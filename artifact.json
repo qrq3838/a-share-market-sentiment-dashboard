@@ -5,7 +5,7 @@
     "surface": "dashboard",
     "title": "A股市场情绪日报",
     "description": "基于工作簿完整历史归档生成的公开只读市场情绪看板。",
-    "generatedAt": "2026-08-02T13:47:59.014Z",
+    "generatedAt": "2026-08-02T13:59:28.538Z",
     "filters": [],
     "cards": [
       {
@@ -352,7 +352,7 @@
           "language": "sql",
           "sql": "SELECT TOP 1 s.[日期] FROM ((([历史_行业占比$] AS s INNER JOIN [历史_行业成交额$] AS a ON s.[日期] = a.[日期]) INNER JOIN [历史_拥挤度$] AS c ON s.[日期] = c.[日期]) INNER JOIN [历史_指数$] AS i ON s.[日期] = i.[日期]) ORDER BY s.[日期] DESC",
           "description": "查找四张历史归档表共同存在的最后一个交易日。",
-          "executed_at": "2026-08-02T13:47:59.014Z",
+          "executed_at": "2026-08-02T13:59:28.538Z",
           "tables_used": [
             "历史_行业占比",
             "历史_行业成交额",
@@ -374,7 +374,7 @@
           "language": "sql",
           "sql": "SELECT s.*, a.* FROM [历史_行业占比$] AS s INNER JOIN [历史_行业成交额$] AS a ON s.[日期] = a.[日期] ORDER BY s.[日期] DESC",
           "description": "读取申万一级行业成交占比与成交额归档。",
-          "executed_at": "2026-08-02T13:47:59.014Z",
+          "executed_at": "2026-08-02T13:59:28.538Z",
           "tables_used": [
             "历史_行业占比",
             "历史_行业成交额"
@@ -398,7 +398,7 @@
           "language": "sql",
           "sql": "SELECT TOP 60 * FROM [历史_拥挤度$] ORDER BY [日期] DESC",
           "description": "读取最近60个完整交易日的市场拥挤度归档。",
-          "executed_at": "2026-08-02T13:47:59.014Z",
+          "executed_at": "2026-08-02T13:59:28.538Z",
           "tables_used": [
             "历史_拥挤度"
           ],
@@ -417,7 +417,7 @@
           "language": "sql",
           "sql": "SELECT TOP 60 * FROM [历史_指数$] ORDER BY [日期] DESC",
           "description": "读取最近60个完整交易日的四个指数收盘点位。",
-          "executed_at": "2026-08-02T13:47:59.014Z",
+          "executed_at": "2026-08-02T13:59:28.538Z",
           "tables_used": [
             "历史_指数"
           ],
@@ -436,7 +436,7 @@
           "language": "sql",
           "sql": "SELECT t.date, t.index, t.level, t.indexed_value FROM read_json_auto('data/public-snapshot.json') AS s, UNNEST(s.index_trend) AS u(t) ORDER BY t.date, t.index",
           "description": "读取工作簿中的四个指数，并将区间首日归一化为100。",
-          "executed_at": "2026-08-02T13:47:59.014Z",
+          "executed_at": "2026-08-02T13:59:28.538Z",
           "tables_used": [
             "历史_指数"
           ],
@@ -511,7 +511,7 @@
   },
   "snapshot": {
     "version": 1,
-    "generatedAt": "2026-08-02T13:47:59.014Z",
+    "generatedAt": "2026-08-02T13:59:28.538Z",
     "status": "ready",
     "datasets": {
       "overview": [
@@ -4561,7 +4561,7 @@
         "language": "sql",
         "sql": "SELECT TOP 1 s.[日期] FROM ((([历史_行业占比$] AS s INNER JOIN [历史_行业成交额$] AS a ON s.[日期] = a.[日期]) INNER JOIN [历史_拥挤度$] AS c ON s.[日期] = c.[日期]) INNER JOIN [历史_指数$] AS i ON s.[日期] = i.[日期]) ORDER BY s.[日期] DESC",
         "description": "查找四张历史归档表共同存在的最后一个交易日。",
-        "executed_at": "2026-08-02T13:47:59.014Z",
+        "executed_at": "2026-08-02T13:59:28.538Z",
         "tables_used": [
           "历史_行业占比",
           "历史_行业成交额",
@@ -4583,7 +4583,7 @@
         "language": "sql",
         "sql": "SELECT s.*, a.* FROM [历史_行业占比$] AS s INNER JOIN [历史_行业成交额$] AS a ON s.[日期] = a.[日期] ORDER BY s.[日期] DESC",
         "description": "读取申万一级行业成交占比与成交额归档。",
-        "executed_at": "2026-08-02T13:47:59.014Z",
+        "executed_at": "2026-08-02T13:59:28.538Z",
         "tables_used": [
           "历史_行业占比",
           "历史_行业成交额"
@@ -4607,7 +4607,7 @@
         "language": "sql",
         "sql": "SELECT TOP 60 * FROM [历史_拥挤度$] ORDER BY [日期] DESC",
         "description": "读取最近60个完整交易日的市场拥挤度归档。",
-        "executed_at": "2026-08-02T13:47:59.014Z",
+        "executed_at": "2026-08-02T13:59:28.538Z",
         "tables_used": [
           "历史_拥挤度"
         ],
@@ -4626,7 +4626,7 @@
         "language": "sql",
         "sql": "SELECT TOP 60 * FROM [历史_指数$] ORDER BY [日期] DESC",
         "description": "读取最近60个完整交易日的四个指数收盘点位。",
-        "executed_at": "2026-08-02T13:47:59.014Z",
+        "executed_at": "2026-08-02T13:59:28.538Z",
         "tables_used": [
           "历史_指数"
         ],
@@ -4645,7 +4645,7 @@
         "language": "sql",
         "sql": "SELECT t.date, t.index, t.level, t.indexed_value FROM read_json_auto('data/public-snapshot.json') AS s, UNNEST(s.index_trend) AS u(t) ORDER BY t.date, t.index",
         "description": "读取工作簿中的四个指数，并将区间首日归一化为100。",
-        "executed_at": "2026-08-02T13:47:59.014Z",
+        "executed_at": "2026-08-02T13:59:28.538Z",
         "tables_used": [
           "历史_指数"
         ],
