@@ -5,7 +5,7 @@
     "surface": "dashboard",
     "title": "A股市场情绪日报",
     "description": "由服务器内部 SQL 增量归档生成的公开只读 A 股市场情绪看板。",
-    "generatedAt": "2026-08-02T23:37:26.804654+08:00",
+    "generatedAt": "2026-08-02T23:40:09.975748+08:00",
     "filters": [],
     "cards": [
       {
@@ -165,8 +165,8 @@
         "valueFormat": "percent",
         "encodings": {
           "x": {
-            "field": "date",
-            "type": "temporal",
+            "field": "date_label",
+            "type": "nominal",
             "label": "交易日"
           },
           "y": {
@@ -352,7 +352,7 @@
           "language": "sql",
           "sql": "SELECT MAX(trade_date) FROM complete_daily_aggregate WHERE industry_count = 31 AND index_count = 4 AND market_amount > 0",
           "description": "只选择沪深个股成交、31 个申万一级行业成交额和四个指数收盘点位均完整的交易日。",
-          "executed_at": "2026-08-02T23:37:26.804654+08:00",
+          "executed_at": "2026-08-02T23:40:09.975748+08:00",
           "tables_used": [
             "qt_stk_daily",
             "qt_sw_daily",
@@ -373,7 +373,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, sw_code, amount FROM qt_sw_daily WHERE sw_code IN (<31个现行申万一级行业代码>) AND trade_date BETWEEN :begin AND :end",
           "description": "按日期增量读取并保存 31 个现行申万一级行业的成交额聚合。",
-          "executed_at": "2026-08-02T23:37:26.804654+08:00",
+          "executed_at": "2026-08-02T23:40:09.975748+08:00",
           "tables_used": [
             "qt_sw_daily"
           ],
@@ -396,7 +396,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, stock_code, amount FROM qt_stk_daily WHERE exchange IN ('SH','SZ') AND trade_date BETWEEN :begin AND :end",
           "description": "个股成交额仅在服务器内存中用于计算日度聚合，原始个股明细不会写入公开文件。",
-          "executed_at": "2026-08-02T23:37:26.804654+08:00",
+          "executed_at": "2026-08-02T23:40:09.975748+08:00",
           "tables_used": [
             "qt_stk_daily"
           ],
@@ -420,7 +420,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_code, tclose FROM qt_idx_daily WHERE index_code IN ('000001','000300','399006','000688') AND trade_date BETWEEN :begin AND :end",
           "description": "读取上证指数、沪深300、创业板指和科创50的日收盘点位。",
-          "executed_at": "2026-08-02T23:37:26.804654+08:00",
+          "executed_at": "2026-08-02T23:40:09.975748+08:00",
           "tables_used": [
             "qt_idx_daily"
           ],
@@ -439,7 +439,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_name, close_level, close_level / FIRST_VALUE(close_level) OVER (PARTITION BY index_name ORDER BY trade_date) * 100 AS indexed_value FROM index_daily_aggregate",
           "description": "从四指数 SQL 聚合归档生成最近 60 个完整交易日的归一化走势。",
-          "executed_at": "2026-08-02T23:37:26.804654+08:00",
+          "executed_at": "2026-08-02T23:40:09.975748+08:00",
           "tables_used": [
             "qt_idx_daily"
           ],
@@ -511,7 +511,7 @@
   },
   "snapshot": {
     "version": 1,
-    "generatedAt": "2026-08-02T23:37:26.804654+08:00",
+    "generatedAt": "2026-08-02T23:40:09.975748+08:00",
     "status": "ready",
     "datasets": {
       "overview": [
@@ -554,6 +554,7 @@
       "market_trend": [
         {
           "date": "2016-01-04",
+          "date_label": "2016-01-04",
           "crowding": 0.23184311118523765,
           "covered_stocks": 2550,
           "top_group_stocks": 5949.0687872666995,
@@ -561,6 +562,7 @@
         },
         {
           "date": "2016-01-08",
+          "date_label": "2016-01-08",
           "crowding": 0.2503444772214494,
           "covered_stocks": 2549,
           "top_group_stocks": 7598.880498066,
@@ -568,6 +570,7 @@
         },
         {
           "date": "2016-01-15",
+          "date_label": "2016-01-15",
           "crowding": 0.25518366115920316,
           "covered_stocks": 2563,
           "top_group_stocks": 5374.260467288699,
@@ -575,6 +578,7 @@
         },
         {
           "date": "2016-01-22",
+          "date_label": "2016-01-22",
           "crowding": 0.25324520375843584,
           "covered_stocks": 2563,
           "top_group_stocks": 4458.1873461925,
@@ -582,6 +586,7 @@
         },
         {
           "date": "2016-01-29",
+          "date_label": "2016-01-29",
           "crowding": 0.2637882317789284,
           "covered_stocks": 2559,
           "top_group_stocks": 4280.181445948,
@@ -589,6 +594,7 @@
         },
         {
           "date": "2016-02-05",
+          "date_label": "2016-02-05",
           "crowding": 0.26066852866818985,
           "covered_stocks": 2560,
           "top_group_stocks": 3629.8535317307997,
@@ -596,6 +602,7 @@
         },
         {
           "date": "2016-02-19",
+          "date_label": "2016-02-19",
           "crowding": 0.2582054784476695,
           "covered_stocks": 2567,
           "top_group_stocks": 4813.220238832299,
@@ -603,6 +610,7 @@
         },
         {
           "date": "2016-02-26",
+          "date_label": "2016-02-26",
           "crowding": 0.23880767064815808,
           "covered_stocks": 2543,
           "top_group_stocks": 4858.401797240799,
@@ -610,6 +618,7 @@
         },
         {
           "date": "2016-03-04",
+          "date_label": "2016-03-04",
           "crowding": 0.2832649355813985,
           "covered_stocks": 2546,
           "top_group_stocks": 6405.477681015,
@@ -617,6 +626,7 @@
         },
         {
           "date": "2016-03-11",
+          "date_label": "2016-03-11",
           "crowding": 0.2703762180533768,
           "covered_stocks": 2562,
           "top_group_stocks": 3039.9986598131,
@@ -624,6 +634,7 @@
         },
         {
           "date": "2016-03-18",
+          "date_label": "2016-03-18",
           "crowding": 0.24695936068527427,
           "covered_stocks": 2559,
           "top_group_stocks": 8163.8543797620005,
@@ -631,6 +642,7 @@
         },
         {
           "date": "2016-03-25",
+          "date_label": "2016-03-25",
           "crowding": 0.2767319487838449,
           "covered_stocks": 2542,
           "top_group_stocks": 5534.1433590414,
@@ -638,6 +650,7 @@
         },
         {
           "date": "2016-04-01",
+          "date_label": "2016-04-01",
           "crowding": 0.2602507594286788,
           "covered_stocks": 2527,
           "top_group_stocks": 5826.4234769407,
@@ -645,6 +658,7 @@
         },
         {
           "date": "2016-04-08",
+          "date_label": "2016-04-08",
           "crowding": 0.2538138936617465,
           "covered_stocks": 2522,
           "top_group_stocks": 5846.3558770839,
@@ -652,6 +666,7 @@
         },
         {
           "date": "2016-04-15",
+          "date_label": "2016-04-15",
           "crowding": 0.21939043036400033,
           "covered_stocks": 2516,
           "top_group_stocks": 5853.2903843618,
@@ -659,6 +674,7 @@
         },
         {
           "date": "2016-04-22",
+          "date_label": "2016-04-22",
           "crowding": 0.2682781316412767,
           "covered_stocks": 2522,
           "top_group_stocks": 4221.3843562438,
@@ -666,6 +682,7 @@
         },
         {
           "date": "2016-04-29",
+          "date_label": "2016-04-29",
           "crowding": 0.27158839288327635,
           "covered_stocks": 2530,
           "top_group_stocks": 3662.6548786015996,
@@ -673,6 +690,7 @@
         },
         {
           "date": "2016-05-06",
+          "date_label": "2016-05-06",
           "crowding": 0.24343162708990768,
           "covered_stocks": 2549,
           "top_group_stocks": 6612.319654482701,
@@ -680,6 +698,7 @@
         },
         {
           "date": "2016-05-13",
+          "date_label": "2016-05-13",
           "crowding": 0.3055655780252077,
           "covered_stocks": 2543,
           "top_group_stocks": 3472.0382901897997,
@@ -687,6 +706,7 @@
         },
         {
           "date": "2016-05-20",
+          "date_label": "2016-05-20",
           "crowding": 0.3403456793105672,
           "covered_stocks": 2550,
           "top_group_stocks": 3655.4955505981993,
@@ -694,6 +714,7 @@
         },
         {
           "date": "2016-05-27",
+          "date_label": "2016-05-27",
           "crowding": 0.32023065279255325,
           "covered_stocks": 2553,
           "top_group_stocks": 3783.1070291603005,
@@ -701,6 +722,7 @@
         },
         {
           "date": "2016-06-03",
+          "date_label": "2016-06-03",
           "crowding": 0.2886529659575038,
           "covered_stocks": 2561,
           "top_group_stocks": 6446.9098667995995,
@@ -708,6 +730,7 @@
         },
         {
           "date": "2016-06-08",
+          "date_label": "2016-06-08",
           "crowding": 0.3009051872419958,
           "covered_stocks": 2573,
           "top_group_stocks": 5461.9701914262,
@@ -715,6 +738,7 @@
         },
         {
           "date": "2016-06-17",
+          "date_label": "2016-06-17",
           "crowding": 0.2861080542862476,
           "covered_stocks": 2571,
           "top_group_stocks": 5710.917002293,
@@ -722,6 +746,7 @@
         },
         {
           "date": "2016-06-24",
+          "date_label": "2016-06-24",
           "crowding": 0.26255174947863547,
           "covered_stocks": 2585,
           "top_group_stocks": 6472.445008716199,
@@ -729,6 +754,7 @@
         },
         {
           "date": "2016-07-01",
+          "date_label": "2016-07-01",
           "crowding": 0.25431798257530136,
           "covered_stocks": 2594,
           "top_group_stocks": 5206.9073985624,
@@ -736,6 +762,7 @@
         },
         {
           "date": "2016-07-08",
+          "date_label": "2016-07-08",
           "crowding": 0.2695995373436724,
           "covered_stocks": 2607,
           "top_group_stocks": 5902.9164474359995,
@@ -743,6 +770,7 @@
         },
         {
           "date": "2016-07-15",
+          "date_label": "2016-07-15",
           "crowding": 0.253003031783359,
           "covered_stocks": 2615,
           "top_group_stocks": 5678.5659661253,
@@ -750,6 +778,7 @@
         },
         {
           "date": "2016-07-22",
+          "date_label": "2016-07-22",
           "crowding": 0.2705809668995002,
           "covered_stocks": 2624,
           "top_group_stocks": 5396.183630834299,
@@ -757,6 +786,7 @@
         },
         {
           "date": "2016-07-29",
+          "date_label": "2016-07-29",
           "crowding": 0.26523239150529465,
           "covered_stocks": 2646,
           "top_group_stocks": 4311.4295722341,
@@ -764,6 +794,7 @@
         },
         {
           "date": "2016-08-05",
+          "date_label": "2016-08-05",
           "crowding": 0.30668353527836717,
           "covered_stocks": 2658,
           "top_group_stocks": 4020.6422467280004,
@@ -771,6 +802,7 @@
         },
         {
           "date": "2016-08-12",
+          "date_label": "2016-08-12",
           "crowding": 0.3299340882943309,
           "covered_stocks": 2682,
           "top_group_stocks": 4264.6844868984,
@@ -778,6 +810,7 @@
         },
         {
           "date": "2016-08-19",
+          "date_label": "2016-08-19",
           "crowding": 0.31596528397979196,
           "covered_stocks": 2690,
           "top_group_stocks": 5364.3533406398,
@@ -785,6 +818,7 @@
         },
         {
           "date": "2016-08-26",
+          "date_label": "2016-08-26",
           "crowding": 0.2850743879010334,
           "covered_stocks": 2687,
           "top_group_stocks": 4752.0514107921,
@@ -792,6 +826,7 @@
         },
         {
           "date": "2016-09-02",
+          "date_label": "2016-09-02",
           "crowding": 0.2881428375692365,
           "covered_stocks": 2693,
           "top_group_stocks": 4308.387523435499,
@@ -799,6 +834,7 @@
         },
         {
           "date": "2016-09-09",
+          "date_label": "2016-09-09",
           "crowding": 0.2581071634219363,
           "covered_stocks": 2693,
           "top_group_stocks": 4809.1160824489,
@@ -806,6 +842,7 @@
         },
         {
           "date": "2016-09-14",
+          "date_label": "2016-09-14",
           "crowding": 0.3032711315224775,
           "covered_stocks": 2683,
           "top_group_stocks": 3745.9801554201,
@@ -813,6 +850,7 @@
         },
         {
           "date": "2016-09-23",
+          "date_label": "2016-09-23",
           "crowding": 0.292329773509694,
           "covered_stocks": 2684,
           "top_group_stocks": 3955.9698236733,
@@ -820,6 +858,7 @@
         },
         {
           "date": "2016-09-30",
+          "date_label": "2016-09-30",
           "crowding": 0.2654551074109001,
           "covered_stocks": 2705,
           "top_group_stocks": 2983.7055399758997,
@@ -827,6 +866,7 @@
         },
         {
           "date": "2016-10-14",
+          "date_label": "2016-10-14",
           "crowding": 0.2725100614607497,
           "covered_stocks": 2726,
           "top_group_stocks": 4233.6479102999,
@@ -834,6 +874,7 @@
         },
         {
           "date": "2016-10-21",
+          "date_label": "2016-10-21",
           "crowding": 0.27547718747561484,
           "covered_stocks": 2731,
           "top_group_stocks": 5056.9148545199,
@@ -841,6 +882,7 @@
         },
         {
           "date": "2016-10-28",
+          "date_label": "2016-10-28",
           "crowding": 0.28807977010759794,
           "covered_stocks": 2752,
           "top_group_stocks": 5112.4500111952,
@@ -848,6 +890,7 @@
         },
         {
           "date": "2016-11-04",
+          "date_label": "2016-11-04",
           "crowding": 0.2959690707077214,
           "covered_stocks": 2764,
           "top_group_stocks": 5666.708868184601,
@@ -855,6 +898,7 @@
         },
         {
           "date": "2016-11-11",
+          "date_label": "2016-11-11",
           "crowding": 0.3053138163424591,
           "covered_stocks": 2762,
           "top_group_stocks": 7601.998653213999,
@@ -862,6 +906,7 @@
         },
         {
           "date": "2016-11-18",
+          "date_label": "2016-11-18",
           "crowding": 0.28914679555023187,
           "covered_stocks": 2751,
           "top_group_stocks": 5441.0169605265,
@@ -869,6 +914,7 @@
         },
         {
           "date": "2016-11-25",
+          "date_label": "2016-11-25",
           "crowding": 0.28098523947485393,
           "covered_stocks": 2763,
           "top_group_stocks": 6122.4597677212,
@@ -876,6 +922,7 @@
         },
         {
           "date": "2016-12-02",
+          "date_label": "2016-12-02",
           "crowding": 0.33006850115177616,
           "covered_stocks": 2778,
           "top_group_stocks": 5972.339125140999,
@@ -883,6 +930,7 @@
         },
         {
           "date": "2016-12-09",
+          "date_label": "2016-12-09",
           "crowding": 0.3450679612573468,
           "covered_stocks": 2790,
           "top_group_stocks": 4867.190270264599,
@@ -890,6 +938,7 @@
         },
         {
           "date": "2016-12-16",
+          "date_label": "2016-12-16",
           "crowding": 0.316319876173967,
           "covered_stocks": 2794,
           "top_group_stocks": 4336.446507351,
@@ -897,6 +946,7 @@
         },
         {
           "date": "2016-12-23",
+          "date_label": "2016-12-23",
           "crowding": 0.30487750470825353,
           "covered_stocks": 2807,
           "top_group_stocks": 4047.9498849565002,
@@ -904,6 +954,7 @@
         },
         {
           "date": "2016-12-30",
+          "date_label": "2016-12-30",
           "crowding": 0.3067574007381668,
           "covered_stocks": 2835,
           "top_group_stocks": 3434.9610595178,
@@ -911,6 +962,7 @@
         },
         {
           "date": "2017-01-06",
+          "date_label": "2017-01-06",
           "crowding": 0.28254983534503275,
           "covered_stocks": 2846,
           "top_group_stocks": 4548.5559210660995,
@@ -918,6 +970,7 @@
         },
         {
           "date": "2017-01-13",
+          "date_label": "2017-01-13",
           "crowding": 0.27352699490014143,
           "covered_stocks": 2863,
           "top_group_stocks": 3836.4167692293004,
@@ -925,6 +978,7 @@
         },
         {
           "date": "2017-01-20",
+          "date_label": "2017-01-20",
           "crowding": 0.298021363386154,
           "covered_stocks": 2877,
           "top_group_stocks": 3228.4632309835997,
@@ -932,6 +986,7 @@
         },
         {
           "date": "2017-01-26",
+          "date_label": "2017-01-26",
           "crowding": 0.32342898618603155,
           "covered_stocks": 2894,
           "top_group_stocks": 2697.5398845794,
@@ -939,6 +994,7 @@
         },
         {
           "date": "2017-02-03",
+          "date_label": "2017-02-03",
           "crowding": 0.3279269357623754,
           "covered_stocks": 2887,
           "top_group_stocks": 2399.6244431146997,
@@ -946,6 +1002,7 @@
         },
         {
           "date": "2017-02-10",
+          "date_label": "2017-02-10",
           "crowding": 0.3085444000625678,
           "covered_stocks": 2896,
           "top_group_stocks": 4983.1120294237,
@@ -953,6 +1010,7 @@
         },
         {
           "date": "2017-02-17",
+          "date_label": "2017-02-17",
           "crowding": 0.31052959321184476,
           "covered_stocks": 2906,
           "top_group_stocks": 4992.318122456701,
@@ -960,6 +1018,7 @@
         },
         {
           "date": "2017-02-24",
+          "date_label": "2017-02-24",
           "crowding": 0.2651518887894595,
           "covered_stocks": 2899,
           "top_group_stocks": 4761.1011329069,
@@ -967,6 +1026,7 @@
         },
         {
           "date": "2017-03-03",
+          "date_label": "2017-03-03",
           "crowding": 0.2909963925557993,
           "covered_stocks": 2905,
           "top_group_stocks": 4493.3999968222,
@@ -974,6 +1034,7 @@
         },
         {
           "date": "2017-03-10",
+          "date_label": "2017-03-10",
           "crowding": 0.30137938817338195,
           "covered_stocks": 2917,
           "top_group_stocks": 4179.0694102273,
@@ -981,6 +1042,7 @@
         },
         {
           "date": "2017-03-17",
+          "date_label": "2017-03-17",
           "crowding": 0.2878597761758668,
           "covered_stocks": 2925,
           "top_group_stocks": 6002.0239848742995,
@@ -988,6 +1050,7 @@
         },
         {
           "date": "2017-03-24",
+          "date_label": "2017-03-24",
           "crowding": 0.324314211157864,
           "covered_stocks": 2936,
           "top_group_stocks": 5626.483261869399,
@@ -995,6 +1058,7 @@
         },
         {
           "date": "2017-03-31",
+          "date_label": "2017-03-31",
           "crowding": 0.3198845849389122,
           "covered_stocks": 2947,
           "top_group_stocks": 4636.5289847988,
@@ -1002,6 +1066,7 @@
         },
         {
           "date": "2017-04-07",
+          "date_label": "2017-04-07",
           "crowding": 0.3412253705736293,
           "covered_stocks": 2947,
           "top_group_stocks": 5662.9511729839005,
@@ -1009,6 +1074,7 @@
         },
         {
           "date": "2017-04-14",
+          "date_label": "2017-04-14",
           "crowding": 0.3476001205399707,
           "covered_stocks": 2946,
           "top_group_stocks": 5115.063244805599,
@@ -1016,6 +1082,7 @@
         },
         {
           "date": "2017-04-21",
+          "date_label": "2017-04-21",
           "crowding": 0.3932684050759479,
           "covered_stocks": 2963,
           "top_group_stocks": 3826.3138653381,
@@ -1023,6 +1090,7 @@
         },
         {
           "date": "2017-04-28",
+          "date_label": "2017-04-28",
           "crowding": 0.397484877607648,
           "covered_stocks": 2964,
           "top_group_stocks": 4165.0394130935,
@@ -1030,6 +1098,7 @@
         },
         {
           "date": "2017-05-05",
+          "date_label": "2017-05-05",
           "crowding": 0.3927402750382682,
           "covered_stocks": 2968,
           "top_group_stocks": 4364.2730383111,
@@ -1037,6 +1106,7 @@
         },
         {
           "date": "2017-05-12",
+          "date_label": "2017-05-12",
           "crowding": 0.4090490351142403,
           "covered_stocks": 2969,
           "top_group_stocks": 3737.8301571194,
@@ -1044,6 +1114,7 @@
         },
         {
           "date": "2017-05-19",
+          "date_label": "2017-05-19",
           "crowding": 0.4001441943738947,
           "covered_stocks": 2983,
           "top_group_stocks": 3538.465254354,
@@ -1051,6 +1122,7 @@
         },
         {
           "date": "2017-05-26",
+          "date_label": "2017-05-26",
           "crowding": 0.4087595872184656,
           "covered_stocks": 2988,
           "top_group_stocks": 3795.8089144621003,
@@ -1058,6 +1130,7 @@
         },
         {
           "date": "2017-06-02",
+          "date_label": "2017-06-02",
           "crowding": 0.3403569414379598,
           "covered_stocks": 2983,
           "top_group_stocks": 3412.6625665107,
@@ -1065,6 +1138,7 @@
         },
         {
           "date": "2017-06-09",
+          "date_label": "2017-06-09",
           "crowding": 0.3640679608575486,
           "covered_stocks": 2987,
           "top_group_stocks": 4056.2781760076996,
@@ -1072,6 +1146,7 @@
         },
         {
           "date": "2017-06-16",
+          "date_label": "2017-06-16",
           "crowding": 0.3475992697883267,
           "covered_stocks": 3007,
           "top_group_stocks": 3635.7866369983994,
@@ -1079,6 +1154,7 @@
         },
         {
           "date": "2017-06-23",
+          "date_label": "2017-06-23",
           "crowding": 0.3568787133269572,
           "covered_stocks": 3023,
           "top_group_stocks": 4059.487690353,
@@ -1086,6 +1162,7 @@
         },
         {
           "date": "2017-06-30",
+          "date_label": "2017-06-30",
           "crowding": 0.35187957144376647,
           "covered_stocks": 3022,
           "top_group_stocks": 3379.4445933598,
@@ -1093,6 +1170,7 @@
         },
         {
           "date": "2017-07-07",
+          "date_label": "2017-07-07",
           "crowding": 0.3315795208512,
           "covered_stocks": 3027,
           "top_group_stocks": 4663.221233255799,
@@ -1100,6 +1178,7 @@
         },
         {
           "date": "2017-07-14",
+          "date_label": "2017-07-14",
           "crowding": 0.3731200989254118,
           "covered_stocks": 3033,
           "top_group_stocks": 3856.1697638401,
@@ -1107,6 +1186,7 @@
         },
         {
           "date": "2017-07-21",
+          "date_label": "2017-07-21",
           "crowding": 0.39435059202824013,
           "covered_stocks": 3033,
           "top_group_stocks": 4439.7441541554,
@@ -1114,6 +1194,7 @@
         },
         {
           "date": "2017-07-28",
+          "date_label": "2017-07-28",
           "crowding": 0.3874369674023947,
           "covered_stocks": 3049,
           "top_group_stocks": 4587.8905270569,
@@ -1121,6 +1202,7 @@
         },
         {
           "date": "2017-08-04",
+          "date_label": "2017-08-04",
           "crowding": 0.4004902458246033,
           "covered_stocks": 3066,
           "top_group_stocks": 5670.912056190899,
@@ -1128,6 +1210,7 @@
         },
         {
           "date": "2017-08-11",
+          "date_label": "2017-08-11",
           "crowding": 0.39460096685839413,
           "covered_stocks": 3088,
           "top_group_stocks": 5358.523016410901,
@@ -1135,6 +1218,7 @@
         },
         {
           "date": "2017-08-18",
+          "date_label": "2017-08-18",
           "crowding": 0.36885961736258577,
           "covered_stocks": 3097,
           "top_group_stocks": 4799.156305843299,
@@ -1142,6 +1226,7 @@
         },
         {
           "date": "2017-08-25",
+          "date_label": "2017-08-25",
           "crowding": 0.39576644685928875,
           "covered_stocks": 3113,
           "top_group_stocks": 4660.9877422124,
@@ -1149,6 +1234,7 @@
         },
         {
           "date": "2017-09-01",
+          "date_label": "2017-09-01",
           "crowding": 0.3840107800578857,
           "covered_stocks": 3132,
           "top_group_stocks": 6404.6948158134,
@@ -1156,6 +1242,7 @@
         },
         {
           "date": "2017-09-08",
+          "date_label": "2017-09-08",
           "crowding": 0.353273505975198,
           "covered_stocks": 3124,
           "top_group_stocks": 5523.971278575601,
@@ -1163,6 +1250,7 @@
         },
         {
           "date": "2017-09-15",
+          "date_label": "2017-09-15",
           "crowding": 0.3765815631448708,
           "covered_stocks": 3136,
           "top_group_stocks": 5649.959765868,
@@ -1170,6 +1258,7 @@
         },
         {
           "date": "2017-09-22",
+          "date_label": "2017-09-22",
           "crowding": 0.3389491129895407,
           "covered_stocks": 3166,
           "top_group_stocks": 4870.0579844575,
@@ -1177,6 +1266,7 @@
         },
         {
           "date": "2017-09-29",
+          "date_label": "2017-09-29",
           "crowding": 0.37420509649384637,
           "covered_stocks": 3182,
           "top_group_stocks": 4340.4007490887,
@@ -1184,6 +1274,7 @@
         },
         {
           "date": "2017-10-13",
+          "date_label": "2017-10-13",
           "crowding": 0.3328653697161507,
           "covered_stocks": 3192,
           "top_group_stocks": 4584.1742363407,
@@ -1191,6 +1282,7 @@
         },
         {
           "date": "2017-10-20",
+          "date_label": "2017-10-20",
           "crowding": 0.36061752717886447,
           "covered_stocks": 3192,
           "top_group_stocks": 3624.5482723982996,
@@ -1198,6 +1290,7 @@
         },
         {
           "date": "2017-10-27",
+          "date_label": "2017-10-27",
           "crowding": 0.37382546058585386,
           "covered_stocks": 3200,
           "top_group_stocks": 4628.1191680695,
@@ -1205,6 +1298,7 @@
         },
         {
           "date": "2017-11-03",
+          "date_label": "2017-11-03",
           "crowding": 0.38656149383810207,
           "covered_stocks": 3235,
           "top_group_stocks": 4650.448546215,
@@ -1212,6 +1306,7 @@
         },
         {
           "date": "2017-11-10",
+          "date_label": "2017-11-10",
           "crowding": 0.4110577022569987,
           "covered_stocks": 3249,
           "top_group_stocks": 5676.2446277185,
@@ -1219,6 +1314,7 @@
         },
         {
           "date": "2017-11-17",
+          "date_label": "2017-11-17",
           "crowding": 0.41285404346008775,
           "covered_stocks": 3247,
           "top_group_stocks": 6456.1973605754,
@@ -1226,6 +1322,7 @@
         },
         {
           "date": "2017-11-24",
+          "date_label": "2017-11-24",
           "crowding": 0.47697127686805396,
           "covered_stocks": 3240,
           "top_group_stocks": 4398.5148501258,
@@ -1233,6 +1330,7 @@
         },
         {
           "date": "2017-12-01",
+          "date_label": "2017-12-01",
           "crowding": 0.4605759030615845,
           "covered_stocks": 3238,
           "top_group_stocks": 3932.0341990776,
@@ -1240,6 +1338,7 @@
         },
         {
           "date": "2017-12-08",
+          "date_label": "2017-12-08",
           "crowding": 0.4327052881163363,
           "covered_stocks": 3235,
           "top_group_stocks": 3752.5490010129997,
@@ -1247,6 +1346,7 @@
         },
         {
           "date": "2017-12-15",
+          "date_label": "2017-12-15",
           "crowding": 0.4300375323200721,
           "covered_stocks": 3241,
           "top_group_stocks": 3780.1311393933997,
@@ -1254,6 +1354,7 @@
         },
         {
           "date": "2017-12-22",
+          "date_label": "2017-12-22",
           "crowding": 0.4192230266848382,
           "covered_stocks": 3246,
           "top_group_stocks": 3371.2663069908003,
@@ -1261,6 +1362,7 @@
         },
         {
           "date": "2017-12-29",
+          "date_label": "2017-12-29",
           "crowding": 0.41617062700381097,
           "covered_stocks": 3251,
           "top_group_stocks": 3656.5187646814998,
@@ -1268,6 +1370,7 @@
         },
         {
           "date": "2018-01-05",
+          "date_label": "2018-01-05",
           "crowding": 0.4359566525302492,
           "covered_stocks": 3263,
           "top_group_stocks": 5030.0739608178,
@@ -1275,6 +1378,7 @@
         },
         {
           "date": "2018-01-12",
+          "date_label": "2018-01-12",
           "crowding": 0.4221925981772162,
           "covered_stocks": 3270,
           "top_group_stocks": 4623.8284976019,
@@ -1282,6 +1386,7 @@
         },
         {
           "date": "2018-01-19",
+          "date_label": "2018-01-19",
           "crowding": 0.4938369012542416,
           "covered_stocks": 3279,
           "top_group_stocks": 5420.0141643747,
@@ -1289,6 +1394,7 @@
         },
         {
           "date": "2018-01-26",
+          "date_label": "2018-01-26",
           "crowding": 0.4723659053320554,
           "covered_stocks": 3272,
           "top_group_stocks": 5021.6438832831,
@@ -1296,6 +1402,7 @@
         },
         {
           "date": "2018-02-02",
+          "date_label": "2018-02-02",
           "crowding": 0.4535796242700376,
           "covered_stocks": 3216,
           "top_group_stocks": 4638.1762516407,
@@ -1303,6 +1410,7 @@
         },
         {
           "date": "2018-02-09",
+          "date_label": "2018-02-09",
           "crowding": 0.5116505987651906,
           "covered_stocks": 3151,
           "top_group_stocks": 4954.4707476548,
@@ -1310,6 +1418,7 @@
         },
         {
           "date": "2018-02-14",
+          "date_label": "2018-02-14",
           "crowding": 0.4788900612775467,
           "covered_stocks": 3188,
           "top_group_stocks": 2392.4498179491,
@@ -1317,6 +1426,7 @@
         },
         {
           "date": "2018-02-23",
+          "date_label": "2018-02-23",
           "crowding": 0.4635852120807127,
           "covered_stocks": 3207,
           "top_group_stocks": 3324.1418766917,
@@ -1324,6 +1434,7 @@
         },
         {
           "date": "2018-03-02",
+          "date_label": "2018-03-02",
           "crowding": 0.406163511611725,
           "covered_stocks": 3235,
           "top_group_stocks": 4166.4758731967,
@@ -1331,6 +1442,7 @@
         },
         {
           "date": "2018-03-09",
+          "date_label": "2018-03-09",
           "crowding": 0.3681350149666308,
           "covered_stocks": 3233,
           "top_group_stocks": 5118.5444139151,
@@ -1338,6 +1450,7 @@
         },
         {
           "date": "2018-03-16",
+          "date_label": "2018-03-16",
           "crowding": 0.3896401387895638,
           "covered_stocks": 3241,
           "top_group_stocks": 3958.8023805844996,
@@ -1345,6 +1458,7 @@
         },
         {
           "date": "2018-03-23",
+          "date_label": "2018-03-23",
           "crowding": 0.36637500652658817,
           "covered_stocks": 3251,
           "top_group_stocks": 6348.6857363776,
@@ -1352,6 +1466,7 @@
         },
         {
           "date": "2018-03-30",
+          "date_label": "2018-03-30",
           "crowding": 0.3521360182593013,
           "covered_stocks": 3249,
           "top_group_stocks": 4967.1259416298,
@@ -1359,6 +1474,7 @@
         },
         {
           "date": "2018-04-04",
+          "date_label": "2018-04-04",
           "crowding": 0.34459096847215365,
           "covered_stocks": 3257,
           "top_group_stocks": 4718.6599384673,
@@ -1366,6 +1482,7 @@
         },
         {
           "date": "2018-04-13",
+          "date_label": "2018-04-13",
           "crowding": 0.33974320305340233,
           "covered_stocks": 3266,
           "top_group_stocks": 3962.2434039309,
@@ -1373,6 +1490,7 @@
         },
         {
           "date": "2018-04-20",
+          "date_label": "2018-04-20",
           "crowding": 0.3885962030769193,
           "covered_stocks": 3255,
           "top_group_stocks": 4472.245914095301,
@@ -1380,6 +1498,7 @@
         },
         {
           "date": "2018-04-27",
+          "date_label": "2018-04-27",
           "crowding": 0.426182353571426,
           "covered_stocks": 3272,
           "top_group_stocks": 4119.3525500827,
@@ -1387,6 +1506,7 @@
         },
         {
           "date": "2018-05-04",
+          "date_label": "2018-05-04",
           "crowding": 0.360653132237063,
           "covered_stocks": 3278,
           "top_group_stocks": 3603.3119072713002,
@@ -1394,6 +1514,7 @@
         },
         {
           "date": "2018-05-11",
+          "date_label": "2018-05-11",
           "crowding": 0.35258747213615066,
           "covered_stocks": 3291,
           "top_group_stocks": 4139.9310553083,
@@ -1401,6 +1522,7 @@
         },
         {
           "date": "2018-05-18",
+          "date_label": "2018-05-18",
           "crowding": 0.35143841875573056,
           "covered_stocks": 3309,
           "top_group_stocks": 3760.4911989539,
@@ -1408,6 +1530,7 @@
         },
         {
           "date": "2018-05-25",
+          "date_label": "2018-05-25",
           "crowding": 0.33259722452751156,
           "covered_stocks": 3306,
           "top_group_stocks": 3983.7245375606,
@@ -1415,6 +1538,7 @@
         },
         {
           "date": "2018-06-01",
+          "date_label": "2018-06-01",
           "crowding": 0.3663098607530793,
           "covered_stocks": 3303,
           "top_group_stocks": 3752.9662298572002,
@@ -1422,6 +1546,7 @@
         },
         {
           "date": "2018-06-08",
+          "date_label": "2018-06-08",
           "crowding": 0.3743924161211218,
           "covered_stocks": 3301,
           "top_group_stocks": 3539.2713809043007,
@@ -1429,6 +1554,7 @@
         },
         {
           "date": "2018-06-15",
+          "date_label": "2018-06-15",
           "crowding": 0.3712210451641272,
           "covered_stocks": 3301,
           "top_group_stocks": 3558.0452561183,
@@ -1436,6 +1562,7 @@
         },
         {
           "date": "2018-06-22",
+          "date_label": "2018-06-22",
           "crowding": 0.40379479679672653,
           "covered_stocks": 3292,
           "top_group_stocks": 2991.5738685857996,
@@ -1443,6 +1570,7 @@
         },
         {
           "date": "2018-06-29",
+          "date_label": "2018-06-29",
           "crowding": 0.3792916969203542,
           "covered_stocks": 3325,
           "top_group_stocks": 3429.5221348534997,
@@ -1450,6 +1578,7 @@
         },
         {
           "date": "2018-07-06",
+          "date_label": "2018-07-06",
           "crowding": 0.40686448764016747,
           "covered_stocks": 3350,
           "top_group_stocks": 3562.6085829566005,
@@ -1457,6 +1586,7 @@
         },
         {
           "date": "2018-07-13",
+          "date_label": "2018-07-13",
           "crowding": 0.40245139069494046,
           "covered_stocks": 3366,
           "top_group_stocks": 3660.2403548318,
@@ -1464,6 +1594,7 @@
         },
         {
           "date": "2018-07-20",
+          "date_label": "2018-07-20",
           "crowding": 0.4352200928277746,
           "covered_stocks": 3386,
           "top_group_stocks": 3482.8203982666996,
@@ -1471,6 +1602,7 @@
         },
         {
           "date": "2018-07-27",
+          "date_label": "2018-07-27",
           "crowding": 0.3515825324099683,
           "covered_stocks": 3390,
           "top_group_stocks": 3106.1233206014003,
@@ -1478,6 +1610,7 @@
         },
         {
           "date": "2018-08-03",
+          "date_label": "2018-08-03",
           "crowding": 0.4153628554903109,
           "covered_stocks": 3406,
           "top_group_stocks": 2846.2921557635,
@@ -1485,6 +1618,7 @@
         },
         {
           "date": "2018-08-10",
+          "date_label": "2018-08-10",
           "crowding": 0.38265278907580247,
           "covered_stocks": 3414,
           "top_group_stocks": 2881.5525441553004,
@@ -1492,6 +1626,7 @@
         },
         {
           "date": "2018-08-17",
+          "date_label": "2018-08-17",
           "crowding": 0.41167410416765104,
           "covered_stocks": 3422,
           "top_group_stocks": 2654.1062985832996,
@@ -1499,6 +1634,7 @@
         },
         {
           "date": "2018-08-24",
+          "date_label": "2018-08-24",
           "crowding": 0.4193792960478695,
           "covered_stocks": 3429,
           "top_group_stocks": 2390.8366083995998,
@@ -1506,6 +1642,7 @@
         },
         {
           "date": "2018-08-31",
+          "date_label": "2018-08-31",
           "crowding": 0.4355439536105301,
           "covered_stocks": 3440,
           "top_group_stocks": 2484.0967912214,
@@ -1513,6 +1650,7 @@
         },
         {
           "date": "2018-09-07",
+          "date_label": "2018-09-07",
           "crowding": 0.4248916913362657,
           "covered_stocks": 3440,
           "top_group_stocks": 2719.9238364947996,
@@ -1520,6 +1658,7 @@
         },
         {
           "date": "2018-09-14",
+          "date_label": "2018-09-14",
           "crowding": 0.41184286875522236,
           "covered_stocks": 3451,
           "top_group_stocks": 2508.0258343184,
@@ -1527,6 +1666,7 @@
         },
         {
           "date": "2018-09-21",
+          "date_label": "2018-09-21",
           "crowding": 0.4272059181194682,
           "covered_stocks": 3460,
           "top_group_stocks": 3214.0541428920997,
@@ -1534,6 +1674,7 @@
         },
         {
           "date": "2018-09-28",
+          "date_label": "2018-09-28",
           "crowding": 0.4288891392605272,
           "covered_stocks": 3470,
           "top_group_stocks": 2630.2908417789,
@@ -1541,6 +1682,7 @@
         },
         {
           "date": "2018-10-12",
+          "date_label": "2018-10-12",
           "crowding": 0.3861594786974049,
           "covered_stocks": 3483,
           "top_group_stocks": 3087.1733142124,
@@ -1548,6 +1690,7 @@
         },
         {
           "date": "2018-10-19",
+          "date_label": "2018-10-19",
           "crowding": 0.44317129173934233,
           "covered_stocks": 3481,
           "top_group_stocks": 2868.5816466632,
@@ -1555,6 +1698,7 @@
         },
         {
           "date": "2018-10-26",
+          "date_label": "2018-10-26",
           "crowding": 0.4263718601695907,
           "covered_stocks": 3475,
           "top_group_stocks": 2825.1715409879002,
@@ -1562,6 +1706,7 @@
         },
         {
           "date": "2018-11-02",
+          "date_label": "2018-11-02",
           "crowding": 0.42163436170717056,
           "covered_stocks": 3484,
           "top_group_stocks": 4510.689491288101,
@@ -1569,6 +1714,7 @@
         },
         {
           "date": "2018-11-09",
+          "date_label": "2018-11-09",
           "crowding": 0.3941082759486751,
           "covered_stocks": 3504,
           "top_group_stocks": 2741.9198978994,
@@ -1576,6 +1722,7 @@
         },
         {
           "date": "2018-11-16",
+          "date_label": "2018-11-16",
           "crowding": 0.33437298900532236,
           "covered_stocks": 3522,
           "top_group_stocks": 4754.924543119099,
@@ -1583,6 +1730,7 @@
         },
         {
           "date": "2018-11-23",
+          "date_label": "2018-11-23",
           "crowding": 0.3192081025649412,
           "covered_stocks": 3528,
           "top_group_stocks": 3583.1666806007997,
@@ -1590,6 +1738,7 @@
         },
         {
           "date": "2018-11-30",
+          "date_label": "2018-11-30",
           "crowding": 0.3501431188802601,
           "covered_stocks": 3538,
           "top_group_stocks": 2669.7354170909002,
@@ -1597,6 +1746,7 @@
         },
         {
           "date": "2018-12-07",
+          "date_label": "2018-12-07",
           "crowding": 0.35492986601008086,
           "covered_stocks": 3546,
           "top_group_stocks": 2408.6646128188,
@@ -1604,6 +1754,7 @@
         },
         {
           "date": "2018-12-14",
+          "date_label": "2018-12-14",
           "crowding": 0.3463623654019018,
           "covered_stocks": 3550,
           "top_group_stocks": 2919.3272576627,
@@ -1611,6 +1762,7 @@
         },
         {
           "date": "2018-12-21",
+          "date_label": "2018-12-21",
           "crowding": 0.405288060134283,
           "covered_stocks": 3550,
           "top_group_stocks": 2361.6645934518,
@@ -1618,6 +1770,7 @@
         },
         {
           "date": "2018-12-28",
+          "date_label": "2018-12-28",
           "crowding": 0.3863364704392025,
           "covered_stocks": 3551,
           "top_group_stocks": 2397.3185048028,
@@ -1625,6 +1778,7 @@
         },
         {
           "date": "2019-01-04",
+          "date_label": "2019-01-04",
           "crowding": 0.39008125338867233,
           "covered_stocks": 3556,
           "top_group_stocks": 3221.40867325,
@@ -1632,6 +1786,7 @@
         },
         {
           "date": "2019-01-11",
+          "date_label": "2019-01-11",
           "crowding": 0.36948588331582993,
           "covered_stocks": 3561,
           "top_group_stocks": 2960.1550004231,
@@ -1639,6 +1794,7 @@
         },
         {
           "date": "2019-01-18",
+          "date_label": "2019-01-18",
           "crowding": 0.4037177202908071,
           "covered_stocks": 3561,
           "top_group_stocks": 3264.8361378432,
@@ -1646,6 +1802,7 @@
         },
         {
           "date": "2019-01-25",
+          "date_label": "2019-01-25",
           "crowding": 0.3898137853732248,
           "covered_stocks": 3564,
           "top_group_stocks": 3127.5796985171,
@@ -1653,6 +1810,7 @@
         },
         {
           "date": "2019-02-01",
+          "date_label": "2019-02-01",
           "crowding": 0.39990519651661033,
           "covered_stocks": 3570,
           "top_group_stocks": 2616.0223784229997,
@@ -1660,6 +1818,7 @@
         },
         {
           "date": "2019-02-15",
+          "date_label": "2019-02-15",
           "crowding": 0.39608163841696803,
           "covered_stocks": 3574,
           "top_group_stocks": 4181.0991244158995,
@@ -1667,6 +1826,7 @@
         },
         {
           "date": "2019-02-22",
+          "date_label": "2019-02-22",
           "crowding": 0.38609126494148954,
           "covered_stocks": 3575,
           "top_group_stocks": 6218.9667813691,
@@ -1674,6 +1834,7 @@
         },
         {
           "date": "2019-03-01",
+          "date_label": "2019-03-01",
           "crowding": 0.3977241320682547,
           "covered_stocks": 3575,
           "top_group_stocks": 6641.3973703949,
@@ -1681,6 +1842,7 @@
         },
         {
           "date": "2019-03-08",
+          "date_label": "2019-03-08",
           "crowding": 0.35352259339176034,
           "covered_stocks": 3576,
           "top_group_stocks": 11836.053256276899,
@@ -1688,6 +1850,7 @@
         },
         {
           "date": "2019-03-15",
+          "date_label": "2019-03-15",
           "crowding": 0.3504527857989611,
           "covered_stocks": 3576,
           "top_group_stocks": 7502.2450935061,
@@ -1695,6 +1858,7 @@
         },
         {
           "date": "2019-03-22",
+          "date_label": "2019-03-22",
           "crowding": 0.32449184953679416,
           "covered_stocks": 3572,
           "top_group_stocks": 8016.1022381721,
@@ -1702,6 +1866,7 @@
         },
         {
           "date": "2019-03-29",
+          "date_label": "2019-03-29",
           "crowding": 0.3760880285398079,
           "covered_stocks": 3567,
           "top_group_stocks": 8360.0389983969,
@@ -1709,6 +1874,7 @@
         },
         {
           "date": "2019-04-04",
+          "date_label": "2019-04-04",
           "crowding": 0.3370627162792199,
           "covered_stocks": 3570,
           "top_group_stocks": 10044.5408244324,
@@ -1716,6 +1882,7 @@
         },
         {
           "date": "2019-04-12",
+          "date_label": "2019-04-12",
           "crowding": 0.3408804850374273,
           "covered_stocks": 3581,
           "top_group_stocks": 6571.4977568597,
@@ -1723,6 +1890,7 @@
         },
         {
           "date": "2019-04-19",
+          "date_label": "2019-04-19",
           "crowding": 0.36204557142603183,
           "covered_stocks": 3588,
           "top_group_stocks": 7201.9139485919995,
@@ -1730,6 +1898,7 @@
         },
         {
           "date": "2019-04-26",
+          "date_label": "2019-04-26",
           "crowding": 0.36440587254601503,
           "covered_stocks": 3578,
           "top_group_stocks": 6237.618801548199,
@@ -1737,6 +1906,7 @@
         },
         {
           "date": "2019-04-30",
+          "date_label": "2019-04-30",
           "crowding": 0.37730523067345273,
           "covered_stocks": 3554,
           "top_group_stocks": 4969.9027644173,
@@ -1744,6 +1914,7 @@
         },
         {
           "date": "2019-05-10",
+          "date_label": "2019-05-10",
           "crowding": 0.38414403683477677,
           "covered_stocks": 3586,
           "top_group_stocks": 6105.7536610061,
@@ -1751,6 +1922,7 @@
         },
         {
           "date": "2019-05-17",
+          "date_label": "2019-05-17",
           "crowding": 0.3675218268241349,
           "covered_stocks": 3591,
           "top_group_stocks": 5736.720722848901,
@@ -1758,6 +1930,7 @@
         },
         {
           "date": "2019-05-24",
+          "date_label": "2019-05-24",
           "crowding": 0.40696739269573406,
           "covered_stocks": 3597,
           "top_group_stocks": 3808.4822046597997,
@@ -1765,6 +1938,7 @@
         },
         {
           "date": "2019-05-31",
+          "date_label": "2019-05-31",
           "crowding": 0.39110714160353977,
           "covered_stocks": 3601,
           "top_group_stocks": 4374.4324266722,
@@ -1772,6 +1946,7 @@
         },
         {
           "date": "2019-06-06",
+          "date_label": "2019-06-06",
           "crowding": 0.38232057743666437,
           "covered_stocks": 3601,
           "top_group_stocks": 3866.3786085444995,
@@ -1779,6 +1954,7 @@
         },
         {
           "date": "2019-06-14",
+          "date_label": "2019-06-14",
           "crowding": 0.3707272686792281,
           "covered_stocks": 3599,
           "top_group_stocks": 4488.2472914125,
@@ -1786,6 +1962,7 @@
         },
         {
           "date": "2019-06-21",
+          "date_label": "2019-06-21",
           "crowding": 0.37373546289905335,
           "covered_stocks": 3604,
           "top_group_stocks": 6215.922377971599,
@@ -1793,6 +1970,7 @@
         },
         {
           "date": "2019-06-28",
+          "date_label": "2019-06-28",
           "crowding": 0.3671544863636904,
           "covered_stocks": 3614,
           "top_group_stocks": 4154.4219722329,
@@ -1800,6 +1978,7 @@
         },
         {
           "date": "2019-07-05",
+          "date_label": "2019-07-05",
           "crowding": 0.3844360355617471,
           "covered_stocks": 3614,
           "top_group_stocks": 3742.5864403786,
@@ -1807,6 +1986,7 @@
         },
         {
           "date": "2019-07-12",
+          "date_label": "2019-07-12",
           "crowding": 0.3981893230503202,
           "covered_stocks": 3611,
           "top_group_stocks": 3300.1945290553003,
@@ -1814,6 +1994,7 @@
         },
         {
           "date": "2019-07-19",
+          "date_label": "2019-07-19",
           "crowding": 0.4088125962879282,
           "covered_stocks": 3615,
           "top_group_stocks": 3499.4861082090997,
@@ -1821,6 +2002,7 @@
         },
         {
           "date": "2019-07-26",
+          "date_label": "2019-07-26",
           "crowding": 0.4191189051779689,
           "covered_stocks": 3644,
           "top_group_stocks": 3520.1827646205006,
@@ -1828,6 +2010,7 @@
         },
         {
           "date": "2019-08-02",
+          "date_label": "2019-08-02",
           "crowding": 0.4389409771079146,
           "covered_stocks": 3650,
           "top_group_stocks": 4549.001302407901,
@@ -1835,6 +2018,7 @@
         },
         {
           "date": "2019-08-09",
+          "date_label": "2019-08-09",
           "crowding": 0.4387945930847835,
           "covered_stocks": 3654,
           "top_group_stocks": 3806.955853091,
@@ -1842,6 +2026,7 @@
         },
         {
           "date": "2019-08-16",
+          "date_label": "2019-08-16",
           "crowding": 0.4279302490087541,
           "covered_stocks": 3656,
           "top_group_stocks": 4302.193399806701,
@@ -1849,6 +2034,7 @@
         },
         {
           "date": "2019-08-23",
+          "date_label": "2019-08-23",
           "crowding": 0.3990924893559786,
           "covered_stocks": 3653,
           "top_group_stocks": 4695.660699467199,
@@ -1856,6 +2042,7 @@
         },
         {
           "date": "2019-08-30",
+          "date_label": "2019-08-30",
           "crowding": 0.40347956371736804,
           "covered_stocks": 3662,
           "top_group_stocks": 5551.4563960308005,
@@ -1863,6 +2050,7 @@
         },
         {
           "date": "2019-09-06",
+          "date_label": "2019-09-06",
           "crowding": 0.40040149990133755,
           "covered_stocks": 3665,
           "top_group_stocks": 6344.2858828477,
@@ -1870,6 +2058,7 @@
         },
         {
           "date": "2019-09-12",
+          "date_label": "2019-09-12",
           "crowding": 0.37871114848159043,
           "covered_stocks": 3664,
           "top_group_stocks": 5375.0491075579,
@@ -1877,6 +2066,7 @@
         },
         {
           "date": "2019-09-20",
+          "date_label": "2019-09-20",
           "crowding": 0.38518532231078756,
           "covered_stocks": 3667,
           "top_group_stocks": 5471.556819009599,
@@ -1884,6 +2074,7 @@
         },
         {
           "date": "2019-09-27",
+          "date_label": "2019-09-27",
           "crowding": 0.3929463049496046,
           "covered_stocks": 3666,
           "top_group_stocks": 3979.4016808971996,
@@ -1891,6 +2082,7 @@
         },
         {
           "date": "2019-09-30",
+          "date_label": "2019-09-30",
           "crowding": 0.4026391014557982,
           "covered_stocks": 3672,
           "top_group_stocks": 3526.8082026672996,
@@ -1898,6 +2090,7 @@
         },
         {
           "date": "2019-10-11",
+          "date_label": "2019-10-11",
           "crowding": 0.40744666918407324,
           "covered_stocks": 3671,
           "top_group_stocks": 4568.1816140613,
@@ -1905,6 +2098,7 @@
         },
         {
           "date": "2019-10-18",
+          "date_label": "2019-10-18",
           "crowding": 0.37371084799036974,
           "covered_stocks": 3675,
           "top_group_stocks": 4159.672465061701,
@@ -1912,6 +2106,7 @@
         },
         {
           "date": "2019-10-25",
+          "date_label": "2019-10-25",
           "crowding": 0.42292498474589896,
           "covered_stocks": 3678,
           "top_group_stocks": 4058.9216954077,
@@ -1919,6 +2114,7 @@
         },
         {
           "date": "2019-11-01",
+          "date_label": "2019-11-01",
           "crowding": 0.43344531175680767,
           "covered_stocks": 3685,
           "top_group_stocks": 4349.5167547908995,
@@ -1926,6 +2122,7 @@
         },
         {
           "date": "2019-11-08",
+          "date_label": "2019-11-08",
           "crowding": 0.4110706308404993,
           "covered_stocks": 3701,
           "top_group_stocks": 4495.912453689501,
@@ -1933,6 +2130,7 @@
         },
         {
           "date": "2019-11-15",
+          "date_label": "2019-11-15",
           "crowding": 0.41763759415544743,
           "covered_stocks": 3705,
           "top_group_stocks": 4011.8632964114004,
@@ -1940,6 +2138,7 @@
         },
         {
           "date": "2019-11-22",
+          "date_label": "2019-11-22",
           "crowding": 0.4282335931508963,
           "covered_stocks": 3714,
           "top_group_stocks": 4712.0691455298,
@@ -1947,6 +2146,7 @@
         },
         {
           "date": "2019-11-29",
+          "date_label": "2019-11-29",
           "crowding": 0.44901953291222535,
           "covered_stocks": 3715,
           "top_group_stocks": 3416.1617145327,
@@ -1954,6 +2154,7 @@
         },
         {
           "date": "2019-12-06",
+          "date_label": "2019-12-06",
           "crowding": 0.42085293627430287,
           "covered_stocks": 3721,
           "top_group_stocks": 4100.2807311067,
@@ -1961,6 +2162,7 @@
         },
         {
           "date": "2019-12-13",
+          "date_label": "2019-12-13",
           "crowding": 0.4318856695321297,
           "covered_stocks": 3729,
           "top_group_stocks": 5656.402401813802,
@@ -1968,6 +2170,7 @@
         },
         {
           "date": "2019-12-20",
+          "date_label": "2019-12-20",
           "crowding": 0.37470403700551363,
           "covered_stocks": 3732,
           "top_group_stocks": 5704.6956649262,
@@ -1975,6 +2178,7 @@
         },
         {
           "date": "2019-12-27",
+          "date_label": "2019-12-27",
           "crowding": 0.3879979609907908,
           "covered_stocks": 3739,
           "top_group_stocks": 6319.8127403935,
@@ -1982,6 +2186,7 @@
         },
         {
           "date": "2020-01-03",
+          "date_label": "2020-01-03",
           "crowding": 0.3739271028078498,
           "covered_stocks": 3742,
           "top_group_stocks": 6953.7103038141,
@@ -1989,6 +2194,7 @@
         },
         {
           "date": "2020-01-10",
+          "date_label": "2020-01-10",
           "crowding": 0.35993234179482503,
           "covered_stocks": 3741,
           "top_group_stocks": 6401.1857984117005,
@@ -1996,6 +2202,7 @@
         },
         {
           "date": "2020-01-17",
+          "date_label": "2020-01-17",
           "crowding": 0.39138757500692095,
           "covered_stocks": 3749,
           "top_group_stocks": 6073.306570989299,
@@ -2003,6 +2210,7 @@
         },
         {
           "date": "2020-01-23",
+          "date_label": "2020-01-23",
           "crowding": 0.4011933500949308,
           "covered_stocks": 3761,
           "top_group_stocks": 8087.3902795474,
@@ -2010,6 +2218,7 @@
         },
         {
           "date": "2020-02-07",
+          "date_label": "2020-02-07",
           "crowding": 0.4015726196109891,
           "covered_stocks": 3767,
           "top_group_stocks": 9294.337033714099,
@@ -2017,6 +2226,7 @@
         },
         {
           "date": "2020-02-14",
+          "date_label": "2020-02-14",
           "crowding": 0.4244256696216719,
           "covered_stocks": 3775,
           "top_group_stocks": 8129.0369299914,
@@ -2024,6 +2234,7 @@
         },
         {
           "date": "2020-02-21",
+          "date_label": "2020-02-21",
           "crowding": 0.39105074258389316,
           "covered_stocks": 3781,
           "top_group_stocks": 11709.5962609071,
@@ -2031,6 +2242,7 @@
         },
         {
           "date": "2020-02-28",
+          "date_label": "2020-02-28",
           "crowding": 0.3884326912761907,
           "covered_stocks": 3784,
           "top_group_stocks": 11292.8506834182,
@@ -2038,6 +2250,7 @@
         },
         {
           "date": "2020-03-06",
+          "date_label": "2020-03-06",
           "crowding": 0.35483530697425775,
           "covered_stocks": 3779,
           "top_group_stocks": 9574.5438660617,
@@ -2045,6 +2258,7 @@
         },
         {
           "date": "2020-03-13",
+          "date_label": "2020-03-13",
           "crowding": 0.3901459086350886,
           "covered_stocks": 3779,
           "top_group_stocks": 9665.116561589299,
@@ -2052,6 +2266,7 @@
         },
         {
           "date": "2020-03-20",
+          "date_label": "2020-03-20",
           "crowding": 0.40868577870104045,
           "covered_stocks": 3784,
           "top_group_stocks": 7168.7175468840005,
@@ -2059,6 +2274,7 @@
         },
         {
           "date": "2020-03-27",
+          "date_label": "2020-03-27",
           "crowding": 0.3909843633866729,
           "covered_stocks": 3791,
           "top_group_stocks": 6338.1645003294,
@@ -2066,6 +2282,7 @@
         },
         {
           "date": "2020-04-03",
+          "date_label": "2020-04-03",
           "crowding": 0.4135443679449438,
           "covered_stocks": 3793,
           "top_group_stocks": 5722.815197438201,
@@ -2073,6 +2290,7 @@
         },
         {
           "date": "2020-04-10",
+          "date_label": "2020-04-10",
           "crowding": 0.3695188738067064,
           "covered_stocks": 3793,
           "top_group_stocks": 6720.206464995,
@@ -2080,6 +2298,7 @@
         },
         {
           "date": "2020-04-17",
+          "date_label": "2020-04-17",
           "crowding": 0.4159969368784238,
           "covered_stocks": 3801,
           "top_group_stocks": 7402.805510213901,
@@ -2087,6 +2306,7 @@
         },
         {
           "date": "2020-04-24",
+          "date_label": "2020-04-24",
           "crowding": 0.36703906706153866,
           "covered_stocks": 3803,
           "top_group_stocks": 6251.5598350815,
@@ -2094,6 +2314,7 @@
         },
         {
           "date": "2020-04-30",
+          "date_label": "2020-04-30",
           "crowding": 0.40186966443292726,
           "covered_stocks": 3772,
           "top_group_stocks": 6789.3078658324,
@@ -2101,6 +2322,7 @@
         },
         {
           "date": "2020-05-08",
+          "date_label": "2020-05-08",
           "crowding": 0.398392403629235,
           "covered_stocks": 3807,
           "top_group_stocks": 6873.931220074199,
@@ -2108,6 +2330,7 @@
         },
         {
           "date": "2020-05-15",
+          "date_label": "2020-05-15",
           "crowding": 0.4143730366145301,
           "covered_stocks": 3814,
           "top_group_stocks": 6268.8298777875,
@@ -2115,6 +2338,7 @@
         },
         {
           "date": "2020-05-22",
+          "date_label": "2020-05-22",
           "crowding": 0.38285469875711814,
           "covered_stocks": 3818,
           "top_group_stocks": 5925.9177223498,
@@ -2122,6 +2346,7 @@
         },
         {
           "date": "2020-05-29",
+          "date_label": "2020-05-29",
           "crowding": 0.3747481215834029,
           "covered_stocks": 3814,
           "top_group_stocks": 5715.9099371266,
@@ -2129,6 +2354,7 @@
         },
         {
           "date": "2020-06-05",
+          "date_label": "2020-06-05",
           "crowding": 0.3783105225761972,
           "covered_stocks": 3820,
           "top_group_stocks": 6314.7933755301,
@@ -2136,6 +2362,7 @@
         },
         {
           "date": "2020-06-12",
+          "date_label": "2020-06-12",
           "crowding": 0.3959914288432948,
           "covered_stocks": 3828,
           "top_group_stocks": 6991.533856945701,
@@ -2143,6 +2370,7 @@
         },
         {
           "date": "2020-06-19",
+          "date_label": "2020-06-19",
           "crowding": 0.41803177702729327,
           "covered_stocks": 3839,
           "top_group_stocks": 7787.013815953201,
@@ -2150,6 +2378,7 @@
         },
         {
           "date": "2020-06-24",
+          "date_label": "2020-06-24",
           "crowding": 0.41020202627211855,
           "covered_stocks": 3837,
           "top_group_stocks": 7286.7932749169995,
@@ -2157,6 +2386,7 @@
         },
         {
           "date": "2020-07-03",
+          "date_label": "2020-07-03",
           "crowding": 0.42344578190674576,
           "covered_stocks": 3851,
           "top_group_stocks": 11715.280561683101,
@@ -2164,6 +2394,7 @@
         },
         {
           "date": "2020-07-10",
+          "date_label": "2020-07-10",
           "crowding": 0.3808339297861231,
           "covered_stocks": 3859,
           "top_group_stocks": 16122.3338854823,
@@ -2171,6 +2402,7 @@
         },
         {
           "date": "2020-07-17",
+          "date_label": "2020-07-17",
           "crowding": 0.4124505717550357,
           "covered_stocks": 3870,
           "top_group_stocks": 11159.868036772099,
@@ -2178,6 +2410,7 @@
         },
         {
           "date": "2020-07-24",
+          "date_label": "2020-07-24",
           "crowding": 0.3902391439273139,
           "covered_stocks": 3883,
           "top_group_stocks": 13350.0101670571,
@@ -2185,6 +2418,7 @@
         },
         {
           "date": "2020-07-31",
+          "date_label": "2020-07-31",
           "crowding": 0.4015995271512006,
           "covered_stocks": 3895,
           "top_group_stocks": 11459.4207694827,
@@ -2192,6 +2426,7 @@
         },
         {
           "date": "2020-08-07",
+          "date_label": "2020-08-07",
           "crowding": 0.4051383697783439,
           "covered_stocks": 3902,
           "top_group_stocks": 12622.815406664702,
@@ -2199,6 +2434,7 @@
         },
         {
           "date": "2020-08-14",
+          "date_label": "2020-08-14",
           "crowding": 0.38660010606771056,
           "covered_stocks": 3912,
           "top_group_stocks": 8501.495429172901,
@@ -2206,6 +2442,7 @@
         },
         {
           "date": "2020-08-21",
+          "date_label": "2020-08-21",
           "crowding": 0.37393989418611884,
           "covered_stocks": 3924,
           "top_group_stocks": 8443.367161722601,
@@ -2213,6 +2450,7 @@
         },
         {
           "date": "2020-08-28",
+          "date_label": "2020-08-28",
           "crowding": 0.38051468722332116,
           "covered_stocks": 3949,
           "top_group_stocks": 9479.0446511273,
@@ -2220,6 +2458,7 @@
         },
         {
           "date": "2020-09-04",
+          "date_label": "2020-09-04",
           "crowding": 0.35609888061606004,
           "covered_stocks": 3959,
           "top_group_stocks": 8386.6976254157,
@@ -2227,6 +2466,7 @@
         },
         {
           "date": "2020-09-11",
+          "date_label": "2020-09-11",
           "crowding": 0.36597727837212424,
           "covered_stocks": 3967,
           "top_group_stocks": 6846.4574092740995,
@@ -2234,6 +2474,7 @@
         },
         {
           "date": "2020-09-18",
+          "date_label": "2020-09-18",
           "crowding": 0.39881183754609245,
           "covered_stocks": 3986,
           "top_group_stocks": 8356.466269059101,
@@ -2241,6 +2482,7 @@
         },
         {
           "date": "2020-09-25",
+          "date_label": "2020-09-25",
           "crowding": 0.39097544866867484,
           "covered_stocks": 4004,
           "top_group_stocks": 5695.0595993666,
@@ -2248,6 +2490,7 @@
         },
         {
           "date": "2020-09-30",
+          "date_label": "2020-09-30",
           "crowding": 0.39285790743749754,
           "covered_stocks": 4016,
           "top_group_stocks": 5401.625002323301,
@@ -2255,6 +2498,7 @@
         },
         {
           "date": "2020-10-09",
+          "date_label": "2020-10-09",
           "crowding": 0.4033630764992357,
           "covered_stocks": 4019,
           "top_group_stocks": 7114.8701677223,
@@ -2262,6 +2506,7 @@
         },
         {
           "date": "2020-10-16",
+          "date_label": "2020-10-16",
           "crowding": 0.38791462080579164,
           "covered_stocks": 4025,
           "top_group_stocks": 7087.2271066849,
@@ -2269,6 +2514,7 @@
         },
         {
           "date": "2020-10-23",
+          "date_label": "2020-10-23",
           "crowding": 0.38300892427520394,
           "covered_stocks": 4036,
           "top_group_stocks": 6876.218915214199,
@@ -2276,6 +2522,7 @@
         },
         {
           "date": "2020-10-30",
+          "date_label": "2020-10-30",
           "crowding": 0.3952771755544975,
           "covered_stocks": 4045,
           "top_group_stocks": 8708.9697792406,
@@ -2283,6 +2530,7 @@
         },
         {
           "date": "2020-11-06",
+          "date_label": "2020-11-06",
           "crowding": 0.42837917520822555,
           "covered_stocks": 4051,
           "top_group_stocks": 8785.150448139098,
@@ -2290,6 +2538,7 @@
         },
         {
           "date": "2020-11-13",
+          "date_label": "2020-11-13",
           "crowding": 0.44229678781611,
           "covered_stocks": 4060,
           "top_group_stocks": 7271.51870345,
@@ -2297,6 +2546,7 @@
         },
         {
           "date": "2020-11-20",
+          "date_label": "2020-11-20",
           "crowding": 0.3937176178740284,
           "covered_stocks": 4066,
           "top_group_stocks": 7508.879452347,
@@ -2304,6 +2554,7 @@
         },
         {
           "date": "2020-11-27",
+          "date_label": "2020-11-27",
           "crowding": 0.4096235393699032,
           "covered_stocks": 4070,
           "top_group_stocks": 7254.9617227868,
@@ -2311,6 +2562,7 @@
         },
         {
           "date": "2020-12-04",
+          "date_label": "2020-12-04",
           "crowding": 0.4312578623392525,
           "covered_stocks": 4074,
           "top_group_stocks": 7486.5914297623995,
@@ -2318,6 +2570,7 @@
         },
         {
           "date": "2020-12-11",
+          "date_label": "2020-12-11",
           "crowding": 0.40287947560818177,
           "covered_stocks": 4084,
           "top_group_stocks": 8348.0549458653,
@@ -2325,6 +2578,7 @@
         },
         {
           "date": "2020-12-18",
+          "date_label": "2020-12-18",
           "crowding": 0.4406635915193659,
           "covered_stocks": 4096,
           "top_group_stocks": 7710.901641258401,
@@ -2332,6 +2586,7 @@
         },
         {
           "date": "2020-12-25",
+          "date_label": "2020-12-25",
           "crowding": 0.42790028035336447,
           "covered_stocks": 4105,
           "top_group_stocks": 7937.147760202901,
@@ -2339,6 +2594,7 @@
         },
         {
           "date": "2020-12-31",
+          "date_label": "2020-12-31",
           "crowding": 0.47033508277702407,
           "covered_stocks": 4118,
           "top_group_stocks": 9616.76932076,
@@ -2346,6 +2602,7 @@
         },
         {
           "date": "2021-01-08",
+          "date_label": "2021-01-08",
           "crowding": 0.49800114830594033,
           "covered_stocks": 4130,
           "top_group_stocks": 11321.649057209102,
@@ -2353,6 +2610,7 @@
         },
         {
           "date": "2021-01-15",
+          "date_label": "2021-01-15",
           "crowding": 0.5234232878393531,
           "covered_stocks": 4123,
           "top_group_stocks": 10363.8468109012,
@@ -2360,6 +2618,7 @@
         },
         {
           "date": "2021-01-22",
+          "date_label": "2021-01-22",
           "crowding": 0.49421246185150886,
           "covered_stocks": 4138,
           "top_group_stocks": 11136.5784510474,
@@ -2367,6 +2626,7 @@
         },
         {
           "date": "2021-01-29",
+          "date_label": "2021-01-29",
           "crowding": 0.49740713482684557,
           "covered_stocks": 4151,
           "top_group_stocks": 9520.4912216545,
@@ -2374,6 +2634,7 @@
         },
         {
           "date": "2021-02-05",
+          "date_label": "2021-02-05",
           "crowding": 0.5260196258130272,
           "covered_stocks": 4157,
           "top_group_stocks": 8909.8363220189,
@@ -2381,6 +2642,7 @@
         },
         {
           "date": "2021-02-10",
+          "date_label": "2021-02-10",
           "crowding": 0.553164899011212,
           "covered_stocks": 4174,
           "top_group_stocks": 8751.0406038368,
@@ -2388,6 +2650,7 @@
         },
         {
           "date": "2021-02-19",
+          "date_label": "2021-02-19",
           "crowding": 0.5043868505477738,
           "covered_stocks": 4173,
           "top_group_stocks": 10422.5298878266,
@@ -2395,6 +2658,7 @@
         },
         {
           "date": "2021-02-26",
+          "date_label": "2021-02-26",
           "crowding": 0.49853597708297287,
           "covered_stocks": 4178,
           "top_group_stocks": 9064.638206209702,
@@ -2402,6 +2666,7 @@
         },
         {
           "date": "2021-03-05",
+          "date_label": "2021-03-05",
           "crowding": 0.4632552462511698,
           "covered_stocks": 4182,
           "top_group_stocks": 8762.7102877768,
@@ -2409,6 +2674,7 @@
         },
         {
           "date": "2021-03-12",
+          "date_label": "2021-03-12",
           "crowding": 0.473649538935727,
           "covered_stocks": 4187,
           "top_group_stocks": 8167.9767126947,
@@ -2416,6 +2682,7 @@
         },
         {
           "date": "2021-03-19",
+          "date_label": "2021-03-19",
           "crowding": 0.4482038454659272,
           "covered_stocks": 4192,
           "top_group_stocks": 7719.620334150901,
@@ -2423,6 +2690,7 @@
         },
         {
           "date": "2021-03-26",
+          "date_label": "2021-03-26",
           "crowding": 0.45637250362931053,
           "covered_stocks": 4211,
           "top_group_stocks": 7478.3806852034995,
@@ -2430,6 +2698,7 @@
         },
         {
           "date": "2021-04-02",
+          "date_label": "2021-04-02",
           "crowding": 0.4393259876503082,
           "covered_stocks": 4221,
           "top_group_stocks": 7166.0337142671,
@@ -2437,6 +2706,7 @@
         },
         {
           "date": "2021-04-09",
+          "date_label": "2021-04-09",
           "crowding": 0.42430583773265884,
           "covered_stocks": 4233,
           "top_group_stocks": 6945.710919214301,
@@ -2444,6 +2714,7 @@
         },
         {
           "date": "2021-04-16",
+          "date_label": "2021-04-16",
           "crowding": 0.40450471393370796,
           "covered_stocks": 4245,
           "top_group_stocks": 6919.0291669698,
@@ -2451,6 +2722,7 @@
         },
         {
           "date": "2021-04-23",
+          "date_label": "2021-04-23",
           "crowding": 0.45350434180152366,
           "covered_stocks": 4252,
           "top_group_stocks": 7784.843368336499,
@@ -2458,6 +2730,7 @@
         },
         {
           "date": "2021-04-30",
+          "date_label": "2021-04-30",
           "crowding": 0.4651382613971755,
           "covered_stocks": 4240,
           "top_group_stocks": 8665.8427678998,
@@ -2465,6 +2738,7 @@
         },
         {
           "date": "2021-05-07",
+          "date_label": "2021-05-07",
           "crowding": 0.47068257716708756,
           "covered_stocks": 4266,
           "top_group_stocks": 8836.081601675902,
@@ -2472,6 +2746,7 @@
         },
         {
           "date": "2021-05-14",
+          "date_label": "2021-05-14",
           "crowding": 0.44502839098957225,
           "covered_stocks": 4281,
           "top_group_stocks": 9014.7698360775,
@@ -2479,6 +2754,7 @@
         },
         {
           "date": "2021-05-21",
+          "date_label": "2021-05-21",
           "crowding": 0.4666150014394268,
           "covered_stocks": 4296,
           "top_group_stocks": 8078.7004323453,
@@ -2486,6 +2762,7 @@
         },
         {
           "date": "2021-05-28",
+          "date_label": "2021-05-28",
           "crowding": 0.4515099421428886,
           "covered_stocks": 4310,
           "top_group_stocks": 10159.719809702201,
@@ -2493,6 +2770,7 @@
         },
         {
           "date": "2021-06-04",
+          "date_label": "2021-06-04",
           "crowding": 0.4416549625368557,
           "covered_stocks": 4320,
           "top_group_stocks": 9373.317271808399,
@@ -2500,6 +2778,7 @@
         },
         {
           "date": "2021-06-11",
+          "date_label": "2021-06-11",
           "crowding": 0.4440387818403457,
           "covered_stocks": 4332,
           "top_group_stocks": 11210.5199158825,
@@ -2507,6 +2786,7 @@
         },
         {
           "date": "2021-06-18",
+          "date_label": "2021-06-18",
           "crowding": 0.47311260622372475,
           "covered_stocks": 4336,
           "top_group_stocks": 10099.593888473499,
@@ -2514,6 +2794,7 @@
         },
         {
           "date": "2021-06-25",
+          "date_label": "2021-06-25",
           "crowding": 0.4651102975934041,
           "covered_stocks": 4349,
           "top_group_stocks": 10544.594901536,
@@ -2521,6 +2802,7 @@
         },
         {
           "date": "2021-07-02",
+          "date_label": "2021-07-02",
           "crowding": 0.4668510383316053,
           "covered_stocks": 4363,
           "top_group_stocks": 10026.9376515556,
@@ -2528,6 +2810,7 @@
         },
         {
           "date": "2021-07-09",
+          "date_label": "2021-07-09",
           "crowding": 0.469691738562741,
           "covered_stocks": 4380,
           "top_group_stocks": 11276.948587984101,
@@ -2535,6 +2818,7 @@
         },
         {
           "date": "2021-07-16",
+          "date_label": "2021-07-16",
           "crowding": 0.46821614551786866,
           "covered_stocks": 4384,
           "top_group_stocks": 11815.0956986249,
@@ -2542,6 +2826,7 @@
         },
         {
           "date": "2021-07-23",
+          "date_label": "2021-07-23",
           "crowding": 0.45014363881397507,
           "covered_stocks": 4393,
           "top_group_stocks": 13786.7177659502,
@@ -2549,6 +2834,7 @@
         },
         {
           "date": "2021-07-30",
+          "date_label": "2021-07-30",
           "crowding": 0.4698918323780092,
           "covered_stocks": 4407,
           "top_group_stocks": 13395.7594284737,
@@ -2556,6 +2842,7 @@
         },
         {
           "date": "2021-08-06",
+          "date_label": "2021-08-06",
           "crowding": 0.47243234642606613,
           "covered_stocks": 4422,
           "top_group_stocks": 12250.814177205899,
@@ -2563,6 +2850,7 @@
         },
         {
           "date": "2021-08-13",
+          "date_label": "2021-08-13",
           "crowding": 0.44686361300481403,
           "covered_stocks": 4434,
           "top_group_stocks": 12973.0481923574,
@@ -2570,6 +2858,7 @@
         },
         {
           "date": "2021-08-20",
+          "date_label": "2021-08-20",
           "crowding": 0.47846710737860965,
           "covered_stocks": 4445,
           "top_group_stocks": 12525.385259128101,
@@ -2577,6 +2866,7 @@
         },
         {
           "date": "2021-08-27",
+          "date_label": "2021-08-27",
           "crowding": 0.44131509358983806,
           "covered_stocks": 4451,
           "top_group_stocks": 13442.774330845601,
@@ -2584,6 +2874,7 @@
         },
         {
           "date": "2021-09-03",
+          "date_label": "2021-09-03",
           "crowding": 0.4393180571189287,
           "covered_stocks": 4449,
           "top_group_stocks": 15730.066679255899,
@@ -2591,6 +2882,7 @@
         },
         {
           "date": "2021-09-10",
+          "date_label": "2021-09-10",
           "crowding": 0.4368824737256521,
           "covered_stocks": 4463,
           "top_group_stocks": 15437.8659753553,
@@ -2598,6 +2890,7 @@
         },
         {
           "date": "2021-09-17",
+          "date_label": "2021-09-17",
           "crowding": 0.4365413736888035,
           "covered_stocks": 4474,
           "top_group_stocks": 13429.1105832548,
@@ -2605,6 +2898,7 @@
         },
         {
           "date": "2021-09-24",
+          "date_label": "2021-09-24",
           "crowding": 0.4298528897822944,
           "covered_stocks": 4472,
           "top_group_stocks": 12831.0160463883,
@@ -2612,6 +2906,7 @@
         },
         {
           "date": "2021-09-30",
+          "date_label": "2021-09-30",
           "crowding": 0.45723851729917425,
           "covered_stocks": 4481,
           "top_group_stocks": 9502.6881272221,
@@ -2619,6 +2914,7 @@
         },
         {
           "date": "2021-10-08",
+          "date_label": "2021-10-08",
           "crowding": 0.45072941886410406,
           "covered_stocks": 4483,
           "top_group_stocks": 10604.145650573699,
@@ -2626,6 +2922,7 @@
         },
         {
           "date": "2021-10-15",
+          "date_label": "2021-10-15",
           "crowding": 0.4557612957555365,
           "covered_stocks": 4491,
           "top_group_stocks": 9888.898742445597,
@@ -2633,6 +2930,7 @@
         },
         {
           "date": "2021-10-22",
+          "date_label": "2021-10-22",
           "crowding": 0.44757955905664687,
           "covered_stocks": 4505,
           "top_group_stocks": 10150.6918631275,
@@ -2640,6 +2938,7 @@
         },
         {
           "date": "2021-10-29",
+          "date_label": "2021-10-29",
           "crowding": 0.47277342279337353,
           "covered_stocks": 4521,
           "top_group_stocks": 11382.8750826994,
@@ -2647,6 +2946,7 @@
         },
         {
           "date": "2021-11-05",
+          "date_label": "2021-11-05",
           "crowding": 0.4235567325756592,
           "covered_stocks": 4526,
           "top_group_stocks": 11509.4184877052,
@@ -2654,6 +2954,7 @@
         },
         {
           "date": "2021-11-12",
+          "date_label": "2021-11-12",
           "crowding": 0.3854673674847383,
           "covered_stocks": 4530,
           "top_group_stocks": 10991.315503007,
@@ -2661,6 +2962,7 @@
         },
         {
           "date": "2021-11-19",
+          "date_label": "2021-11-19",
           "crowding": 0.39229399763565653,
           "covered_stocks": 4544,
           "top_group_stocks": 11131.4007694557,
@@ -2668,6 +2970,7 @@
         },
         {
           "date": "2021-11-26",
+          "date_label": "2021-11-26",
           "crowding": 0.38117257780482994,
           "covered_stocks": 4549,
           "top_group_stocks": 11015.396279048899,
@@ -2675,6 +2978,7 @@
         },
         {
           "date": "2021-12-03",
+          "date_label": "2021-12-03",
           "crowding": 0.39963949447409713,
           "covered_stocks": 4554,
           "top_group_stocks": 11352.323836953901,
@@ -2682,6 +2986,7 @@
         },
         {
           "date": "2021-12-10",
+          "date_label": "2021-12-10",
           "crowding": 0.4145270674240776,
           "covered_stocks": 4567,
           "top_group_stocks": 12354.1762515167,
@@ -2689,6 +2994,7 @@
         },
         {
           "date": "2021-12-17",
+          "date_label": "2021-12-17",
           "crowding": 0.36914101841486313,
           "covered_stocks": 4570,
           "top_group_stocks": 11593.7500334327,
@@ -2696,6 +3002,7 @@
         },
         {
           "date": "2021-12-24",
+          "date_label": "2021-12-24",
           "crowding": 0.37988343362711713,
           "covered_stocks": 4586,
           "top_group_stocks": 11317.131956280999,
@@ -2703,6 +3010,7 @@
         },
         {
           "date": "2021-12-31",
+          "date_label": "2021-12-31",
           "crowding": 0.37117843850070104,
           "covered_stocks": 4592,
           "top_group_stocks": 10602.744958116598,
@@ -2710,6 +3018,7 @@
         },
         {
           "date": "2022-01-07",
+          "date_label": "2022-01-07",
           "crowding": 0.3555960398819889,
           "covered_stocks": 4599,
           "top_group_stocks": 12072.2189369287,
@@ -2717,6 +3026,7 @@
         },
         {
           "date": "2022-01-14",
+          "date_label": "2022-01-14",
           "crowding": 0.3515796080627697,
           "covered_stocks": 4604,
           "top_group_stocks": 11069.1373874707,
@@ -2724,6 +3034,7 @@
         },
         {
           "date": "2022-01-21",
+          "date_label": "2022-01-21",
           "crowding": 0.38051784773053254,
           "covered_stocks": 4610,
           "top_group_stocks": 9843.3888006493,
@@ -2731,6 +3042,7 @@
         },
         {
           "date": "2022-01-28",
+          "date_label": "2022-01-28",
           "crowding": 0.4068502292218632,
           "covered_stocks": 4625,
           "top_group_stocks": 8186.698508732,
@@ -2738,6 +3050,7 @@
         },
         {
           "date": "2022-02-11",
+          "date_label": "2022-02-11",
           "crowding": 0.40800146056356634,
           "covered_stocks": 4629,
           "top_group_stocks": 9913.9884421556,
@@ -2745,6 +3058,7 @@
         },
         {
           "date": "2022-02-18",
+          "date_label": "2022-02-18",
           "crowding": 0.3852950612019999,
           "covered_stocks": 4637,
           "top_group_stocks": 8074.037382574299,
@@ -2752,6 +3066,7 @@
         },
         {
           "date": "2022-02-25",
+          "date_label": "2022-02-25",
           "crowding": 0.38876600913117454,
           "covered_stocks": 4640,
           "top_group_stocks": 10185.7852673102,
@@ -2759,6 +3074,7 @@
         },
         {
           "date": "2022-03-04",
+          "date_label": "2022-03-04",
           "crowding": 0.37889837690475286,
           "covered_stocks": 4642,
           "top_group_stocks": 10061.394873038,
@@ -2766,6 +3082,7 @@
         },
         {
           "date": "2022-03-11",
+          "date_label": "2022-03-11",
           "crowding": 0.39836012310353064,
           "covered_stocks": 4645,
           "top_group_stocks": 10500.2948461887,
@@ -2773,6 +3090,7 @@
         },
         {
           "date": "2022-03-18",
+          "date_label": "2022-03-18",
           "crowding": 0.408137708058689,
           "covered_stocks": 4659,
           "top_group_stocks": 9902.4986041761,
@@ -2780,6 +3098,7 @@
         },
         {
           "date": "2022-03-25",
+          "date_label": "2022-03-25",
           "crowding": 0.39730057993375856,
           "covered_stocks": 4668,
           "top_group_stocks": 9181.610569158502,
@@ -2787,6 +3106,7 @@
         },
         {
           "date": "2022-04-01",
+          "date_label": "2022-04-01",
           "crowding": 0.394250965072559,
           "covered_stocks": 4670,
           "top_group_stocks": 9352.9931468088,
@@ -2794,6 +3114,7 @@
         },
         {
           "date": "2022-04-08",
+          "date_label": "2022-04-08",
           "crowding": 0.37877067832344224,
           "covered_stocks": 4671,
           "top_group_stocks": 9262.301084617699,
@@ -2801,6 +3122,7 @@
         },
         {
           "date": "2022-04-15",
+          "date_label": "2022-04-15",
           "crowding": 0.39841930363160266,
           "covered_stocks": 4678,
           "top_group_stocks": 9108.98530266,
@@ -2808,6 +3130,7 @@
         },
         {
           "date": "2022-04-22",
+          "date_label": "2022-04-22",
           "crowding": 0.3717095196980142,
           "covered_stocks": 4692,
           "top_group_stocks": 7530.986978909099,
@@ -2815,6 +3138,7 @@
         },
         {
           "date": "2022-04-29",
+          "date_label": "2022-04-29",
           "crowding": 0.41525468345000666,
           "covered_stocks": 4680,
           "top_group_stocks": 9649.094312516501,
@@ -2822,6 +3146,7 @@
         },
         {
           "date": "2022-05-06",
+          "date_label": "2022-05-06",
           "crowding": 0.3941924867679737,
           "covered_stocks": 4662,
           "top_group_stocks": 7595.9647167516,
@@ -2829,6 +3154,7 @@
         },
         {
           "date": "2022-05-13",
+          "date_label": "2022-05-13",
           "crowding": 0.3973114657842172,
           "covered_stocks": 4667,
           "top_group_stocks": 7569.965848299399,
@@ -2836,6 +3162,7 @@
         },
         {
           "date": "2022-05-20",
+          "date_label": "2022-05-20",
           "crowding": 0.41555500569401216,
           "covered_stocks": 4670,
           "top_group_stocks": 9204.4163994009,
@@ -2843,6 +3170,7 @@
         },
         {
           "date": "2022-05-27",
+          "date_label": "2022-05-27",
           "crowding": 0.38785669478909474,
           "covered_stocks": 4679,
           "top_group_stocks": 8156.5887117348,
@@ -2850,6 +3178,7 @@
         },
         {
           "date": "2022-06-02",
+          "date_label": "2022-06-02",
           "crowding": 0.3689642424873062,
           "covered_stocks": 4689,
           "top_group_stocks": 8912.8388755242,
@@ -2857,6 +3186,7 @@
         },
         {
           "date": "2022-06-10",
+          "date_label": "2022-06-10",
           "crowding": 0.4089067515396825,
           "covered_stocks": 4713,
           "top_group_stocks": 10502.8895873719,
@@ -2864,6 +3194,7 @@
         },
         {
           "date": "2022-06-17",
+          "date_label": "2022-06-17",
           "crowding": 0.41723064229178813,
           "covered_stocks": 4710,
           "top_group_stocks": 10930.428690229399,
@@ -2871,6 +3202,7 @@
         },
         {
           "date": "2022-06-24",
+          "date_label": "2022-06-24",
           "crowding": 0.4001556523691266,
           "covered_stocks": 4711,
           "top_group_stocks": 11601.686045856,
@@ -2878,6 +3210,7 @@
         },
         {
           "date": "2022-07-01",
+          "date_label": "2022-07-01",
           "crowding": 0.4138239365057944,
           "covered_stocks": 4713,
           "top_group_stocks": 10511.506048613,
@@ -2885,6 +3218,7 @@
         },
         {
           "date": "2022-07-08",
+          "date_label": "2022-07-08",
           "crowding": 0.42032053729215296,
           "covered_stocks": 4719,
           "top_group_stocks": 10292.307936093,
@@ -2892,6 +3226,7 @@
         },
         {
           "date": "2022-07-15",
+          "date_label": "2022-07-15",
           "crowding": 0.3966354392921056,
           "covered_stocks": 4725,
           "top_group_stocks": 10877.169152802098,
@@ -2899,6 +3234,7 @@
         },
         {
           "date": "2022-07-22",
+          "date_label": "2022-07-22",
           "crowding": 0.37264459792983146,
           "covered_stocks": 4728,
           "top_group_stocks": 9412.3125826669,
@@ -2906,6 +3242,7 @@
         },
         {
           "date": "2022-07-29",
+          "date_label": "2022-07-29",
           "crowding": 0.36563071829131444,
           "covered_stocks": 4734,
           "top_group_stocks": 10144.288940300201,
@@ -2913,6 +3250,7 @@
         },
         {
           "date": "2022-08-05",
+          "date_label": "2022-08-05",
           "crowding": 0.3768461835395481,
           "covered_stocks": 4746,
           "top_group_stocks": 9953.193374112201,
@@ -2920,6 +3258,7 @@
         },
         {
           "date": "2022-08-12",
+          "date_label": "2022-08-12",
           "crowding": 0.34943131078499207,
           "covered_stocks": 4754,
           "top_group_stocks": 9993.4651933841,
@@ -2927,6 +3266,7 @@
         },
         {
           "date": "2022-08-19",
+          "date_label": "2022-08-19",
           "crowding": 0.3651116726434907,
           "covered_stocks": 4769,
           "top_group_stocks": 11198.7161284883,
@@ -2934,6 +3274,7 @@
         },
         {
           "date": "2022-08-26",
+          "date_label": "2022-08-26",
           "crowding": 0.3751747845212294,
           "covered_stocks": 4776,
           "top_group_stocks": 9289.3212969042,
@@ -2941,6 +3282,7 @@
         },
         {
           "date": "2022-09-02",
+          "date_label": "2022-09-02",
           "crowding": 0.353852552487595,
           "covered_stocks": 4789,
           "top_group_stocks": 7464.8032808575,
@@ -2948,6 +3290,7 @@
         },
         {
           "date": "2022-09-09",
+          "date_label": "2022-09-09",
           "crowding": 0.3892265084636367,
           "covered_stocks": 4798,
           "top_group_stocks": 7793.7138329218005,
@@ -2955,6 +3298,7 @@
         },
         {
           "date": "2022-09-16",
+          "date_label": "2022-09-16",
           "crowding": 0.37346548666696167,
           "covered_stocks": 4798,
           "top_group_stocks": 7989.1994917868005,
@@ -2962,6 +3306,7 @@
         },
         {
           "date": "2022-09-23",
+          "date_label": "2022-09-23",
           "crowding": 0.36544188087760054,
           "covered_stocks": 4812,
           "top_group_stocks": 6671.6665653322,
@@ -2969,6 +3314,7 @@
         },
         {
           "date": "2022-09-30",
+          "date_label": "2022-09-30",
           "crowding": 0.38748524722113237,
           "covered_stocks": 4823,
           "top_group_stocks": 5606.538131500301,
@@ -2976,6 +3322,7 @@
         },
         {
           "date": "2022-10-14",
+          "date_label": "2022-10-14",
           "crowding": 0.39347911147487913,
           "covered_stocks": 4832,
           "top_group_stocks": 8605.5611554101,
@@ -2983,6 +3330,7 @@
         },
         {
           "date": "2022-10-21",
+          "date_label": "2022-10-21",
           "crowding": 0.3626112881774746,
           "covered_stocks": 4838,
           "top_group_stocks": 7121.7572049353,
@@ -2990,6 +3338,7 @@
         },
         {
           "date": "2022-10-28",
+          "date_label": "2022-10-28",
           "crowding": 0.3560282128197231,
           "covered_stocks": 4845,
           "top_group_stocks": 9094.031666243101,
@@ -2997,6 +3346,7 @@
         },
         {
           "date": "2022-11-04",
+          "date_label": "2022-11-04",
           "crowding": 0.3858840179242559,
           "covered_stocks": 4851,
           "top_group_stocks": 10804.0772491092,
@@ -3004,6 +3354,7 @@
         },
         {
           "date": "2022-11-11",
+          "date_label": "2022-11-11",
           "crowding": 0.3771164867992244,
           "covered_stocks": 4860,
           "top_group_stocks": 12228.6868696261,
@@ -3011,6 +3362,7 @@
         },
         {
           "date": "2022-11-18",
+          "date_label": "2022-11-18",
           "crowding": 0.3535664122740392,
           "covered_stocks": 4863,
           "top_group_stocks": 9786.004071572701,
@@ -3018,6 +3370,7 @@
         },
         {
           "date": "2022-11-25",
+          "date_label": "2022-11-25",
           "crowding": 0.3680856489655693,
           "covered_stocks": 4873,
           "top_group_stocks": 7397.956730010999,
@@ -3025,6 +3378,7 @@
         },
         {
           "date": "2022-12-02",
+          "date_label": "2022-12-02",
           "crowding": 0.35176258580792924,
           "covered_stocks": 4878,
           "top_group_stocks": 8643.3181899596,
@@ -3032,6 +3386,7 @@
         },
         {
           "date": "2022-12-09",
+          "date_label": "2022-12-09",
           "crowding": 0.3706210628267373,
           "covered_stocks": 4879,
           "top_group_stocks": 10089.6112796146,
@@ -3039,6 +3394,7 @@
         },
         {
           "date": "2022-12-16",
+          "date_label": "2022-12-16",
           "crowding": 0.35844832447815445,
           "covered_stocks": 4888,
           "top_group_stocks": 7612.0524986125,
@@ -3046,6 +3402,7 @@
         },
         {
           "date": "2022-12-23",
+          "date_label": "2022-12-23",
           "crowding": 0.3932614521757698,
           "covered_stocks": 4891,
           "top_group_stocks": 5851.2441753107,
@@ -3053,6 +3410,7 @@
         },
         {
           "date": "2022-12-30",
+          "date_label": "2022-12-30",
           "crowding": 0.3816966684224571,
           "covered_stocks": 4899,
           "top_group_stocks": 6039.315958910201,
@@ -3060,6 +3418,7 @@
         },
         {
           "date": "2023-01-06",
+          "date_label": "2023-01-06",
           "crowding": 0.3867855215989926,
           "covered_stocks": 4902,
           "top_group_stocks": 8379.1090368969,
@@ -3067,6 +3426,7 @@
         },
         {
           "date": "2023-01-13",
+          "date_label": "2023-01-13",
           "crowding": 0.40460254579522115,
           "covered_stocks": 4900,
           "top_group_stocks": 7021.666755823599,
@@ -3074,6 +3434,7 @@
         },
         {
           "date": "2023-01-20",
+          "date_label": "2023-01-20",
           "crowding": 0.39237897905507835,
           "covered_stocks": 4901,
           "top_group_stocks": 7488.587403461899,
@@ -3081,6 +3442,7 @@
         },
         {
           "date": "2023-02-03",
+          "date_label": "2023-02-03",
           "crowding": 0.34437019379244194,
           "covered_stocks": 4901,
           "top_group_stocks": 9144.799998889499,
@@ -3088,6 +3450,7 @@
         },
         {
           "date": "2023-02-10",
+          "date_label": "2023-02-10",
           "crowding": 0.33708883042213766,
           "covered_stocks": 4908,
           "top_group_stocks": 8930.7689458526,
@@ -3095,6 +3458,7 @@
         },
         {
           "date": "2023-02-17",
+          "date_label": "2023-02-17",
           "crowding": 0.36435694471592966,
           "covered_stocks": 4915,
           "top_group_stocks": 9165.5305431295,
@@ -3102,6 +3466,7 @@
         },
         {
           "date": "2023-02-24",
+          "date_label": "2023-02-24",
           "crowding": 0.38348111795812934,
           "covered_stocks": 4917,
           "top_group_stocks": 7277.180941788899,
@@ -3109,6 +3474,7 @@
         },
         {
           "date": "2023-03-03",
+          "date_label": "2023-03-03",
           "crowding": 0.3818208713537166,
           "covered_stocks": 4923,
           "top_group_stocks": 8715.6476454372,
@@ -3116,6 +3482,7 @@
         },
         {
           "date": "2023-03-10",
+          "date_label": "2023-03-10",
           "crowding": 0.3777758093131058,
           "covered_stocks": 4927,
           "top_group_stocks": 8146.930097261599,
@@ -3123,6 +3490,7 @@
         },
         {
           "date": "2023-03-17",
+          "date_label": "2023-03-17",
           "crowding": 0.4138005724380652,
           "covered_stocks": 4933,
           "top_group_stocks": 9745.4413646421,
@@ -3130,6 +3498,7 @@
         },
         {
           "date": "2023-03-24",
+          "date_label": "2023-03-24",
           "crowding": 0.41812006117820505,
           "covered_stocks": 4938,
           "top_group_stocks": 10772.5245749141,
@@ -3137,6 +3506,7 @@
         },
         {
           "date": "2023-03-31",
+          "date_label": "2023-03-31",
           "crowding": 0.4333333054031818,
           "covered_stocks": 4943,
           "top_group_stocks": 9541.1209386262,
@@ -3144,6 +3514,7 @@
         },
         {
           "date": "2023-04-07",
+          "date_label": "2023-04-07",
           "crowding": 0.4293701025494135,
           "covered_stocks": 4947,
           "top_group_stocks": 10553.0860478371,
@@ -3151,6 +3522,7 @@
         },
         {
           "date": "2023-04-14",
+          "date_label": "2023-04-14",
           "crowding": 0.41945944286974346,
           "covered_stocks": 4956,
           "top_group_stocks": 11156.133098628701,
@@ -3158,6 +3530,7 @@
         },
         {
           "date": "2023-04-21",
+          "date_label": "2023-04-21",
           "crowding": 0.42525264965925536,
           "covered_stocks": 4965,
           "top_group_stocks": 12191.092241068101,
@@ -3165,6 +3538,7 @@
         },
         {
           "date": "2023-04-28",
+          "date_label": "2023-04-28",
           "crowding": 0.4214049461942749,
           "covered_stocks": 4940,
           "top_group_stocks": 11181.033926022801,
@@ -3172,6 +3546,7 @@
         },
         {
           "date": "2023-05-05",
+          "date_label": "2023-05-05",
           "crowding": 0.4309248178458881,
           "covered_stocks": 4944,
           "top_group_stocks": 10727.0345380905,
@@ -3179,6 +3554,7 @@
         },
         {
           "date": "2023-05-12",
+          "date_label": "2023-05-12",
           "crowding": 0.41759213823305813,
           "covered_stocks": 4949,
           "top_group_stocks": 8487.7201139593,
@@ -3186,6 +3562,7 @@
         },
         {
           "date": "2023-05-19",
+          "date_label": "2023-05-19",
           "crowding": 0.41465982058848494,
           "covered_stocks": 4962,
           "top_group_stocks": 8483.7740754311,
@@ -3193,6 +3570,7 @@
         },
         {
           "date": "2023-05-26",
+          "date_label": "2023-05-26",
           "crowding": 0.42065216309888104,
           "covered_stocks": 4966,
           "top_group_stocks": 8209.6836114415,
@@ -3200,6 +3578,7 @@
         },
         {
           "date": "2023-06-02",
+          "date_label": "2023-06-02",
           "crowding": 0.40660730824074104,
           "covered_stocks": 4969,
           "top_group_stocks": 9408.9531220277,
@@ -3207,6 +3586,7 @@
         },
         {
           "date": "2023-06-09",
+          "date_label": "2023-06-09",
           "crowding": 0.4189223433104939,
           "covered_stocks": 4975,
           "top_group_stocks": 9898.7312639806,
@@ -3214,6 +3594,7 @@
         },
         {
           "date": "2023-06-16",
+          "date_label": "2023-06-16",
           "crowding": 0.42865973549590813,
           "covered_stocks": 4976,
           "top_group_stocks": 10688.6239904418,
@@ -3221,6 +3602,7 @@
         },
         {
           "date": "2023-06-21",
+          "date_label": "2023-06-21",
           "crowding": 0.43567647713741053,
           "covered_stocks": 4988,
           "top_group_stocks": 10223.9675901401,
@@ -3228,6 +3610,7 @@
         },
         {
           "date": "2023-06-30",
+          "date_label": "2023-06-30",
           "crowding": 0.3859264109760465,
           "covered_stocks": 5001,
           "top_group_stocks": 9198.9770937614,
@@ -3235,6 +3618,7 @@
         },
         {
           "date": "2023-07-07",
+          "date_label": "2023-07-07",
           "crowding": 0.39887547469573215,
           "covered_stocks": 5004,
           "top_group_stocks": 8001.6655402861,
@@ -3242,6 +3626,7 @@
         },
         {
           "date": "2023-07-14",
+          "date_label": "2023-07-14",
           "crowding": 0.410895488583902,
           "covered_stocks": 5005,
           "top_group_stocks": 9235.0200173864,
@@ -3249,6 +3634,7 @@
         },
         {
           "date": "2023-07-21",
+          "date_label": "2023-07-21",
           "crowding": 0.37747482866152615,
           "covered_stocks": 5014,
           "top_group_stocks": 7113.2337316159,
@@ -3256,6 +3642,7 @@
         },
         {
           "date": "2023-07-28",
+          "date_label": "2023-07-28",
           "crowding": 0.42667594693433136,
           "covered_stocks": 5023,
           "top_group_stocks": 9528.0105267225,
@@ -3263,6 +3650,7 @@
         },
         {
           "date": "2023-08-04",
+          "date_label": "2023-08-04",
           "crowding": 0.46276121185059116,
           "covered_stocks": 5028,
           "top_group_stocks": 10502.0438693185,
@@ -3270,6 +3658,7 @@
         },
         {
           "date": "2023-08-11",
+          "date_label": "2023-08-11",
           "crowding": 0.39980997442105815,
           "covered_stocks": 5036,
           "top_group_stocks": 7638.097845468999,
@@ -3277,6 +3666,7 @@
         },
         {
           "date": "2023-08-18",
+          "date_label": "2023-08-18",
           "crowding": 0.3755249357006458,
           "covered_stocks": 5042,
           "top_group_stocks": 7450.747086907199,
@@ -3284,6 +3674,7 @@
         },
         {
           "date": "2023-08-25",
+          "date_label": "2023-08-25",
           "crowding": 0.37575127721457235,
           "covered_stocks": 5047,
           "top_group_stocks": 7666.776385569601,
@@ -3291,6 +3682,7 @@
         },
         {
           "date": "2023-09-01",
+          "date_label": "2023-09-01",
           "crowding": 0.3734038373952275,
           "covered_stocks": 5049,
           "top_group_stocks": 7455.3919767049,
@@ -3298,6 +3690,7 @@
         },
         {
           "date": "2023-09-08",
+          "date_label": "2023-09-08",
           "crowding": 0.3848955406355472,
           "covered_stocks": 5053,
           "top_group_stocks": 6820.8408471502,
@@ -3305,6 +3698,7 @@
         },
         {
           "date": "2023-09-15",
+          "date_label": "2023-09-15",
           "crowding": 0.38285324985508457,
           "covered_stocks": 5056,
           "top_group_stocks": 7217.4427677164,
@@ -3312,6 +3706,7 @@
         },
         {
           "date": "2023-09-22",
+          "date_label": "2023-09-22",
           "crowding": 0.42363970823838637,
           "covered_stocks": 5060,
           "top_group_stocks": 7655.8388783766995,
@@ -3319,6 +3714,7 @@
         },
         {
           "date": "2023-09-28",
+          "date_label": "2023-09-28",
           "crowding": 0.3970958626261775,
           "covered_stocks": 5060,
           "top_group_stocks": 7173.0672280221,
@@ -3326,6 +3722,7 @@
         },
         {
           "date": "2023-10-13",
+          "date_label": "2023-10-13",
           "crowding": 0.416428335023542,
           "covered_stocks": 5063,
           "top_group_stocks": 8090.5289756931,
@@ -3333,6 +3730,7 @@
         },
         {
           "date": "2023-10-20",
+          "date_label": "2023-10-20",
           "crowding": 0.4300248471021977,
           "covered_stocks": 5068,
           "top_group_stocks": 7318.5609216087,
@@ -3340,6 +3738,7 @@
         },
         {
           "date": "2023-10-27",
+          "date_label": "2023-10-27",
           "crowding": 0.38141750756453946,
           "covered_stocks": 5070,
           "top_group_stocks": 9646.9746786159,
@@ -3347,6 +3746,7 @@
         },
         {
           "date": "2023-11-03",
+          "date_label": "2023-11-03",
           "crowding": 0.37365779696692253,
           "covered_stocks": 5075,
           "top_group_stocks": 8097.3042121694,
@@ -3354,6 +3754,7 @@
         },
         {
           "date": "2023-11-10",
+          "date_label": "2023-11-10",
           "crowding": 0.4078412291514157,
           "covered_stocks": 5073,
           "top_group_stocks": 8277.472035922,
@@ -3361,6 +3762,7 @@
         },
         {
           "date": "2023-11-17",
+          "date_label": "2023-11-17",
           "crowding": 0.37618787679455057,
           "covered_stocks": 5074,
           "top_group_stocks": 8268.5109004963,
@@ -3368,6 +3770,7 @@
         },
         {
           "date": "2023-11-24",
+          "date_label": "2023-11-24",
           "crowding": 0.36090869539476655,
           "covered_stocks": 5078,
           "top_group_stocks": 8134.6726357546,
@@ -3375,6 +3778,7 @@
         },
         {
           "date": "2023-12-01",
+          "date_label": "2023-12-01",
           "crowding": 0.3810960324693431,
           "covered_stocks": 5082,
           "top_group_stocks": 8342.4295115577,
@@ -3382,6 +3786,7 @@
         },
         {
           "date": "2023-12-08",
+          "date_label": "2023-12-08",
           "crowding": 0.38535463289247557,
           "covered_stocks": 5084,
           "top_group_stocks": 9624.3137202496,
@@ -3389,6 +3794,7 @@
         },
         {
           "date": "2023-12-15",
+          "date_label": "2023-12-15",
           "crowding": 0.3761343669858063,
           "covered_stocks": 5087,
           "top_group_stocks": 7332.267211358999,
@@ -3396,6 +3802,7 @@
         },
         {
           "date": "2023-12-22",
+          "date_label": "2023-12-22",
           "crowding": 0.3694571270856332,
           "covered_stocks": 5087,
           "top_group_stocks": 7795.7554894163,
@@ -3403,6 +3810,7 @@
         },
         {
           "date": "2023-12-29",
+          "date_label": "2023-12-29",
           "crowding": 0.3634016950866369,
           "covered_stocks": 5090,
           "top_group_stocks": 8227.1483204065,
@@ -3410,6 +3818,7 @@
         },
         {
           "date": "2024-01-05",
+          "date_label": "2024-01-05",
           "crowding": 0.34788153798473337,
           "covered_stocks": 5092,
           "top_group_stocks": 7362.9686811739,
@@ -3417,6 +3826,7 @@
         },
         {
           "date": "2024-01-12",
+          "date_label": "2024-01-12",
           "crowding": 0.35505728537112113,
           "covered_stocks": 5092,
           "top_group_stocks": 6768.094317646001,
@@ -3424,6 +3834,7 @@
         },
         {
           "date": "2024-01-19",
+          "date_label": "2024-01-19",
           "crowding": 0.4025570728343516,
           "covered_stocks": 5097,
           "top_group_stocks": 6666.585800573201,
@@ -3431,6 +3842,7 @@
         },
         {
           "date": "2024-01-26",
+          "date_label": "2024-01-26",
           "crowding": 0.38119821049412017,
           "covered_stocks": 5099,
           "top_group_stocks": 8283.9907656466,
@@ -3438,6 +3850,7 @@
         },
         {
           "date": "2024-02-02",
+          "date_label": "2024-02-02",
           "crowding": 0.3497841058808699,
           "covered_stocks": 5101,
           "top_group_stocks": 8055.8379087519,
@@ -3445,6 +3858,7 @@
         },
         {
           "date": "2024-02-08",
+          "date_label": "2024-02-08",
           "crowding": 0.31157991472192514,
           "covered_stocks": 5104,
           "top_group_stocks": 10175.688171550799,
@@ -3452,6 +3866,7 @@
         },
         {
           "date": "2024-02-23",
+          "date_label": "2024-02-23",
           "crowding": 0.36981141484071833,
           "covered_stocks": 5103,
           "top_group_stocks": 9218.0751814353,
@@ -3459,6 +3874,7 @@
         },
         {
           "date": "2024-03-01",
+          "date_label": "2024-03-01",
           "crowding": 0.3989848616226048,
           "covered_stocks": 5104,
           "top_group_stocks": 10552.5850183574,
@@ -3466,6 +3882,7 @@
         },
         {
           "date": "2024-03-08",
+          "date_label": "2024-03-08",
           "crowding": 0.4044451744515089,
           "covered_stocks": 5102,
           "top_group_stocks": 8606.627681924401,
@@ -3473,6 +3890,7 @@
         },
         {
           "date": "2024-03-15",
+          "date_label": "2024-03-15",
           "crowding": 0.3992246328749687,
           "covered_stocks": 5104,
           "top_group_stocks": 9445.266280286001,
@@ -3480,6 +3898,7 @@
         },
         {
           "date": "2024-03-22",
+          "date_label": "2024-03-22",
           "crowding": 0.3781746760547617,
           "covered_stocks": 5106,
           "top_group_stocks": 10974.1206316452,
@@ -3487,6 +3906,7 @@
         },
         {
           "date": "2024-03-29",
+          "date_label": "2024-03-29",
           "crowding": 0.37800148114772336,
           "covered_stocks": 5109,
           "top_group_stocks": 8586.038067038,
@@ -3494,6 +3914,7 @@
         },
         {
           "date": "2024-04-03",
+          "date_label": "2024-04-03",
           "crowding": 0.36879506966874126,
           "covered_stocks": 5111,
           "top_group_stocks": 9178.9448443446,
@@ -3501,6 +3922,7 @@
         },
         {
           "date": "2024-04-12",
+          "date_label": "2024-04-12",
           "crowding": 0.38097032508603623,
           "covered_stocks": 5115,
           "top_group_stocks": 8101.832616302199,
@@ -3508,6 +3930,7 @@
         },
         {
           "date": "2024-04-19",
+          "date_label": "2024-04-19",
           "crowding": 0.39260564698233863,
           "covered_stocks": 5111,
           "top_group_stocks": 8602.476927443,
@@ -3515,6 +3938,7 @@
         },
         {
           "date": "2024-04-26",
+          "date_label": "2024-04-26",
           "crowding": 0.395060930495279,
           "covered_stocks": 5098,
           "top_group_stocks": 10863.0535684497,
@@ -3522,6 +3946,7 @@
         },
         {
           "date": "2024-04-30",
+          "date_label": "2024-04-30",
           "crowding": 0.3658551491407327,
           "covered_stocks": 5053,
           "top_group_stocks": 10304.840172471299,
@@ -3529,6 +3954,7 @@
         },
         {
           "date": "2024-05-10",
+          "date_label": "2024-05-10",
           "crowding": 0.3509816503890549,
           "covered_stocks": 5093,
           "top_group_stocks": 9125.3823502577,
@@ -3536,6 +3962,7 @@
         },
         {
           "date": "2024-05-17",
+          "date_label": "2024-05-17",
           "crowding": 0.39070245936819165,
           "covered_stocks": 5095,
           "top_group_stocks": 8873.8083409691,
@@ -3543,6 +3970,7 @@
         },
         {
           "date": "2024-05-24",
+          "date_label": "2024-05-24",
           "crowding": 0.37563185493964835,
           "covered_stocks": 5095,
           "top_group_stocks": 7639.1040231863,
@@ -3550,6 +3978,7 @@
         },
         {
           "date": "2024-05-31",
+          "date_label": "2024-05-31",
           "crowding": 0.3631391127948038,
           "covered_stocks": 5092,
           "top_group_stocks": 7146.484991007101,
@@ -3557,6 +3986,7 @@
         },
         {
           "date": "2024-06-07",
+          "date_label": "2024-06-07",
           "crowding": 0.4032905878063497,
           "covered_stocks": 5095,
           "top_group_stocks": 7167.5471840709,
@@ -3564,6 +3994,7 @@
         },
         {
           "date": "2024-06-14",
+          "date_label": "2024-06-14",
           "crowding": 0.4355276353681171,
           "covered_stocks": 5101,
           "top_group_stocks": 8480.9032296778,
@@ -3571,6 +4002,7 @@
         },
         {
           "date": "2024-06-21",
+          "date_label": "2024-06-21",
           "crowding": 0.4067566423699108,
           "covered_stocks": 5096,
           "top_group_stocks": 6195.2512878364005,
@@ -3578,6 +4010,7 @@
         },
         {
           "date": "2024-06-28",
+          "date_label": "2024-06-28",
           "crowding": 0.40050712076921885,
           "covered_stocks": 5089,
           "top_group_stocks": 7037.9064868465,
@@ -3585,6 +4018,7 @@
         },
         {
           "date": "2024-07-05",
+          "date_label": "2024-07-05",
           "crowding": 0.41821291458795024,
           "covered_stocks": 5086,
           "top_group_stocks": 5759.6731571125,
@@ -3592,6 +4026,7 @@
         },
         {
           "date": "2024-07-12",
+          "date_label": "2024-07-12",
           "crowding": 0.4308261908920288,
           "covered_stocks": 5093,
           "top_group_stocks": 6889.7333420335,
@@ -3599,6 +4034,7 @@
         },
         {
           "date": "2024-07-19",
+          "date_label": "2024-07-19",
           "crowding": 0.45467563175556913,
           "covered_stocks": 5087,
           "top_group_stocks": 6702.047771197,
@@ -3606,6 +4042,7 @@
         },
         {
           "date": "2024-07-26",
+          "date_label": "2024-07-26",
           "crowding": 0.4302366152122166,
           "covered_stocks": 5086,
           "top_group_stocks": 6065.3434766277005,
@@ -3613,6 +4050,7 @@
         },
         {
           "date": "2024-08-02",
+          "date_label": "2024-08-02",
           "crowding": 0.4092493022883679,
           "covered_stocks": 5087,
           "top_group_stocks": 7225.689276882,
@@ -3620,6 +4058,7 @@
         },
         {
           "date": "2024-08-09",
+          "date_label": "2024-08-09",
           "crowding": 0.4002159797738956,
           "covered_stocks": 5088,
           "top_group_stocks": 5632.4015742675,
@@ -3627,6 +4066,7 @@
         },
         {
           "date": "2024-08-16",
+          "date_label": "2024-08-16",
           "crowding": 0.3854607714359746,
           "covered_stocks": 5090,
           "top_group_stocks": 5913.2269919524,
@@ -3634,6 +4074,7 @@
         },
         {
           "date": "2024-08-23",
+          "date_label": "2024-08-23",
           "crowding": 0.40728049607212696,
           "covered_stocks": 5088,
           "top_group_stocks": 5102.447303326,
@@ -3641,6 +4082,7 @@
         },
         {
           "date": "2024-08-30",
+          "date_label": "2024-08-30",
           "crowding": 0.4044453317225935,
           "covered_stocks": 5088,
           "top_group_stocks": 8764.6345591524,
@@ -3648,6 +4090,7 @@
         },
         {
           "date": "2024-09-06",
+          "date_label": "2024-09-06",
           "crowding": 0.3994125690863673,
           "covered_stocks": 5087,
           "top_group_stocks": 5425.813230954401,
@@ -3655,6 +4098,7 @@
         },
         {
           "date": "2024-09-13",
+          "date_label": "2024-09-13",
           "crowding": 0.4249027740148319,
           "covered_stocks": 5089,
           "top_group_stocks": 5248.1437699768,
@@ -3662,6 +4106,7 @@
         },
         {
           "date": "2024-09-20",
+          "date_label": "2024-09-20",
           "crowding": 0.4197298260667225,
           "covered_stocks": 5090,
           "top_group_stocks": 5746.668028412801,
@@ -3669,6 +4114,7 @@
         },
         {
           "date": "2024-09-27",
+          "date_label": "2024-09-27",
           "crowding": 0.40764703212962194,
           "covered_stocks": 5095,
           "top_group_stocks": 14461.149772839799,
@@ -3676,6 +4122,7 @@
         },
         {
           "date": "2024-09-30",
+          "date_label": "2024-09-30",
           "crowding": 0.36745803492817775,
           "covered_stocks": 5092,
           "top_group_stocks": 25937.0042621516,
@@ -3683,6 +4130,7 @@
         },
         {
           "date": "2024-10-11",
+          "date_label": "2024-10-11",
           "crowding": 0.42466385617599484,
           "covered_stocks": 5090,
           "top_group_stocks": 15749.7232945161,
@@ -3690,6 +4138,7 @@
         },
         {
           "date": "2024-10-18",
+          "date_label": "2024-10-18",
           "crowding": 0.44366522122823365,
           "covered_stocks": 5097,
           "top_group_stocks": 21013.4024668121,
@@ -3697,6 +4146,7 @@
         },
         {
           "date": "2024-10-25",
+          "date_label": "2024-10-25",
           "crowding": 0.4014984298259823,
           "covered_stocks": 5096,
           "top_group_stocks": 17739.6650818894,
@@ -3704,6 +4154,7 @@
         },
         {
           "date": "2024-11-01",
+          "date_label": "2024-11-01",
           "crowding": 0.42218711570546236,
           "covered_stocks": 5093,
           "top_group_stocks": 22341.367572553005,
@@ -3711,6 +4162,7 @@
         },
         {
           "date": "2024-11-08",
+          "date_label": "2024-11-08",
           "crowding": 0.40946889478766385,
           "covered_stocks": 5100,
           "top_group_stocks": 26843.3447394245,
@@ -3718,6 +4170,7 @@
         },
         {
           "date": "2024-11-15",
+          "date_label": "2024-11-15",
           "crowding": 0.42288564458055594,
           "covered_stocks": 5098,
           "top_group_stocks": 18283.377110442598,
@@ -3725,6 +4178,7 @@
         },
         {
           "date": "2024-11-22",
+          "date_label": "2024-11-22",
           "crowding": 0.38895433783278494,
           "covered_stocks": 5103,
           "top_group_stocks": 17907.8456946881,
@@ -3732,6 +4186,7 @@
         },
         {
           "date": "2024-11-29",
+          "date_label": "2024-11-29",
           "crowding": 0.3923217843803937,
           "covered_stocks": 5106,
           "top_group_stocks": 17092.738348279,
@@ -3739,6 +4194,7 @@
         },
         {
           "date": "2024-12-06",
+          "date_label": "2024-12-06",
           "crowding": 0.37702529717621236,
           "covered_stocks": 5105,
           "top_group_stocks": 17895.703799148403,
@@ -3746,6 +4202,7 @@
         },
         {
           "date": "2024-12-13",
+          "date_label": "2024-12-13",
           "crowding": 0.36111762487436116,
           "covered_stocks": 5106,
           "top_group_stocks": 20703.2675139028,
@@ -3753,6 +4210,7 @@
         },
         {
           "date": "2024-12-20",
+          "date_label": "2024-12-20",
           "crowding": 0.398246483649781,
           "covered_stocks": 5112,
           "top_group_stocks": 15166.799342895898,
@@ -3760,6 +4218,7 @@
         },
         {
           "date": "2024-12-27",
+          "date_label": "2024-12-27",
           "crowding": 0.40846330434260847,
           "covered_stocks": 5108,
           "top_group_stocks": 14369.7597005211,
@@ -3767,6 +4226,7 @@
         },
         {
           "date": "2025-01-03",
+          "date_label": "2025-01-03",
           "crowding": 0.3669637700503105,
           "covered_stocks": 5109,
           "top_group_stocks": 12686.295216320801,
@@ -3774,6 +4234,7 @@
         },
         {
           "date": "2025-01-10",
+          "date_label": "2025-01-10",
           "crowding": 0.4137618257460246,
           "covered_stocks": 5112,
           "top_group_stocks": 11489.0213995257,
@@ -3781,6 +4242,7 @@
         },
         {
           "date": "2025-01-17",
+          "date_label": "2025-01-17",
           "crowding": 0.4106183595714592,
           "covered_stocks": 5115,
           "top_group_stocks": 11366.737557365701,
@@ -3788,6 +4250,7 @@
         },
         {
           "date": "2025-01-24",
+          "date_label": "2025-01-24",
           "crowding": 0.41475580760884756,
           "covered_stocks": 5118,
           "top_group_stocks": 12225.3580740559,
@@ -3795,6 +4258,7 @@
         },
         {
           "date": "2025-01-27",
+          "date_label": "2025-01-27",
           "crowding": 0.4151139600750719,
           "covered_stocks": 5119,
           "top_group_stocks": 11184.1119134302,
@@ -3802,6 +4266,7 @@
         },
         {
           "date": "2025-02-07",
+          "date_label": "2025-02-07",
           "crowding": 0.43352571517351385,
           "covered_stocks": 5122,
           "top_group_stocks": 19609.817416469803,
@@ -3809,6 +4274,7 @@
         },
         {
           "date": "2025-02-14",
+          "date_label": "2025-02-14",
           "crowding": 0.4373037365124099,
           "covered_stocks": 5122,
           "top_group_stocks": 17157.6194116875,
@@ -3816,6 +4282,7 @@
         },
         {
           "date": "2025-02-21",
+          "date_label": "2025-02-21",
           "crowding": 0.4331904336461218,
           "covered_stocks": 5125,
           "top_group_stocks": 21920.3691333702,
@@ -3823,6 +4290,7 @@
         },
         {
           "date": "2025-02-28",
+          "date_label": "2025-02-28",
           "crowding": 0.3872340080277758,
           "covered_stocks": 5119,
           "top_group_stocks": 18666.4287019696,
@@ -3830,6 +4298,7 @@
         },
         {
           "date": "2025-03-07",
+          "date_label": "2025-03-07",
           "crowding": 0.38855047752669297,
           "covered_stocks": 5117,
           "top_group_stocks": 18179.6621854954,
@@ -3837,6 +4306,7 @@
         },
         {
           "date": "2025-03-14",
+          "date_label": "2025-03-14",
           "crowding": 0.38199744011664544,
           "covered_stocks": 5121,
           "top_group_stocks": 17915.013800560802,
@@ -3844,6 +4314,7 @@
         },
         {
           "date": "2025-03-21",
+          "date_label": "2025-03-21",
           "crowding": 0.3448395648498446,
           "covered_stocks": 5123,
           "top_group_stocks": 15504.233379261,
@@ -3851,6 +4322,7 @@
         },
         {
           "date": "2025-03-28",
+          "date_label": "2025-03-28",
           "crowding": 0.32897029236307285,
           "covered_stocks": 5126,
           "top_group_stocks": 11187.7121218473,
@@ -3858,6 +4330,7 @@
         },
         {
           "date": "2025-04-03",
+          "date_label": "2025-04-03",
           "crowding": 0.3544938054992708,
           "covered_stocks": 5128,
           "top_group_stocks": 11374.5965249528,
@@ -3865,6 +4338,7 @@
         },
         {
           "date": "2025-04-11",
+          "date_label": "2025-04-11",
           "crowding": 0.3720727952205754,
           "covered_stocks": 5129,
           "top_group_stocks": 13484.808292643602,
@@ -3872,6 +4346,7 @@
         },
         {
           "date": "2025-04-18",
+          "date_label": "2025-04-18",
           "crowding": 0.34832414339351425,
           "covered_stocks": 5129,
           "top_group_stocks": 9145.1830434247,
@@ -3879,6 +4354,7 @@
         },
         {
           "date": "2025-04-25",
+          "date_label": "2025-04-25",
           "crowding": 0.34615924381383917,
           "covered_stocks": 5128,
           "top_group_stocks": 11134.073891438902,
@@ -3886,6 +4362,7 @@
         },
         {
           "date": "2025-04-30",
+          "date_label": "2025-04-30",
           "crowding": 0.34335439968408593,
           "covered_stocks": 5097,
           "top_group_stocks": 11691.248650559102,
@@ -3893,6 +4370,7 @@
         },
         {
           "date": "2025-05-09",
+          "date_label": "2025-05-09",
           "crowding": 0.3448663630764515,
           "covered_stocks": 5124,
           "top_group_stocks": 11918.856247436299,
@@ -3900,6 +4378,7 @@
         },
         {
           "date": "2025-05-16",
+          "date_label": "2025-05-16",
           "crowding": 0.34294194219805674,
           "covered_stocks": 5125,
           "top_group_stocks": 10894.312941780998,
@@ -3907,6 +4386,7 @@
         },
         {
           "date": "2025-05-23",
+          "date_label": "2025-05-23",
           "crowding": 0.3289136083350248,
           "covered_stocks": 5122,
           "top_group_stocks": 11553.862221867299,
@@ -3914,6 +4394,7 @@
         },
         {
           "date": "2025-05-30",
+          "date_label": "2025-05-30",
           "crowding": 0.3325251082420876,
           "covered_stocks": 5119,
           "top_group_stocks": 11388.1595301383,
@@ -3921,6 +4402,7 @@
         },
         {
           "date": "2025-06-06",
+          "date_label": "2025-06-06",
           "crowding": 0.33614041840565645,
           "covered_stocks": 5126,
           "top_group_stocks": 11518.4213757873,
@@ -3928,6 +4410,7 @@
         },
         {
           "date": "2025-06-13",
+          "date_label": "2025-06-13",
           "crowding": 0.32913603106506745,
           "covered_stocks": 5131,
           "top_group_stocks": 14670.6474342644,
@@ -3935,6 +4418,7 @@
         },
         {
           "date": "2025-06-20",
+          "date_label": "2025-06-20",
           "crowding": 0.3463488809152275,
           "covered_stocks": 5140,
           "top_group_stocks": 10675.869564299299,
@@ -3942,6 +4426,7 @@
         },
         {
           "date": "2025-06-27",
+          "date_label": "2025-06-27",
           "crowding": 0.3864063524081546,
           "covered_stocks": 5138,
           "top_group_stocks": 15409.3560425236,
@@ -3949,6 +4434,7 @@
         },
         {
           "date": "2025-07-04",
+          "date_label": "2025-07-04",
           "crowding": 0.35784542476212333,
           "covered_stocks": 5137,
           "top_group_stocks": 14283.6485128604,
@@ -3956,6 +4442,7 @@
         },
         {
           "date": "2025-07-11",
+          "date_label": "2025-07-11",
           "crowding": 0.3849759937521038,
           "covered_stocks": 5143,
           "top_group_stocks": 17118.4395394506,
@@ -3963,6 +4450,7 @@
         },
         {
           "date": "2025-07-18",
+          "date_label": "2025-07-18",
           "crowding": 0.36780868142464324,
           "covered_stocks": 5139,
           "top_group_stocks": 15708.5594840054,
@@ -3970,6 +4458,7 @@
         },
         {
           "date": "2025-07-25",
+          "date_label": "2025-07-25",
           "crowding": 0.36202700206897365,
           "covered_stocks": 5142,
           "top_group_stocks": 17869.8219318692,
@@ -3977,6 +4466,7 @@
         },
         {
           "date": "2025-08-01",
+          "date_label": "2025-08-01",
           "crowding": 0.36742229172996443,
           "covered_stocks": 5143,
           "top_group_stocks": 15981.536385021198,
@@ -3984,6 +4474,7 @@
         },
         {
           "date": "2025-08-08",
+          "date_label": "2025-08-08",
           "crowding": 0.33967981756927623,
           "covered_stocks": 5144,
           "top_group_stocks": 17099.984978073,
@@ -3991,6 +4482,7 @@
         },
         {
           "date": "2025-08-15",
+          "date_label": "2025-08-15",
           "crowding": 0.3854265219431139,
           "covered_stocks": 5144,
           "top_group_stocks": 22442.624130062002,
@@ -3998,6 +4490,7 @@
         },
         {
           "date": "2025-08-22",
+          "date_label": "2025-08-22",
           "crowding": 0.39907846292203203,
           "covered_stocks": 5145,
           "top_group_stocks": 25462.026027555698,
@@ -4005,6 +4498,7 @@
         },
         {
           "date": "2025-08-29",
+          "date_label": "2025-08-29",
           "crowding": 0.4242802312124144,
           "covered_stocks": 5144,
           "top_group_stocks": 27979.0181458206,
@@ -4012,6 +4506,7 @@
         },
         {
           "date": "2025-09-05",
+          "date_label": "2025-09-05",
           "crowding": 0.4387877550125629,
           "covered_stocks": 5147,
           "top_group_stocks": 23043.006809968098,
@@ -4019,6 +4514,7 @@
         },
         {
           "date": "2025-09-12",
+          "date_label": "2025-09-12",
           "crowding": 0.4319708455513445,
           "covered_stocks": 5152,
           "top_group_stocks": 25205.977756213902,
@@ -4026,6 +4522,7 @@
         },
         {
           "date": "2025-09-19",
+          "date_label": "2025-09-19",
           "crowding": 0.4322638421313074,
           "covered_stocks": 5151,
           "top_group_stocks": 23234.8119149052,
@@ -4033,6 +4530,7 @@
         },
         {
           "date": "2025-09-26",
+          "date_label": "2025-09-26",
           "crowding": 0.44645522207684135,
           "covered_stocks": 5153,
           "top_group_stocks": 21466.508257345202,
@@ -4040,6 +4538,7 @@
         },
         {
           "date": "2025-09-30",
+          "date_label": "2025-09-30",
           "crowding": 0.46065956537340563,
           "covered_stocks": 5150,
           "top_group_stocks": 21811.0706231903,
@@ -4047,6 +4546,7 @@
         },
         {
           "date": "2025-10-10",
+          "date_label": "2025-10-10",
           "crowding": 0.45411684402710656,
           "covered_stocks": 5148,
           "top_group_stocks": 25152.6873260495,
@@ -4054,6 +4554,7 @@
         },
         {
           "date": "2025-10-17",
+          "date_label": "2025-10-17",
           "crowding": 0.4165462414301852,
           "covered_stocks": 5156,
           "top_group_stocks": 19378.4362357059,
@@ -4061,6 +4562,7 @@
         },
         {
           "date": "2025-10-24",
+          "date_label": "2025-10-24",
           "crowding": 0.43481989479550537,
           "covered_stocks": 5157,
           "top_group_stocks": 19740.2096329023,
@@ -4068,6 +4570,7 @@
         },
         {
           "date": "2025-10-31",
+          "date_label": "2025-10-31",
           "crowding": 0.4295800422511324,
           "covered_stocks": 5156,
           "top_group_stocks": 23174.901205929702,
@@ -4075,6 +4578,7 @@
         },
         {
           "date": "2025-11-07",
+          "date_label": "2025-11-07",
           "crowding": 0.4112647354849847,
           "covered_stocks": 5158,
           "top_group_stocks": 19987.1496992302,
@@ -4082,6 +4586,7 @@
         },
         {
           "date": "2025-11-14",
+          "date_label": "2025-11-14",
           "crowding": 0.38812979227436795,
           "covered_stocks": 5160,
           "top_group_stocks": 19579.1998282881,
@@ -4089,6 +4594,7 @@
         },
         {
           "date": "2025-11-21",
+          "date_label": "2025-11-21",
           "crowding": 0.38878688480304846,
           "covered_stocks": 5164,
           "top_group_stocks": 19653.541025949202,
@@ -4096,6 +4602,7 @@
         },
         {
           "date": "2025-11-28",
+          "date_label": "2025-11-28",
           "crowding": 0.41377759491818566,
           "covered_stocks": 5152,
           "top_group_stocks": 15856.6704273077,
@@ -4103,6 +4610,7 @@
         },
         {
           "date": "2025-12-05",
+          "date_label": "2025-12-05",
           "crowding": 0.4272330037417506,
           "covered_stocks": 5156,
           "top_group_stocks": 17256.5901494071,
@@ -4110,6 +4618,7 @@
         },
         {
           "date": "2025-12-12",
+          "date_label": "2025-12-12",
           "crowding": 0.4441769574431561,
           "covered_stocks": 5161,
           "top_group_stocks": 20920.6386996676,
@@ -4117,6 +4626,7 @@
         },
         {
           "date": "2025-12-19",
+          "date_label": "2025-12-19",
           "crowding": 0.410175654158288,
           "covered_stocks": 5165,
           "top_group_stocks": 17257.1852680442,
@@ -4124,6 +4634,7 @@
         },
         {
           "date": "2025-12-26",
+          "date_label": "2025-12-26",
           "crowding": 0.4314296402160575,
           "covered_stocks": 5169,
           "top_group_stocks": 21600.306899527797,
@@ -4131,6 +4642,7 @@
         },
         {
           "date": "2025-12-31",
+          "date_label": "2025-12-31",
           "crowding": 0.44797358263622233,
           "covered_stocks": 5174,
           "top_group_stocks": 20451.0028361338,
@@ -4138,6 +4650,7 @@
         },
         {
           "date": "2026-01-09",
+          "date_label": "2026-01-09",
           "crowding": 0.41927620331471405,
           "covered_stocks": 5175,
           "top_group_stocks": 31225.385784479,
@@ -4145,6 +4658,7 @@
         },
         {
           "date": "2026-01-16",
+          "date_label": "2026-01-16",
           "crowding": 0.41682370895069515,
           "covered_stocks": 5175,
           "top_group_stocks": 30260.913107391905,
@@ -4152,6 +4666,7 @@
         },
         {
           "date": "2026-01-23",
+          "date_label": "2026-01-23",
           "crowding": 0.4047245419762028,
           "covered_stocks": 5180,
           "top_group_stocks": 30849.725793940703,
@@ -4159,6 +4674,7 @@
         },
         {
           "date": "2026-01-30",
+          "date_label": "2026-01-30",
           "crowding": 0.4205788815061622,
           "covered_stocks": 5174,
           "top_group_stocks": 28352.144710546498,
@@ -4166,6 +4682,7 @@
         },
         {
           "date": "2026-02-06",
+          "date_label": "2026-02-06",
           "crowding": 0.4169211979866092,
           "covered_stocks": 5178,
           "top_group_stocks": 21455.6494294687,
@@ -4173,6 +4690,7 @@
         },
         {
           "date": "2026-02-13",
+          "date_label": "2026-02-13",
           "crowding": 0.42553460016569533,
           "covered_stocks": 5183,
           "top_group_stocks": 19825.0495297832,
@@ -4180,6 +4698,7 @@
         },
         {
           "date": "2026-02-27",
+          "date_label": "2026-02-27",
           "crowding": 0.42471549155827865,
           "covered_stocks": 5179,
           "top_group_stocks": 24870.9296173873,
@@ -4187,6 +4706,7 @@
         },
         {
           "date": "2026-03-06",
+          "date_label": "2026-03-06",
           "crowding": 0.4075896971698467,
           "covered_stocks": 5183,
           "top_group_stocks": 21999.7303114576,
@@ -4194,6 +4714,7 @@
         },
         {
           "date": "2026-03-13",
+          "date_label": "2026-03-13",
           "crowding": 0.4104235101173717,
           "covered_stocks": 5186,
           "top_group_stocks": 24000.8553490271,
@@ -4201,6 +4722,7 @@
         },
         {
           "date": "2026-03-20",
+          "date_label": "2026-03-20",
           "crowding": 0.44016111712443384,
           "covered_stocks": 5184,
           "top_group_stocks": 22865.943298248,
@@ -4208,6 +4730,7 @@
         },
         {
           "date": "2026-03-27",
+          "date_label": "2026-03-27",
           "crowding": 0.41910093293729234,
           "covered_stocks": 5180,
           "top_group_stocks": 18530.706525823498,
@@ -4215,6 +4738,7 @@
         },
         {
           "date": "2026-04-03",
+          "date_label": "2026-04-03",
           "crowding": 0.4193329195576431,
           "covered_stocks": 5186,
           "top_group_stocks": 16563.2541869407,
@@ -4222,6 +4746,7 @@
         },
         {
           "date": "2026-04-10",
+          "date_label": "2026-04-10",
           "crowding": 0.45898487004652894,
           "covered_stocks": 5193,
           "top_group_stocks": 23227.099265072004,
@@ -4229,6 +4754,7 @@
         },
         {
           "date": "2026-04-17",
+          "date_label": "2026-04-17",
           "crowding": 0.44658671504772,
           "covered_stocks": 5193,
           "top_group_stocks": 24253.7080062055,
@@ -4236,6 +4762,7 @@
         },
         {
           "date": "2026-04-24",
+          "date_label": "2026-04-24",
           "crowding": 0.47117637046239863,
           "covered_stocks": 5191,
           "top_group_stocks": 26414.9264780035,
@@ -4243,6 +4770,7 @@
         },
         {
           "date": "2026-04-30",
+          "date_label": "2026-04-30",
           "crowding": 0.44377217293563115,
           "covered_stocks": 5155,
           "top_group_stocks": 27405.7743474138,
@@ -4250,6 +4778,7 @@
         },
         {
           "date": "2026-05-08",
+          "date_label": "2026-05-08",
           "crowding": 0.437780063055461,
           "covered_stocks": 5184,
           "top_group_stocks": 30483.3139058673,
@@ -4257,6 +4786,7 @@
         },
         {
           "date": "2026-05-15",
+          "date_label": "2026-05-15",
           "crowding": 0.4516428610092788,
           "covered_stocks": 5188,
           "top_group_stocks": 33442.5741375996,
@@ -4264,6 +4794,7 @@
         },
         {
           "date": "2026-05-22",
+          "date_label": "2026-05-22",
           "crowding": 0.45694374755123657,
           "covered_stocks": 5196,
           "top_group_stocks": 29030.481344018997,
@@ -4271,6 +4802,7 @@
         },
         {
           "date": "2026-05-29",
+          "date_label": "2026-05-29",
           "crowding": 0.47613746389421036,
           "covered_stocks": 5195,
           "top_group_stocks": 33186.3803013572,
@@ -4278,6 +4810,7 @@
         },
         {
           "date": "2026-06-05",
+          "date_label": "2026-06-05",
           "crowding": 0.4942746871966017,
           "covered_stocks": 5202,
           "top_group_stocks": 30688.1035676629,
@@ -4285,6 +4818,7 @@
         },
         {
           "date": "2026-06-12",
+          "date_label": "2026-06-12",
           "crowding": 0.48664401416725284,
           "covered_stocks": 5199,
           "top_group_stocks": 32147.618380446,
@@ -4292,6 +4826,7 @@
         },
         {
           "date": "2026-06-18",
+          "date_label": "2026-06-18",
           "crowding": 0.5101855544247361,
           "covered_stocks": 5193,
           "top_group_stocks": 33096.7385086488,
@@ -4299,6 +4834,7 @@
         },
         {
           "date": "2026-06-26",
+          "date_label": "2026-06-26",
           "crowding": 0.5276572725792544,
           "covered_stocks": 5198,
           "top_group_stocks": 35520.808807044006,
@@ -4306,6 +4842,7 @@
         },
         {
           "date": "2026-07-03",
+          "date_label": "2026-07-03",
           "crowding": 0.4905664486649809,
           "covered_stocks": 5198,
           "top_group_stocks": 31822.385159309393,
@@ -4313,6 +4850,7 @@
         },
         {
           "date": "2026-07-10",
+          "date_label": "2026-07-10",
           "crowding": 0.5260662625085144,
           "covered_stocks": 5199,
           "top_group_stocks": 33883.6199298557,
@@ -4320,6 +4858,7 @@
         },
         {
           "date": "2026-07-17",
+          "date_label": "2026-07-17",
           "crowding": 0.48931509744616813,
           "covered_stocks": 5200,
           "top_group_stocks": 26547.432284758797,
@@ -4327,6 +4866,7 @@
         },
         {
           "date": "2026-07-24",
+          "date_label": "2026-07-24",
           "crowding": 0.5001060251039493,
           "covered_stocks": 5202,
           "top_group_stocks": 19309.2162590975,
@@ -4334,6 +4874,7 @@
         },
         {
           "date": "2026-07-31",
+          "date_label": "2026-07-31",
           "crowding": 0.5063215558119172,
           "covered_stocks": 5202,
           "top_group_stocks": 25417.5578518891,
@@ -7928,7 +8469,7 @@
         "language": "sql",
         "sql": "SELECT MAX(trade_date) FROM complete_daily_aggregate WHERE industry_count = 31 AND index_count = 4 AND market_amount > 0",
         "description": "只选择沪深个股成交、31 个申万一级行业成交额和四个指数收盘点位均完整的交易日。",
-        "executed_at": "2026-08-02T23:37:26.804654+08:00",
+        "executed_at": "2026-08-02T23:40:09.975748+08:00",
         "tables_used": [
           "qt_stk_daily",
           "qt_sw_daily",
@@ -7949,7 +8490,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, sw_code, amount FROM qt_sw_daily WHERE sw_code IN (<31个现行申万一级行业代码>) AND trade_date BETWEEN :begin AND :end",
         "description": "按日期增量读取并保存 31 个现行申万一级行业的成交额聚合。",
-        "executed_at": "2026-08-02T23:37:26.804654+08:00",
+        "executed_at": "2026-08-02T23:40:09.975748+08:00",
         "tables_used": [
           "qt_sw_daily"
         ],
@@ -7972,7 +8513,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, stock_code, amount FROM qt_stk_daily WHERE exchange IN ('SH','SZ') AND trade_date BETWEEN :begin AND :end",
         "description": "个股成交额仅在服务器内存中用于计算日度聚合，原始个股明细不会写入公开文件。",
-        "executed_at": "2026-08-02T23:37:26.804654+08:00",
+        "executed_at": "2026-08-02T23:40:09.975748+08:00",
         "tables_used": [
           "qt_stk_daily"
         ],
@@ -7996,7 +8537,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_code, tclose FROM qt_idx_daily WHERE index_code IN ('000001','000300','399006','000688') AND trade_date BETWEEN :begin AND :end",
         "description": "读取上证指数、沪深300、创业板指和科创50的日收盘点位。",
-        "executed_at": "2026-08-02T23:37:26.804654+08:00",
+        "executed_at": "2026-08-02T23:40:09.975748+08:00",
         "tables_used": [
           "qt_idx_daily"
         ],
@@ -8015,7 +8556,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_name, close_level, close_level / FIRST_VALUE(close_level) OVER (PARTITION BY index_name ORDER BY trade_date) * 100 AS indexed_value FROM index_daily_aggregate",
         "description": "从四指数 SQL 聚合归档生成最近 60 个完整交易日的归一化走势。",
-        "executed_at": "2026-08-02T23:37:26.804654+08:00",
+        "executed_at": "2026-08-02T23:40:09.975748+08:00",
         "tables_used": [
           "qt_idx_daily"
         ],
