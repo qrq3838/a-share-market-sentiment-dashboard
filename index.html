@@ -36,7 +36,9 @@ html:not([data-portable-source-tooltips-ready]) .portable-chart-summary>.portabl
 .trend-entry{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1rem;border-radius:999px;background:#195996;color:#fff!important;font-weight:650;text-decoration:none!important;box-shadow:0 5px 14px rgba(25,89,150,.2);transition:transform .15s ease,box-shadow .15s ease}
 .trend-entry:hover,.trend-entry:focus-visible{transform:translateY(-1px);box-shadow:0 8px 18px rgba(25,89,150,.26)}
 .trend-entry-fixed{position:fixed;right:24px;bottom:24px;z-index:2147483000}
+.daily-crowding-original{position:absolute!important;left:0;top:0;width:100%!important;height:320px!important;overflow:hidden!important;visibility:hidden!important;pointer-events:none!important}.daily-crowding-shell{position:relative;z-index:1;width:100%;padding:0 20px 18px;background:#fff}.daily-crowding-note{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 10px;color:#667085;font-size:12px}.daily-crowding-note a{color:#195996;text-decoration:none}.daily-crowding-frame{display:block;width:100%;height:540px;border:0;background:#fff}
 @media(max-width:640px){.trend-entry-fixed{right:14px;bottom:14px}}
+@media(max-width:760px){.daily-crowding-shell{padding:0 14px 14px}.daily-crowding-note{align-items:flex-start;flex-direction:column}.daily-crowding-frame{height:650px}}
 </style>
 </head>
 <body>
@@ -5157,5 +5159,8 @@ h08fJM7287ss+/RB3ITI/xKT92d55fBpXX3JqrVAVB4LwKkvkZxqTMloP4HTeP/504d19UXlpbL4
   if (document.readyState === "complete") scheduleBoot();
   else window.addEventListener("load", scheduleBoot, { once: true });
 })();</script>
+<script data-dashboard-crowding>
+(()=>{const mount=()=>{document.querySelectorAll('[data-artifact-block-id="crowding_chart"]').forEach(block=>{const panel=block.querySelector('section.panel');if(!panel||panel.querySelector('.daily-crowding-shell'))return;const original=panel.querySelector('.chart-body-measure');if(original)original.classList.add('daily-crowding-original');const shell=document.createElement('div');shell.className='daily-crowding-shell';shell.innerHTML='<div class="daily-crowding-note"><span>全量日频数据；可自行选择开始日期和结束日期，筛选在浏览器本地完成。</span><a href="trends.html">打开完整趋势分析</a></div><iframe class="daily-crowding-frame" src="trends.html?embed=crowding" title="市场拥挤度全量日频趋势与日期筛选"></iframe>';panel.appendChild(shell)})};new MutationObserver(mount).observe(document.body,{childList:true,subtree:true});mount()})();
+</script>
 </body>
 </html>
