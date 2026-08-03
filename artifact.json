@@ -5,7 +5,7 @@
     "surface": "dashboard",
     "title": "A股市场情绪日报",
     "description": "由服务器内部 SQL 增量归档生成的公开只读 A 股市场情绪看板。",
-    "generatedAt": "2026-08-02T23:50:43.390742+08:00",
+    "generatedAt": "2026-08-03T19:55:16.183421+08:00",
     "filters": [],
     "cards": [
       {
@@ -352,7 +352,7 @@
           "language": "sql",
           "sql": "SELECT MAX(trade_date) FROM complete_daily_aggregate WHERE industry_count = 31 AND index_count = 4 AND market_amount > 0",
           "description": "只选择沪深个股成交、31 个申万一级行业成交额和四个指数收盘点位均完整的交易日。",
-          "executed_at": "2026-08-02T23:50:43.390742+08:00",
+          "executed_at": "2026-08-03T19:55:16.183421+08:00",
           "tables_used": [
             "qt_stk_daily",
             "qt_sw_daily",
@@ -373,7 +373,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, sw_code, amount FROM qt_sw_daily WHERE sw_code IN (<31个现行申万一级行业代码>) AND trade_date BETWEEN :begin AND :end",
           "description": "按日期增量读取并保存 31 个现行申万一级行业的成交额聚合。",
-          "executed_at": "2026-08-02T23:50:43.390742+08:00",
+          "executed_at": "2026-08-03T19:55:16.183421+08:00",
           "tables_used": [
             "qt_sw_daily"
           ],
@@ -396,7 +396,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, stock_code, amount FROM qt_stk_daily WHERE exchange IN ('SH','SZ') AND trade_date BETWEEN :begin AND :end",
           "description": "个股成交额仅在服务器内存中用于计算日度聚合，原始个股明细不会写入公开文件。",
-          "executed_at": "2026-08-02T23:50:43.390742+08:00",
+          "executed_at": "2026-08-03T19:55:16.183421+08:00",
           "tables_used": [
             "qt_stk_daily"
           ],
@@ -420,7 +420,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_code, tclose FROM qt_idx_daily WHERE index_code IN ('000001','000300','399006','000688') AND trade_date BETWEEN :begin AND :end",
           "description": "读取上证指数、沪深300、创业板指和科创50的日收盘点位。",
-          "executed_at": "2026-08-02T23:50:43.390742+08:00",
+          "executed_at": "2026-08-03T19:55:16.183421+08:00",
           "tables_used": [
             "qt_idx_daily"
           ],
@@ -439,7 +439,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_name, close_level, close_level / FIRST_VALUE(close_level) OVER (PARTITION BY index_name ORDER BY trade_date) * 100 AS indexed_value FROM index_daily_aggregate",
           "description": "从四指数 SQL 聚合归档生成最近 60 个完整交易日的归一化走势。",
-          "executed_at": "2026-08-02T23:50:43.390742+08:00",
+          "executed_at": "2026-08-03T19:55:16.183421+08:00",
           "tables_used": [
             "qt_idx_daily"
           ],
@@ -511,7 +511,7 @@
   },
   "snapshot": {
     "version": 1,
-    "generatedAt": "2026-08-02T23:50:43.390742+08:00",
+    "generatedAt": "2026-08-03T19:55:16.183421+08:00",
     "status": "ready",
     "datasets": {
       "overview": [
@@ -5157,7 +5157,7 @@
         "language": "sql",
         "sql": "SELECT MAX(trade_date) FROM complete_daily_aggregate WHERE industry_count = 31 AND index_count = 4 AND market_amount > 0",
         "description": "只选择沪深个股成交、31 个申万一级行业成交额和四个指数收盘点位均完整的交易日。",
-        "executed_at": "2026-08-02T23:50:43.390742+08:00",
+        "executed_at": "2026-08-03T19:55:16.183421+08:00",
         "tables_used": [
           "qt_stk_daily",
           "qt_sw_daily",
@@ -5178,7 +5178,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, sw_code, amount FROM qt_sw_daily WHERE sw_code IN (<31个现行申万一级行业代码>) AND trade_date BETWEEN :begin AND :end",
         "description": "按日期增量读取并保存 31 个现行申万一级行业的成交额聚合。",
-        "executed_at": "2026-08-02T23:50:43.390742+08:00",
+        "executed_at": "2026-08-03T19:55:16.183421+08:00",
         "tables_used": [
           "qt_sw_daily"
         ],
@@ -5201,7 +5201,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, stock_code, amount FROM qt_stk_daily WHERE exchange IN ('SH','SZ') AND trade_date BETWEEN :begin AND :end",
         "description": "个股成交额仅在服务器内存中用于计算日度聚合，原始个股明细不会写入公开文件。",
-        "executed_at": "2026-08-02T23:50:43.390742+08:00",
+        "executed_at": "2026-08-03T19:55:16.183421+08:00",
         "tables_used": [
           "qt_stk_daily"
         ],
@@ -5225,7 +5225,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_code, tclose FROM qt_idx_daily WHERE index_code IN ('000001','000300','399006','000688') AND trade_date BETWEEN :begin AND :end",
         "description": "读取上证指数、沪深300、创业板指和科创50的日收盘点位。",
-        "executed_at": "2026-08-02T23:50:43.390742+08:00",
+        "executed_at": "2026-08-03T19:55:16.183421+08:00",
         "tables_used": [
           "qt_idx_daily"
         ],
@@ -5244,7 +5244,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_name, close_level, close_level / FIRST_VALUE(close_level) OVER (PARTITION BY index_name ORDER BY trade_date) * 100 AS indexed_value FROM index_daily_aggregate",
         "description": "从四指数 SQL 聚合归档生成最近 60 个完整交易日的归一化走势。",
-        "executed_at": "2026-08-02T23:50:43.390742+08:00",
+        "executed_at": "2026-08-03T19:55:16.183421+08:00",
         "tables_used": [
           "qt_idx_daily"
         ],
