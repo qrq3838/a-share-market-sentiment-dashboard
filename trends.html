@@ -83,7 +83,7 @@ function lineChart(container,dates,series,options={}){
   const xCount=Math.min(compact?3:6,dates.length),xIndices=[...new Set(Array.from({length:xCount},(_,i)=>Math.round(i*(dates.length-1)/(xCount-1))))];
   let svg='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+options.aria+'">';
   yTicks.forEach(v=>{const yy=y(v);svg+='<line class="gridline" x1="'+M.l+'" x2="'+(W-M.r)+'" y1="'+yy+'" y2="'+yy+'"/><text class="tick" x="'+(M.l-10)+'" y="'+(yy+4)+'" text-anchor="end">'+(options.percent?fmtPct(v,1):fmtNumber(v,1))+'</text>'});
-  xIndices.forEach(i=>{svg+='<text class="tick" x="'+x(i)+'" y="'+(H-22)+'" text-anchor="middle">'+dates[i].replaceAll("-","/")+'</text>'});
+  xIndices.forEach(i=>{const anchor=i===0?"start":i===dates.length-1?"end":"middle";svg+='<text class="tick" x="'+x(i)+'" y="'+(H-22)+'" text-anchor="'+anchor+'">'+dates[i].replaceAll("-","/")+'</text>'});
   svg+='<line class="axis" x1="'+M.l+'" x2="'+(W-M.r)+'" y1="'+(H-M.b)+'" y2="'+(H-M.b)+'"/>';
   series.forEach((s,i)=>{svg+='<path d="'+pathFor(s.values,x,y)+'" fill="none" stroke="'+(s.color||COLORS[i%COLORS.length])+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>'});
   svg+='<line class="hover-line" x1="0" x2="0" y1="'+M.t+'" y2="'+(H-M.b)+'" visibility="hidden"/><circle class="hover-dot" cx="0" cy="0" r="4" stroke="'+(series[0].color||COLORS[0])+'" visibility="hidden"/></svg><div class="chart-tooltip" role="status"></div>';container.innerHTML=svg;
