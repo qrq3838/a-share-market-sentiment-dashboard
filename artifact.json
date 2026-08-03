@@ -195,8 +195,8 @@
       },
       {
         "id": "index_trend",
-        "title": "四个指数归一化走势",
-        "subtitle": "最近60个完整交易日，区间首日=100。",
+        "title": "四个指数走势",
+        "subtitle": "最近60个完整交易日，展示原始收盘点位。",
         "type": "line",
         "dataset": "index_trend",
         "sourceId": "combined_index_source",
@@ -208,9 +208,9 @@
             "label": "交易日"
           },
           "y": {
-            "field": "indexed_value",
+            "field": "level",
             "type": "quantitative",
-            "label": "归一化点位"
+            "label": "指数点位"
           },
           "color": {
             "field": "index",
@@ -222,11 +222,6 @@
               "field": "date",
               "type": "temporal",
               "label": "交易日"
-            },
-            {
-              "field": "level",
-              "type": "quantitative",
-              "label": "收盘点位"
             }
           ]
         }
