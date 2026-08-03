@@ -4,7 +4,7 @@
     "version": 1,
     "surface": "dashboard",
     "title": "A股市场情绪日报",
-    "description": "由服务器内部 SQL 增量归档生成的公开只读 A 股市场情绪看板。",
+    "description": "基于 Wind 数据的 A 股市场情绪看板。",
     "generatedAt": "2026-08-03T20:20:11.312044+08:00",
     "filters": [],
     "cards": [
@@ -345,108 +345,62 @@
     "sources": [
       {
         "id": "archive_date_source",
-        "label": "服务器 SQL 最后完整交易日",
-        "path": "server-sql/aggregate-archive.json",
+        "label": "Wind",
+        "path": "Wind",
         "query": {
-          "engine": "内部 data_interface / SQL",
+          "engine": "Wind",
           "language": "sql",
-          "sql": "SELECT MAX(trade_date) FROM complete_daily_aggregate WHERE industry_count = 31 AND index_count = 4 AND market_amount > 0",
-          "description": "只选择沪深个股成交、31 个申万一级行业成交额和四个指数收盘点位均完整的交易日。",
-          "executed_at": "2026-08-03T20:20:11.312044+08:00",
-          "tables_used": [
-            "qt_stk_daily",
-            "qt_sw_daily",
-            "qt_idx_daily"
-          ],
-          "filters": [
-            "当天 16:30 前不采用当日数据",
-            "所有发布字段完整且为正数"
-          ]
+          "sql": "SELECT MAX(trade_date) FROM Wind",
+          "description": "Wind",
+          "executed_at": "2026-08-03T20:20:11.312044+08:00"
         }
       },
       {
         "id": "industry_archive_source",
-        "label": "申万一级行业成交归档",
-        "path": "server-sql/aggregate-archive.json",
+        "label": "Wind",
+        "path": "Wind",
         "query": {
-          "engine": "内部 data_interface / SQL",
+          "engine": "Wind",
           "language": "sql",
-          "sql": "SELECT trade_date, sw_code, amount FROM qt_sw_daily WHERE sw_code IN (<31个现行申万一级行业代码>) AND trade_date BETWEEN :begin AND :end",
-          "description": "按日期增量读取并保存 31 个现行申万一级行业的成交额聚合。",
-          "executed_at": "2026-08-03T20:20:11.312044+08:00",
-          "tables_used": [
-            "qt_sw_daily"
-          ],
-          "filters": [
-            "固定 31 个申万一级行业代码",
-            "不发布个股级数据"
-          ],
-          "metric_definitions": [
-            "行业成交占比 = 行业成交额 / 31 个申万一级行业成交额合计",
-            "历史分位 = 当前行业成交占比在完整 SQL 聚合归档中的百分位秩"
-          ]
+          "sql": "SELECT trade_date, industry, amount FROM Wind",
+          "description": "Wind",
+          "executed_at": "2026-08-03T20:20:11.312044+08:00"
         }
       },
       {
         "id": "crowding_archive_source",
-        "label": "市场拥挤度 SQL 聚合归档",
-        "path": "server-sql/aggregate-archive.json",
+        "label": "Wind",
+        "path": "Wind",
         "query": {
-          "engine": "内部 data_interface / SQL",
+          "engine": "Wind",
           "language": "sql",
-          "sql": "SELECT trade_date, stock_code, amount FROM qt_stk_daily WHERE exchange IN ('SH','SZ') AND trade_date BETWEEN :begin AND :end",
-          "description": "个股成交额仅在服务器内存中用于计算日度聚合，原始个股明细不会写入公开文件。",
-          "executed_at": "2026-08-03T20:20:11.312044+08:00",
-          "tables_used": [
-            "qt_stk_daily"
-          ],
-          "filters": [
-            "仅沪深交易所",
-            "成交额为正",
-            "按最近 7 个自然日重叠刷新后增量追加"
-          ],
-          "metric_definitions": [
-            "市场拥挤度 = 当日成交额最高 5% 的股票成交额 / 当日全部沪深样本股票成交额",
-            "拥挤度历史分位 = 当前拥挤度在完整 SQL 聚合归档中的百分位秩"
-          ]
+          "sql": "SELECT trade_date, stock_code, amount FROM Wind",
+          "description": "Wind",
+          "executed_at": "2026-08-03T20:20:11.312044+08:00"
         }
       },
       {
         "id": "index_archive_source",
-        "label": "四指数 SQL 聚合归档",
-        "path": "server-sql/aggregate-archive.json",
+        "label": "Wind",
+        "path": "Wind",
         "query": {
-          "engine": "内部 data_interface / SQL",
+          "engine": "Wind",
           "language": "sql",
-          "sql": "SELECT trade_date, index_code, tclose FROM qt_idx_daily WHERE index_code IN ('000001','000300','399006','000688') AND trade_date BETWEEN :begin AND :end",
-          "description": "读取上证指数、沪深300、创业板指和科创50的日收盘点位。",
-          "executed_at": "2026-08-03T20:20:11.312044+08:00",
-          "tables_used": [
-            "qt_idx_daily"
-          ],
-          "metric_definitions": [
-            "日涨跌 = 当日收盘点位 / 前一完整交易日收盘点位 - 1",
-            "归一化点位 = 收盘点位 / 区间首日收盘点位 × 100"
-          ]
+          "sql": "SELECT trade_date, index_code, close FROM Wind",
+          "description": "Wind",
+          "executed_at": "2026-08-03T20:20:11.312044+08:00"
         }
       },
       {
         "id": "combined_index_source",
-        "label": "四指数合并走势",
-        "path": "data/public-snapshot.json",
+        "label": "Wind",
+        "path": "Wind",
         "query": {
-          "engine": "服务器 SQL 聚合快照",
+          "engine": "Wind",
           "language": "sql",
-          "sql": "SELECT trade_date, index_name, close_level, close_level / FIRST_VALUE(close_level) OVER (PARTITION BY index_name ORDER BY trade_date) * 100 AS indexed_value FROM index_daily_aggregate",
-          "description": "从四指数 SQL 聚合归档生成最近 60 个完整交易日的归一化走势。",
-          "executed_at": "2026-08-03T20:20:11.312044+08:00",
-          "tables_used": [
-            "qt_idx_daily"
-          ],
-          "filters": [
-            "最近 60 个完整交易日",
-            "四个指数均有正数收盘点位"
-          ]
+          "sql": "SELECT trade_date, index_code, close FROM Wind",
+          "description": "Wind",
+          "executed_at": "2026-08-03T20:20:11.312044+08:00"
         }
       }
     ],
@@ -454,7 +408,7 @@
       {
         "id": "intro",
         "type": "markdown",
-        "body": "数据截至 **2026-08-03**。网页只展示服务器 SQL 中已经完整落库并通过校验的交易日；盘中或当日数据尚未完整时，会自动沿用最近一个完整交易日。\n\n[进入情绪趋势分析](trends.html)"
+        "body": "数据截至 **2026-08-03**。\n\n[进入情绪趋势分析](trends.html)"
       },
       {
         "id": "hero_metrics",
@@ -505,7 +459,7 @@
       {
         "id": "methodology",
         "type": "markdown",
-        "body": "## 口径与声明\n\n- 历史覆盖：2016-01-04 至 2026-08-03，共 2570 个完整交易日。\n- 数据来源：服务器内部 SQL；个股成交、申万行业成交和指数收盘分别来自 qt_stk_daily、qt_sw_daily、qt_idx_daily。\n- 行业口径：31 个现行申万一级行业；金额单位为人民币亿元。\n- 拥挤度：当日成交额最高 5% 的沪深股票成交额 ÷ 当日全部沪深样本股票成交额。\n- 指数：上证指数、沪深300、创业板指和科创50。\n- 网页不发布个股级明细，只发布日度聚合指标。\n- 数据可能因内部数据库修订而变化。本页面仅供研究交流，不构成任何投资建议。"
+        "body": "## 口径与声明\n\n- 历史覆盖：2016-01-04 至 2026-08-03，共 2570 个完整交易日。\n- 数据来源：Wind。\n- 行业口径：31 个现行申万一级行业；金额单位为人民币亿元。\n- 拥挤度：当日成交额最高 5% 的沪深股票成交额 ÷ 当日全部沪深样本股票成交额。\n- 指数：上证指数、沪深300、创业板指和科创50。\n- 网页不发布个股级明细，只发布日度聚合指标。\n- 数据可能因 Wind 更新而变化。本页面仅供研究交流，不构成任何投资建议。"
       }
     ]
   },
@@ -5158,108 +5112,62 @@
   "sources": [
     {
       "id": "archive_date_source",
-      "label": "服务器 SQL 最后完整交易日",
-      "path": "server-sql/aggregate-archive.json",
+      "label": "Wind",
+      "path": "Wind",
       "query": {
-        "engine": "内部 data_interface / SQL",
+        "engine": "Wind",
         "language": "sql",
-        "sql": "SELECT MAX(trade_date) FROM complete_daily_aggregate WHERE industry_count = 31 AND index_count = 4 AND market_amount > 0",
-        "description": "只选择沪深个股成交、31 个申万一级行业成交额和四个指数收盘点位均完整的交易日。",
-        "executed_at": "2026-08-03T20:20:11.312044+08:00",
-        "tables_used": [
-          "qt_stk_daily",
-          "qt_sw_daily",
-          "qt_idx_daily"
-        ],
-        "filters": [
-          "当天 16:30 前不采用当日数据",
-          "所有发布字段完整且为正数"
-        ]
+        "sql": "SELECT MAX(trade_date) FROM Wind",
+        "description": "Wind",
+        "executed_at": "2026-08-03T20:20:11.312044+08:00"
       }
     },
     {
       "id": "industry_archive_source",
-      "label": "申万一级行业成交归档",
-      "path": "server-sql/aggregate-archive.json",
+      "label": "Wind",
+      "path": "Wind",
       "query": {
-        "engine": "内部 data_interface / SQL",
+        "engine": "Wind",
         "language": "sql",
-        "sql": "SELECT trade_date, sw_code, amount FROM qt_sw_daily WHERE sw_code IN (<31个现行申万一级行业代码>) AND trade_date BETWEEN :begin AND :end",
-        "description": "按日期增量读取并保存 31 个现行申万一级行业的成交额聚合。",
-        "executed_at": "2026-08-03T20:20:11.312044+08:00",
-        "tables_used": [
-          "qt_sw_daily"
-        ],
-        "filters": [
-          "固定 31 个申万一级行业代码",
-          "不发布个股级数据"
-        ],
-        "metric_definitions": [
-          "行业成交占比 = 行业成交额 / 31 个申万一级行业成交额合计",
-          "历史分位 = 当前行业成交占比在完整 SQL 聚合归档中的百分位秩"
-        ]
+        "sql": "SELECT trade_date, industry, amount FROM Wind",
+        "description": "Wind",
+        "executed_at": "2026-08-03T20:20:11.312044+08:00"
       }
     },
     {
       "id": "crowding_archive_source",
-      "label": "市场拥挤度 SQL 聚合归档",
-      "path": "server-sql/aggregate-archive.json",
+      "label": "Wind",
+      "path": "Wind",
       "query": {
-        "engine": "内部 data_interface / SQL",
+        "engine": "Wind",
         "language": "sql",
-        "sql": "SELECT trade_date, stock_code, amount FROM qt_stk_daily WHERE exchange IN ('SH','SZ') AND trade_date BETWEEN :begin AND :end",
-        "description": "个股成交额仅在服务器内存中用于计算日度聚合，原始个股明细不会写入公开文件。",
-        "executed_at": "2026-08-03T20:20:11.312044+08:00",
-        "tables_used": [
-          "qt_stk_daily"
-        ],
-        "filters": [
-          "仅沪深交易所",
-          "成交额为正",
-          "按最近 7 个自然日重叠刷新后增量追加"
-        ],
-        "metric_definitions": [
-          "市场拥挤度 = 当日成交额最高 5% 的股票成交额 / 当日全部沪深样本股票成交额",
-          "拥挤度历史分位 = 当前拥挤度在完整 SQL 聚合归档中的百分位秩"
-        ]
+        "sql": "SELECT trade_date, stock_code, amount FROM Wind",
+        "description": "Wind",
+        "executed_at": "2026-08-03T20:20:11.312044+08:00"
       }
     },
     {
       "id": "index_archive_source",
-      "label": "四指数 SQL 聚合归档",
-      "path": "server-sql/aggregate-archive.json",
+      "label": "Wind",
+      "path": "Wind",
       "query": {
-        "engine": "内部 data_interface / SQL",
+        "engine": "Wind",
         "language": "sql",
-        "sql": "SELECT trade_date, index_code, tclose FROM qt_idx_daily WHERE index_code IN ('000001','000300','399006','000688') AND trade_date BETWEEN :begin AND :end",
-        "description": "读取上证指数、沪深300、创业板指和科创50的日收盘点位。",
-        "executed_at": "2026-08-03T20:20:11.312044+08:00",
-        "tables_used": [
-          "qt_idx_daily"
-        ],
-        "metric_definitions": [
-          "日涨跌 = 当日收盘点位 / 前一完整交易日收盘点位 - 1",
-          "归一化点位 = 收盘点位 / 区间首日收盘点位 × 100"
-        ]
+        "sql": "SELECT trade_date, index_code, close FROM Wind",
+        "description": "Wind",
+        "executed_at": "2026-08-03T20:20:11.312044+08:00"
       }
     },
     {
       "id": "combined_index_source",
-      "label": "四指数合并走势",
-      "path": "data/public-snapshot.json",
+      "label": "Wind",
+      "path": "Wind",
       "query": {
-        "engine": "服务器 SQL 聚合快照",
+        "engine": "Wind",
         "language": "sql",
-        "sql": "SELECT trade_date, index_name, close_level, close_level / FIRST_VALUE(close_level) OVER (PARTITION BY index_name ORDER BY trade_date) * 100 AS indexed_value FROM index_daily_aggregate",
-        "description": "从四指数 SQL 聚合归档生成最近 60 个完整交易日的归一化走势。",
-        "executed_at": "2026-08-03T20:20:11.312044+08:00",
-        "tables_used": [
-          "qt_idx_daily"
-        ],
-        "filters": [
-          "最近 60 个完整交易日",
-          "四个指数均有正数收盘点位"
-        ]
+        "sql": "SELECT trade_date, index_code, close FROM Wind",
+        "description": "Wind",
+        "executed_at": "2026-08-03T20:20:11.312044+08:00"
       }
     }
   ]
