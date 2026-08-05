@@ -5,7 +5,7 @@
     "surface": "dashboard",
     "title": "A股市场情绪日报",
     "description": "基于 Wind 数据的 A 股市场情绪看板。",
-    "generatedAt": "2026-08-05T13:14:52.368927+08:00",
+    "generatedAt": "2026-08-05T17:24:33.065921+08:00",
     "filters": [],
     "cards": [
       {
@@ -347,7 +347,7 @@
           "language": "sql",
           "sql": "SELECT MAX(trade_date) FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-05T13:14:52.368927+08:00"
+          "executed_at": "2026-08-05T17:24:33.065921+08:00"
         }
       },
       {
@@ -359,7 +359,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, industry, amount FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-05T13:14:52.368927+08:00"
+          "executed_at": "2026-08-05T17:24:33.065921+08:00"
         }
       },
       {
@@ -371,7 +371,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, stock_code, amount FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-05T13:14:52.368927+08:00"
+          "executed_at": "2026-08-05T17:24:33.065921+08:00"
         }
       },
       {
@@ -383,7 +383,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_code, close FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-05T13:14:52.368927+08:00"
+          "executed_at": "2026-08-05T17:24:33.065921+08:00"
         }
       },
       {
@@ -395,7 +395,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_code, close FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-05T13:14:52.368927+08:00"
+          "executed_at": "2026-08-05T17:24:33.065921+08:00"
         }
       }
     ],
@@ -460,7 +460,7 @@
   },
   "snapshot": {
     "version": 1,
-    "generatedAt": "2026-08-05T13:14:52.368927+08:00",
+    "generatedAt": "2026-08-05T17:24:33.065921+08:00",
     "status": "ready",
     "datasets": {
       "overview": [
@@ -5114,7 +5114,7 @@
         "language": "sql",
         "sql": "SELECT MAX(trade_date) FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-05T13:14:52.368927+08:00"
+        "executed_at": "2026-08-05T17:24:33.065921+08:00"
       }
     },
     {
@@ -5126,7 +5126,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, industry, amount FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-05T13:14:52.368927+08:00"
+        "executed_at": "2026-08-05T17:24:33.065921+08:00"
       }
     },
     {
@@ -5138,7 +5138,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, stock_code, amount FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-05T13:14:52.368927+08:00"
+        "executed_at": "2026-08-05T17:24:33.065921+08:00"
       }
     },
     {
@@ -5150,7 +5150,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_code, close FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-05T13:14:52.368927+08:00"
+        "executed_at": "2026-08-05T17:24:33.065921+08:00"
       }
     },
     {
@@ -5162,7 +5162,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_code, close FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-05T13:14:52.368927+08:00"
+        "executed_at": "2026-08-05T17:24:33.065921+08:00"
       }
     }
   ]
