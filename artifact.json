@@ -5,7 +5,7 @@
     "surface": "dashboard",
     "title": "A股市场情绪日报",
     "description": "基于 Wind 数据的 A 股市场情绪看板。",
-    "generatedAt": "2026-08-03T20:20:11.312044+08:00",
+    "generatedAt": "2026-08-05T13:14:52.368927+08:00",
     "filters": [],
     "cards": [
       {
@@ -158,7 +158,7 @@
       {
         "id": "crowding_trend",
         "title": "市场拥挤度走势",
-        "subtitle": "完整历史：2016-01-04 至 2026-08-03；展示每月最后一个完整交易日。",
+        "subtitle": "完整历史：2016-01-04 至 2026-08-04；展示每月最后一个完整交易日。",
         "type": "line",
         "dataset": "market_trend",
         "sourceId": "crowding_archive_source",
@@ -229,7 +229,7 @@
       {
         "id": "industry_ranking",
         "title": "申万一级行业成交占比前十",
-        "subtitle": "2026-08-03，按当日成交占比从高到低展示前十行业。",
+        "subtitle": "2026-08-04，按当日成交占比从高到低展示前十行业。",
         "type": "bar",
         "dataset": "industry_top10",
         "sourceId": "industry_archive_source",
@@ -267,7 +267,7 @@
       {
         "id": "top_industry_trend",
         "title": "当前成交占比前五行业走势",
-        "subtitle": "按2026-08-03成交占比选取前五行业；展示最近60个完整交易日。",
+        "subtitle": "按2026-08-04成交占比选取前五行业；展示最近60个完整交易日。",
         "type": "line",
         "dataset": "top_industry_trend",
         "sourceId": "industry_archive_source",
@@ -347,7 +347,7 @@
           "language": "sql",
           "sql": "SELECT MAX(trade_date) FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-03T20:20:11.312044+08:00"
+          "executed_at": "2026-08-05T13:14:52.368927+08:00"
         }
       },
       {
@@ -359,7 +359,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, industry, amount FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-03T20:20:11.312044+08:00"
+          "executed_at": "2026-08-05T13:14:52.368927+08:00"
         }
       },
       {
@@ -371,7 +371,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, stock_code, amount FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-03T20:20:11.312044+08:00"
+          "executed_at": "2026-08-05T13:14:52.368927+08:00"
         }
       },
       {
@@ -383,7 +383,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_code, close FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-03T20:20:11.312044+08:00"
+          "executed_at": "2026-08-05T13:14:52.368927+08:00"
         }
       },
       {
@@ -395,7 +395,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_code, close FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-03T20:20:11.312044+08:00"
+          "executed_at": "2026-08-05T13:14:52.368927+08:00"
         }
       }
     ],
@@ -403,7 +403,7 @@
       {
         "id": "intro",
         "type": "markdown",
-        "body": "数据截至 **2026-08-03**。\n\n[进入情绪趋势分析](trends.html)"
+        "body": "数据截至 **2026-08-04**。\n\n[进入情绪趋势分析](trends.html)"
       },
       {
         "id": "hero_metrics",
@@ -454,50 +454,50 @@
       {
         "id": "methodology",
         "type": "markdown",
-        "body": "## 口径与声明\n\n- 历史覆盖：2016-01-04 至 2026-08-03，共 2570 个完整交易日。\n- 数据来源：Wind。\n- 行业口径：31 个现行申万一级行业；金额单位为人民币亿元。\n- 拥挤度：当日成交额最高 5% 的沪深股票成交额 ÷ 当日全部沪深样本股票成交额。\n- 指数：上证指数、沪深300、创业板指和科创50。\n- 网页不发布个股级明细，只发布日度聚合指标。\n- 数据可能因 Wind 更新而变化。本页面仅供研究交流，不构成任何投资建议。"
+        "body": "## 口径与声明\n\n- 历史覆盖：2016-01-04 至 2026-08-04，共 2571 个完整交易日。\n- 数据来源：Wind。\n- 行业口径：31 个现行申万一级行业；金额单位为人民币亿元。\n- 拥挤度：当日成交额最高 5% 的沪深股票成交额 ÷ 当日全部沪深样本股票成交额。\n- 指数：上证指数、沪深300、创业板指和科创50。\n- 网页不发布个股级明细，只发布日度聚合指标。\n- 数据可能因 Wind 更新而变化。本页面仅供研究交流，不构成任何投资建议。"
       }
     ]
   },
   "snapshot": {
     "version": 1,
-    "generatedAt": "2026-08-03T20:20:11.312044+08:00",
+    "generatedAt": "2026-08-05T13:14:52.368927+08:00",
     "status": "ready",
     "datasets": {
       "overview": [
         {
-          "latest_date": "2026-08-03",
-          "turnover_total_yi": 19957.6035,
-          "crowding": 0.47439942536773233,
-          "crowding_change": -0.03192213044418485,
-          "crowding_percentile": 0.9564202334630351,
+          "latest_date": "2026-08-04",
+          "turnover_total_yi": 22052.9083,
+          "crowding": 0.4918899640112112,
+          "crowding_change": 0.01749053864347888,
+          "crowding_percentile": 0.9747180085569818,
           "covered_stocks": 5202,
-          "archive_days": 2570
+          "archive_days": 2571
         }
       ],
       "index_latest": [
         {
           "index": "上证指数",
-          "level": 3809.6629,
-          "daily_return": -0.005897169254380996,
-          "previous_level": 3832.2624
+          "level": 3822.2846,
+          "daily_return": 0.0033130752854799717,
+          "previous_level": 3809.6629
         },
         {
           "index": "沪深300",
-          "level": 4543.1781,
-          "daily_return": -0.009811850267625766,
-          "previous_level": 4588.1968
+          "level": 4600.9304,
+          "daily_return": 0.012711872334478791,
+          "previous_level": 4543.1781
         },
         {
           "index": "创业板指",
-          "level": 3302.5534,
-          "daily_return": -0.012383715483070046,
-          "previous_level": 3343.9641
+          "level": 3488.9663,
+          "daily_return": 0.05644508276535376,
+          "previous_level": 3302.5534
         },
         {
           "index": "科创50",
-          "level": 1552.8903,
-          "daily_return": -0.0507787342789785,
-          "previous_level": 1635.9624
+          "level": 1616.3582,
+          "daily_return": 0.04087082004440368,
+          "previous_level": 1552.8903
         }
       ],
       "market_trend": [
@@ -1518,1819 +1518,1789 @@
           "turnover_total_yi": 12869.4574365079
         },
         {
-          "date": "2026-08-03",
+          "date": "2026-08-04",
           "month_label": "2026-08",
-          "crowding": 0.47439942536773233,
+          "crowding": 0.4918899640112112,
           "covered_stocks": 5202,
-          "top_group_stocks": 19971.6370358543,
-          "turnover_total_yi": 9474.5331334622
+          "top_group_stocks": 22133.711172977,
+          "turnover_total_yi": 10887.3503923102
         }
       ],
       "index_trend": [
         {
-          "date": "2026-05-11",
-          "index": "上证指数",
-          "level": 4225.0207,
-          "indexed_value": 100
-        },
-        {
           "date": "2026-05-12",
           "index": "上证指数",
           "level": 4214.4891,
-          "indexed_value": 99.7507325822096
+          "indexed_value": 100
         },
         {
           "date": "2026-05-13",
           "index": "上证指数",
           "level": 4242.572,
-          "indexed_value": 100.4154133493358
+          "indexed_value": 100.66634173997508
         },
         {
           "date": "2026-05-14",
           "index": "上证指数",
           "level": 4177.9175,
-          "indexed_value": 98.88513682311661
+          "indexed_value": 99.132241200956
         },
         {
           "date": "2026-05-15",
           "index": "上证指数",
           "level": 4135.3894,
-          "indexed_value": 97.87855950622917
+          "indexed_value": 98.12314854486158
         },
         {
           "date": "2026-05-18",
           "index": "上证指数",
           "level": 4131.5276,
-          "indexed_value": 97.78715640375442
+          "indexed_value": 98.03151703488805
         },
         {
           "date": "2026-05-19",
           "index": "上证指数",
           "level": 4169.5378,
-          "indexed_value": 98.68680170016681
+          "indexed_value": 98.93341045774683
         },
         {
           "date": "2026-05-20",
           "index": "上证指数",
           "level": 4162.1845,
-          "indexed_value": 98.51275994931812
+          "indexed_value": 98.75893379342233
         },
         {
           "date": "2026-05-21",
           "index": "上证指数",
           "level": 4077.2765,
-          "indexed_value": 96.50311299066534
+          "indexed_value": 96.74426492169597
         },
         {
           "date": "2026-05-22",
           "index": "上证指数",
           "level": 4112.8996,
-          "indexed_value": 97.34625915560602
+          "indexed_value": 97.5895180272266
         },
         {
           "date": "2026-05-25",
           "index": "上证指数",
           "level": 4152.5686,
-          "indexed_value": 98.28516579812259
+          "indexed_value": 98.53077090649019
         },
         {
           "date": "2026-05-26",
           "index": "上证指数",
           "level": 4145.373,
-          "indexed_value": 98.11485657336542
+          "indexed_value": 98.36003609547834
         },
         {
           "date": "2026-05-27",
           "index": "上证指数",
           "level": 4093.7266,
-          "indexed_value": 96.89246256237277
+          "indexed_value": 97.13458744026649
         },
         {
           "date": "2026-05-28",
           "index": "上证指数",
           "level": 4098.6358,
-          "indexed_value": 97.00865607593354
+          "indexed_value": 97.25107131016189
         },
         {
           "date": "2026-05-29",
           "index": "上证指数",
           "level": 4068.5691,
-          "indexed_value": 96.29702169269846
+          "indexed_value": 96.53765862153969
         },
         {
           "date": "2026-06-01",
           "index": "上证指数",
           "level": 4057.74,
-          "indexed_value": 96.04071288928833
+          "indexed_value": 96.28070932725868
         },
         {
           "date": "2026-06-02",
           "index": "上证指数",
           "level": 4075.1016,
-          "indexed_value": 96.45163631979365
+          "indexed_value": 96.69265961561035
         },
         {
           "date": "2026-06-03",
           "index": "上证指数",
           "level": 4083.974,
-          "indexed_value": 96.66163292407064
+          "indexed_value": 96.9031809810589
         },
         {
           "date": "2026-06-04",
           "index": "上证指数",
           "level": 4057.7811,
-          "indexed_value": 96.0416856655874
+          "indexed_value": 96.28168453443148
         },
         {
           "date": "2026-06-05",
           "index": "上证指数",
           "level": 4027.7362,
-          "indexed_value": 95.33056725615569
+          "indexed_value": 95.5687891089812
         },
         {
           "date": "2026-06-08",
           "index": "上证指数",
           "level": 3959.3378,
-          "indexed_value": 93.7116781463343
+          "indexed_value": 93.94585455209743
         },
         {
           "date": "2026-06-09",
           "index": "上证指数",
           "level": 4010.0307,
-          "indexed_value": 94.9115042205592
+          "indexed_value": 95.14867887545373
         },
         {
           "date": "2026-06-10",
           "index": "上证指数",
           "level": 3993.2258,
-          "indexed_value": 94.51375705685892
+          "indexed_value": 94.74993778012146
         },
         {
           "date": "2026-06-11",
           "index": "上证指数",
           "level": 3987.0147,
-          "indexed_value": 94.36674949308532
+          "indexed_value": 94.60256285868672
         },
         {
           "date": "2026-06-12",
           "index": "上证指数",
           "level": 4031.5129,
-          "indexed_value": 95.41995616731535
+          "indexed_value": 95.65840139437069
         },
         {
           "date": "2026-06-15",
           "index": "上证指数",
           "level": 4096.4717,
-          "indexed_value": 96.95743502511124
+          "indexed_value": 97.1997222628954
         },
         {
           "date": "2026-06-16",
           "index": "上证指数",
           "level": 4091.8917,
-          "indexed_value": 96.84903318935218
+          "indexed_value": 97.09104954144976
         },
         {
           "date": "2026-06-17",
           "index": "上证指数",
           "level": 4108.0762,
-          "indexed_value": 97.23209640132652
+          "indexed_value": 97.47506999128318
         },
         {
           "date": "2026-06-18",
           "index": "上证指数",
           "level": 4090.4813,
-          "indexed_value": 96.81565110438393
+          "indexed_value": 97.05758403788492
         },
         {
           "date": "2026-06-22",
           "index": "上证指数",
           "level": 4163.0965,
-          "indexed_value": 98.53434564237756
+          "indexed_value": 98.7805734270377
         },
         {
           "date": "2026-06-23",
           "index": "上证指数",
           "level": 4106.2517,
-          "indexed_value": 97.18891318094607
+          "indexed_value": 97.4317788602182
         },
         {
           "date": "2026-06-24",
           "index": "上证指数",
           "level": 4110.8134,
-          "indexed_value": 97.29688188273255
+          "indexed_value": 97.54001736533144
         },
         {
           "date": "2026-06-25",
           "index": "上证指数",
           "level": 4120.2806,
-          "indexed_value": 97.52095652454436
+          "indexed_value": 97.76465194796684
         },
         {
           "date": "2026-06-26",
           "index": "上证指数",
           "level": 4027.2648,
-          "indexed_value": 95.31940991437035
+          "indexed_value": 95.55760388607958
         },
         {
           "date": "2026-06-29",
           "index": "上证指数",
           "level": 4073.9017,
-          "indexed_value": 96.42323645893617
+          "indexed_value": 96.66418878625169
         },
         {
           "date": "2026-06-30",
           "index": "上证指数",
           "level": 4094.3972,
-          "indexed_value": 96.90833467395792
+          "indexed_value": 97.15049921472095
         },
         {
           "date": "2026-07-01",
           "index": "上证指数",
           "level": 4112.4453,
-          "indexed_value": 97.33550654556558
+          "indexed_value": 97.57873854745527
         },
         {
           "date": "2026-07-02",
           "index": "上证指数",
           "level": 4028.9038,
-          "indexed_value": 95.35820262371732
+          "indexed_value": 95.59649353464931
         },
         {
           "date": "2026-07-03",
           "index": "上证指数",
           "level": 4043.6432,
-          "indexed_value": 95.70706245297212
+          "indexed_value": 95.9462251308231
         },
         {
           "date": "2026-07-06",
           "index": "上证指数",
           "level": 4041.2382,
-          "indexed_value": 95.65013965493708
+          "indexed_value": 95.88916008822991
         },
         {
           "date": "2026-07-07",
           "index": "上证指数",
           "level": 3990.2353,
-          "indexed_value": 94.44297633855379
+          "indexed_value": 94.67898018765786
         },
         {
           "date": "2026-07-08",
           "index": "上证指数",
           "level": 3970.8797,
-          "indexed_value": 93.98485787300402
+          "indexed_value": 94.21971692844099
         },
         {
           "date": "2026-07-09",
           "index": "上证指数",
           "level": 4036.5879,
-          "indexed_value": 95.54007392200468
+          "indexed_value": 95.77881931169308
         },
         {
           "date": "2026-07-10",
           "index": "上证指数",
           "level": 3996.1616,
-          "indexed_value": 94.58324310695093
+          "indexed_value": 94.81959746912146
         },
         {
           "date": "2026-07-13",
           "index": "上证指数",
           "level": 3913.794,
-          "indexed_value": 92.63372366435979
+          "indexed_value": 92.8652063662948
         },
         {
           "date": "2026-07-14",
           "index": "上证指数",
           "level": 3967.1262,
-          "indexed_value": 93.8960180715801
+          "indexed_value": 94.13065512495929
         },
         {
           "date": "2026-07-15",
           "index": "上证指数",
           "level": 3955.5781,
-          "indexed_value": 93.6226916000672
+          "indexed_value": 93.85664563707141
         },
         {
           "date": "2026-07-16",
           "index": "上证指数",
           "level": 3882.4126,
-          "indexed_value": 91.89097227381632
+          "indexed_value": 92.12059891197725
         },
         {
           "date": "2026-07-17",
           "index": "上证指数",
           "level": 3764.1547,
-          "indexed_value": 89.09198243691445
+          "indexed_value": 89.31461467061335
         },
         {
           "date": "2026-07-20",
           "index": "上证指数",
           "level": 3796.2814,
-          "indexed_value": 89.85237397771803
+          "indexed_value": 90.07690635621765
         },
         {
           "date": "2026-07-21",
           "index": "上证指数",
           "level": 3864.3671,
-          "indexed_value": 91.46386194036872
+          "indexed_value": 91.69242127118089
         },
         {
           "date": "2026-07-22",
           "index": "上证指数",
           "level": 3867.0336,
-          "indexed_value": 91.5269740571922
+          "indexed_value": 91.75569109907059
         },
         {
           "date": "2026-07-23",
           "index": "上证指数",
           "level": 3876.7774,
-          "indexed_value": 91.75759541249111
+          "indexed_value": 91.98688875479593
         },
         {
           "date": "2026-07-24",
           "index": "上证指数",
           "level": 3814.1978,
-          "indexed_value": 90.27642870483452
+          "indexed_value": 90.50202075501869
         },
         {
           "date": "2026-07-27",
           "index": "上证指数",
           "level": 3858.245,
-          "indexed_value": 91.31896087515027
+          "indexed_value": 91.54715811223714
         },
         {
           "date": "2026-07-28",
           "index": "上证指数",
           "level": 3813.3146,
-          "indexed_value": 90.2555246652401
+          "indexed_value": 90.48106447825432
         },
         {
           "date": "2026-07-29",
           "index": "上证指数",
           "level": 3828.469,
-          "indexed_value": 90.61420693157788
+          "indexed_value": 90.84064305682983
         },
         {
           "date": "2026-07-30",
           "index": "上证指数",
           "level": 3804.6926,
-          "indexed_value": 90.05145465914521
+          "indexed_value": 90.27648452098262
         },
         {
           "date": "2026-07-31",
           "index": "上证指数",
           "level": 3832.2624,
-          "indexed_value": 90.70399110707315
+          "indexed_value": 90.93065159428222
         },
         {
           "date": "2026-08-03",
           "index": "上证指数",
           "level": 3809.6629,
-          "indexed_value": 90.16909431946688
+          "indexed_value": 90.39441815141959
         },
         {
-          "date": "2026-05-11",
-          "index": "沪深300",
-          "level": 4951.8366,
-          "indexed_value": 100
+          "date": "2026-08-04",
+          "index": "上证指数",
+          "level": 3822.2846,
+          "indexed_value": 90.6939016641424
         },
         {
           "date": "2026-05-12",
           "index": "沪深300",
           "level": 4948.0465,
-          "indexed_value": 99.923460721624
+          "indexed_value": 100
         },
         {
           "date": "2026-05-13",
           "index": "沪深300",
           "level": 4998.3417,
-          "indexed_value": 100.93914851713808
+          "indexed_value": 101.01646579109553
         },
         {
           "date": "2026-05-14",
           "index": "沪深300",
           "level": 4914.5971,
-          "indexed_value": 99.24796589612832
+          "indexed_value": 99.32398775961381
         },
         {
           "date": "2026-05-15",
           "index": "沪深300",
           "level": 4859.5927,
-          "indexed_value": 98.13717803208613
+          "indexed_value": 98.21234905532921
         },
         {
           "date": "2026-05-18",
           "index": "沪深300",
           "level": 4833.5237,
-          "indexed_value": 97.61072689676392
+          "indexed_value": 97.68549466946197
         },
         {
           "date": "2026-05-19",
           "index": "沪深300",
           "level": 4852.8832,
-          "indexed_value": 98.001682850359
+          "indexed_value": 98.07675008713034
         },
         {
           "date": "2026-05-20",
           "index": "沪深300",
           "level": 4850.7,
-          "indexed_value": 97.95759415809479
+          "indexed_value": 98.03262762385114
         },
         {
           "date": "2026-05-21",
           "index": "沪深300",
           "level": 4783.0976,
-          "indexed_value": 96.59239563761051
+          "indexed_value": 96.66638338988932
         },
         {
           "date": "2026-05-22",
           "index": "沪深300",
           "level": 4845.0956,
-          "indexed_value": 97.84441594861995
+          "indexed_value": 97.91936272223795
         },
         {
           "date": "2026-05-25",
           "index": "沪深300",
           "level": 4921.5974,
-          "indexed_value": 99.3893336464293
+          "indexed_value": 99.46546379465107
         },
         {
           "date": "2026-05-26",
           "index": "沪深300",
           "level": 4947.8493,
-          "indexed_value": 99.91947836081667
+          "indexed_value": 99.9960145887877
         },
         {
           "date": "2026-05-27",
           "index": "沪深300",
           "level": 4908.1714,
-          "indexed_value": 99.11820192128312
+          "indexed_value": 99.19412438828131
         },
         {
           "date": "2026-05-28",
           "index": "沪深300",
           "level": 4914.2133,
-          "indexed_value": 99.24021523650438
+          "indexed_value": 99.31623116314691
         },
         {
           "date": "2026-05-29",
           "index": "沪深300",
           "level": 4892.1213,
-          "indexed_value": 98.79407773673307
+          "indexed_value": 98.86975193139352
         },
         {
           "date": "2026-06-01",
           "index": "沪深300",
           "level": 4844.2556,
-          "indexed_value": 97.82745254558684
+          "indexed_value": 97.90238632559335
         },
         {
           "date": "2026-06-02",
           "index": "沪深300",
           "level": 4914.5591,
-          "indexed_value": 99.24719850408636
+          "indexed_value": 99.32321977976561
         },
         {
           "date": "2026-06-03",
           "index": "沪深300",
           "level": 4938.8091,
-          "indexed_value": 99.73691579403085
+          "indexed_value": 99.81331218289885
         },
         {
           "date": "2026-06-04",
           "index": "沪深300",
           "level": 4904.7454,
-          "indexed_value": 99.04901547034085
+          "indexed_value": 99.12488494196649
         },
         {
           "date": "2026-06-05",
           "index": "沪深300",
           "level": 4816.9199,
-          "indexed_value": 97.27542100238122
+          "indexed_value": 97.34993193778594
         },
         {
           "date": "2026-06-08",
           "index": "沪深300",
           "level": 4713.6358,
-          "indexed_value": 95.18964741284073
+          "indexed_value": 95.26256068935487
         },
         {
           "date": "2026-06-09",
           "index": "沪深300",
           "level": 4801.8106,
-          "indexed_value": 96.97029582922829
+          "indexed_value": 97.04457304514013
         },
         {
           "date": "2026-06-10",
           "index": "沪深300",
           "level": 4748.5932,
-          "indexed_value": 95.89559558568635
+          "indexed_value": 95.96904960371735
         },
         {
           "date": "2026-06-11",
           "index": "沪深300",
           "level": 4722.4122,
-          "indexed_value": 95.36688266329305
+          "indexed_value": 95.43993169829749
         },
         {
           "date": "2026-06-12",
           "index": "沪深300",
           "level": 4777.3206,
-          "indexed_value": 96.4757318527029
+          "indexed_value": 96.54963024296558
         },
         {
           "date": "2026-06-15",
           "index": "沪深300",
           "level": 4891.7126,
-          "indexed_value": 98.78582423337636
+          "indexed_value": 98.86149210602608
         },
         {
           "date": "2026-06-16",
           "index": "沪深300",
           "level": 4884.2322,
-          "indexed_value": 98.63476109046087
+          "indexed_value": 98.71031325190658
         },
         {
           "date": "2026-06-17",
           "index": "沪深300",
           "level": 4931.3861,
-          "indexed_value": 99.58701181698927
+          "indexed_value": 99.66329338255005
         },
         {
           "date": "2026-06-18",
           "index": "沪深300",
           "level": 4941.5986,
-          "indexed_value": 99.79324842827005
+          "indexed_value": 99.86968796675617
         },
         {
           "date": "2026-06-22",
           "index": "沪深300",
           "level": 5059.6582,
-          "indexed_value": 102.17740625771053
+          "indexed_value": 102.25567201116641
         },
         {
           "date": "2026-06-23",
           "index": "沪深300",
           "level": 4919.386,
-          "indexed_value": 99.34467546849184
+          "indexed_value": 99.42077140948453
         },
         {
           "date": "2026-06-24",
           "index": "沪深300",
           "level": 4943.0197,
-          "indexed_value": 99.82194687118715
+          "indexed_value": 99.89840839207957
         },
         {
           "date": "2026-06-25",
           "index": "沪深300",
           "level": 5020.1038,
-          "indexed_value": 101.37862384231337
+          "indexed_value": 101.4562777451667
         },
         {
           "date": "2026-06-26",
           "index": "沪深300",
           "level": 4868.2205,
-          "indexed_value": 98.31141237576378
+          "indexed_value": 98.38671685886541
         },
         {
           "date": "2026-06-29",
           "index": "沪深300",
           "level": 4926.921,
-          "indexed_value": 99.4968412326045
+          "indexed_value": 99.57305372938593
         },
         {
           "date": "2026-06-30",
           "index": "沪深300",
           "level": 4979.4328,
-          "indexed_value": 100.55729221759862
+          "indexed_value": 100.63431699762724
         },
         {
           "date": "2026-07-01",
           "index": "沪深300",
           "level": 4958.9773,
-          "indexed_value": 100.1442030619508
+          "indexed_value": 100.22091142433685
         },
         {
           "date": "2026-07-02",
           "index": "沪深300",
           "level": 4812.2957,
-          "indexed_value": 97.18203746868384
+          "indexed_value": 97.25647687425733
         },
         {
           "date": "2026-07-03",
           "index": "沪深300",
           "level": 4842.1737,
-          "indexed_value": 97.78540955895032
+          "indexed_value": 97.86031113490951
         },
         {
           "date": "2026-07-06",
           "index": "沪深300",
           "level": 4841.998,
-          "indexed_value": 97.78186138048255
+          "indexed_value": 97.85676023861132
         },
         {
           "date": "2026-07-07",
           "index": "沪深300",
           "level": 4792.2624,
-          "indexed_value": 96.7774744425129
+          "indexed_value": 96.85160396128046
         },
         {
           "date": "2026-07-08",
           "index": "沪深300",
           "level": 4755.5338,
-          "indexed_value": 96.03575772270031
+          "indexed_value": 96.10931910199308
         },
         {
           "date": "2026-07-09",
           "index": "沪深300",
           "level": 4876.3125,
-          "indexed_value": 98.4748264916496
+          "indexed_value": 98.55025614654187
         },
         {
           "date": "2026-07-10",
           "index": "沪深300",
           "level": 4780.7867,
-          "indexed_value": 96.54572810419472
+          "indexed_value": 96.61968011012021
         },
         {
           "date": "2026-07-13",
           "index": "沪深300",
           "level": 4695.383,
-          "indexed_value": 94.8210407427418
+          "indexed_value": 94.89367167426578
         },
         {
           "date": "2026-07-14",
           "index": "沪深300",
           "level": 4796.502,
-          "indexed_value": 96.86309116096442
+          "indexed_value": 96.93728626034537
         },
         {
           "date": "2026-07-15",
           "index": "沪深300",
           "level": 4786.7828,
-          "indexed_value": 96.66681651006013
+          "indexed_value": 96.74086126716877
         },
         {
           "date": "2026-07-16",
           "index": "沪深300",
           "level": 4698.4344,
-          "indexed_value": 94.88266232371238
+          "indexed_value": 94.95534045607695
         },
         {
           "date": "2026-07-17",
           "index": "沪深300",
           "level": 4529.0953,
-          "indexed_value": 91.4629392254179
+          "indexed_value": 91.53299792150295
         },
         {
           "date": "2026-07-20",
           "index": "沪深300",
           "level": 4598.3208,
-          "indexed_value": 92.86091548335826
+          "indexed_value": 92.93204499998131
         },
         {
           "date": "2026-07-21",
           "index": "沪深300",
           "level": 4739.2287,
-          "indexed_value": 95.70648393365808
+          "indexed_value": 95.77979309612388
         },
         {
           "date": "2026-07-22",
           "index": "沪深300",
           "level": 4717.2442,
-          "indexed_value": 95.26251734558447
+          "indexed_value": 95.3354864389411
         },
         {
           "date": "2026-07-23",
           "index": "沪深300",
           "level": 4728.0018,
-          "indexed_value": 95.47976199376208
+          "indexed_value": 95.5528974919698
         },
         {
           "date": "2026-07-24",
           "index": "沪深300",
           "level": 4649.1917,
-          "indexed_value": 93.88822926830827
+          "indexed_value": 93.9601456857772
         },
         {
           "date": "2026-07-27",
           "index": "沪深300",
           "level": 4702.4272,
-          "indexed_value": 94.96329503279652
+          "indexed_value": 95.03603492812769
         },
         {
           "date": "2026-07-28",
           "index": "沪深300",
           "level": 4569.5235,
-          "indexed_value": 92.279367618875
+          "indexed_value": 92.35005168201228
         },
         {
           "date": "2026-07-29",
           "index": "沪深300",
           "level": 4600.2624,
-          "indexed_value": 92.90012517779766
+          "indexed_value": 92.97128472822556
         },
         {
           "date": "2026-07-30",
           "index": "沪深300",
           "level": 4549.7201,
-          "indexed_value": 91.87944731455799
+          "indexed_value": 91.94982504711706
         },
         {
           "date": "2026-07-31",
           "index": "沪深300",
           "level": 4588.1968,
-          "indexed_value": 92.65646608775418
+          "indexed_value": 92.72743900042167
         },
         {
           "date": "2026-08-03",
           "index": "沪深300",
           "level": 4543.1781,
-          "indexed_value": 91.7473347161738
+          "indexed_value": 91.81761125324913
         },
         {
-          "date": "2026-05-11",
-          "index": "创业板指",
-          "level": 3928.9739,
-          "indexed_value": 100
+          "date": "2026-08-04",
+          "index": "沪深300",
+          "level": 4600.9304,
+          "indexed_value": 92.98478500555724
         },
         {
           "date": "2026-05-12",
           "index": "创业板指",
           "level": 3934.882,
-          "indexed_value": 100.15037259473777
+          "indexed_value": 100
         },
         {
           "date": "2026-05-13",
           "index": "创业板指",
           "level": 4038.3327,
-          "indexed_value": 102.78339339439235
+          "indexed_value": 102.62906740278362
         },
         {
           "date": "2026-05-14",
           "index": "创业板指",
           "level": 3951.1404,
-          "indexed_value": 100.56418038307662
+          "indexed_value": 100.41318646912411
         },
         {
           "date": "2026-05-15",
           "index": "创业板指",
           "level": 3929.0642,
-          "indexed_value": 100.00229830999896
+          "indexed_value": 99.85214804408365
         },
         {
           "date": "2026-05-18",
           "index": "创业板指",
           "level": 3914.8753,
-          "indexed_value": 99.64116330729507
+          "indexed_value": 99.49155527408446
         },
         {
           "date": "2026-05-19",
           "index": "创业板指",
           "level": 3908.4374,
-          "indexed_value": 99.47730627581923
+          "indexed_value": 99.32794426872266
         },
         {
           "date": "2026-05-20",
           "index": "创业板指",
           "level": 3921.7894,
-          "indexed_value": 99.8171405516336
+          "indexed_value": 99.66726829419535
         },
         {
           "date": "2026-05-21",
           "index": "创业板指",
           "level": 3829.7786,
-          "indexed_value": 97.47528737719536
+          "indexed_value": 97.32893133771229
         },
         {
           "date": "2026-05-22",
           "index": "创业板指",
           "level": 3938.502,
-          "indexed_value": 100.24250861019972
+          "indexed_value": 100.09199767616919
         },
         {
           "date": "2026-05-25",
           "index": "创业板指",
           "level": 4021.1602,
-          "indexed_value": 102.34631998955248
+          "indexed_value": 102.19265024974065
         },
         {
           "date": "2026-05-26",
           "index": "创业板指",
           "level": 4043.0658,
-          "indexed_value": 102.90385996201196
+          "indexed_value": 102.74935309368868
         },
         {
           "date": "2026-05-27",
           "index": "创业板指",
           "level": 4045.7731,
-          "indexed_value": 102.97276599368604
+          "indexed_value": 102.81815566515083
         },
         {
           "date": "2026-05-28",
           "index": "创业板指",
           "level": 4125.0749,
-          "indexed_value": 104.99115048842648
+          "indexed_value": 104.83350961985644
         },
         {
           "date": "2026-05-29",
           "index": "创业板指",
           "level": 4037.951,
-          "indexed_value": 102.7736783896681
+          "indexed_value": 102.61936698482954
         },
         {
           "date": "2026-06-01",
           "index": "创业板指",
           "level": 3950.9432,
-          "indexed_value": 100.55916126090835
+          "indexed_value": 100.40817488300793
         },
         {
           "date": "2026-06-02",
           "index": "创业板指",
           "level": 4055.8709,
-          "indexed_value": 103.22977457294893
+          "indexed_value": 103.07477835421747
         },
         {
           "date": "2026-06-03",
           "index": "创业板指",
           "level": 4122.987,
-          "indexed_value": 104.93800938713287
+          "indexed_value": 104.7804483082339
         },
         {
           "date": "2026-06-04",
           "index": "创业板指",
           "level": 4088.884,
-          "indexed_value": 104.07002194644255
+          "indexed_value": 103.91376412304105
         },
         {
           "date": "2026-06-05",
           "index": "创业板指",
           "level": 3957.935,
-          "indexed_value": 100.73711612082737
+          "indexed_value": 100.58586254937252
         },
         {
           "date": "2026-06-08",
           "index": "创业板指",
           "level": 3811.7854,
-          "indexed_value": 97.01732556686112
+          "indexed_value": 96.87165714245053
         },
         {
           "date": "2026-06-09",
           "index": "创业板指",
           "level": 3961.7493,
-          "indexed_value": 100.83419744783745
+          "indexed_value": 100.68279811186204
         },
         {
           "date": "2026-06-10",
           "index": "创业板指",
           "level": 3854.7935,
-          "indexed_value": 98.11196506039403
+          "indexed_value": 97.96465306964733
         },
         {
           "date": "2026-06-11",
           "index": "创业板指",
           "level": 3811.246,
-          "indexed_value": 97.00359679151852
+          "indexed_value": 96.85794898042685
         },
         {
           "date": "2026-06-12",
           "index": "创业板指",
           "level": 3830.353,
-          "indexed_value": 97.489906970367
+          "indexed_value": 97.3435289800304
         },
         {
           "date": "2026-06-15",
           "index": "创业板指",
           "level": 4033.5349,
-          "indexed_value": 102.66128008638591
+          "indexed_value": 102.50713744401992
         },
         {
           "date": "2026-06-16",
           "index": "创业板指",
           "level": 4102.9421,
-          "indexed_value": 104.42782783565958
+          "indexed_value": 104.27103277811128
         },
         {
           "date": "2026-06-17",
           "index": "创业板指",
           "level": 4167.0478,
-          "indexed_value": 106.05944213576986
+          "indexed_value": 105.90019726131558
         },
         {
           "date": "2026-06-18",
           "index": "创业板指",
           "level": 4252.3903,
-          "indexed_value": 108.2315741522233
+          "indexed_value": 108.0690678907271
         },
         {
           "date": "2026-06-22",
           "index": "创业板指",
           "level": 4359.392,
-          "indexed_value": 110.9549747836197
+          "indexed_value": 110.7883794228137
         },
         {
           "date": "2026-06-23",
           "index": "创业板指",
           "level": 4192.1945,
-          "indexed_value": 106.69947438439334
+          "indexed_value": 106.5392685219023
         },
         {
           "date": "2026-06-24",
           "index": "创业板指",
           "level": 4251.4244,
-          "indexed_value": 108.20699012533525
+          "indexed_value": 108.04452077597244
         },
         {
           "date": "2026-06-25",
           "index": "创业板指",
           "level": 4371.9891,
-          "indexed_value": 111.27559539145831
+          "indexed_value": 111.10851862902113
         },
         {
           "date": "2026-06-26",
           "index": "创业板指",
           "level": 4194.2089,
-          "indexed_value": 106.75074476824598
+          "indexed_value": 106.5904619249065
         },
         {
           "date": "2026-06-29",
           "index": "创业板指",
           "level": 4216.6985,
-          "indexed_value": 107.32314867248165
+          "indexed_value": 107.1620063829106
         },
         {
           "date": "2026-06-30",
           "index": "创业板指",
           "level": 4342.7123,
-          "indexed_value": 110.53044409381289
+          "indexed_value": 110.36448615231664
         },
         {
           "date": "2026-07-01",
           "index": "创业板指",
           "level": 4260.7208,
-          "indexed_value": 108.44360152150668
+          "indexed_value": 108.2807769076684
         },
         {
           "date": "2026-07-02",
           "index": "创业板指",
           "level": 4017.2735,
-          "indexed_value": 102.24739594223315
+          "indexed_value": 102.0938747337277
         },
         {
           "date": "2026-07-03",
           "index": "创业板指",
           "level": 4019.9341,
-          "indexed_value": 102.31511336840389
+          "indexed_value": 102.1614904843398
         },
         {
           "date": "2026-07-06",
           "index": "创业板指",
           "level": 3948.86,
-          "indexed_value": 100.50613978372319
+          "indexed_value": 100.35523301588205
         },
         {
           "date": "2026-07-07",
           "index": "创业板指",
           "level": 3911.9075,
-          "indexed_value": 99.56562704577905
+          "indexed_value": 99.41613242785932
         },
         {
           "date": "2026-07-08",
           "index": "创业板指",
           "level": 3845.3513,
-          "indexed_value": 97.87164277166616
+          "indexed_value": 97.7246916171819
         },
         {
           "date": "2026-07-09",
           "index": "创业板指",
           "level": 4018.1744,
-          "indexed_value": 102.27032559315296
+          "indexed_value": 102.11676995650696
         },
         {
           "date": "2026-07-10",
           "index": "创业板指",
           "level": 3842.7314,
-          "indexed_value": 97.80496123937093
+          "indexed_value": 97.65811020508366
         },
         {
           "date": "2026-07-13",
           "index": "创业板指",
           "level": 3723.5166,
-          "indexed_value": 94.7707135443175
+          "indexed_value": 94.62841833630588
         },
         {
           "date": "2026-07-14",
           "index": "创业板指",
           "level": 3851.1372,
-          "indexed_value": 98.01890513958365
+          "indexed_value": 97.87173287534416
         },
         {
           "date": "2026-07-15",
           "index": "创业板指",
           "level": 3804.7038,
-          "indexed_value": 96.83708512291211
+          "indexed_value": 96.69168732378759
         },
         {
           "date": "2026-07-16",
           "index": "创业板指",
           "level": 3692.4573,
-          "indexed_value": 93.98019416723538
+          "indexed_value": 93.839085898891
         },
         {
           "date": "2026-07-17",
           "index": "创业板指",
           "level": 3428.6298,
-          "indexed_value": 87.26527300168627
+          "indexed_value": 87.13424697360684
         },
         {
           "date": "2026-07-20",
           "index": "创业板指",
           "level": 3443.1015,
-          "indexed_value": 87.6336058124489
+          "indexed_value": 87.50202674438522
         },
         {
           "date": "2026-07-21",
           "index": "创业板指",
           "level": 3685.9684,
-          "indexed_value": 93.81503908692294
+          "indexed_value": 93.67417879367159
         },
         {
           "date": "2026-07-22",
           "index": "创业板指",
           "level": 3566.7323,
-          "indexed_value": 90.7802492655907
+          "indexed_value": 90.64394561260033
         },
         {
           "date": "2026-07-23",
           "index": "创业板指",
           "level": 3575.5202,
-          "indexed_value": 91.00391835130287
+          "indexed_value": 90.86727886630399
         },
         {
           "date": "2026-07-24",
           "index": "创业板指",
           "level": 3480.8702,
-          "indexed_value": 88.59489242216651
+          "indexed_value": 88.46187001287458
         },
         {
           "date": "2026-07-27",
           "index": "创业板指",
           "level": 3590.7872,
-          "indexed_value": 91.39249308833536
+          "indexed_value": 91.25527017074464
         },
         {
           "date": "2026-07-28",
           "index": "创业板指",
           "level": 3327.0298,
-          "indexed_value": 84.67935610363814
+          "indexed_value": 84.55221274742163
         },
         {
           "date": "2026-07-29",
           "index": "创业板指",
           "level": 3378.6964,
-          "indexed_value": 85.99437120210953
+          "indexed_value": 85.8652533926049
         },
         {
           "date": "2026-07-30",
           "index": "创业板指",
           "level": 3244.6179,
-          "indexed_value": 82.58181353660812
+          "indexed_value": 82.45781957375088
         },
         {
           "date": "2026-07-31",
           "index": "创业板指",
           "level": 3343.9641,
-          "indexed_value": 85.11036685685288
+          "indexed_value": 84.98257635171778
         },
         {
           "date": "2026-08-03",
           "index": "创业板指",
           "level": 3302.5534,
-          "indexed_value": 84.0563842890379
+          "indexed_value": 83.93017630515985
         },
         {
-          "date": "2026-05-11",
-          "index": "科创50",
-          "level": 1716.6914,
-          "indexed_value": 100
+          "date": "2026-08-04",
+          "index": "创业板指",
+          "level": 3488.9663,
+          "indexed_value": 88.66762205321533
         },
         {
           "date": "2026-05-12",
           "index": "科创50",
           "level": 1723.7836,
-          "indexed_value": 100.41313191176936
+          "indexed_value": 100
         },
         {
           "date": "2026-05-13",
           "index": "科创50",
           "level": 1770.1471,
-          "indexed_value": 103.11387940779571
+          "indexed_value": 102.68963575242276
         },
         {
           "date": "2026-05-14",
           "index": "科创50",
           "level": 1725.0932,
-          "indexed_value": 100.4894181912952
+          "indexed_value": 100.0759724132426
         },
         {
           "date": "2026-05-15",
           "index": "科创50",
           "level": 1696.2612,
-          "indexed_value": 98.80990840869826
+          "indexed_value": 98.40337267392496
         },
         {
           "date": "2026-05-18",
           "index": "科创50",
           "level": 1709.9627,
-          "indexed_value": 99.60804254043563
+          "indexed_value": 99.19822302521037
         },
         {
           "date": "2026-05-19",
           "index": "科创50",
           "level": 1775.1345,
-          "indexed_value": 103.40440337733385
+          "indexed_value": 102.97896441293442
         },
         {
           "date": "2026-05-20",
           "index": "科创50",
           "level": 1832.022,
-          "indexed_value": 106.71819058451624
+          "indexed_value": 106.27911763402321
         },
         {
           "date": "2026-05-21",
           "index": "科创50",
           "level": 1764.1744,
-          "indexed_value": 102.76596014869068
+          "indexed_value": 102.34314794502049
         },
         {
           "date": "2026-05-22",
           "index": "科创50",
           "level": 1790.771,
-          "indexed_value": 104.31525433167546
+          "indexed_value": 103.88606783357261
         },
         {
           "date": "2026-05-25",
           "index": "科创50",
           "level": 1896.0369,
-          "indexed_value": 110.44716015936238
+          "indexed_value": 109.99274502901642
         },
         {
           "date": "2026-05-26",
           "index": "科创50",
           "level": 1867.7088,
-          "indexed_value": 108.79700335191289
+          "indexed_value": 108.34937749726822
         },
         {
           "date": "2026-05-27",
           "index": "科创50",
           "level": 1815.4513,
-          "indexed_value": 105.7529209967499
+          "indexed_value": 105.3178194757161
         },
         {
           "date": "2026-05-28",
           "index": "科创50",
           "level": 1844.2493,
-          "indexed_value": 107.43045022535792
+          "indexed_value": 106.98844680968077
         },
         {
           "date": "2026-05-29",
           "index": "科创50",
           "level": 1751.3234,
-          "indexed_value": 102.01736899247005
+          "indexed_value": 101.59763673352037
         },
         {
           "date": "2026-06-01",
           "index": "科创50",
           "level": 1663.6935,
-          "indexed_value": 96.91278816914911
+          "indexed_value": 96.514057797046
         },
         {
           "date": "2026-06-02",
           "index": "科创50",
           "level": 1690.558,
-          "indexed_value": 98.47768795253474
+          "indexed_value": 98.07251907954108
         },
         {
           "date": "2026-06-03",
           "index": "科创50",
           "level": 1726.1806,
-          "indexed_value": 100.5527609679876
+          "indexed_value": 100.1390545773843
         },
         {
           "date": "2026-06-04",
           "index": "科创50",
           "level": 1738.0589,
-          "indexed_value": 101.244690804649
+          "indexed_value": 100.82813759221285
         },
         {
           "date": "2026-06-05",
           "index": "科创50",
           "level": 1668.3291,
-          "indexed_value": 97.1828192300608
+          "indexed_value": 96.78297786334666
         },
         {
           "date": "2026-06-08",
           "index": "科创50",
           "level": 1596.5656,
-          "indexed_value": 93.00248140114175
+          "indexed_value": 92.61983928841182
         },
         {
           "date": "2026-06-09",
           "index": "科创50",
           "level": 1663.1089,
-          "indexed_value": 96.87873429085741
+          "indexed_value": 96.48014402735934
         },
         {
           "date": "2026-06-10",
           "index": "科创50",
           "level": 1652.2241,
-          "indexed_value": 96.24467740678378
+          "indexed_value": 95.848695857183
         },
         {
           "date": "2026-06-11",
           "index": "科创50",
           "level": 1662.436,
-          "indexed_value": 96.83953679735333
+          "indexed_value": 96.44110780494721
         },
         {
           "date": "2026-06-12",
           "index": "科创50",
           "level": 1663.2213,
-          "indexed_value": 96.88528176933839
+          "indexed_value": 96.48666456740858
         },
         {
           "date": "2026-06-15",
           "index": "科创50",
           "level": 1748.3264,
-          "indexed_value": 101.8427889835063
+          "indexed_value": 101.42377500284839
         },
         {
           "date": "2026-06-16",
           "index": "科创50",
           "level": 1758.4244,
-          "indexed_value": 102.43101351821302
+          "indexed_value": 102.00957939268017
         },
         {
           "date": "2026-06-17",
           "index": "科创50",
           "level": 1840.8211,
-          "indexed_value": 107.23075213168774
+          "indexed_value": 106.78957033817933
         },
         {
           "date": "2026-06-18",
           "index": "科创50",
           "level": 1911.5132,
-          "indexed_value": 111.34867920932092
+          "indexed_value": 110.89055493972677
         },
         {
           "date": "2026-06-22",
           "index": "科创50",
           "level": 1948.9281,
-          "indexed_value": 113.52815654578336
+          "indexed_value": 113.06106520563254
         },
         {
           "date": "2026-06-23",
           "index": "科创50",
           "level": 1916.2123,
-          "indexed_value": 111.62240924606483
+          "indexed_value": 111.16315876308371
         },
         {
           "date": "2026-06-24",
           "index": "科创50",
           "level": 1989.4257,
-          "indexed_value": 115.8872060522934
+          "indexed_value": 115.41040882393823
         },
         {
           "date": "2026-06-25",
           "index": "科创50",
           "level": 2066.3309,
-          "indexed_value": 120.36705607076496
+          "indexed_value": 119.87182729897185
         },
         {
           "date": "2026-06-26",
           "index": "科创50",
           "level": 2032.2842,
-          "indexed_value": 118.38378173269814
+          "indexed_value": 117.89671278923875
         },
         {
           "date": "2026-06-29",
           "index": "科创50",
           "level": 2126.0105,
-          "indexed_value": 123.84348753654851
+          "indexed_value": 123.33395560788487
         },
         {
           "date": "2026-06-30",
           "index": "科创50",
           "level": 2207.8648,
-          "indexed_value": 128.61163048874133
+          "indexed_value": 128.082480886812
         },
         {
           "date": "2026-07-01",
           "index": "科创50",
           "level": 2153.0431,
-          "indexed_value": 125.41817941186169
+          "indexed_value": 124.90216869449273
         },
         {
           "date": "2026-07-02",
           "index": "科创50",
           "level": 1987.291,
-          "indexed_value": 115.7628563875837
+          "indexed_value": 115.28657077373285
         },
         {
           "date": "2026-07-03",
           "index": "科创50",
           "level": 1975.6001,
-          "indexed_value": 115.0818428984965
+          "indexed_value": 114.6083591931145
         },
         {
           "date": "2026-07-06",
           "index": "科创50",
           "level": 1996.1029,
-          "indexed_value": 116.27616355508043
+          "indexed_value": 115.79776603049245
         },
         {
           "date": "2026-07-07",
           "index": "科创50",
           "level": 2001.5859,
-          "indexed_value": 116.59555701158637
+          "indexed_value": 116.11584539961977
         },
         {
           "date": "2026-07-08",
           "index": "科创50",
           "level": 2016.2327,
-          "indexed_value": 117.44875636937427
+          "indexed_value": 116.9655344209099
         },
         {
           "date": "2026-07-09",
           "index": "科创50",
           "level": 2185.8251,
-          "indexed_value": 127.32778296669977
+          "indexed_value": 126.80391552628765
         },
         {
           "date": "2026-07-10",
           "index": "科创50",
           "level": 2064.9756,
-          "indexed_value": 120.28810769367169
+          "indexed_value": 119.79320374088722
         },
         {
           "date": "2026-07-13",
           "index": "科创50",
           "level": 1994.3192,
-          "indexed_value": 116.17226019772686
+          "indexed_value": 115.69429016496038
         },
         {
           "date": "2026-07-14",
           "index": "科创50",
           "level": 2009.7296,
-          "indexed_value": 117.06994046804218
+          "indexed_value": 116.58827709000133
         },
         {
           "date": "2026-07-15",
           "index": "科创50",
           "level": 1924.2735,
-          "indexed_value": 112.09198694651816
+          "indexed_value": 111.63080446988822
         },
         {
           "date": "2026-07-16",
           "index": "科创50",
           "level": 1846.8766,
-          "indexed_value": 107.58349462227166
+          "indexed_value": 107.14086153273531
         },
         {
           "date": "2026-07-17",
           "index": "科创50",
           "level": 1715.4044,
-          "indexed_value": 99.92503020636092
+          "indexed_value": 99.51390650195302
         },
         {
           "date": "2026-07-20",
           "index": "科创50",
           "level": 1718.6895,
-          "indexed_value": 100.11639249780129
+          "indexed_value": 99.70448146739533
         },
         {
           "date": "2026-07-21",
           "index": "科创50",
           "level": 1903.1613,
-          "indexed_value": 110.86216777226238
+          "indexed_value": 110.4060451671544
         },
         {
           "date": "2026-07-22",
           "index": "科创50",
           "level": 1860.0848,
-          "indexed_value": 108.35289324569344
+          "indexed_value": 107.90709460282602
         },
         {
           "date": "2026-07-23",
           "index": "科创50",
           "level": 1789.6941,
-          "indexed_value": 104.25252319665607
+          "indexed_value": 103.82359479461343
         },
         {
           "date": "2026-07-24",
           "index": "科创50",
           "level": 1787.1958,
-          "indexed_value": 104.10699325458263
+          "indexed_value": 103.67866360951572
         },
         {
           "date": "2026-07-27",
           "index": "科创50",
           "level": 1807.951,
-          "indexed_value": 105.31601661195484
+          "indexed_value": 104.88271265604337
         },
         {
           "date": "2026-07-28",
           "index": "科创50",
           "level": 1693.4786,
-          "indexed_value": 98.64781754018223
+          "indexed_value": 98.2419486993611
         },
         {
           "date": "2026-07-29",
           "index": "科创50",
           "level": 1678.7376,
-          "indexed_value": 97.7891308828133
+          "indexed_value": 97.38679495500479
         },
         {
           "date": "2026-07-30",
           "index": "科创50",
           "level": 1588.4149,
-          "indexed_value": 92.52769018357057
+          "indexed_value": 92.14700151457527
         },
         {
           "date": "2026-07-31",
           "index": "科创50",
           "level": 1635.9624,
-          "indexed_value": 95.29740755968137
+          "indexed_value": 94.90532338281903
         },
         {
           "date": "2026-08-03",
           "index": "科创50",
           "level": 1552.8903,
-          "indexed_value": 90.45832582373279
+          "indexed_value": 90.08615118510235
+        },
+        {
+          "date": "2026-08-04",
+          "index": "科创50",
+          "level": 1616.3582,
+          "indexed_value": 93.7680460586816
         }
       ],
       "industry_latest": [
         {
           "industry": "电子",
-          "amount_yi": 5534.5303,
-          "share": 0.27731437294061884,
-          "share_change": -0.01882141944939464,
-          "history_percentile": 0.9797665369649805,
+          "amount_yi": 6078.5727,
+          "share": 0.2756358761080052,
+          "share_change": -0.0016784968326136185,
+          "history_percentile": 0.9793854531310774,
           "rank": 1
         },
         {
-          "industry": "电力设备",
-          "amount_yi": 1543.6085,
-          "share": 0.07734438155362691,
-          "share_change": 0.009231184866816261,
-          "history_percentile": 0.667704280155642,
+          "industry": "通信",
+          "amount_yi": 2098.9,
+          "share": 0.09517565535789219,
+          "share_change": 0.0247557625085328,
+          "history_percentile": 0.9972773239984442,
           "rank": 2
         },
         {
-          "industry": "计算机",
-          "amount_yi": 1454.5856,
-          "share": 0.07288378086076316,
-          "share_change": -0.001028643403237925,
-          "history_percentile": 0.5377431906614786,
+          "industry": "电力设备",
+          "amount_yi": 1659.4185,
+          "share": 0.07524715005503378,
+          "share_change": -0.00209723149859313,
+          "history_percentile": 0.6386619992220925,
           "rank": 3
         },
         {
           "industry": "机械设备",
-          "amount_yi": 1411.5401,
-          "share": 0.07072693372227783,
-          "share_change": 0.003677367879712276,
-          "history_percentile": 0.8023346303501946,
+          "amount_yi": 1598.7026,
+          "share": 0.07249395763369679,
+          "share_change": 0.0017670239114189606,
+          "history_percentile": 0.8339167639050953,
           "rank": 4
         },
         {
-          "industry": "通信",
-          "amount_yi": 1405.4123,
-          "share": 0.07041989284935939,
-          "share_change": -0.014172764085857506,
-          "history_percentile": 0.9346303501945525,
+          "industry": "计算机",
+          "amount_yi": 1486.0634,
+          "share": 0.06738627757319428,
+          "share_change": -0.005497503287568886,
+          "history_percentile": 0.4535200311162972,
           "rank": 5
         },
         {
-          "industry": "有色金属",
-          "amount_yi": 1005.7157,
-          "share": 0.05039260851133754,
-          "share_change": -0.0000255842557790667,
-          "history_percentile": 0.5319066147859922,
+          "industry": "医药生物",
+          "amount_yi": 1187.2407,
+          "share": 0.053836014907838715,
+          "share_change": 0.0068582953635056565,
+          "history_percentile": 0.2637106184364061,
           "rank": 6
         },
         {
-          "industry": "医药生物",
-          "amount_yi": 937.5627,
-          "share": 0.04697771954433306,
-          "share_change": 0.0017532203121794349,
-          "history_percentile": 0.13618677042801555,
+          "industry": "有色金属",
+          "amount_yi": 1048.8698,
+          "share": 0.047561518223879794,
+          "share_change": -0.0028310902874577465,
+          "history_percentile": 0.47724620770128356,
           "rank": 7
         },
         {
           "industry": "基础化工",
-          "amount_yi": 879.8585,
-          "share": 0.0440863804113555,
-          "share_change": 0.001691388154301511,
-          "history_percentile": 0.2019455252918288,
+          "amount_yi": 931.5659,
+          "share": 0.04224231504195753,
+          "share_change": -0.0018440653693979694,
+          "history_percentile": 0.17386231038506417,
           "rank": 8
         },
         {
           "industry": "传媒",
-          "amount_yi": 692.6915,
-          "share": 0.034708150204507265,
-          "share_change": 0.006256515266008199,
-          "history_percentile": 0.4933852140077821,
+          "amount_yi": 750.6045,
+          "share": 0.03403653113634904,
+          "share_change": -0.0006716190681582274,
+          "history_percentile": 0.4780241151302995,
           "rank": 9
         },
         {
           "industry": "汽车",
-          "amount_yi": 581.1325,
-          "share": 0.029118350808001573,
-          "share_change": -0.0003417214272467446,
-          "history_percentile": 0.17198443579766537,
+          "amount_yi": 628.7793,
+          "share": 0.02851230737671004,
+          "share_change": -0.0006060434312915343,
+          "history_percentile": 0.15324776351614158,
           "rank": 10
         },
         {
           "industry": "公用事业",
-          "amount_yi": 486.0336,
-          "share": 0.024353304744229434,
-          "share_change": 0.004323691706560547,
-          "history_percentile": 0.5299610894941634,
+          "amount_yi": 511.5689,
+          "share": 0.023197343998387732,
+          "share_change": -0.001155960745841702,
+          "history_percentile": 0.47607934655775963,
           "rank": 11
         },
         {
           "industry": "国防军工",
-          "amount_yi": 464.8598,
-          "share": 0.023292365739203104,
-          "share_change": -0.0002806545668196034,
-          "history_percentile": 0.4342412451361868,
+          "amount_yi": 477.6569,
+          "share": 0.021659587638152924,
+          "share_change": -0.00163277810105018,
+          "history_percentile": 0.37884091793076624,
           "rank": 12
         },
         {
           "industry": "非银金融",
-          "amount_yi": 393.6861,
-          "share": 0.01972612092428833,
-          "share_change": -0.0006124160795763466,
-          "history_percentile": 0.0377431906614786,
+          "amount_yi": 401.4141,
+          "share": 0.01820232028081303,
+          "share_change": -0.0015238006434752996,
+          "history_percentile": 0.024504084014002333,
           "rank": 13
         },
         {
           "industry": "银行",
-          "amount_yi": 383.809,
-          "share": 0.019231216814183126,
-          "share_change": -0.0006411480469690027,
-          "history_percentile": 0.4723735408560311,
+          "amount_yi": 376.2297,
+          "share": 0.01706032124570164,
+          "share_change": -0.0021708955684814867,
+          "history_percentile": 0.36406067677946324,
           "rank": 14
         },
         {
           "industry": "食品饮料",
-          "amount_yi": 331.3434,
-          "share": 0.016602364106492042,
-          "share_change": -0.0012819201744752214,
-          "history_percentile": 0.08715953307392996,
+          "amount_yi": 336.0025,
+          "share": 0.01523619902777177,
+          "share_change": -0.0013661650787202724,
+          "history_percentile": 0.07117852975495916,
           "rank": 15
         },
         {
           "industry": "建筑材料",
-          "amount_yi": 316.3833,
-          "share": 0.015852770098373787,
-          "share_change": -0.0014727849757370064,
-          "history_percentile": 0.6517509727626459,
+          "amount_yi": 316.9846,
+          "share": 0.014373822975539241,
+          "share_change": -0.001478947122834546,
+          "history_percentile": 0.5464799688837029,
           "rank": 16
         },
         {
           "industry": "建筑装饰",
-          "amount_yi": 295.8667,
-          "share": 0.014824760898772238,
-          "share_change": 0.002637834374766522,
-          "history_percentile": 0.17898832684824903,
+          "amount_yi": 305.4545,
+          "share": 0.013850984906149545,
+          "share_change": -0.0009737759926226938,
+          "history_percentile": 0.1306884480746791,
           "rank": 17
         },
         {
           "industry": "交通运输",
-          "amount_yi": 216.5964,
-          "share": 0.010852826092070623,
-          "share_change": 0.0016219403019636005,
-          "history_percentile": 0.04319066147859922,
+          "amount_yi": 218.9353,
+          "share": 0.009927729124053902,
+          "share_change": -0.0009250969680167209,
+          "history_percentile": 0.03072734344612991,
           "rank": 18
         },
         {
           "industry": "家用电器",
-          "amount_yi": 207.2406,
-          "share": 0.010384042352580057,
-          "share_change": -0.00028794222189611196,
-          "history_percentile": 0.038910505836575876,
+          "amount_yi": 203.1931,
+          "share": 0.009213891303397838,
+          "share_change": -0.0011701510491822185,
+          "history_percentile": 0.013224426293271101,
           "rank": 19
         },
         {
-          "industry": "农林牧渔",
-          "amount_yi": 162.3478,
-          "share": 0.008134634000520153,
-          "share_change": 0.0017584534625468221,
-          "history_percentile": 0.045914396887159536,
+          "industry": "环保",
+          "amount_yi": 182.5716,
+          "share": 0.008278799218513959,
+          "share_change": 0.00040986345175218417,
+          "history_percentile": 0.2854920264488526,
           "rank": 20
         },
         {
           "industry": "商贸零售",
-          "amount_yi": 159.4718,
-          "share": 0.007990528522124412,
-          "share_change": -0.00031387865291302233,
-          "history_percentile": 0.09221789883268483,
+          "amount_yi": 165.2955,
+          "share": 0.007495405946071975,
+          "share_change": -0.0004951225760524364,
+          "history_percentile": 0.06495527032283158,
           "rank": 21
         },
         {
-          "industry": "环保",
-          "amount_yi": 157.0451,
-          "share": 0.007868935766761774,
-          "share_change": 0.0014852061913925565,
-          "history_percentile": 0.22684824902723735,
+          "industry": "农林牧渔",
+          "amount_yi": 156.1874,
+          "share": 0.007082394660843894,
+          "share_change": -0.0010522393396762593,
+          "history_percentile": 0.025281991443018282,
           "rank": 22
         },
         {
-          "industry": "石油石化",
-          "amount_yi": 155.9708,
-          "share": 0.007815106658472296,
-          "share_change": 0.0010136610021424129,
-          "history_percentile": 0.26536964980544747,
+          "industry": "轻工制造",
+          "amount_yi": 151.3015,
+          "share": 0.006860841116361964,
+          "share_change": -0.0006749885237047901,
+          "history_percentile": 0.012057565149747181,
           "rank": 23
         },
         {
-          "industry": "轻工制造",
-          "amount_yi": 150.3971,
-          "share": 0.007535829640066754,
-          "share_change": 0.0007163289682727333,
-          "history_percentile": 0.017509727626459144,
+          "industry": "石油石化",
+          "amount_yi": 147.2182,
+          "share": 0.006675681864600144,
+          "share_change": -0.001139424793872152,
+          "history_percentile": 0.15208090237261765,
           "rank": 24
         },
         {
           "industry": "房地产",
-          "amount_yi": 144.3329,
-          "share": 0.007231975522512008,
-          "share_change": 0.0004722323718603051,
-          "history_percentile": 0.019455252918287938,
+          "amount_yi": 146.6764,
+          "share": 0.006651113676466882,
+          "share_change": -0.0005808618460451265,
+          "history_percentile": 0.011668611435239206,
           "rank": 25
         },
         {
-          "industry": "纺织服饰",
-          "amount_yi": 115.4408,
-          "share": 0.005784301707366818,
-          "share_change": 0.0008381274086588326,
-          "history_percentile": 0.11906614785992217,
+          "industry": "社会服务",
+          "amount_yi": 116.9313,
+          "share": 0.005302307451212682,
+          "share_change": -0.00036750155165682537,
+          "history_percentile": 0.29871645274212366,
           "rank": 26
         },
         {
-          "industry": "社会服务",
-          "amount_yi": 113.1558,
-          "share": 0.005669809002869507,
-          "share_change": 0.000059484134203373513,
-          "history_percentile": 0.3490272373540856,
+          "industry": "纺织服饰",
+          "amount_yi": 114.9909,
+          "share": 0.005214319056502856,
+          "share_change": -0.0005699826508639627,
+          "history_percentile": 0.059509918319719954,
           "rank": 27
         },
         {
           "industry": "煤炭",
-          "amount_yi": 102.881,
-          "share": 0.005154977650497967,
-          "share_change": 0.000823276514935925,
-          "history_percentile": 0.1377431906614786,
+          "amount_yi": 99.54,
+          "share": 0.004513690377971599,
+          "share_change": -0.0006412872725263677,
+          "history_percentile": 0.08673667833527811,
           "rank": 28
         },
         {
           "industry": "钢铁",
-          "amount_yi": 82.363,
-          "share": 0.004126898302193447,
-          "share_change": 0.0008523797910678752,
-          "history_percentile": 0.06575875486381323,
+          "amount_yi": 78.7693,
+          "share": 0.0035718327455249973,
+          "share_change": -0.0005550655566684496,
+          "history_percentile": 0.025670945157526253,
           "rank": 29
         },
         {
           "industry": "美容护理",
-          "amount_yi": 37.4395,
-          "share": 0.0018759516892897486,
-          "share_change": -0.00015498846031465597,
-          "history_percentile": 0.1490272373540856,
+          "amount_yi": 39.2962,
+          "share": 0.0017819055639024264,
+          "share_change": -0.00009404612538732224,
+          "history_percentile": 0.12563204978607545,
           "rank": 30
         },
         {
           "industry": "综合",
-          "amount_yi": 34.3013,
-          "share": 0.0017187083609512533,
-          "share_change": 0.00022357309282762462,
-          "history_percentile": 0.16575875486381322,
+          "amount_yi": 37.973,
+          "share": 0.0017219044075016626,
+          "share_change": 0.0000031960465504093753,
+          "history_percentile": 0.1688059120964605,
           "rank": 31
         }
       ],
       "industry_top10": [
         {
           "industry": "电子",
-          "amount_yi": 5534.5303,
-          "share": 0.27731437294061884,
-          "share_change": -0.01882141944939464,
-          "history_percentile": 0.9797665369649805,
+          "amount_yi": 6078.5727,
+          "share": 0.2756358761080052,
+          "share_change": -0.0016784968326136185,
+          "history_percentile": 0.9793854531310774,
           "rank": 1
         },
         {
-          "industry": "电力设备",
-          "amount_yi": 1543.6085,
-          "share": 0.07734438155362691,
-          "share_change": 0.009231184866816261,
-          "history_percentile": 0.667704280155642,
+          "industry": "通信",
+          "amount_yi": 2098.9,
+          "share": 0.09517565535789219,
+          "share_change": 0.0247557625085328,
+          "history_percentile": 0.9972773239984442,
           "rank": 2
         },
         {
-          "industry": "计算机",
-          "amount_yi": 1454.5856,
-          "share": 0.07288378086076316,
-          "share_change": -0.001028643403237925,
-          "history_percentile": 0.5377431906614786,
+          "industry": "电力设备",
+          "amount_yi": 1659.4185,
+          "share": 0.07524715005503378,
+          "share_change": -0.00209723149859313,
+          "history_percentile": 0.6386619992220925,
           "rank": 3
         },
         {
           "industry": "机械设备",
-          "amount_yi": 1411.5401,
-          "share": 0.07072693372227783,
-          "share_change": 0.003677367879712276,
-          "history_percentile": 0.8023346303501946,
+          "amount_yi": 1598.7026,
+          "share": 0.07249395763369679,
+          "share_change": 0.0017670239114189606,
+          "history_percentile": 0.8339167639050953,
           "rank": 4
         },
         {
-          "industry": "通信",
-          "amount_yi": 1405.4123,
-          "share": 0.07041989284935939,
-          "share_change": -0.014172764085857506,
-          "history_percentile": 0.9346303501945525,
+          "industry": "计算机",
+          "amount_yi": 1486.0634,
+          "share": 0.06738627757319428,
+          "share_change": -0.005497503287568886,
+          "history_percentile": 0.4535200311162972,
           "rank": 5
         },
         {
-          "industry": "有色金属",
-          "amount_yi": 1005.7157,
-          "share": 0.05039260851133754,
-          "share_change": -0.0000255842557790667,
-          "history_percentile": 0.5319066147859922,
+          "industry": "医药生物",
+          "amount_yi": 1187.2407,
+          "share": 0.053836014907838715,
+          "share_change": 0.0068582953635056565,
+          "history_percentile": 0.2637106184364061,
           "rank": 6
         },
         {
-          "industry": "医药生物",
-          "amount_yi": 937.5627,
-          "share": 0.04697771954433306,
-          "share_change": 0.0017532203121794349,
-          "history_percentile": 0.13618677042801555,
+          "industry": "有色金属",
+          "amount_yi": 1048.8698,
+          "share": 0.047561518223879794,
+          "share_change": -0.0028310902874577465,
+          "history_percentile": 0.47724620770128356,
           "rank": 7
         },
         {
           "industry": "基础化工",
-          "amount_yi": 879.8585,
-          "share": 0.0440863804113555,
-          "share_change": 0.001691388154301511,
-          "history_percentile": 0.2019455252918288,
+          "amount_yi": 931.5659,
+          "share": 0.04224231504195753,
+          "share_change": -0.0018440653693979694,
+          "history_percentile": 0.17386231038506417,
           "rank": 8
         },
         {
           "industry": "传媒",
-          "amount_yi": 692.6915,
-          "share": 0.034708150204507265,
-          "share_change": 0.006256515266008199,
-          "history_percentile": 0.4933852140077821,
+          "amount_yi": 750.6045,
+          "share": 0.03403653113634904,
+          "share_change": -0.0006716190681582274,
+          "history_percentile": 0.4780241151302995,
           "rank": 9
         },
         {
           "industry": "汽车",
-          "amount_yi": 581.1325,
-          "share": 0.029118350808001573,
-          "share_change": -0.0003417214272467446,
-          "history_percentile": 0.17198443579766537,
+          "amount_yi": 628.7793,
+          "share": 0.02851230737671004,
+          "share_change": -0.0006060434312915343,
+          "history_percentile": 0.15324776351614158,
           "rank": 10
         }
       ],
       "top_industry_trend": [
-        {
-          "date": "2026-05-11",
-          "industry": "电子",
-          "share": 0.24632246111498796,
-          "latest_rank": 1
-        },
-        {
-          "date": "2026-05-11",
-          "industry": "电力设备",
-          "share": 0.10159660144610064,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-05-11",
-          "industry": "计算机",
-          "share": 0.06547668018821703,
-          "latest_rank": 3
-        },
-        {
-          "date": "2026-05-11",
-          "industry": "通信",
-          "share": 0.08232251543771349,
-          "latest_rank": 5
-        },
-        {
-          "date": "2026-05-11",
-          "industry": "机械设备",
-          "share": 0.07834340129054547,
-          "latest_rank": 4
-        },
         {
           "date": "2026-05-12",
           "industry": "电子",
@@ -3341,19 +3311,19 @@
           "date": "2026-05-12",
           "industry": "电力设备",
           "share": 0.10726054690476616,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-05-12",
           "industry": "计算机",
           "share": 0.05933572715778436,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-05-12",
           "industry": "通信",
           "share": 0.08766888886439973,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-05-12",
@@ -3371,19 +3341,19 @@
           "date": "2026-05-13",
           "industry": "电力设备",
           "share": 0.11436301219912906,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-05-13",
           "industry": "计算机",
           "share": 0.06295476502624982,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-05-13",
           "industry": "通信",
           "share": 0.08389753289137143,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-05-13",
@@ -3401,19 +3371,19 @@
           "date": "2026-05-14",
           "industry": "电力设备",
           "share": 0.11046086499291649,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-05-14",
           "industry": "计算机",
           "share": 0.06051629311781242,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-05-14",
           "industry": "通信",
           "share": 0.08442041491915742,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-05-14",
@@ -3431,19 +3401,19 @@
           "date": "2026-05-15",
           "industry": "电力设备",
           "share": 0.10806023031353774,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-05-15",
           "industry": "计算机",
           "share": 0.054477583709747465,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-05-15",
           "industry": "通信",
           "share": 0.08336384262099128,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-05-15",
@@ -3461,19 +3431,19 @@
           "date": "2026-05-18",
           "industry": "电力设备",
           "share": 0.10197604424520042,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-05-18",
           "industry": "计算机",
           "share": 0.055840524789310675,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-05-18",
           "industry": "通信",
           "share": 0.08180565775818914,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-05-18",
@@ -3491,19 +3461,19 @@
           "date": "2026-05-19",
           "industry": "电力设备",
           "share": 0.09906229244014418,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-05-19",
           "industry": "计算机",
           "share": 0.06292042525744136,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-05-19",
           "industry": "通信",
           "share": 0.08547816274470404,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-05-19",
@@ -3521,19 +3491,19 @@
           "date": "2026-05-20",
           "industry": "电力设备",
           "share": 0.10633721421328962,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-05-20",
           "industry": "计算机",
           "share": 0.05726101916049626,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-05-20",
           "industry": "通信",
           "share": 0.07896372634886074,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-05-20",
@@ -3551,19 +3521,19 @@
           "date": "2026-05-21",
           "industry": "电力设备",
           "share": 0.09933344677878166,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-05-21",
           "industry": "计算机",
           "share": 0.06047595716016329,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-05-21",
           "industry": "通信",
           "share": 0.06866599970514,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-05-21",
@@ -3581,19 +3551,19 @@
           "date": "2026-05-22",
           "industry": "电力设备",
           "share": 0.09375866092748047,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-05-22",
           "industry": "计算机",
           "share": 0.05401118014580634,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-05-22",
           "industry": "通信",
           "share": 0.07102902638420874,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-05-22",
@@ -3611,19 +3581,19 @@
           "date": "2026-05-25",
           "industry": "电力设备",
           "share": 0.09630395700504903,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-05-25",
           "industry": "计算机",
           "share": 0.05431297584614072,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-05-25",
           "industry": "通信",
           "share": 0.07148813377051089,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-05-25",
@@ -3641,19 +3611,19 @@
           "date": "2026-05-26",
           "industry": "电力设备",
           "share": 0.09390660731914166,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-05-26",
           "industry": "计算机",
           "share": 0.052483908039570176,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-05-26",
           "industry": "通信",
           "share": 0.07043283505280926,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-05-26",
@@ -3671,19 +3641,19 @@
           "date": "2026-05-27",
           "industry": "电力设备",
           "share": 0.1018891195126711,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-05-27",
           "industry": "计算机",
           "share": 0.04696333827465191,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-05-27",
           "industry": "通信",
           "share": 0.06732760997924324,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-05-27",
@@ -3701,19 +3671,19 @@
           "date": "2026-05-28",
           "industry": "电力设备",
           "share": 0.09880216068580581,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-05-28",
           "industry": "计算机",
           "share": 0.04814271631987617,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-05-28",
           "industry": "通信",
           "share": 0.0760361262772034,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-05-28",
@@ -3731,19 +3701,19 @@
           "date": "2026-05-29",
           "industry": "电力设备",
           "share": 0.09657835729759481,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-05-29",
           "industry": "计算机",
           "share": 0.047014288006504174,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-05-29",
           "industry": "通信",
           "share": 0.08249094707377962,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-05-29",
@@ -3761,19 +3731,19 @@
           "date": "2026-06-01",
           "industry": "电力设备",
           "share": 0.0954592693392226,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-01",
           "industry": "计算机",
           "share": 0.05385418378639389,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-01",
           "industry": "通信",
           "share": 0.0742682298886445,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-01",
@@ -3791,19 +3761,19 @@
           "date": "2026-06-02",
           "industry": "电力设备",
           "share": 0.09322378445201994,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-02",
           "industry": "计算机",
           "share": 0.049700384993369116,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-02",
           "industry": "通信",
           "share": 0.08756396896021641,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-02",
@@ -3821,19 +3791,19 @@
           "date": "2026-06-03",
           "industry": "电力设备",
           "share": 0.08366820038344752,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-03",
           "industry": "计算机",
           "share": 0.04747074518471054,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-03",
           "industry": "通信",
           "share": 0.09803565270961304,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-03",
@@ -3851,19 +3821,19 @@
           "date": "2026-06-04",
           "industry": "电力设备",
           "share": 0.09157835556570397,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-04",
           "industry": "计算机",
           "share": 0.044205601827197426,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-04",
           "industry": "通信",
           "share": 0.08597346928535289,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-04",
@@ -3881,19 +3851,19 @@
           "date": "2026-06-05",
           "industry": "电力设备",
           "share": 0.08475354037029993,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-05",
           "industry": "计算机",
           "share": 0.042940226017080384,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-05",
           "industry": "通信",
           "share": 0.10860890752831522,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-05",
@@ -3911,19 +3881,19 @@
           "date": "2026-06-08",
           "industry": "电力设备",
           "share": 0.08662984993412956,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-08",
           "industry": "计算机",
           "share": 0.045749603643049,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-08",
           "industry": "通信",
           "share": 0.0958502884845054,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-08",
@@ -3941,19 +3911,19 @@
           "date": "2026-06-09",
           "industry": "电力设备",
           "share": 0.08575162055311798,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-09",
           "industry": "计算机",
           "share": 0.04463039943702264,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-09",
           "industry": "通信",
           "share": 0.10132420391273682,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-09",
@@ -3971,19 +3941,19 @@
           "date": "2026-06-10",
           "industry": "电力设备",
           "share": 0.08523328608788448,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-10",
           "industry": "计算机",
           "share": 0.05044254268320857,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-10",
           "industry": "通信",
           "share": 0.08738352407706013,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-10",
@@ -4001,19 +3971,19 @@
           "date": "2026-06-11",
           "industry": "电力设备",
           "share": 0.08470453413648443,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-11",
           "industry": "计算机",
           "share": 0.043856159240311776,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-11",
           "industry": "通信",
           "share": 0.09301536958454316,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-11",
@@ -4031,19 +4001,19 @@
           "date": "2026-06-12",
           "industry": "电力设备",
           "share": 0.08784266574197164,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-12",
           "industry": "计算机",
           "share": 0.04062309123788623,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-12",
           "industry": "通信",
           "share": 0.0796531043880326,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-12",
@@ -4061,19 +4031,19 @@
           "date": "2026-06-15",
           "industry": "电力设备",
           "share": 0.08385661913775594,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-15",
           "industry": "计算机",
           "share": 0.04266608673993003,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-15",
           "industry": "通信",
           "share": 0.08525095675581974,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-15",
@@ -4091,19 +4061,19 @@
           "date": "2026-06-16",
           "industry": "电力设备",
           "share": 0.09851576621278722,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-16",
           "industry": "计算机",
           "share": 0.04019145273340615,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-16",
           "industry": "通信",
           "share": 0.08651979260079161,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-16",
@@ -4121,19 +4091,19 @@
           "date": "2026-06-17",
           "industry": "电力设备",
           "share": 0.09027281874134176,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-17",
           "industry": "计算机",
           "share": 0.04101811355480522,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-17",
           "industry": "通信",
           "share": 0.07882654024454701,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-17",
@@ -4151,19 +4121,19 @@
           "date": "2026-06-18",
           "industry": "电力设备",
           "share": 0.08443037063494505,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-18",
           "industry": "计算机",
           "share": 0.041355777948773244,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-18",
           "industry": "通信",
           "share": 0.0776607108868135,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-18",
@@ -4181,19 +4151,19 @@
           "date": "2026-06-22",
           "industry": "电力设备",
           "share": 0.0950599313026545,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-22",
           "industry": "计算机",
           "share": 0.04772711118452706,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-22",
           "industry": "通信",
           "share": 0.07868370526447573,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-22",
@@ -4211,19 +4181,19 @@
           "date": "2026-06-23",
           "industry": "电力设备",
           "share": 0.08248747134971648,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-23",
           "industry": "计算机",
           "share": 0.04498495845126603,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-23",
           "industry": "通信",
           "share": 0.08044838018007035,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-23",
@@ -4241,19 +4211,19 @@
           "date": "2026-06-24",
           "industry": "电力设备",
           "share": 0.07869558015047967,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-24",
           "industry": "计算机",
           "share": 0.04553830875875247,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-24",
           "industry": "通信",
           "share": 0.07631572880084332,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-24",
@@ -4271,19 +4241,19 @@
           "date": "2026-06-25",
           "industry": "电力设备",
           "share": 0.07503434549167431,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-25",
           "industry": "计算机",
           "share": 0.04725912755372019,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-25",
           "industry": "通信",
           "share": 0.08692422557447796,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-25",
@@ -4301,19 +4271,19 @@
           "date": "2026-06-26",
           "industry": "电力设备",
           "share": 0.08493223527681049,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-26",
           "industry": "计算机",
           "share": 0.044433106498564315,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-26",
           "industry": "通信",
           "share": 0.08116834845248161,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-26",
@@ -4331,19 +4301,19 @@
           "date": "2026-06-29",
           "industry": "电力设备",
           "share": 0.07715627979717632,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-29",
           "industry": "计算机",
           "share": 0.038038845093887774,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-29",
           "industry": "通信",
           "share": 0.06957141142572605,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-29",
@@ -4361,19 +4331,19 @@
           "date": "2026-06-30",
           "industry": "电力设备",
           "share": 0.07636112598444872,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-06-30",
           "industry": "计算机",
           "share": 0.04476594424382689,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-06-30",
           "industry": "通信",
           "share": 0.07181961705057059,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-06-30",
@@ -4391,19 +4361,19 @@
           "date": "2026-07-01",
           "industry": "电力设备",
           "share": 0.08422294544061538,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-01",
           "industry": "计算机",
           "share": 0.047916874240206866,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-01",
           "industry": "通信",
           "share": 0.0695676571083232,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-01",
@@ -4421,19 +4391,19 @@
           "date": "2026-07-02",
           "industry": "电力设备",
           "share": 0.07467999968390528,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-02",
           "industry": "计算机",
           "share": 0.04479567223305888,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-02",
           "industry": "通信",
           "share": 0.06690675818232349,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-02",
@@ -4451,19 +4421,19 @@
           "date": "2026-07-03",
           "industry": "电力设备",
           "share": 0.07504313103628721,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-03",
           "industry": "计算机",
           "share": 0.039864227902199824,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-03",
           "industry": "通信",
           "share": 0.06438078792337538,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-03",
@@ -4481,19 +4451,19 @@
           "date": "2026-07-06",
           "industry": "电力设备",
           "share": 0.07708766324223201,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-06",
           "industry": "计算机",
           "share": 0.041875222505997615,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-06",
           "industry": "通信",
           "share": 0.06584292749711904,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-06",
@@ -4511,19 +4481,19 @@
           "date": "2026-07-07",
           "industry": "电力设备",
           "share": 0.07741166737960549,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-07",
           "industry": "计算机",
           "share": 0.042899353478686855,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-07",
           "industry": "通信",
           "share": 0.0698173689792731,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-07",
@@ -4541,19 +4511,19 @@
           "date": "2026-07-08",
           "industry": "电力设备",
           "share": 0.07692785142439038,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-08",
           "industry": "计算机",
           "share": 0.05837536993633731,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-08",
           "industry": "通信",
           "share": 0.07360713102674901,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-08",
@@ -4571,19 +4541,19 @@
           "date": "2026-07-09",
           "industry": "电力设备",
           "share": 0.07385015846733387,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-09",
           "industry": "计算机",
           "share": 0.06129530397433271,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-09",
           "industry": "通信",
           "share": 0.08494239125258038,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-09",
@@ -4601,19 +4571,19 @@
           "date": "2026-07-10",
           "industry": "电力设备",
           "share": 0.06941756257394535,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-10",
           "industry": "计算机",
           "share": 0.0628569560337891,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-10",
           "industry": "通信",
           "share": 0.08394409506883399,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-10",
@@ -4631,19 +4601,19 @@
           "date": "2026-07-13",
           "industry": "电力设备",
           "share": 0.07049306124318165,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-13",
           "industry": "计算机",
           "share": 0.06055896454619209,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-13",
           "industry": "通信",
           "share": 0.07367638861357503,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-13",
@@ -4661,19 +4631,19 @@
           "date": "2026-07-14",
           "industry": "电力设备",
           "share": 0.0656236560161708,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-14",
           "industry": "计算机",
           "share": 0.055450485249575736,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-14",
           "industry": "通信",
           "share": 0.0865522900771473,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-14",
@@ -4691,19 +4661,19 @@
           "date": "2026-07-15",
           "industry": "电力设备",
           "share": 0.06221576814011719,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-15",
           "industry": "计算机",
           "share": 0.05083928142592124,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-15",
           "industry": "通信",
           "share": 0.07507007534980585,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-15",
@@ -4721,19 +4691,19 @@
           "date": "2026-07-16",
           "industry": "电力设备",
           "share": 0.06070035022838616,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-16",
           "industry": "计算机",
           "share": 0.05767197026209844,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-16",
           "industry": "通信",
           "share": 0.07820107765726628,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-16",
@@ -4751,19 +4721,19 @@
           "date": "2026-07-17",
           "industry": "电力设备",
           "share": 0.06576653866148949,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-17",
           "industry": "计算机",
           "share": 0.05777615815221622,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-17",
           "industry": "通信",
           "share": 0.08649423306045104,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-17",
@@ -4781,19 +4751,19 @@
           "date": "2026-07-20",
           "industry": "电力设备",
           "share": 0.06848529462783885,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-20",
           "industry": "计算机",
           "share": 0.0591639986757039,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-20",
           "industry": "通信",
           "share": 0.08445431578095791,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-20",
@@ -4811,19 +4781,19 @@
           "date": "2026-07-21",
           "industry": "电力设备",
           "share": 0.06679098650485772,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-21",
           "industry": "计算机",
           "share": 0.060501515334182784,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-21",
           "industry": "通信",
           "share": 0.08939088378800579,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-21",
@@ -4841,19 +4811,19 @@
           "date": "2026-07-22",
           "industry": "电力设备",
           "share": 0.06123090405193626,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-22",
           "industry": "计算机",
           "share": 0.06659179577739274,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-22",
           "industry": "通信",
           "share": 0.09001551744856184,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-22",
@@ -4871,19 +4841,19 @@
           "date": "2026-07-23",
           "industry": "电力设备",
           "share": 0.08538607346135903,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-23",
           "industry": "计算机",
           "share": 0.06442682557813294,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-23",
           "industry": "通信",
           "share": 0.07754850149452892,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-23",
@@ -4901,19 +4871,19 @@
           "date": "2026-07-24",
           "industry": "电力设备",
           "share": 0.08066929953743603,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-24",
           "industry": "计算机",
           "share": 0.05911672242922853,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-24",
           "industry": "通信",
           "share": 0.0680716551285928,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-24",
@@ -4931,19 +4901,19 @@
           "date": "2026-07-27",
           "industry": "电力设备",
           "share": 0.08481334986987601,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-27",
           "industry": "计算机",
           "share": 0.05793227600665553,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-27",
           "industry": "通信",
           "share": 0.07017655229463451,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-27",
@@ -4961,19 +4931,19 @@
           "date": "2026-07-28",
           "industry": "电力设备",
           "share": 0.07598852032219441,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-28",
           "industry": "计算机",
           "share": 0.057850349895693216,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-28",
           "industry": "通信",
           "share": 0.09450908616482157,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-28",
@@ -4991,19 +4961,19 @@
           "date": "2026-07-29",
           "industry": "电力设备",
           "share": 0.07981121801915628,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-29",
           "industry": "计算机",
           "share": 0.057249628057850076,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-29",
           "industry": "通信",
           "share": 0.0782280783273636,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-29",
@@ -5021,19 +4991,19 @@
           "date": "2026-07-30",
           "industry": "电力设备",
           "share": 0.07318102424846738,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-30",
           "industry": "计算机",
           "share": 0.05463262831171985,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-30",
           "industry": "通信",
           "share": 0.0881064480380686,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-30",
@@ -5051,19 +5021,19 @@
           "date": "2026-07-31",
           "industry": "电力设备",
           "share": 0.06811319668681065,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-07-31",
           "industry": "计算机",
           "share": 0.07391242426400109,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-07-31",
           "industry": "通信",
           "share": 0.08459265693521689,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-07-31",
@@ -5081,24 +5051,54 @@
           "date": "2026-08-03",
           "industry": "电力设备",
           "share": 0.07734438155362691,
-          "latest_rank": 2
+          "latest_rank": 3
         },
         {
           "date": "2026-08-03",
           "industry": "计算机",
           "share": 0.07288378086076316,
-          "latest_rank": 3
+          "latest_rank": 5
         },
         {
           "date": "2026-08-03",
           "industry": "通信",
           "share": 0.07041989284935939,
-          "latest_rank": 5
+          "latest_rank": 2
         },
         {
           "date": "2026-08-03",
           "industry": "机械设备",
           "share": 0.07072693372227783,
+          "latest_rank": 4
+        },
+        {
+          "date": "2026-08-04",
+          "industry": "电子",
+          "share": 0.2756358761080052,
+          "latest_rank": 1
+        },
+        {
+          "date": "2026-08-04",
+          "industry": "电力设备",
+          "share": 0.07524715005503378,
+          "latest_rank": 3
+        },
+        {
+          "date": "2026-08-04",
+          "industry": "计算机",
+          "share": 0.06738627757319428,
+          "latest_rank": 5
+        },
+        {
+          "date": "2026-08-04",
+          "industry": "通信",
+          "share": 0.09517565535789219,
+          "latest_rank": 2
+        },
+        {
+          "date": "2026-08-04",
+          "industry": "机械设备",
+          "share": 0.07249395763369679,
           "latest_rank": 4
         }
       ]
@@ -5114,7 +5114,7 @@
         "language": "sql",
         "sql": "SELECT MAX(trade_date) FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-03T20:20:11.312044+08:00"
+        "executed_at": "2026-08-05T13:14:52.368927+08:00"
       }
     },
     {
@@ -5126,7 +5126,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, industry, amount FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-03T20:20:11.312044+08:00"
+        "executed_at": "2026-08-05T13:14:52.368927+08:00"
       }
     },
     {
@@ -5138,7 +5138,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, stock_code, amount FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-03T20:20:11.312044+08:00"
+        "executed_at": "2026-08-05T13:14:52.368927+08:00"
       }
     },
     {
@@ -5150,7 +5150,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_code, close FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-03T20:20:11.312044+08:00"
+        "executed_at": "2026-08-05T13:14:52.368927+08:00"
       }
     },
     {
@@ -5162,7 +5162,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_code, close FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-03T20:20:11.312044+08:00"
+        "executed_at": "2026-08-05T13:14:52.368927+08:00"
       }
     }
   ]
