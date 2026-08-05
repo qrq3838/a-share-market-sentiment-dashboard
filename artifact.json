@@ -5,7 +5,7 @@
     "surface": "dashboard",
     "title": "A股市场情绪日报",
     "description": "基于 Wind 数据的 A 股市场情绪看板。",
-    "generatedAt": "2026-08-05T20:52:18.070952+08:00",
+    "generatedAt": "2026-08-05T21:10:20.774030+08:00",
     "filters": [],
     "cards": [
       {
@@ -157,8 +157,8 @@
     "charts": [
       {
         "id": "crowding_trend",
-        "title": "市场拥挤度走势",
-        "subtitle": "完整历史：2016-01-04 至 2026-08-05；展示每月最后一个完整交易日。",
+        "title": "市场拥挤度与四个指数走势",
+        "subtitle": "市场拥挤度使用左轴，四个指数原始点位使用右轴；可自行选择日期区间。",
         "type": "line",
         "dataset": "market_trend",
         "sourceId": "crowding_archive_source",
@@ -387,7 +387,7 @@
           "language": "sql",
           "sql": "SELECT MAX(trade_date) FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-05T20:52:18.070952+08:00"
+          "executed_at": "2026-08-05T21:10:20.774030+08:00"
         }
       },
       {
@@ -399,7 +399,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, industry, amount FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-05T20:52:18.070952+08:00"
+          "executed_at": "2026-08-05T21:10:20.774030+08:00"
         }
       },
       {
@@ -411,7 +411,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, stock_code, amount, circulating_market_cap FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-05T20:52:18.070952+08:00"
+          "executed_at": "2026-08-05T21:10:20.774030+08:00"
         }
       },
       {
@@ -423,7 +423,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_code, close FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-05T20:52:18.070952+08:00"
+          "executed_at": "2026-08-05T21:10:20.774030+08:00"
         }
       },
       {
@@ -435,7 +435,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_code, close FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-05T20:52:18.070952+08:00"
+          "executed_at": "2026-08-05T21:10:20.774030+08:00"
         }
       }
     ],
@@ -463,12 +463,6 @@
         "id": "crowding_chart",
         "type": "chart",
         "chartId": "crowding_trend",
-        "layout": "full"
-      },
-      {
-        "id": "index_chart",
-        "type": "chart",
-        "chartId": "index_trend",
         "layout": "full"
       },
       {
@@ -505,7 +499,7 @@
   },
   "snapshot": {
     "version": 1,
-    "generatedAt": "2026-08-05T20:52:18.070952+08:00",
+    "generatedAt": "2026-08-05T21:10:20.774030+08:00",
     "status": "ready",
     "datasets": {
       "overview": [
@@ -7050,7 +7044,7 @@
         "language": "sql",
         "sql": "SELECT MAX(trade_date) FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-05T20:52:18.070952+08:00"
+        "executed_at": "2026-08-05T21:10:20.774030+08:00"
       }
     },
     {
@@ -7062,7 +7056,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, industry, amount FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-05T20:52:18.070952+08:00"
+        "executed_at": "2026-08-05T21:10:20.774030+08:00"
       }
     },
     {
@@ -7074,7 +7068,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, stock_code, amount, circulating_market_cap FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-05T20:52:18.070952+08:00"
+        "executed_at": "2026-08-05T21:10:20.774030+08:00"
       }
     },
     {
@@ -7086,7 +7080,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_code, close FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-05T20:52:18.070952+08:00"
+        "executed_at": "2026-08-05T21:10:20.774030+08:00"
       }
     },
     {
@@ -7098,7 +7092,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_code, close FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-05T20:52:18.070952+08:00"
+        "executed_at": "2026-08-05T21:10:20.774030+08:00"
       }
     }
   ]
