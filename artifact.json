@@ -5,7 +5,7 @@
     "surface": "dashboard",
     "title": "A股市场情绪日报",
     "description": "基于 Wind 数据的 A 股市场情绪看板。",
-    "generatedAt": "2026-08-05T21:10:20.774030+08:00",
+    "generatedAt": "2026-08-05T22:07:35.867814+08:00",
     "filters": [],
     "cards": [
       {
@@ -56,7 +56,7 @@
         "id": "crowding_percentile",
         "dataset": "overview",
         "sourceId": "crowding_archive_source",
-        "description": "相对2016-01-04以来完整归档历史的分位位置。",
+        "description": "相对2008-01-02以来市场拥挤度历史的分位位置。",
         "metrics": [
           {
             "label": "拥挤度历史分位",
@@ -387,7 +387,7 @@
           "language": "sql",
           "sql": "SELECT MAX(trade_date) FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-05T21:10:20.774030+08:00"
+          "executed_at": "2026-08-05T22:07:35.867814+08:00"
         }
       },
       {
@@ -399,7 +399,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, industry, amount FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-05T21:10:20.774030+08:00"
+          "executed_at": "2026-08-05T22:07:35.867814+08:00"
         }
       },
       {
@@ -411,7 +411,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, stock_code, amount, circulating_market_cap FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-05T21:10:20.774030+08:00"
+          "executed_at": "2026-08-05T22:07:35.867814+08:00"
         }
       },
       {
@@ -423,7 +423,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_code, close FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-05T21:10:20.774030+08:00"
+          "executed_at": "2026-08-05T22:07:35.867814+08:00"
         }
       },
       {
@@ -435,7 +435,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_code, close FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-05T21:10:20.774030+08:00"
+          "executed_at": "2026-08-05T22:07:35.867814+08:00"
         }
       }
     ],
@@ -493,13 +493,13 @@
       {
         "id": "methodology",
         "type": "markdown",
-        "body": "## 口径与声明\n\n- 历史覆盖：2016-01-04 至 2026-08-05，共 2572 个完整交易日。\n- 数据来源：Wind。\n- 行业口径：31 个现行申万一级行业；金额单位为人民币亿元。\n- 拥挤度：当日成交额最高 5% 的沪深股票成交额 ÷ 当日全部沪深样本股票成交额。\n- 指数：上证指数、沪深300、创业板指和科创50。\n- 个股榜单：仅发布最新完整交易日成交额前 5% 的个股代码、名称、成交额与流通市值，不发布完整个股历史明细。\n- 数据可能因 Wind 更新而变化。本页面仅供研究交流，不构成任何投资建议。"
+        "body": "## 口径与声明\n\n- 市场拥挤度与指数走势覆盖：2008-01-02 至 2026-08-05，共 4518 个交易日。\n- 行业成交结构覆盖：2016-01-04 至 2026-08-05，共 2572 个交易日。\n- 数据来源：Wind。\n- 行业口径：31 个现行申万一级行业；金额单位为人民币亿元。\n- 拥挤度：当日成交额最高 5% 的沪深股票成交额 ÷ 当日全部沪深样本股票成交额。\n- 指数：上证指数、沪深300、创业板指和科创50。\n- 个股榜单：仅发布最新完整交易日成交额前 5% 的个股代码、名称、成交额与流通市值，不发布完整个股历史明细。\n- 数据可能因 Wind 更新而变化。本页面仅供研究交流，不构成任何投资建议。"
       }
     ]
   },
   "snapshot": {
     "version": 1,
-    "generatedAt": "2026-08-05T21:10:20.774030+08:00",
+    "generatedAt": "2026-08-05T22:07:35.867814+08:00",
     "status": "ready",
     "datasets": {
       "overview": [
@@ -508,9 +508,9 @@
           "turnover_total_yi": 26535.8204,
           "crowding": 0.5174358540827717,
           "crowding_change": 0.025545890071560495,
-          "crowding_percentile": 0.9910575427682737,
+          "crowding_percentile": 0.9900398406374502,
           "covered_stocks": 5204,
-          "archive_days": 2572
+          "archive_days": 4518
         }
       ],
       "index_latest": [
@@ -540,6 +540,774 @@
         }
       ],
       "market_trend": [
+        {
+          "date": "2008-01-31",
+          "month_label": "2008-01",
+          "crowding": 0.41311947958035344,
+          "covered_stocks": 1402,
+          "top_group_stocks": 1129.790838365,
+          "turnover_total_yi": 466.73860318
+        },
+        {
+          "date": "2008-02-29",
+          "month_label": "2008-02",
+          "crowding": 0.3099433846904914,
+          "covered_stocks": 1417,
+          "top_group_stocks": 1143.33522084,
+          "turnover_total_yi": 354.369188183
+        },
+        {
+          "date": "2008-03-31",
+          "month_label": "2008-03",
+          "crowding": 0.44606343105942287,
+          "covered_stocks": 1416,
+          "top_group_stocks": 970.10956588,
+          "turnover_total_yi": 432.73040146
+        },
+        {
+          "date": "2008-04-30",
+          "month_label": "2008-04",
+          "crowding": 0.474690188582499,
+          "covered_stocks": 1416,
+          "top_group_stocks": 2186.304760937,
+          "turnover_total_yi": 1037.817419268
+        },
+        {
+          "date": "2008-05-30",
+          "month_label": "2008-05",
+          "crowding": 0.40512300344936797,
+          "covered_stocks": 1427,
+          "top_group_stocks": 956.2928030830001,
+          "turnover_total_yi": 387.41621256199994
+        },
+        {
+          "date": "2008-06-30",
+          "month_label": "2008-06",
+          "crowding": 0.4270361419392397,
+          "covered_stocks": 1422,
+          "top_group_stocks": 612.69218575,
+          "turnover_total_yi": 261.641707199
+        },
+        {
+          "date": "2008-07-31",
+          "month_label": "2008-07",
+          "crowding": 0.32803676027722484,
+          "covered_stocks": 1496,
+          "top_group_stocks": 681.139663851,
+          "turnover_total_yi": 223.43884862599998
+        },
+        {
+          "date": "2008-08-29",
+          "month_label": "2008-08",
+          "crowding": 0.42319668521632764,
+          "covered_stocks": 1520,
+          "top_group_stocks": 546.979957191,
+          "turnover_total_yi": 231.48010476299999
+        },
+        {
+          "date": "2008-09-26",
+          "month_label": "2008-09",
+          "crowding": 0.4913013883437544,
+          "covered_stocks": 1501,
+          "top_group_stocks": 929.300559325,
+          "turnover_total_yi": 456.566654985
+        },
+        {
+          "date": "2008-10-31",
+          "month_label": "2008-10",
+          "crowding": 0.4765465202105491,
+          "covered_stocks": 1526,
+          "top_group_stocks": 350.67337479699995,
+          "turnover_total_yi": 167.11217649
+        },
+        {
+          "date": "2008-11-28",
+          "month_label": "2008-11",
+          "crowding": 0.43591899092511727,
+          "covered_stocks": 1494,
+          "top_group_stocks": 727.834928239,
+          "turnover_total_yi": 317.277067478
+        },
+        {
+          "date": "2008-12-31",
+          "month_label": "2008-12",
+          "crowding": 0.3788541064373541,
+          "covered_stocks": 1521,
+          "top_group_stocks": 538.915032871,
+          "turnover_total_yi": 204.17017322400002
+        },
+        {
+          "date": "2009-01-23",
+          "month_label": "2009-01",
+          "crowding": 0.35027253688133286,
+          "covered_stocks": 1544,
+          "top_group_stocks": 949.526111785,
+          "turnover_total_yi": 332.59292001
+        },
+        {
+          "date": "2009-02-27",
+          "month_label": "2009-02",
+          "crowding": 0.3437116174758037,
+          "covered_stocks": 1532,
+          "top_group_stocks": 1481.807420914,
+          "turnover_total_yi": 509.31442543
+        },
+        {
+          "date": "2009-03-31",
+          "month_label": "2009-03",
+          "crowding": 0.3615782503826536,
+          "covered_stocks": 1518,
+          "top_group_stocks": 1956.4067838770002,
+          "turnover_total_yi": 707.394141951
+        },
+        {
+          "date": "2009-04-30",
+          "month_label": "2009-04",
+          "crowding": 0.32900133114042585,
+          "covered_stocks": 1501,
+          "top_group_stocks": 1905.9093186020002,
+          "turnover_total_yi": 627.046702853
+        },
+        {
+          "date": "2009-05-27",
+          "month_label": "2009-05",
+          "crowding": 0.3581875088476077,
+          "covered_stocks": 1515,
+          "top_group_stocks": 1572.628164037,
+          "turnover_total_yi": 563.29576442
+        },
+        {
+          "date": "2009-06-30",
+          "month_label": "2009-06",
+          "crowding": 0.3970206381518396,
+          "covered_stocks": 1487,
+          "top_group_stocks": 2094.598812042,
+          "turnover_total_yi": 831.598957029
+        },
+        {
+          "date": "2009-07-31",
+          "month_label": "2009-07",
+          "crowding": 0.3650546841402415,
+          "covered_stocks": 1527,
+          "top_group_stocks": 3292.6876365740004,
+          "turnover_total_yi": 1202.011045142
+        },
+        {
+          "date": "2009-08-31",
+          "month_label": "2009-08",
+          "crowding": 0.37676006657846567,
+          "covered_stocks": 1527,
+          "top_group_stocks": 1887.7183508429998,
+          "turnover_total_yi": 711.216891545
+        },
+        {
+          "date": "2009-09-30",
+          "month_label": "2009-09",
+          "crowding": 0.39396834005225945,
+          "covered_stocks": 1559,
+          "top_group_stocks": 1078.27235344,
+          "turnover_total_yi": 424.80516920900004
+        },
+        {
+          "date": "2009-10-30",
+          "month_label": "2009-10",
+          "crowding": 0.3220227977388034,
+          "covered_stocks": 1586,
+          "top_group_stocks": 2162.581679406,
+          "turnover_total_yi": 696.4006027410001
+        },
+        {
+          "date": "2009-11-30",
+          "month_label": "2009-11",
+          "crowding": 0.29924607794539565,
+          "covered_stocks": 1589,
+          "top_group_stocks": 2631.108095307,
+          "turnover_total_yi": 787.348778171
+        },
+        {
+          "date": "2009-12-31",
+          "month_label": "2009-12",
+          "crowding": 0.35218201297408064,
+          "covered_stocks": 1602,
+          "top_group_stocks": 2151.145174665,
+          "turnover_total_yi": 757.5946378130001
+        },
+        {
+          "date": "2010-01-29",
+          "month_label": "2010-01",
+          "crowding": 0.3064779176827526,
+          "covered_stocks": 1662,
+          "top_group_stocks": 1631.357671839,
+          "turnover_total_yi": 499.97510226099996
+        },
+        {
+          "date": "2010-02-26",
+          "month_label": "2010-02",
+          "crowding": 0.27940387510155157,
+          "covered_stocks": 1660,
+          "top_group_stocks": 2110.0488834370003,
+          "turnover_total_yi": 589.555834686
+        },
+        {
+          "date": "2010-03-31",
+          "month_label": "2010-03",
+          "crowding": 0.25301504617045295,
+          "covered_stocks": 1691,
+          "top_group_stocks": 2181.306612715,
+          "turnover_total_yi": 551.903393328
+        },
+        {
+          "date": "2010-04-30",
+          "month_label": "2010-04",
+          "crowding": 0.2883985678116626,
+          "covered_stocks": 1724,
+          "top_group_stocks": 1889.453594405,
+          "turnover_total_yi": 544.9157105730001
+        },
+        {
+          "date": "2010-05-31",
+          "month_label": "2010-05",
+          "crowding": 0.2747785494031995,
+          "covered_stocks": 1739,
+          "top_group_stocks": 1618.3773909529998,
+          "turnover_total_yi": 444.695391873
+        },
+        {
+          "date": "2010-06-30",
+          "month_label": "2010-06",
+          "crowding": 0.28228657294028064,
+          "covered_stocks": 1768,
+          "top_group_stocks": 970.95740717,
+          "turnover_total_yi": 274.088238941
+        },
+        {
+          "date": "2010-07-30",
+          "month_label": "2010-07",
+          "crowding": 0.24692834893838725,
+          "covered_stocks": 1809,
+          "top_group_stocks": 1784.073342749,
+          "turnover_total_yi": 440.53828491
+        },
+        {
+          "date": "2010-08-31",
+          "month_label": "2010-08",
+          "crowding": 0.27520331345977544,
+          "covered_stocks": 1839,
+          "top_group_stocks": 2554.378645411,
+          "turnover_total_yi": 702.973467048
+        },
+        {
+          "date": "2010-09-30",
+          "month_label": "2010-09",
+          "crowding": 0.3594208871003979,
+          "covered_stocks": 1878,
+          "top_group_stocks": 1807.737368239,
+          "turnover_total_yi": 649.738568537
+        },
+        {
+          "date": "2010-10-29",
+          "month_label": "2010-10",
+          "crowding": 0.32548804566325096,
+          "covered_stocks": 1893,
+          "top_group_stocks": 3478.120882517,
+          "turnover_total_yi": 1132.086768631
+        },
+        {
+          "date": "2010-11-30",
+          "month_label": "2010-11",
+          "crowding": 0.2964318472663741,
+          "covered_stocks": 1914,
+          "top_group_stocks": 3252.859432703,
+          "turnover_total_yi": 964.2511305339999
+        },
+        {
+          "date": "2010-12-31",
+          "month_label": "2010-12",
+          "crowding": 0.37597100321317023,
+          "covered_stocks": 1953,
+          "top_group_stocks": 1966.6639895970002,
+          "turnover_total_yi": 739.408633152
+        },
+        {
+          "date": "2011-01-31",
+          "month_label": "2011-01",
+          "crowding": 0.41456694949876294,
+          "covered_stocks": 1979,
+          "top_group_stocks": 1705.541798474,
+          "turnover_total_yi": 707.061260636
+        },
+        {
+          "date": "2011-02-28",
+          "month_label": "2011-02",
+          "crowding": 0.32393204766588385,
+          "covered_stocks": 1988,
+          "top_group_stocks": 2608.540281206,
+          "turnover_total_yi": 844.98979471
+        },
+        {
+          "date": "2011-03-31",
+          "month_label": "2011-03",
+          "crowding": 0.3475115291840094,
+          "covered_stocks": 2018,
+          "top_group_stocks": 2206.794683531,
+          "turnover_total_yi": 766.8865950689999
+        },
+        {
+          "date": "2011-04-29",
+          "month_label": "2011-04",
+          "crowding": 0.365271664336341,
+          "covered_stocks": 2021,
+          "top_group_stocks": 1519.816119355,
+          "turnover_total_yi": 555.145763402
+        },
+        {
+          "date": "2011-05-31",
+          "month_label": "2011-05",
+          "crowding": 0.380258869418717,
+          "covered_stocks": 2075,
+          "top_group_stocks": 1297.419373229,
+          "turnover_total_yi": 493.355224026
+        },
+        {
+          "date": "2011-06-30",
+          "month_label": "2011-06",
+          "crowding": 0.3581069667187556,
+          "covered_stocks": 2068,
+          "top_group_stocks": 1783.661794842,
+          "turnover_total_yi": 638.7417150030001
+        },
+        {
+          "date": "2011-07-29",
+          "month_label": "2011-07",
+          "crowding": 0.31858296860477336,
+          "covered_stocks": 2122,
+          "top_group_stocks": 1538.6655121860001,
+          "turnover_total_yi": 490.192626562
+        },
+        {
+          "date": "2011-08-31",
+          "month_label": "2011-08",
+          "crowding": 0.3165145713168677,
+          "covered_stocks": 2153,
+          "top_group_stocks": 1232.562014099,
+          "turnover_total_yi": 390.123837514
+        },
+        {
+          "date": "2011-09-30",
+          "month_label": "2011-09",
+          "crowding": 0.35619475005639756,
+          "covered_stocks": 2174,
+          "top_group_stocks": 812.09675091,
+          "turnover_total_yi": 289.264599212
+        },
+        {
+          "date": "2011-10-31",
+          "month_label": "2011-10",
+          "crowding": 0.31100871174477757,
+          "covered_stocks": 2192,
+          "top_group_stocks": 1612.432234482,
+          "turnover_total_yi": 501.48047202199996
+        },
+        {
+          "date": "2011-11-30",
+          "month_label": "2011-11",
+          "crowding": 0.27961783418149067,
+          "covered_stocks": 2197,
+          "top_group_stocks": 1410.775566436,
+          "turnover_total_yi": 394.47800840300005
+        },
+        {
+          "date": "2011-12-30",
+          "month_label": "2011-12",
+          "crowding": 0.33389740741742285,
+          "covered_stocks": 2209,
+          "top_group_stocks": 824.035212355,
+          "turnover_total_yi": 275.143221026
+        },
+        {
+          "date": "2012-01-31",
+          "month_label": "2012-01",
+          "crowding": 0.38870638547387676,
+          "covered_stocks": 2239,
+          "top_group_stocks": 779.3437642519999,
+          "turnover_total_yi": 302.935897644
+        },
+        {
+          "date": "2012-02-29",
+          "month_label": "2012-02",
+          "crowding": 0.33093373660325487,
+          "covered_stocks": 2244,
+          "top_group_stocks": 1715.743252075,
+          "turnover_total_yi": 567.797325461
+        },
+        {
+          "date": "2012-03-30",
+          "month_label": "2012-03",
+          "crowding": 0.34702567284585956,
+          "covered_stocks": 2240,
+          "top_group_stocks": 1052.861790503,
+          "turnover_total_yi": 365.37007126300006
+        },
+        {
+          "date": "2012-04-27",
+          "month_label": "2012-04",
+          "crowding": 0.36000551190662505,
+          "covered_stocks": 2213,
+          "top_group_stocks": 1454.155613514,
+          "turnover_total_yi": 523.504036035
+        },
+        {
+          "date": "2012-05-31",
+          "month_label": "2012-05",
+          "crowding": 0.3412315915997503,
+          "covered_stocks": 2303,
+          "top_group_stocks": 1494.5851625110001,
+          "turnover_total_yi": 509.999673785
+        },
+        {
+          "date": "2012-06-29",
+          "month_label": "2012-06",
+          "crowding": 0.35504905667467856,
+          "covered_stocks": 2299,
+          "top_group_stocks": 1115.826686964,
+          "turnover_total_yi": 396.173212619
+        },
+        {
+          "date": "2012-07-31",
+          "month_label": "2012-07",
+          "crowding": 0.38243005169083394,
+          "covered_stocks": 2381,
+          "top_group_stocks": 845.786501173,
+          "turnover_total_yi": 323.454175363
+        },
+        {
+          "date": "2012-08-31",
+          "month_label": "2012-08",
+          "crowding": 0.3494854391919656,
+          "covered_stocks": 2382,
+          "top_group_stocks": 739.9392397460001,
+          "turnover_total_yi": 258.597990178
+        },
+        {
+          "date": "2012-09-28",
+          "month_label": "2012-09",
+          "crowding": 0.4288762415346016,
+          "covered_stocks": 2401,
+          "top_group_stocks": 1181.123675584,
+          "turnover_total_yi": 506.55588277199996
+        },
+        {
+          "date": "2012-10-31",
+          "month_label": "2012-10",
+          "crowding": 0.3860986393417285,
+          "covered_stocks": 2414,
+          "top_group_stocks": 797.836016491,
+          "turnover_total_yi": 308.043400385
+        },
+        {
+          "date": "2012-11-30",
+          "month_label": "2012-11",
+          "crowding": 0.40817547660117404,
+          "covered_stocks": 2403,
+          "top_group_stocks": 679.59823727,
+          "turnover_total_yi": 277.395334395
+        },
+        {
+          "date": "2012-12-31",
+          "month_label": "2012-12",
+          "crowding": 0.34950804285075704,
+          "covered_stocks": 2399,
+          "top_group_stocks": 1922.085460299,
+          "turnover_total_yi": 671.784327421
+        },
+        {
+          "date": "2013-01-31",
+          "month_label": "2013-01",
+          "crowding": 0.3760978616860529,
+          "covered_stocks": 2400,
+          "top_group_stocks": 2089.4360224439997,
+          "turnover_total_yi": 785.8324201710001
+        },
+        {
+          "date": "2013-02-28",
+          "month_label": "2013-02",
+          "crowding": 0.3840921357592131,
+          "covered_stocks": 2406,
+          "top_group_stocks": 2140.726635615,
+          "turnover_total_yi": 822.23626555
+        },
+        {
+          "date": "2013-03-29",
+          "month_label": "2013-03",
+          "crowding": 0.38586042892036926,
+          "covered_stocks": 2389,
+          "top_group_stocks": 1341.61338807,
+          "turnover_total_yi": 517.675517366
+        },
+        {
+          "date": "2013-04-26",
+          "month_label": "2013-04",
+          "crowding": 0.35631681462511466,
+          "covered_stocks": 2380,
+          "top_group_stocks": 1382.610796536,
+          "turnover_total_yi": 492.64747488800003
+        },
+        {
+          "date": "2013-05-31",
+          "month_label": "2013-05",
+          "crowding": 0.2812345785899848,
+          "covered_stocks": 2378,
+          "top_group_stocks": 2156.233057138,
+          "turnover_total_yi": 606.407295166
+        },
+        {
+          "date": "2013-06-28",
+          "month_label": "2013-06",
+          "crowding": 0.38618282430735423,
+          "covered_stocks": 2368,
+          "top_group_stocks": 1576.63766001,
+          "turnover_total_yi": 608.8703844519999
+        },
+        {
+          "date": "2013-07-31",
+          "month_label": "2013-07",
+          "crowding": 0.34654077991443777,
+          "covered_stocks": 2359,
+          "top_group_stocks": 1419.233672249,
+          "turnover_total_yi": 491.822343662
+        },
+        {
+          "date": "2013-08-30",
+          "month_label": "2013-08",
+          "crowding": 0.31132417308951393,
+          "covered_stocks": 2359,
+          "top_group_stocks": 2568.63897117,
+          "turnover_total_yi": 799.679403665
+        },
+        {
+          "date": "2013-09-30",
+          "month_label": "2013-09",
+          "crowding": 0.39522123591997815,
+          "covered_stocks": 2363,
+          "top_group_stocks": 1785.6666661729998,
+          "turnover_total_yi": 705.7333867460001
+        },
+        {
+          "date": "2013-10-31",
+          "month_label": "2013-10",
+          "crowding": 0.3812480595640005,
+          "covered_stocks": 2350,
+          "top_group_stocks": 1833.1282027329999,
+          "turnover_total_yi": 698.8765702239999
+        },
+        {
+          "date": "2013-11-29",
+          "month_label": "2013-11",
+          "crowding": 0.29575863110931566,
+          "covered_stocks": 2337,
+          "top_group_stocks": 2275.51940535,
+          "turnover_total_yi": 673.004504389
+        },
+        {
+          "date": "2013-12-31",
+          "month_label": "2013-12",
+          "crowding": 0.3330695062752649,
+          "covered_stocks": 2349,
+          "top_group_stocks": 1614.365020473,
+          "turnover_total_yi": 537.695760317
+        },
+        {
+          "date": "2014-01-30",
+          "month_label": "2014-01",
+          "crowding": 0.3356279413964013,
+          "covered_stocks": 2396,
+          "top_group_stocks": 1565.056066931,
+          "turnover_total_yi": 525.276545914
+        },
+        {
+          "date": "2014-02-28",
+          "month_label": "2014-02",
+          "crowding": 0.3036490407088145,
+          "covered_stocks": 2379,
+          "top_group_stocks": 2277.5046416239998,
+          "turnover_total_yi": 691.5620996389999
+        },
+        {
+          "date": "2014-03-31",
+          "month_label": "2014-03",
+          "crowding": 0.3037809511778422,
+          "covered_stocks": 2340,
+          "top_group_stocks": 1476.604863326,
+          "turnover_total_yi": 448.564429895
+        },
+        {
+          "date": "2014-04-30",
+          "month_label": "2014-04",
+          "crowding": 0.3312978395693879,
+          "covered_stocks": 2315,
+          "top_group_stocks": 1176.447147493,
+          "turnover_total_yi": 389.754398332
+        },
+        {
+          "date": "2014-05-30",
+          "month_label": "2014-05",
+          "crowding": 0.35014947777976974,
+          "covered_stocks": 2308,
+          "top_group_stocks": 1480.474412925,
+          "turnover_total_yi": 518.387342552
+        },
+        {
+          "date": "2014-06-30",
+          "month_label": "2014-06",
+          "crowding": 0.2786223534155525,
+          "covered_stocks": 2298,
+          "top_group_stocks": 2029.335448555,
+          "turnover_total_yi": 565.4182185459999
+        },
+        {
+          "date": "2014-07-31",
+          "month_label": "2014-07",
+          "crowding": 0.32179577559657935,
+          "covered_stocks": 2315,
+          "top_group_stocks": 2744.753055821,
+          "turnover_total_yi": 883.2499384189999
+        },
+        {
+          "date": "2014-08-29",
+          "month_label": "2014-08",
+          "crowding": 0.31285354975738333,
+          "covered_stocks": 2308,
+          "top_group_stocks": 2002.4527089970002,
+          "turnover_total_yi": 626.474438231
+        },
+        {
+          "date": "2014-09-30",
+          "month_label": "2014-09",
+          "crowding": 0.24702766479918453,
+          "covered_stocks": 2330,
+          "top_group_stocks": 3471.830016234,
+          "turnover_total_yi": 857.63806149
+        },
+        {
+          "date": "2014-10-31",
+          "month_label": "2014-10",
+          "crowding": 0.3336435714022018,
+          "covered_stocks": 2325,
+          "top_group_stocks": 4528.221041528,
+          "turnover_total_yi": 1510.811840394
+        },
+        {
+          "date": "2014-11-28",
+          "month_label": "2014-11",
+          "crowding": 0.39746609183985276,
+          "covered_stocks": 2305,
+          "top_group_stocks": 6994.776513988,
+          "turnover_total_yi": 2780.1864843079998
+        },
+        {
+          "date": "2014-12-31",
+          "month_label": "2014-12",
+          "crowding": 0.5726687144548106,
+          "covered_stocks": 2342,
+          "top_group_stocks": 6398.856680548,
+          "turnover_total_yi": 3664.42502923
+        },
+        {
+          "date": "2015-01-30",
+          "month_label": "2015-01",
+          "crowding": 0.4201761162480072,
+          "covered_stocks": 2352,
+          "top_group_stocks": 4973.747625285,
+          "turnover_total_yi": 2089.84996039
+        },
+        {
+          "date": "2015-02-27",
+          "month_label": "2015-02",
+          "crowding": 0.3838234362771996,
+          "covered_stocks": 2384,
+          "top_group_stocks": 6118.174382566999,
+          "turnover_total_yi": 2348.29871526
+        },
+        {
+          "date": "2015-03-31",
+          "month_label": "2015-03",
+          "crowding": 0.3887695452768355,
+          "covered_stocks": 2338,
+          "top_group_stocks": 12740.394526971,
+          "turnover_total_yi": 4953.0773868979995
+        },
+        {
+          "date": "2015-04-30",
+          "month_label": "2015-04",
+          "crowding": 0.3953663991835994,
+          "covered_stocks": 2365,
+          "top_group_stocks": 13189.252271858999,
+          "turnover_total_yi": 5214.587178649001
+        },
+        {
+          "date": "2015-05-29",
+          "month_label": "2015-05",
+          "crowding": 0.28401115434383045,
+          "covered_stocks": 2334,
+          "top_group_stocks": 18525.097199885,
+          "turnover_total_yi": 5261.334240071
+        },
+        {
+          "date": "2015-06-30",
+          "month_label": "2015-06",
+          "crowding": 0.35282861329428405,
+          "covered_stocks": 2335,
+          "top_group_stocks": 16599.389328008,
+          "turnover_total_yi": 5856.739518133
+        },
+        {
+          "date": "2015-07-31",
+          "month_label": "2015-07",
+          "crowding": 0.2929150730829624,
+          "covered_stocks": 2276,
+          "top_group_stocks": 8771.286322426,
+          "turnover_total_yi": 2569.241974165
+        },
+        {
+          "date": "2015-08-31",
+          "month_label": "2015-08",
+          "crowding": 0.3333378924640331,
+          "covered_stocks": 2281,
+          "top_group_stocks": 7956.257319345,
+          "turnover_total_yi": 2652.122046732
+        },
+        {
+          "date": "2015-09-30",
+          "month_label": "2015-09",
+          "crowding": 0.2938373407205781,
+          "covered_stocks": 2349,
+          "top_group_stocks": 3707.1315932370003,
+          "turnover_total_yi": 1089.293689058
+        },
+        {
+          "date": "2015-10-30",
+          "month_label": "2015-10",
+          "crowding": 0.2635022508860018,
+          "covered_stocks": 2384,
+          "top_group_stocks": 8008.933805408001,
+          "turnover_total_yi": 2110.3720849220003
+        },
+        {
+          "date": "2015-11-30",
+          "month_label": "2015-11",
+          "crowding": 0.233368486134683,
+          "covered_stocks": 2471,
+          "top_group_stocks": 9813.291682461,
+          "turnover_total_yi": 2290.113023934
+        },
+        {
+          "date": "2015-12-31",
+          "month_label": "2015-12",
+          "crowding": 0.24113699738225536,
+          "covered_stocks": 2542,
+          "top_group_stocks": 6853.225461103,
+          "turnover_total_yi": 1652.5662100739999
+        },
         {
           "date": "2016-01-29",
           "month_label": "2016-01",
@@ -7044,7 +7812,7 @@
         "language": "sql",
         "sql": "SELECT MAX(trade_date) FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-05T21:10:20.774030+08:00"
+        "executed_at": "2026-08-05T22:07:35.867814+08:00"
       }
     },
     {
@@ -7056,7 +7824,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, industry, amount FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-05T21:10:20.774030+08:00"
+        "executed_at": "2026-08-05T22:07:35.867814+08:00"
       }
     },
     {
@@ -7068,7 +7836,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, stock_code, amount, circulating_market_cap FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-05T21:10:20.774030+08:00"
+        "executed_at": "2026-08-05T22:07:35.867814+08:00"
       }
     },
     {
@@ -7080,7 +7848,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_code, close FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-05T21:10:20.774030+08:00"
+        "executed_at": "2026-08-05T22:07:35.867814+08:00"
       }
     },
     {
@@ -7092,7 +7860,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_code, close FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-05T21:10:20.774030+08:00"
+        "executed_at": "2026-08-05T22:07:35.867814+08:00"
       }
     }
   ]
