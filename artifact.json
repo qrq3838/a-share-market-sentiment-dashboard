@@ -5,7 +5,7 @@
     "surface": "dashboard",
     "title": "A股市场情绪日报",
     "description": "基于 Wind 与米筐 RQData 的 A 股市场情绪看板。",
-    "generatedAt": "2026-08-06T16:34:28.187338+08:00",
+    "generatedAt": "2026-08-06T17:20:45.662173+08:00",
     "filters": [],
     "cards": [
       {
@@ -387,7 +387,7 @@
           "language": "sql",
           "sql": "SELECT MAX(trade_date) FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-06T16:34:28.187338+08:00"
+          "executed_at": "2026-08-06T17:20:45.662173+08:00"
         }
       },
       {
@@ -399,7 +399,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, industry, amount FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-06T16:34:28.187338+08:00"
+          "executed_at": "2026-08-06T17:20:45.662173+08:00"
         }
       },
       {
@@ -411,7 +411,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, stock_code, amount, circulating_market_cap FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-06T16:34:28.187338+08:00"
+          "executed_at": "2026-08-06T17:20:45.662173+08:00"
         }
       },
       {
@@ -423,7 +423,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_code, close FROM Wind",
           "description": "Wind",
-          "executed_at": "2026-08-06T16:34:28.187338+08:00"
+          "executed_at": "2026-08-06T17:20:45.662173+08:00"
         }
       },
       {
@@ -435,7 +435,7 @@
           "language": "python",
           "sql": "get_price(benchmark_indices, fields=['close'], adjust_type='none')",
           "description": "Ricequant RQData",
-          "executed_at": "2026-08-06T16:34:28.187338+08:00"
+          "executed_at": "2026-08-06T17:20:45.662173+08:00"
         }
       }
     ],
@@ -499,7 +499,7 @@
   },
   "snapshot": {
     "version": 1,
-    "generatedAt": "2026-08-06T16:34:28.187338+08:00",
+    "generatedAt": "2026-08-06T17:20:45.662173+08:00",
     "status": "ready",
     "datasets": {
       "overview": [
@@ -7812,7 +7812,7 @@
         "language": "sql",
         "sql": "SELECT MAX(trade_date) FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-06T16:34:28.187338+08:00"
+        "executed_at": "2026-08-06T17:20:45.662173+08:00"
       }
     },
     {
@@ -7824,7 +7824,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, industry, amount FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-06T16:34:28.187338+08:00"
+        "executed_at": "2026-08-06T17:20:45.662173+08:00"
       }
     },
     {
@@ -7836,7 +7836,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, stock_code, amount, circulating_market_cap FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-06T16:34:28.187338+08:00"
+        "executed_at": "2026-08-06T17:20:45.662173+08:00"
       }
     },
     {
@@ -7848,7 +7848,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_code, close FROM Wind",
         "description": "Wind",
-        "executed_at": "2026-08-06T16:34:28.187338+08:00"
+        "executed_at": "2026-08-06T17:20:45.662173+08:00"
       }
     },
     {
@@ -7860,7 +7860,7 @@
         "language": "python",
         "sql": "get_price(benchmark_indices, fields=['close'], adjust_type='none')",
         "description": "Ricequant RQData",
-        "executed_at": "2026-08-06T16:34:28.187338+08:00"
+        "executed_at": "2026-08-06T17:20:45.662173+08:00"
       }
     }
   ]
