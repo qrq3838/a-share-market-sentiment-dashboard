@@ -4,7 +4,7 @@
     "version": 1,
     "surface": "dashboard",
     "title": "A股市场情绪日报",
-    "description": "基于 Wind 数据的 A 股市场情绪看板。",
+    "description": "基于 Wind 与米筐 RQData 的 A 股市场情绪看板。",
     "generatedAt": "2026-08-05T22:36:02.284556+08:00",
     "filters": [],
     "cards": [
@@ -157,8 +157,8 @@
     "charts": [
       {
         "id": "crowding_trend",
-        "title": "市场拥挤度与四个指数走势",
-        "subtitle": "市场拥挤度使用左轴，四个指数原始点位使用右轴；可自行选择日期区间。",
+        "title": "市场拥挤度与基准指数走势",
+        "subtitle": "市场拥挤度使用左轴，所选基准指数原始点位使用右轴；可自行选择日期区间。",
         "type": "line",
         "dataset": "market_trend",
         "sourceId": "crowding_archive_source",
@@ -195,7 +195,7 @@
       },
       {
         "id": "index_trend",
-        "title": "四个指数走势",
+        "title": "日报四个指数走势",
         "subtitle": "最近60个完整交易日，展示原始收盘点位。",
         "type": "line",
         "dataset": "index_trend",
@@ -428,13 +428,13 @@
       },
       {
         "id": "combined_index_source",
-        "label": "Wind",
-        "path": "Wind",
+        "label": "Ricequant RQData",
+        "path": "Ricequant RQData",
         "query": {
-          "engine": "Wind",
-          "language": "sql",
-          "sql": "SELECT trade_date, index_code, close FROM Wind",
-          "description": "Wind",
+          "engine": "Ricequant RQData",
+          "language": "python",
+          "sql": "get_price(benchmark_indices, fields=['close'], adjust_type='none')",
+          "description": "Ricequant RQData",
           "executed_at": "2026-08-05T22:36:02.284556+08:00"
         }
       }
@@ -493,7 +493,7 @@
       {
         "id": "methodology",
         "type": "markdown",
-        "body": "## 口径与声明\n\n- 市场拥挤度与指数走势覆盖：2008-01-02 至 2026-08-05，共 4518 个交易日。\n- 行业成交结构覆盖：2016-01-04 至 2026-08-05，共 2572 个交易日。\n- 数据来源：Wind。\n- 行业口径：31 个现行申万一级行业；金额单位为人民币亿元。\n- 拥挤度：当日成交额最高 5% 的沪深股票成交额 ÷ 当日全部沪深样本股票成交额。\n- 指数：上证指数、沪深300、创业板指和科创50。\n- 个股榜单：仅发布最新完整交易日成交额前 5% 的个股代码、名称、成交额与流通市值，不发布完整个股历史明细。\n- 数据可能因 Wind 更新而变化。本页面仅供研究交流，不构成任何投资建议。"
+        "body": "## 口径与声明\n\n- 市场拥挤度与指数走势覆盖：2008-01-02 至 2026-08-05，共 4518 个交易日。\n- 行业成交结构覆盖：2016-01-04 至 2026-08-05，共 2572 个交易日。\n- 数据来源：市场成交与行业数据来自 Wind；图表基准指数来自米筐 RQData。\n- 行业口径：31 个现行申万一级行业；金额单位为人民币亿元。\n- 拥挤度：当日成交额最高 5% 的沪深股票成交额 ÷ 当日全部沪深样本股票成交额。\n- 基准指数：上证指数、沪深300、创业板指、科创50、中证500、中证800、中证1000和中证2000；万得全A在米筐中未找到，暂不展示。\n- 个股榜单：仅发布最新完整交易日成交额前 5% 的个股代码、名称、成交额与流通市值，不发布完整个股历史明细。\n- 数据可能因 Wind 更新而变化。本页面仅供研究交流，不构成任何投资建议。"
       }
     ]
   },
@@ -7853,13 +7853,13 @@
     },
     {
       "id": "combined_index_source",
-      "label": "Wind",
-      "path": "Wind",
+      "label": "Ricequant RQData",
+      "path": "Ricequant RQData",
       "query": {
-        "engine": "Wind",
-        "language": "sql",
-        "sql": "SELECT trade_date, index_code, close FROM Wind",
-        "description": "Wind",
+        "engine": "Ricequant RQData",
+        "language": "python",
+        "sql": "get_price(benchmark_indices, fields=['close'], adjust_type='none')",
+        "description": "Ricequant RQData",
         "executed_at": "2026-08-05T22:36:02.284556+08:00"
       }
     }
