@@ -380,49 +380,49 @@
     "sources": [
       {
         "id": "archive_date_source",
-        "label": "Wind",
-        "path": "Wind",
+        "label": "Wind / Ricequant RQData",
+        "path": "Wind / Ricequant RQData",
         "query": {
-          "engine": "Wind",
+          "engine": "Wind / Ricequant RQData",
           "language": "sql",
-          "sql": "SELECT MAX(trade_date) FROM Wind",
-          "description": "Wind",
+          "sql": "SELECT MAX(trade_date) FROM Wind; latest-day fallback: RQData",
+          "description": "Wind historical archive with Ricequant RQData latest-day fallback after overlap validation",
           "executed_at": "2026-08-07T21:54:04.991811+08:00"
         }
       },
       {
         "id": "industry_archive_source",
-        "label": "Wind",
-        "path": "Wind",
+        "label": "Wind / Ricequant RQData",
+        "path": "Wind / Ricequant RQData",
         "query": {
-          "engine": "Wind",
+          "engine": "Wind / Ricequant RQData",
           "language": "sql",
-          "sql": "SELECT trade_date, industry, amount FROM Wind",
-          "description": "Wind",
+          "sql": "SELECT trade_date, industry, amount FROM Wind; latest-day fallback: RQData + latest data_interface SW labels",
+          "description": "Wind historical archive with Ricequant RQData latest-day fallback after overlap validation",
           "executed_at": "2026-08-07T21:54:04.991811+08:00"
         }
       },
       {
         "id": "crowding_archive_source",
-        "label": "Wind",
-        "path": "Wind",
+        "label": "Wind / Ricequant RQData",
+        "path": "Wind / Ricequant RQData",
         "query": {
-          "engine": "Wind",
+          "engine": "Wind / Ricequant RQData",
           "language": "sql",
-          "sql": "SELECT trade_date, stock_code, amount, circulating_market_cap FROM Wind",
-          "description": "Wind",
+          "sql": "SELECT trade_date, stock_code, amount, circulating_market_cap FROM Wind; latest-day fallback: RQData",
+          "description": "Wind historical archive with Ricequant RQData latest-day fallback after overlap validation",
           "executed_at": "2026-08-07T21:54:04.991811+08:00"
         }
       },
       {
         "id": "index_archive_source",
-        "label": "Wind",
-        "path": "Wind",
+        "label": "Wind / Ricequant RQData",
+        "path": "Wind / Ricequant RQData",
         "query": {
-          "engine": "Wind",
+          "engine": "Wind / Ricequant RQData",
           "language": "sql",
-          "sql": "SELECT trade_date, index_code, close FROM Wind",
-          "description": "Wind",
+          "sql": "SELECT trade_date, index_code, close FROM Wind; latest-day fallback: RQData",
+          "description": "Wind historical archive with Ricequant RQData latest-day fallback after overlap validation",
           "executed_at": "2026-08-07T21:54:04.991811+08:00"
         }
       },
@@ -493,7 +493,7 @@
       {
         "id": "methodology",
         "type": "markdown",
-        "body": "## 口径与声明\n\n- 市场拥挤度与指数走势覆盖：2008-01-02 至 2026-08-07，共 4520 个交易日。\n- 行业成交结构覆盖：2016-01-04 至 2026-08-07，共 2574 个交易日。\n- 数据来源：市场成交与行业数据来自 Wind；图表基准指数来自米筐 RQData。\n- 行业口径：31 个现行申万一级行业；金额单位为人民币亿元。\n- 拥挤度：当日成交额最高 5% 的沪深股票成交额 ÷ 当日全部沪深样本股票成交额。\n- 基准指数：上证指数、沪深300、创业板指、科创50、中证500、中证800、中证1000和中证2000；万得全A在米筐中未找到，暂不展示。\n- 个股榜单：仅发布最新完整交易日成交额前 5% 的个股代码、名称、成交额与流通市值，不发布完整个股历史明细。\n- 数据可能因 Wind 更新而变化。本页面仅供研究交流，不构成任何投资建议。"
+        "body": "## 口径与声明\n\n- 市场拥挤度与指数走势覆盖：2008-01-02 至 2026-08-07，共 4520 个交易日。\n- 行业成交结构覆盖：2016-01-04 至 2026-08-07，共 2574 个交易日。\n- 数据来源：历史市场成交与行业数据来自 Wind；图表基准指数来自米筐 RQData。\n- 最新日兜底：2026-08-07 的个股成交额、流通市值和四个市场指数来自米筐 RQData；申万一级行业标签沿用 data_interface 的 2026-08-06 标签，成交额覆盖率为 99.91%。\n- 行业口径：31 个现行申万一级行业；金额单位为人民币亿元。\n- 拥挤度：当日成交额最高 5% 的沪深股票成交额 ÷ 当日全部沪深样本股票成交额。\n- 基准指数：上证指数、沪深300、创业板指、科创50、中证500、中证800、中证1000和中证2000；万得全A在米筐中未找到，暂不展示。\n- 个股榜单：仅发布最新完整交易日成交额前 5% 的个股代码、名称、成交额与流通市值，不发布完整个股历史明细。\n- 数据可能因 Wind 或米筐更新而变化。本页面仅供研究交流，不构成任何投资建议。"
       }
     ]
   },
@@ -7805,49 +7805,49 @@
   "sources": [
     {
       "id": "archive_date_source",
-      "label": "Wind",
-      "path": "Wind",
+      "label": "Wind / Ricequant RQData",
+      "path": "Wind / Ricequant RQData",
       "query": {
-        "engine": "Wind",
+        "engine": "Wind / Ricequant RQData",
         "language": "sql",
-        "sql": "SELECT MAX(trade_date) FROM Wind",
-        "description": "Wind",
+        "sql": "SELECT MAX(trade_date) FROM Wind; latest-day fallback: RQData",
+        "description": "Wind historical archive with Ricequant RQData latest-day fallback after overlap validation",
         "executed_at": "2026-08-07T21:54:04.991811+08:00"
       }
     },
     {
       "id": "industry_archive_source",
-      "label": "Wind",
-      "path": "Wind",
+      "label": "Wind / Ricequant RQData",
+      "path": "Wind / Ricequant RQData",
       "query": {
-        "engine": "Wind",
+        "engine": "Wind / Ricequant RQData",
         "language": "sql",
-        "sql": "SELECT trade_date, industry, amount FROM Wind",
-        "description": "Wind",
+        "sql": "SELECT trade_date, industry, amount FROM Wind; latest-day fallback: RQData + latest data_interface SW labels",
+        "description": "Wind historical archive with Ricequant RQData latest-day fallback after overlap validation",
         "executed_at": "2026-08-07T21:54:04.991811+08:00"
       }
     },
     {
       "id": "crowding_archive_source",
-      "label": "Wind",
-      "path": "Wind",
+      "label": "Wind / Ricequant RQData",
+      "path": "Wind / Ricequant RQData",
       "query": {
-        "engine": "Wind",
+        "engine": "Wind / Ricequant RQData",
         "language": "sql",
-        "sql": "SELECT trade_date, stock_code, amount, circulating_market_cap FROM Wind",
-        "description": "Wind",
+        "sql": "SELECT trade_date, stock_code, amount, circulating_market_cap FROM Wind; latest-day fallback: RQData",
+        "description": "Wind historical archive with Ricequant RQData latest-day fallback after overlap validation",
         "executed_at": "2026-08-07T21:54:04.991811+08:00"
       }
     },
     {
       "id": "index_archive_source",
-      "label": "Wind",
-      "path": "Wind",
+      "label": "Wind / Ricequant RQData",
+      "path": "Wind / Ricequant RQData",
       "query": {
-        "engine": "Wind",
+        "engine": "Wind / Ricequant RQData",
         "language": "sql",
-        "sql": "SELECT trade_date, index_code, close FROM Wind",
-        "description": "Wind",
+        "sql": "SELECT trade_date, index_code, close FROM Wind; latest-day fallback: RQData",
+        "description": "Wind historical archive with Ricequant RQData latest-day fallback after overlap validation",
         "executed_at": "2026-08-07T21:54:04.991811+08:00"
       }
     },
