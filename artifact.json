@@ -5,7 +5,7 @@
     "surface": "dashboard",
     "title": "A股市场情绪日报",
     "description": "基于 Wind 与米筐 RQData 的 A 股市场情绪看板。",
-    "generatedAt": "2026-08-08T16:27:16.016145+08:00",
+    "generatedAt": "2026-08-08T17:00:19.917168+08:00",
     "filters": [],
     "cards": [
       {
@@ -380,50 +380,50 @@
     "sources": [
       {
         "id": "archive_date_source",
-        "label": "Wind",
-        "path": "Wind",
+        "label": "Wind/data_interface history; Ricequant RQData incremental",
+        "path": "Wind/data_interface history; Ricequant RQData incremental",
         "query": {
-          "engine": "Wind",
+          "engine": "Wind/data_interface history; Ricequant RQData incremental",
           "language": "sql",
-          "sql": "SELECT MAX(trade_date) FROM Wind; latest-day fallback: RQData",
-          "description": "Wind",
-          "executed_at": "2026-08-08T16:27:16.016145+08:00"
+          "sql": "SELECT trading_date, stock_daybar_ready FROM RQData.trading_calendar_and_readiness",
+          "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
+          "executed_at": "2026-08-08T17:00:19.917168+08:00"
         }
       },
       {
         "id": "industry_archive_source",
-        "label": "Wind",
-        "path": "Wind",
+        "label": "Wind/data_interface history; Ricequant RQData incremental",
+        "path": "Wind/data_interface history; Ricequant RQData incremental",
         "query": {
-          "engine": "Wind",
+          "engine": "Wind/data_interface history; Ricequant RQData incremental",
           "language": "sql",
-          "sql": "SELECT trade_date, industry, amount FROM Wind; latest-day fallback: RQData + latest data_interface SW labels",
-          "description": "Wind",
-          "executed_at": "2026-08-08T16:27:16.016145+08:00"
+          "sql": "SELECT trade_date, stock_id, total_turnover, sw2021_level1 FROM RQData.get_price_total_turnover JOIN RQData.get_factor_exposure_sws_2021",
+          "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
+          "executed_at": "2026-08-08T17:00:19.917168+08:00"
         }
       },
       {
         "id": "crowding_archive_source",
-        "label": "Wind",
-        "path": "Wind",
+        "label": "Wind/data_interface history; Ricequant RQData incremental",
+        "path": "Wind/data_interface history; Ricequant RQData incremental",
         "query": {
-          "engine": "Wind",
+          "engine": "Wind/data_interface history; Ricequant RQData incremental",
           "language": "sql",
-          "sql": "SELECT trade_date, stock_code, amount, circulating_market_cap FROM Wind; latest-day fallback: RQData",
-          "description": "Wind",
-          "executed_at": "2026-08-08T16:27:16.016145+08:00"
+          "sql": "SELECT trade_date, stock_id, total_turnover, a_share_market_val_in_circulation FROM RQData.stock_daybar_and_factor",
+          "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
+          "executed_at": "2026-08-08T17:00:19.917168+08:00"
         }
       },
       {
         "id": "index_archive_source",
-        "label": "Wind",
-        "path": "Wind",
+        "label": "Wind/data_interface history; Ricequant RQData incremental",
+        "path": "Wind/data_interface history; Ricequant RQData incremental",
         "query": {
-          "engine": "Wind",
+          "engine": "Wind/data_interface history; Ricequant RQData incremental",
           "language": "sql",
-          "sql": "SELECT trade_date, index_code, close FROM Wind; latest-day fallback: RQData",
-          "description": "Wind",
-          "executed_at": "2026-08-08T16:27:16.016145+08:00"
+          "sql": "SELECT trade_date, index_id, close FROM RQData.get_price_index_close",
+          "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
+          "executed_at": "2026-08-08T17:00:19.917168+08:00"
         }
       },
       {
@@ -432,10 +432,10 @@
         "path": "Ricequant RQData",
         "query": {
           "engine": "Ricequant RQData",
-          "language": "python",
-          "sql": "get_price(benchmark_indices, fields=['close'], adjust_type='none')",
+          "language": "sql",
+          "sql": "SELECT trade_date, index_id, close FROM RQData.get_price_benchmark_index_close",
           "description": "Ricequant RQData",
-          "executed_at": "2026-08-08T16:27:16.016145+08:00"
+          "executed_at": "2026-08-08T17:00:19.917168+08:00"
         }
       }
     ],
@@ -493,13 +493,13 @@
       {
         "id": "methodology",
         "type": "markdown",
-        "body": "## 口径与声明\n\n- 市场拥挤度与指数走势覆盖：2008-01-02 至 2026-08-07，共 4520 个交易日。\n- 行业成交结构覆盖：2016-01-04 至 2026-08-07，共 2574 个交易日。\n- 数据来源：历史市场成交与行业数据来自 Wind；图表基准指数来自米筐 RQData。\n- 行业口径：31 个现行申万一级行业；金额单位为人民币亿元。\n- 拥挤度：当日成交额最高 5% 的沪深股票成交额 ÷ 当日全部沪深样本股票成交额。\n- 基准指数：上证指数、沪深300、创业板指、科创50、中证500、中证800、中证1000和中证2000；万得全A在米筐中未找到，暂不展示。\n- 个股榜单：仅发布最新完整交易日成交额前 5% 的个股代码、名称、成交额与流通市值，不发布完整个股历史明细。\n- 数据可能因 Wind 或米筐更新而变化。本页面仅供研究交流，不构成任何投资建议。"
+        "body": "## 口径与声明\n\n- 市场拥挤度与指数走势覆盖：2008-01-02 至 2026-08-07，共 4520 个交易日。\n- 行业成交结构覆盖：2016-01-04 至 2026-08-07，共 2574 个交易日。\n- 数据来源：市场拥挤度、行业成交和个股成交榜的历史存量保留不变；自2026-08-10起增量全部来自米筐 RQData，且仅使用沪深普通股票。图表基准指数也来自米筐 RQData。\n- 行业口径：31 个现行申万一级行业；金额单位为人民币亿元。\n- 拥挤度：当日成交额最高 5% 的沪深股票成交额 ÷ 当日全部沪深样本股票成交额。\n- 基准指数：上证指数、沪深300、创业板指、科创50、中证500、中证800、中证1000和中证2000；万得全A在米筐中未找到，暂不展示。\n- 个股榜单：仅发布最新完整交易日成交额前 5% 的个股代码、名称、成交额与流通市值，不发布完整个股历史明细。\n- 数据可能因 Wind 或米筐更新而变化。本页面仅供研究交流，不构成任何投资建议。"
       }
     ]
   },
   "snapshot": {
     "version": 1,
-    "generatedAt": "2026-08-08T16:27:16.016145+08:00",
+    "generatedAt": "2026-08-08T17:00:19.917168+08:00",
     "status": "ready",
     "datasets": {
       "overview": [
@@ -4190,15 +4190,15 @@
         },
         {
           "date": "2026-05-15",
-          "industry": "通信",
-          "share": 0.08336384262099128,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-05-15",
           "industry": "机械设备",
           "share": 0.08479001878213688,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-05-15",
+          "industry": "通信",
+          "share": 0.08336384262099128,
+          "latest_rank": 2
         },
         {
           "date": "2026-05-18",
@@ -4220,15 +4220,15 @@
         },
         {
           "date": "2026-05-18",
-          "industry": "通信",
-          "share": 0.08180565775818914,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-05-18",
           "industry": "机械设备",
           "share": 0.08956411802911525,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-05-18",
+          "industry": "通信",
+          "share": 0.08180565775818914,
+          "latest_rank": 2
         },
         {
           "date": "2026-05-19",
@@ -4250,15 +4250,15 @@
         },
         {
           "date": "2026-05-19",
-          "industry": "通信",
-          "share": 0.08547816274470404,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-05-19",
           "industry": "机械设备",
           "share": 0.08807571356112981,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-05-19",
+          "industry": "通信",
+          "share": 0.08547816274470404,
+          "latest_rank": 2
         },
         {
           "date": "2026-05-20",
@@ -4280,15 +4280,15 @@
         },
         {
           "date": "2026-05-20",
-          "industry": "通信",
-          "share": 0.07896372634886074,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-05-20",
           "industry": "机械设备",
           "share": 0.08868662819279072,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-05-20",
+          "industry": "通信",
+          "share": 0.07896372634886074,
+          "latest_rank": 2
         },
         {
           "date": "2026-05-21",
@@ -4310,15 +4310,15 @@
         },
         {
           "date": "2026-05-21",
-          "industry": "通信",
-          "share": 0.06866599970514,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-05-21",
           "industry": "机械设备",
           "share": 0.08855762282388357,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-05-21",
+          "industry": "通信",
+          "share": 0.06866599970514,
+          "latest_rank": 2
         },
         {
           "date": "2026-05-22",
@@ -4340,15 +4340,15 @@
         },
         {
           "date": "2026-05-22",
-          "industry": "通信",
-          "share": 0.07102902638420874,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-05-22",
           "industry": "机械设备",
           "share": 0.08848078295216186,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-05-22",
+          "industry": "通信",
+          "share": 0.07102902638420874,
+          "latest_rank": 2
         },
         {
           "date": "2026-05-25",
@@ -4370,15 +4370,15 @@
         },
         {
           "date": "2026-05-25",
-          "industry": "通信",
-          "share": 0.07148813377051089,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-05-25",
           "industry": "机械设备",
           "share": 0.08471472714705405,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-05-25",
+          "industry": "通信",
+          "share": 0.07148813377051089,
+          "latest_rank": 2
         },
         {
           "date": "2026-05-26",
@@ -4400,15 +4400,15 @@
         },
         {
           "date": "2026-05-26",
-          "industry": "通信",
-          "share": 0.07043283505280926,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-05-26",
           "industry": "机械设备",
           "share": 0.08868844020331557,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-05-26",
+          "industry": "通信",
+          "share": 0.07043283505280926,
+          "latest_rank": 2
         },
         {
           "date": "2026-05-27",
@@ -4430,15 +4430,15 @@
         },
         {
           "date": "2026-05-27",
-          "industry": "通信",
-          "share": 0.06732760997924324,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-05-27",
           "industry": "机械设备",
           "share": 0.08244146761901755,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-05-27",
+          "industry": "通信",
+          "share": 0.06732760997924324,
+          "latest_rank": 2
         },
         {
           "date": "2026-05-28",
@@ -4460,15 +4460,15 @@
         },
         {
           "date": "2026-05-28",
-          "industry": "通信",
-          "share": 0.0760361262772034,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-05-28",
           "industry": "机械设备",
           "share": 0.07800856319451402,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-05-28",
+          "industry": "通信",
+          "share": 0.0760361262772034,
+          "latest_rank": 2
         },
         {
           "date": "2026-05-29",
@@ -4490,15 +4490,15 @@
         },
         {
           "date": "2026-05-29",
-          "industry": "通信",
-          "share": 0.08249094707377962,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-05-29",
           "industry": "机械设备",
           "share": 0.07791411681797233,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-05-29",
+          "industry": "通信",
+          "share": 0.08249094707377962,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-01",
@@ -4520,15 +4520,15 @@
         },
         {
           "date": "2026-06-01",
-          "industry": "通信",
-          "share": 0.0742682298886445,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-01",
           "industry": "机械设备",
           "share": 0.07358423578449924,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-01",
+          "industry": "通信",
+          "share": 0.0742682298886445,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-02",
@@ -4550,15 +4550,15 @@
         },
         {
           "date": "2026-06-02",
-          "industry": "通信",
-          "share": 0.08756396896021641,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-02",
           "industry": "机械设备",
           "share": 0.07419409909379047,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-02",
+          "industry": "通信",
+          "share": 0.08756396896021641,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-03",
@@ -4580,15 +4580,15 @@
         },
         {
           "date": "2026-06-03",
-          "industry": "通信",
-          "share": 0.09803565270961304,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-03",
           "industry": "机械设备",
           "share": 0.07726099455187949,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-03",
+          "industry": "通信",
+          "share": 0.09803565270961304,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-04",
@@ -4610,15 +4610,15 @@
         },
         {
           "date": "2026-06-04",
-          "industry": "通信",
-          "share": 0.08597346928535289,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-04",
           "industry": "机械设备",
           "share": 0.07984549578256778,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-04",
+          "industry": "通信",
+          "share": 0.08597346928535289,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-05",
@@ -4640,15 +4640,15 @@
         },
         {
           "date": "2026-06-05",
-          "industry": "通信",
-          "share": 0.10860890752831522,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-05",
           "industry": "机械设备",
           "share": 0.0857797775955969,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-05",
+          "industry": "通信",
+          "share": 0.10860890752831522,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-08",
@@ -4670,15 +4670,15 @@
         },
         {
           "date": "2026-06-08",
-          "industry": "通信",
-          "share": 0.0958502884845054,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-08",
           "industry": "机械设备",
           "share": 0.09328512293310355,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-08",
+          "industry": "通信",
+          "share": 0.0958502884845054,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-09",
@@ -4700,15 +4700,15 @@
         },
         {
           "date": "2026-06-09",
-          "industry": "通信",
-          "share": 0.10132420391273682,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-09",
           "industry": "机械设备",
           "share": 0.09027356242368573,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-09",
+          "industry": "通信",
+          "share": 0.10132420391273682,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-10",
@@ -4730,15 +4730,15 @@
         },
         {
           "date": "2026-06-10",
-          "industry": "通信",
-          "share": 0.08738352407706013,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-10",
           "industry": "机械设备",
           "share": 0.09022088090841167,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-10",
+          "industry": "通信",
+          "share": 0.08738352407706013,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-11",
@@ -4760,15 +4760,15 @@
         },
         {
           "date": "2026-06-11",
-          "industry": "通信",
-          "share": 0.09301536958454316,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-11",
           "industry": "机械设备",
           "share": 0.07986394813449685,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-11",
+          "industry": "通信",
+          "share": 0.09301536958454316,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-12",
@@ -4790,15 +4790,15 @@
         },
         {
           "date": "2026-06-12",
-          "industry": "通信",
-          "share": 0.0796531043880326,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-12",
           "industry": "机械设备",
           "share": 0.07560101003697685,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-12",
+          "industry": "通信",
+          "share": 0.0796531043880326,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-15",
@@ -4820,15 +4820,15 @@
         },
         {
           "date": "2026-06-15",
-          "industry": "通信",
-          "share": 0.08525095675581974,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-15",
           "industry": "机械设备",
           "share": 0.0759640258933692,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-15",
+          "industry": "通信",
+          "share": 0.08525095675581974,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-16",
@@ -4850,15 +4850,15 @@
         },
         {
           "date": "2026-06-16",
-          "industry": "通信",
-          "share": 0.08651979260079161,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-16",
           "industry": "机械设备",
           "share": 0.07968079166532631,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-16",
+          "industry": "通信",
+          "share": 0.08651979260079161,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-17",
@@ -4880,15 +4880,15 @@
         },
         {
           "date": "2026-06-17",
-          "industry": "通信",
-          "share": 0.07882654024454701,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-17",
           "industry": "机械设备",
           "share": 0.08039275969710183,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-17",
+          "industry": "通信",
+          "share": 0.07882654024454701,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-18",
@@ -4910,15 +4910,15 @@
         },
         {
           "date": "2026-06-18",
-          "industry": "通信",
-          "share": 0.0776607108868135,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-18",
           "industry": "机械设备",
           "share": 0.08175961286574254,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-18",
+          "industry": "通信",
+          "share": 0.0776607108868135,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-22",
@@ -4940,15 +4940,15 @@
         },
         {
           "date": "2026-06-22",
-          "industry": "通信",
-          "share": 0.07868370526447573,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-22",
           "industry": "机械设备",
           "share": 0.08077452546009745,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-22",
+          "industry": "通信",
+          "share": 0.07868370526447573,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-23",
@@ -4970,15 +4970,15 @@
         },
         {
           "date": "2026-06-23",
-          "industry": "通信",
-          "share": 0.08044838018007035,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-23",
           "industry": "机械设备",
           "share": 0.07966138298588024,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-23",
+          "industry": "通信",
+          "share": 0.08044838018007035,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-24",
@@ -5000,15 +5000,15 @@
         },
         {
           "date": "2026-06-24",
-          "industry": "通信",
-          "share": 0.07631572880084332,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-24",
           "industry": "机械设备",
           "share": 0.08085622232654092,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-24",
+          "industry": "通信",
+          "share": 0.07631572880084332,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-25",
@@ -5030,15 +5030,15 @@
         },
         {
           "date": "2026-06-25",
-          "industry": "通信",
-          "share": 0.08692422557447796,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-25",
           "industry": "机械设备",
           "share": 0.07924095214716324,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-25",
+          "industry": "通信",
+          "share": 0.08692422557447796,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-26",
@@ -5060,15 +5060,15 @@
         },
         {
           "date": "2026-06-26",
-          "industry": "通信",
-          "share": 0.08116834845248161,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-26",
           "industry": "机械设备",
           "share": 0.0773819091247143,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-26",
+          "industry": "通信",
+          "share": 0.08116834845248161,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-29",
@@ -5090,15 +5090,15 @@
         },
         {
           "date": "2026-06-29",
-          "industry": "通信",
-          "share": 0.06957141142572605,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-29",
           "industry": "机械设备",
           "share": 0.08000813272359233,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-29",
+          "industry": "通信",
+          "share": 0.06957141142572605,
+          "latest_rank": 2
         },
         {
           "date": "2026-06-30",
@@ -5120,15 +5120,15 @@
         },
         {
           "date": "2026-06-30",
-          "industry": "通信",
-          "share": 0.07181961705057059,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-06-30",
           "industry": "机械设备",
           "share": 0.08441361362605108,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-06-30",
+          "industry": "通信",
+          "share": 0.07181961705057059,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-01",
@@ -5150,15 +5150,15 @@
         },
         {
           "date": "2026-07-01",
-          "industry": "通信",
-          "share": 0.0695676571083232,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-01",
           "industry": "机械设备",
           "share": 0.07874075448592016,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-01",
+          "industry": "通信",
+          "share": 0.0695676571083232,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-02",
@@ -5180,15 +5180,15 @@
         },
         {
           "date": "2026-07-02",
-          "industry": "通信",
-          "share": 0.06690675818232349,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-02",
           "industry": "机械设备",
           "share": 0.08389028857180338,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-02",
+          "industry": "通信",
+          "share": 0.06690675818232349,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-03",
@@ -5210,15 +5210,15 @@
         },
         {
           "date": "2026-07-03",
-          "industry": "通信",
-          "share": 0.06438078792337538,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-03",
           "industry": "机械设备",
           "share": 0.09130824498816867,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-03",
+          "industry": "通信",
+          "share": 0.06438078792337538,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-06",
@@ -5240,15 +5240,15 @@
         },
         {
           "date": "2026-07-06",
-          "industry": "通信",
-          "share": 0.06584292749711904,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-06",
           "industry": "机械设备",
           "share": 0.09012509973909086,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-06",
+          "industry": "通信",
+          "share": 0.06584292749711904,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-07",
@@ -5270,15 +5270,15 @@
         },
         {
           "date": "2026-07-07",
-          "industry": "通信",
-          "share": 0.0698173689792731,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-07",
           "industry": "机械设备",
           "share": 0.09081425212519757,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-07",
+          "industry": "通信",
+          "share": 0.0698173689792731,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-08",
@@ -5300,15 +5300,15 @@
         },
         {
           "date": "2026-07-08",
-          "industry": "通信",
-          "share": 0.07360713102674901,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-08",
           "industry": "机械设备",
           "share": 0.07986006888182308,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-08",
+          "industry": "通信",
+          "share": 0.07360713102674901,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-09",
@@ -5330,15 +5330,15 @@
         },
         {
           "date": "2026-07-09",
-          "industry": "通信",
-          "share": 0.08494239125258038,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-09",
           "industry": "机械设备",
           "share": 0.07531508355420198,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-09",
+          "industry": "通信",
+          "share": 0.08494239125258038,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-10",
@@ -5360,15 +5360,15 @@
         },
         {
           "date": "2026-07-10",
-          "industry": "通信",
-          "share": 0.08394409506883399,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-10",
           "industry": "机械设备",
           "share": 0.07615862084023112,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-10",
+          "industry": "通信",
+          "share": 0.08394409506883399,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-13",
@@ -5390,15 +5390,15 @@
         },
         {
           "date": "2026-07-13",
-          "industry": "通信",
-          "share": 0.07367638861357503,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-13",
           "industry": "机械设备",
           "share": 0.07361067465406433,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-13",
+          "industry": "通信",
+          "share": 0.07367638861357503,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-14",
@@ -5420,15 +5420,15 @@
         },
         {
           "date": "2026-07-14",
-          "industry": "通信",
-          "share": 0.0865522900771473,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-14",
           "industry": "机械设备",
           "share": 0.06773989245825619,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-14",
+          "industry": "通信",
+          "share": 0.0865522900771473,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-15",
@@ -5450,15 +5450,15 @@
         },
         {
           "date": "2026-07-15",
-          "industry": "通信",
-          "share": 0.07507007534980585,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-15",
           "industry": "机械设备",
           "share": 0.06679072270542899,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-15",
+          "industry": "通信",
+          "share": 0.07507007534980585,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-16",
@@ -5480,15 +5480,15 @@
         },
         {
           "date": "2026-07-16",
-          "industry": "通信",
-          "share": 0.07820107765726628,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-16",
           "industry": "机械设备",
           "share": 0.06749669496193789,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-16",
+          "industry": "通信",
+          "share": 0.07820107765726628,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-17",
@@ -5510,15 +5510,15 @@
         },
         {
           "date": "2026-07-17",
-          "industry": "通信",
-          "share": 0.08649423306045104,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-17",
           "industry": "机械设备",
           "share": 0.06947642062047583,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-17",
+          "industry": "通信",
+          "share": 0.08649423306045104,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-20",
@@ -5540,15 +5540,15 @@
         },
         {
           "date": "2026-07-20",
-          "industry": "通信",
-          "share": 0.08445431578095791,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-20",
           "industry": "机械设备",
           "share": 0.07086337661883016,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-20",
+          "industry": "通信",
+          "share": 0.08445431578095791,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-21",
@@ -5570,15 +5570,15 @@
         },
         {
           "date": "2026-07-21",
-          "industry": "通信",
-          "share": 0.08939088378800579,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-21",
           "industry": "机械设备",
           "share": 0.06901328597193367,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-21",
+          "industry": "通信",
+          "share": 0.08939088378800579,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-22",
@@ -5600,15 +5600,15 @@
         },
         {
           "date": "2026-07-22",
-          "industry": "通信",
-          "share": 0.09001551744856184,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-22",
           "industry": "机械设备",
           "share": 0.0629066398689164,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-22",
+          "industry": "通信",
+          "share": 0.09001551744856184,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-23",
@@ -5630,15 +5630,15 @@
         },
         {
           "date": "2026-07-23",
-          "industry": "通信",
-          "share": 0.07754850149452892,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-23",
           "industry": "机械设备",
           "share": 0.06009813195246231,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-23",
+          "industry": "通信",
+          "share": 0.07754850149452892,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-24",
@@ -5660,15 +5660,15 @@
         },
         {
           "date": "2026-07-24",
-          "industry": "通信",
-          "share": 0.0680716551285928,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-24",
           "industry": "机械设备",
           "share": 0.06256854959181979,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-24",
+          "industry": "通信",
+          "share": 0.0680716551285928,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-27",
@@ -5690,15 +5690,15 @@
         },
         {
           "date": "2026-07-27",
-          "industry": "通信",
-          "share": 0.07017655229463451,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-27",
           "industry": "机械设备",
           "share": 0.06428243370982267,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-27",
+          "industry": "通信",
+          "share": 0.07017655229463451,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-28",
@@ -5720,15 +5720,15 @@
         },
         {
           "date": "2026-07-28",
-          "industry": "通信",
-          "share": 0.09450908616482157,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-28",
           "industry": "机械设备",
           "share": 0.06681236318075075,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-28",
+          "industry": "通信",
+          "share": 0.09450908616482157,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-29",
@@ -5750,15 +5750,15 @@
         },
         {
           "date": "2026-07-29",
-          "industry": "通信",
-          "share": 0.0782280783273636,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-29",
           "industry": "机械设备",
           "share": 0.06676955661083589,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-29",
+          "industry": "通信",
+          "share": 0.0782280783273636,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-30",
@@ -5780,15 +5780,15 @@
         },
         {
           "date": "2026-07-30",
-          "industry": "通信",
-          "share": 0.0881064480380686,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-30",
           "industry": "机械设备",
           "share": 0.06507586911763585,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-30",
+          "industry": "通信",
+          "share": 0.0881064480380686,
+          "latest_rank": 2
         },
         {
           "date": "2026-07-31",
@@ -5810,15 +5810,15 @@
         },
         {
           "date": "2026-07-31",
-          "industry": "通信",
-          "share": 0.08459265693521689,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-07-31",
           "industry": "机械设备",
           "share": 0.06704956584256555,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-07-31",
+          "industry": "通信",
+          "share": 0.08459265693521689,
+          "latest_rank": 2
         },
         {
           "date": "2026-08-03",
@@ -5840,15 +5840,15 @@
         },
         {
           "date": "2026-08-03",
-          "industry": "通信",
-          "share": 0.07041989284935939,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-08-03",
           "industry": "机械设备",
           "share": 0.07072693372227783,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-08-03",
+          "industry": "通信",
+          "share": 0.07041989284935939,
+          "latest_rank": 2
         },
         {
           "date": "2026-08-04",
@@ -5870,15 +5870,15 @@
         },
         {
           "date": "2026-08-04",
-          "industry": "通信",
-          "share": 0.09517565535789219,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-08-04",
           "industry": "机械设备",
           "share": 0.07249395763369679,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-08-04",
+          "industry": "通信",
+          "share": 0.09517565535789219,
+          "latest_rank": 2
         },
         {
           "date": "2026-08-05",
@@ -5900,15 +5900,15 @@
         },
         {
           "date": "2026-08-05",
-          "industry": "通信",
-          "share": 0.10236422160891623,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-08-05",
           "industry": "机械设备",
           "share": 0.07031457749842172,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-08-05",
+          "industry": "通信",
+          "share": 0.10236422160891623,
+          "latest_rank": 2
         },
         {
           "date": "2026-08-06",
@@ -5930,15 +5930,15 @@
         },
         {
           "date": "2026-08-06",
-          "industry": "通信",
-          "share": 0.08473453616414066,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-08-06",
           "industry": "机械设备",
           "share": 0.06825472351403195,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-08-06",
+          "industry": "通信",
+          "share": 0.08473453616414066,
+          "latest_rank": 2
         },
         {
           "date": "2026-08-07",
@@ -5960,15 +5960,15 @@
         },
         {
           "date": "2026-08-07",
-          "industry": "通信",
-          "share": 0.09010310658666221,
-          "latest_rank": 2
-        },
-        {
-          "date": "2026-08-07",
           "industry": "机械设备",
           "share": 0.07120369466426738,
           "latest_rank": 4
+        },
+        {
+          "date": "2026-08-07",
+          "industry": "通信",
+          "share": 0.09010310658666221,
+          "latest_rank": 2
         }
       ],
       "top_turnover_stocks": [
@@ -7805,50 +7805,50 @@
   "sources": [
     {
       "id": "archive_date_source",
-      "label": "Wind",
-      "path": "Wind",
+      "label": "Wind/data_interface history; Ricequant RQData incremental",
+      "path": "Wind/data_interface history; Ricequant RQData incremental",
       "query": {
-        "engine": "Wind",
+        "engine": "Wind/data_interface history; Ricequant RQData incremental",
         "language": "sql",
-        "sql": "SELECT MAX(trade_date) FROM Wind; latest-day fallback: RQData",
-        "description": "Wind",
-        "executed_at": "2026-08-08T16:27:16.016145+08:00"
+        "sql": "SELECT trading_date, stock_daybar_ready FROM RQData.trading_calendar_and_readiness",
+        "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
+        "executed_at": "2026-08-08T17:00:19.917168+08:00"
       }
     },
     {
       "id": "industry_archive_source",
-      "label": "Wind",
-      "path": "Wind",
+      "label": "Wind/data_interface history; Ricequant RQData incremental",
+      "path": "Wind/data_interface history; Ricequant RQData incremental",
       "query": {
-        "engine": "Wind",
+        "engine": "Wind/data_interface history; Ricequant RQData incremental",
         "language": "sql",
-        "sql": "SELECT trade_date, industry, amount FROM Wind; latest-day fallback: RQData + latest data_interface SW labels",
-        "description": "Wind",
-        "executed_at": "2026-08-08T16:27:16.016145+08:00"
+        "sql": "SELECT trade_date, stock_id, total_turnover, sw2021_level1 FROM RQData.get_price_total_turnover JOIN RQData.get_factor_exposure_sws_2021",
+        "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
+        "executed_at": "2026-08-08T17:00:19.917168+08:00"
       }
     },
     {
       "id": "crowding_archive_source",
-      "label": "Wind",
-      "path": "Wind",
+      "label": "Wind/data_interface history; Ricequant RQData incremental",
+      "path": "Wind/data_interface history; Ricequant RQData incremental",
       "query": {
-        "engine": "Wind",
+        "engine": "Wind/data_interface history; Ricequant RQData incremental",
         "language": "sql",
-        "sql": "SELECT trade_date, stock_code, amount, circulating_market_cap FROM Wind; latest-day fallback: RQData",
-        "description": "Wind",
-        "executed_at": "2026-08-08T16:27:16.016145+08:00"
+        "sql": "SELECT trade_date, stock_id, total_turnover, a_share_market_val_in_circulation FROM RQData.stock_daybar_and_factor",
+        "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
+        "executed_at": "2026-08-08T17:00:19.917168+08:00"
       }
     },
     {
       "id": "index_archive_source",
-      "label": "Wind",
-      "path": "Wind",
+      "label": "Wind/data_interface history; Ricequant RQData incremental",
+      "path": "Wind/data_interface history; Ricequant RQData incremental",
       "query": {
-        "engine": "Wind",
+        "engine": "Wind/data_interface history; Ricequant RQData incremental",
         "language": "sql",
-        "sql": "SELECT trade_date, index_code, close FROM Wind; latest-day fallback: RQData",
-        "description": "Wind",
-        "executed_at": "2026-08-08T16:27:16.016145+08:00"
+        "sql": "SELECT trade_date, index_id, close FROM RQData.get_price_index_close",
+        "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
+        "executed_at": "2026-08-08T17:00:19.917168+08:00"
       }
     },
     {
@@ -7857,10 +7857,10 @@
       "path": "Ricequant RQData",
       "query": {
         "engine": "Ricequant RQData",
-        "language": "python",
-        "sql": "get_price(benchmark_indices, fields=['close'], adjust_type='none')",
+        "language": "sql",
+        "sql": "SELECT trade_date, index_id, close FROM RQData.get_price_benchmark_index_close",
         "description": "Ricequant RQData",
-        "executed_at": "2026-08-08T16:27:16.016145+08:00"
+        "executed_at": "2026-08-08T17:00:19.917168+08:00"
       }
     }
   ]
