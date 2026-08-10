@@ -5,7 +5,7 @@
     "surface": "dashboard",
     "title": "A股市场情绪日报",
     "description": "基于 Wind 与米筐 RQData 的 A 股市场情绪看板。",
-    "generatedAt": "2026-08-10T10:22:02.530809+08:00",
+    "generatedAt": "2026-08-10T11:06:27.821064+08:00",
     "filters": [],
     "cards": [
       {
@@ -247,7 +247,8 @@
           "y": {
             "field": "share",
             "type": "quantitative",
-            "label": "成交占比"
+            "label": "成交占比",
+            "format": "percent"
           },
           "tooltip": [
             {
@@ -387,7 +388,7 @@
           "language": "sql",
           "sql": "SELECT trading_date, stock_daybar_ready FROM RQData.trading_calendar_and_readiness",
           "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
-          "executed_at": "2026-08-10T10:22:02.530809+08:00"
+          "executed_at": "2026-08-10T11:06:27.821064+08:00"
         }
       },
       {
@@ -399,7 +400,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, stock_id, total_turnover, sw2021_level1 FROM RQData.get_price_total_turnover JOIN RQData.get_factor_exposure_sws_2021",
           "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
-          "executed_at": "2026-08-10T10:22:02.530809+08:00"
+          "executed_at": "2026-08-10T11:06:27.821064+08:00"
         }
       },
       {
@@ -411,7 +412,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, stock_id, total_turnover, a_share_market_val_in_circulation FROM RQData.stock_daybar_and_factor",
           "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
-          "executed_at": "2026-08-10T10:22:02.530809+08:00"
+          "executed_at": "2026-08-10T11:06:27.821064+08:00"
         }
       },
       {
@@ -423,7 +424,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_id, close FROM RQData.get_price_index_close",
           "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
-          "executed_at": "2026-08-10T10:22:02.530809+08:00"
+          "executed_at": "2026-08-10T11:06:27.821064+08:00"
         }
       },
       {
@@ -435,7 +436,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_id, close FROM RQData.get_price_benchmark_index_close",
           "description": "Ricequant RQData",
-          "executed_at": "2026-08-10T10:22:02.530809+08:00"
+          "executed_at": "2026-08-10T11:06:27.821064+08:00"
         }
       }
     ],
@@ -499,7 +500,7 @@
   },
   "snapshot": {
     "version": 1,
-    "generatedAt": "2026-08-10T10:22:02.530809+08:00",
+    "generatedAt": "2026-08-10T11:06:27.821064+08:00",
     "status": "ready",
     "datasets": {
       "overview": [
@@ -4094,7 +4095,9 @@
           "share": 0.29521075032884403,
           "share_change": 0.006661681726856272,
           "history_percentile": 0.984071484071484,
-          "rank": 1
+          "rank": 1,
+          "share_display": "29.52%",
+          "share_change_display": "+0.67%"
         },
         {
           "industry": "通信",
@@ -4102,7 +4105,9 @@
           "share": 0.09010310658666221,
           "share_change": 0.005368570422521549,
           "history_percentile": 0.993006993006993,
-          "rank": 2
+          "rank": 2,
+          "share_display": "9.01%",
+          "share_change_display": "+0.54%"
         },
         {
           "industry": "有色金属",
@@ -4110,7 +4115,9 @@
           "share": 0.07254591446213139,
           "share_change": -0.004555573710998503,
           "history_percentile": 0.8535353535353535,
-          "rank": 3
+          "rank": 3,
+          "share_display": "7.25%",
+          "share_change_display": "-0.46%"
         },
         {
           "industry": "机械设备",
@@ -4118,7 +4125,9 @@
           "share": 0.07120369466426738,
           "share_change": 0.00294897115023543,
           "history_percentile": 0.8104118104118104,
-          "rank": 4
+          "rank": 4,
+          "share_display": "7.12%",
+          "share_change_display": "+0.29%"
         },
         {
           "industry": "医药生物",
@@ -4126,7 +4135,9 @@
           "share": 0.06971479312868863,
           "share_change": 0.01854749560723464,
           "history_percentile": 0.5470085470085471,
-          "rank": 5
+          "rank": 5,
+          "share_display": "6.97%",
+          "share_change_display": "+1.85%"
         },
         {
           "industry": "电力设备",
@@ -4134,7 +4145,9 @@
           "share": 0.06890922779424598,
           "share_change": -0.0021482494911471833,
           "history_percentile": 0.5742035742035742,
-          "rank": 6
+          "rank": 6,
+          "share_display": "6.89%",
+          "share_change_display": "-0.21%"
         },
         {
           "industry": "计算机",
@@ -4142,7 +4155,9 @@
           "share": 0.06256458274912137,
           "share_change": -0.008002812820382177,
           "history_percentile": 0.37995337995337997,
-          "rank": 7
+          "rank": 7,
+          "share_display": "6.26%",
+          "share_change_display": "-0.80%"
         },
         {
           "industry": "基础化工",
@@ -4150,7 +4165,9 @@
           "share": 0.04832417140736482,
           "share_change": 0.0013167404400541705,
           "history_percentile": 0.2529137529137529,
-          "rank": 8
+          "rank": 8,
+          "share_display": "4.83%",
+          "share_change_display": "+0.13%"
         },
         {
           "industry": "传媒",
@@ -4158,7 +4175,9 @@
           "share": 0.023273193620048167,
           "share_change": -0.002273501342458333,
           "history_percentile": 0.16122766122766122,
-          "rank": 9
+          "rank": 9,
+          "share_display": "2.33%",
+          "share_change_display": "-0.23%"
         },
         {
           "industry": "国防军工",
@@ -4166,7 +4185,9 @@
           "share": 0.02289627558782523,
           "share_change": 0.0001913055140010632,
           "history_percentile": 0.41375291375291373,
-          "rank": 10
+          "rank": 10,
+          "share_display": "2.29%",
+          "share_change_display": "+0.02%"
         }
       ],
       "top_industry_trend": [
@@ -7812,7 +7833,7 @@
         "language": "sql",
         "sql": "SELECT trading_date, stock_daybar_ready FROM RQData.trading_calendar_and_readiness",
         "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
-        "executed_at": "2026-08-10T10:22:02.530809+08:00"
+        "executed_at": "2026-08-10T11:06:27.821064+08:00"
       }
     },
     {
@@ -7824,7 +7845,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, stock_id, total_turnover, sw2021_level1 FROM RQData.get_price_total_turnover JOIN RQData.get_factor_exposure_sws_2021",
         "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
-        "executed_at": "2026-08-10T10:22:02.530809+08:00"
+        "executed_at": "2026-08-10T11:06:27.821064+08:00"
       }
     },
     {
@@ -7836,7 +7857,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, stock_id, total_turnover, a_share_market_val_in_circulation FROM RQData.stock_daybar_and_factor",
         "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
-        "executed_at": "2026-08-10T10:22:02.530809+08:00"
+        "executed_at": "2026-08-10T11:06:27.821064+08:00"
       }
     },
     {
@@ -7848,7 +7869,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_id, close FROM RQData.get_price_index_close",
         "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
-        "executed_at": "2026-08-10T10:22:02.530809+08:00"
+        "executed_at": "2026-08-10T11:06:27.821064+08:00"
       }
     },
     {
@@ -7860,7 +7881,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_id, close FROM RQData.get_price_benchmark_index_close",
         "description": "Ricequant RQData",
-        "executed_at": "2026-08-10T10:22:02.530809+08:00"
+        "executed_at": "2026-08-10T11:06:27.821064+08:00"
       }
     }
   ]
