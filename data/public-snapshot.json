@@ -1,1491 +1,1491 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-12T20:35:34.725895+08:00",
+  "generated_at": "2026-08-14T09:19:24.915596+08:00",
   "workbook_name": "服务器市场情绪聚合归档",
   "data_source": "Wind/data_interface history through 2026-08-07; Ricequant RQData incremental thereafter",
-  "latest_complete_date": "2026-08-12",
-  "previous_complete_date": "2026-08-11",
+  "latest_complete_date": "2026-08-13",
+  "previous_complete_date": "2026-08-12",
   "coverage_start": "2008-01-02",
   "industry_coverage_start": "2016-01-04",
-  "complete_archive_days": 4523,
-  "industry_archive_days": 2577,
+  "complete_archive_days": 4524,
+  "industry_archive_days": 2578,
   "overview": [
     {
-      "latest_date": "2026-08-12",
-      "turnover_total_yi": 21522.7615526389,
-      "crowding": 0.47729231447561504,
-      "crowding_change": -0.005782065414687787,
-      "crowding_percentile": 0.9632986955560469,
+      "latest_date": "2026-08-13",
+      "turnover_total_yi": 25507.6027643568,
+      "crowding": 0.48640789284504765,
+      "crowding_change": 0.009115578369432609,
+      "crowding_percentile": 0.9719274977895668,
       "covered_stocks": 5208,
-      "archive_days": 4523
+      "archive_days": 4524
     }
   ],
   "index_latest": [
     {
       "index": "上证指数",
-      "level": 3946.6752,
-      "daily_return": 0.0031982722116197237,
-      "previous_level": 3934.0929
+      "level": 3926.9648,
+      "daily_return": -0.004994178390965609,
+      "previous_level": 3946.6752
     },
     {
       "index": "沪深300",
-      "level": 4690.9165,
-      "daily_return": 0.00581668719253936,
-      "previous_level": 4663.7887
+      "level": 4663.9513,
+      "daily_return": -0.005748386269506245,
+      "previous_level": 4690.9165
     },
     {
       "index": "创业板指",
-      "level": 3602.0835,
-      "daily_return": 0.014910384109880992,
-      "previous_level": 3549.1641
+      "level": 3586.0427,
+      "daily_return": -0.004453200487995357,
+      "previous_level": 3602.0835
     },
     {
       "index": "科创50",
-      "level": 1736.9912,
-      "daily_return": 0.016079881949287333,
-      "previous_level": 1709.5026
+      "level": 1717.7477,
+      "daily_return": -0.011078639891785258,
+      "previous_level": 1736.9912
     }
   ],
   "index_trend": [
     {
-      "date": "2026-05-20",
-      "index": "上证指数",
-      "level": 4162.1845,
-      "indexed_value": 100.0
-    },
-    {
       "date": "2026-05-21",
       "index": "上证指数",
       "level": 4077.2765,
-      "indexed_value": 97.96001354577145
+      "indexed_value": 100.0
     },
     {
       "date": "2026-05-22",
       "index": "上证指数",
       "level": 4112.8996,
-      "indexed_value": 98.81588862771459
+      "indexed_value": 100.87369841118208
     },
     {
       "date": "2026-05-25",
       "index": "上证指数",
       "level": 4152.5686,
-      "indexed_value": 99.76896987627529
+      "indexed_value": 101.84662727681086
     },
     {
       "date": "2026-05-26",
       "index": "上证指数",
       "level": 4145.373,
-      "indexed_value": 99.59608950540273
+      "indexed_value": 101.67014672662008
     },
     {
       "date": "2026-05-27",
       "index": "上证指数",
       "level": 4093.7266,
-      "indexed_value": 98.35524109995603
+      "indexed_value": 100.40345804362299
     },
     {
       "date": "2026-05-28",
       "index": "上证指数",
       "level": 4098.6358,
-      "indexed_value": 98.47318877863295
+      "indexed_value": 100.5238619455904
     },
     {
       "date": "2026-05-29",
       "index": "上证指数",
       "level": 4068.5691,
-      "indexed_value": 97.75081090230383
+      "indexed_value": 99.7864407773179
     },
     {
       "date": "2026-06-01",
       "index": "上证指数",
       "level": 4057.74,
-      "indexed_value": 97.49063262332555
+      "indexed_value": 99.5208443675576
     },
     {
       "date": "2026-06-02",
       "index": "上证指数",
       "level": 4075.1016,
-      "indexed_value": 97.90775973530245
+      "indexed_value": 99.94665802037218
     },
     {
       "date": "2026-06-03",
       "index": "上证指数",
       "level": 4083.974,
-      "indexed_value": 98.12092664320863
+      "indexed_value": 100.16426406205221
     },
     {
       "date": "2026-06-04",
       "index": "上证指数",
       "level": 4057.7811,
-      "indexed_value": 97.49162008555842
+      "indexed_value": 99.52185239338074
     },
     {
       "date": "2026-06-05",
       "index": "上证指数",
       "level": 4027.7362,
-      "indexed_value": 96.7697659726521
+      "indexed_value": 98.78496589573948
     },
     {
       "date": "2026-06-08",
       "index": "上证指数",
       "level": 3959.3378,
-      "indexed_value": 95.12643661039051
+      "indexed_value": 97.10741471666196
     },
     {
       "date": "2026-06-09",
       "index": "上证指数",
       "level": 4010.0307,
-      "indexed_value": 96.34437637255147
+      "indexed_value": 98.35071769108619
     },
     {
       "date": "2026-06-10",
       "index": "上证指数",
       "level": 3993.2258,
-      "indexed_value": 95.94062444853178
+      "indexed_value": 97.93855776030888
     },
     {
       "date": "2026-06-11",
       "index": "上证指数",
       "level": 3987.0147,
-      "indexed_value": 95.79139752214252
+      "indexed_value": 97.78622323013904
     },
     {
       "date": "2026-06-12",
       "index": "上证指数",
       "level": 4031.5129,
-      "indexed_value": 96.86050438177357
+      "indexed_value": 98.87759390367566
     },
     {
       "date": "2026-06-15",
       "index": "上证指数",
       "level": 4096.4717,
-      "indexed_value": 98.42119444729084
+      "indexed_value": 100.47078484866063
     },
     {
       "date": "2026-06-16",
       "index": "上证指数",
       "level": 4091.8917,
-      "indexed_value": 98.31115607681494
+      "indexed_value": 100.35845496374847
     },
     {
       "date": "2026-06-17",
       "index": "上证指数",
       "level": 4108.0762,
-      "indexed_value": 98.70000236654575
+      "indexed_value": 100.75539885509359
     },
     {
       "date": "2026-06-18",
       "index": "上证指数",
       "level": 4090.4813,
-      "indexed_value": 98.27727002491119
+      "indexed_value": 100.32386324547771
     },
     {
       "date": "2026-06-22",
       "index": "上证指数",
       "level": 4163.0965,
-      "indexed_value": 100.02191157071482
+      "indexed_value": 102.10483640243677
     },
     {
       "date": "2026-06-23",
       "index": "上证指数",
       "level": 4106.2517,
-      "indexed_value": 98.6561672121935
+      "indexed_value": 100.71065084744681
     },
     {
       "date": "2026-06-24",
       "index": "上证指数",
       "level": 4110.8134,
-      "indexed_value": 98.76576590970438
+      "indexed_value": 100.82253190334282
     },
     {
       "date": "2026-06-25",
       "index": "上证指数",
       "level": 4120.2806,
-      "indexed_value": 98.99322339026537
+      "indexed_value": 101.054726114356
     },
     {
       "date": "2026-06-26",
       "index": "上证指数",
       "level": 4027.2648,
-      "indexed_value": 96.7584401892804
+      "indexed_value": 98.77340425649327
     },
     {
       "date": "2026-06-29",
       "index": "上证指数",
       "level": 4073.9017,
-      "indexed_value": 97.87893112378848
+      "indexed_value": 99.91722906209574
     },
     {
       "date": "2026-06-30",
       "index": "上证指数",
       "level": 4094.3972,
-      "indexed_value": 98.37135283166806
+      "indexed_value": 100.4199052970776
     },
     {
       "date": "2026-07-01",
       "index": "上证指数",
       "level": 4112.4453,
-      "indexed_value": 98.80497368629382
+      "indexed_value": 100.86255616954112
     },
     {
       "date": "2026-07-02",
       "index": "上证指数",
       "level": 4028.9038,
-      "indexed_value": 96.79781854936992
+      "indexed_value": 98.81360265853935
     },
     {
       "date": "2026-07-03",
       "index": "上证指数",
       "level": 4043.6432,
-      "indexed_value": 97.1519450903726
+      "indexed_value": 99.17510377331536
     },
     {
       "date": "2026-07-06",
       "index": "上证指数",
       "level": 4041.2382,
-      "indexed_value": 97.09416293295023
+      "indexed_value": 99.1161183206486
     },
     {
       "date": "2026-07-07",
       "index": "上证指数",
       "level": 3990.2353,
-      "indexed_value": 95.86877515881382
+      "indexed_value": 97.86521223174341
     },
     {
       "date": "2026-07-08",
       "index": "上证指数",
       "level": 3970.8797,
-      "indexed_value": 95.40374051174328
+      "indexed_value": 97.39049338449331
     },
     {
       "date": "2026-07-09",
       "index": "上证指数",
       "level": 4036.5879,
-      "indexed_value": 96.98243554556507
+      "indexed_value": 99.00206424558158
     },
     {
       "date": "2026-07-10",
       "index": "上证指数",
       "level": 3996.1616,
-      "indexed_value": 96.01115952452372
+      "indexed_value": 98.01056170706107
     },
     {
       "date": "2026-07-13",
       "index": "上证指数",
       "level": 3913.794,
-      "indexed_value": 94.03220832714166
+      "indexed_value": 95.99039947376637
     },
     {
       "date": "2026-07-14",
       "index": "上证指数",
       "level": 3967.1262,
-      "indexed_value": 95.31355950222773
+      "indexed_value": 97.2984343838344
     },
     {
       "date": "2026-07-15",
       "index": "上证指数",
       "level": 3955.5781,
-      "indexed_value": 95.03610664063547
+      "indexed_value": 97.01520365371346
     },
     {
       "date": "2026-07-16",
       "index": "上证指数",
       "level": 3882.4126,
-      "indexed_value": 93.27824367228314
+      "indexed_value": 95.22073374224192
     },
     {
       "date": "2026-07-17",
       "index": "上证指数",
       "level": 3764.1547,
-      "indexed_value": 90.43699768715202
+      "indexed_value": 92.32031970360607
     },
     {
       "date": "2026-07-20",
       "index": "上证指数",
       "level": 3796.2814,
-      "indexed_value": 91.2088688043502
+      "indexed_value": 93.10826479391329
     },
     {
       "date": "2026-07-21",
       "index": "上证指数",
       "level": 3864.3671,
-      "indexed_value": 92.8446852848546
+      "indexed_value": 94.77814663783532
     },
     {
       "date": "2026-07-22",
       "index": "上证指数",
       "level": 3867.0336,
-      "indexed_value": 92.90875020076597
+      "indexed_value": 94.8435456854594
     },
     {
       "date": "2026-07-23",
       "index": "上证指数",
       "level": 3876.7774,
-      "indexed_value": 93.14285323007665
+      "indexed_value": 95.08252383668363
     },
     {
       "date": "2026-07-24",
       "index": "上证指数",
       "level": 3814.1978,
-      "indexed_value": 91.63932545517864
+      "indexed_value": 93.54768556903119
     },
     {
       "date": "2026-07-27",
       "index": "上证指数",
       "level": 3858.245,
-      "indexed_value": 92.69759665867767
+      "indexed_value": 94.62799493730681
     },
     {
       "date": "2026-07-28",
       "index": "上证指数",
       "level": 3813.3146,
-      "indexed_value": 91.61810582880216
+      "indexed_value": 93.5260240506132
     },
     {
       "date": "2026-07-29",
       "index": "上证指数",
       "level": 3828.469,
-      "indexed_value": 91.98220309551391
+      "indexed_value": 93.89770352832339
     },
     {
       "date": "2026-07-30",
       "index": "上证指数",
       "level": 3804.6926,
-      "indexed_value": 91.41095499250453
+      "indexed_value": 93.31455936333973
     },
     {
       "date": "2026-07-31",
       "index": "上证指数",
       "level": 3832.2624,
-      "indexed_value": 92.07334273624824
+      "indexed_value": 93.9907411233945
     },
     {
       "date": "2026-08-03",
       "index": "上证指数",
       "level": 3809.6629,
-      "indexed_value": 91.53037065031594
+      "indexed_value": 93.43646181464514
     },
     {
       "date": "2026-08-04",
       "index": "上证指数",
       "level": 3822.2846,
-      "indexed_value": 91.83361765918833
+      "indexed_value": 93.74602384704593
     },
     {
       "date": "2026-08-05",
       "index": "上证指数",
       "level": 3878.4296,
-      "indexed_value": 93.18254873132125
+      "indexed_value": 95.12304598424953
     },
     {
       "date": "2026-08-06",
       "index": "上证指数",
       "level": 3900.3523,
-      "indexed_value": 93.70926012530198
+      "indexed_value": 95.66072597725467
     },
     {
       "date": "2026-08-07",
       "index": "上证指数",
       "level": 3940.0371,
-      "indexed_value": 94.66272098221498
+      "indexed_value": 96.63404235646024
     },
     {
       "date": "2026-08-10",
       "index": "上证指数",
       "level": 3966.5935,
-      "indexed_value": 95.30076093455251
+      "indexed_value": 97.28536929001504
     },
     {
       "date": "2026-08-11",
       "index": "上证指数",
       "level": 3934.0929,
-      "indexed_value": 94.51990655387813
+      "indexed_value": 96.48825386259676
     },
     {
       "date": "2026-08-12",
       "index": "上证指数",
       "level": 3946.6752,
-      "indexed_value": 94.82220694445428
+      "indexed_value": 96.7968495636732
     },
     {
-      "date": "2026-05-20",
-      "index": "沪深300",
-      "level": 4850.7,
-      "indexed_value": 100.0
+      "date": "2026-08-13",
+      "index": "上证指数",
+      "level": 3926.9648,
+      "indexed_value": 96.31342882926876
     },
     {
       "date": "2026-05-21",
       "index": "沪深300",
       "level": 4783.0976,
-      "indexed_value": 98.6063372296782
+      "indexed_value": 100.0
     },
     {
       "date": "2026-05-22",
       "index": "沪深300",
       "level": 4845.0956,
-      "indexed_value": 99.88446203640711
+      "indexed_value": 101.29618931463995
     },
     {
       "date": "2026-05-25",
       "index": "沪深300",
       "level": 4921.5974,
-      "indexed_value": 101.46159111056137
+      "indexed_value": 102.89560890415447
     },
     {
       "date": "2026-05-26",
       "index": "沪深300",
       "level": 4947.8493,
-      "indexed_value": 102.00278928814397
+      "indexed_value": 103.4444561616305
     },
     {
       "date": "2026-05-27",
       "index": "沪深300",
       "level": 4908.1714,
-      "indexed_value": 101.1848063166141
+      "indexed_value": 102.61491214396294
     },
     {
       "date": "2026-05-28",
       "index": "沪深300",
       "level": 4914.2133,
-      "indexed_value": 101.30936359700662
+      "indexed_value": 102.74122986743987
     },
     {
       "date": "2026-05-29",
       "index": "沪深300",
       "level": 4892.1213,
-      "indexed_value": 100.85392417589215
+      "indexed_value": 102.27935344660331
     },
     {
       "date": "2026-06-01",
       "index": "沪深300",
       "level": 4844.2556,
-      "indexed_value": 99.86714494815182
+      "indexed_value": 101.27862747354351
     },
     {
       "date": "2026-06-02",
       "index": "沪深300",
       "level": 4914.5591,
-      "indexed_value": 101.31649246500507
+      "indexed_value": 102.74845949202458
     },
     {
       "date": "2026-06-03",
       "index": "沪深300",
       "level": 4938.8091,
-      "indexed_value": 101.81642031047066
+      "indexed_value": 103.25545311891608
     },
     {
       "date": "2026-06-04",
       "index": "沪深300",
       "level": 4904.7454,
-      "indexed_value": 101.11417733522995
+      "indexed_value": 102.54328492063385
     },
     {
       "date": "2026-06-05",
       "index": "沪深300",
       "level": 4816.9199,
-      "indexed_value": 99.3036036036036
+      "indexed_value": 100.70712125966234
     },
     {
       "date": "2026-06-08",
       "index": "沪深300",
       "level": 4713.6358,
-      "indexed_value": 97.17434184756839
+      "indexed_value": 98.54776536443663
     },
     {
       "date": "2026-06-09",
       "index": "沪深300",
       "level": 4801.8106,
-      "indexed_value": 98.99211660172759
+      "indexed_value": 100.39123182433075
     },
     {
       "date": "2026-06-10",
       "index": "沪深300",
       "level": 4748.5932,
-      "indexed_value": 97.89500896777785
+      "indexed_value": 99.27861810722825
     },
     {
       "date": "2026-06-11",
       "index": "沪深300",
       "level": 4722.4122,
-      "indexed_value": 97.3552724349063
+      "indexed_value": 98.7312531527686
     },
     {
       "date": "2026-06-12",
       "index": "沪深300",
       "level": 4777.3206,
-      "indexed_value": 98.48724101676048
+      "indexed_value": 99.87922052855454
     },
     {
       "date": "2026-06-15",
       "index": "沪深300",
       "level": 4891.7126,
-      "indexed_value": 100.8454985878327
+      "indexed_value": 102.27080877463173
     },
     {
       "date": "2026-06-16",
       "index": "沪深300",
       "level": 4884.2322,
-      "indexed_value": 100.69128579380298
+      "indexed_value": 102.11441639827714
     },
     {
       "date": "2026-06-17",
       "index": "沪深300",
       "level": 4931.3861,
-      "indexed_value": 101.66339085080504
+      "indexed_value": 103.10026080170304
     },
     {
       "date": "2026-06-18",
       "index": "沪深300",
       "level": 4941.5986,
-      "indexed_value": 101.87392747438516
+      "indexed_value": 103.31377306622387
     },
     {
       "date": "2026-06-22",
       "index": "沪深300",
       "level": 5059.6582,
-      "indexed_value": 104.30779475127301
+      "indexed_value": 105.78203965564073
     },
     {
       "date": "2026-06-23",
       "index": "沪深300",
       "level": 4919.386,
-      "indexed_value": 101.41600181417117
+      "indexed_value": 102.84937526677274
     },
     {
       "date": "2026-06-24",
       "index": "沪深300",
       "level": 4943.0197,
-      "indexed_value": 101.90322427690847
+      "indexed_value": 103.3434839381074
     },
     {
       "date": "2026-06-25",
       "index": "沪深300",
       "level": 5020.1038,
-      "indexed_value": 103.49235780402827
+      "indexed_value": 104.95507764675342
     },
     {
       "date": "2026-06-26",
       "index": "沪深300",
       "level": 4868.2205,
-      "indexed_value": 100.36119529140126
+      "indexed_value": 101.77966052793906
     },
     {
       "date": "2026-06-29",
       "index": "沪深300",
       "level": 4926.921,
-      "indexed_value": 101.57134021893748
+      "indexed_value": 103.00690916279859
     },
     {
       "date": "2026-06-30",
       "index": "沪深300",
       "level": 4979.4328,
-      "indexed_value": 102.65390149875276
+      "indexed_value": 104.10477093338007
     },
     {
       "date": "2026-07-01",
       "index": "沪深300",
       "level": 4958.9773,
-      "indexed_value": 102.23219947636424
+      "indexed_value": 103.67710874225105
     },
     {
       "date": "2026-07-02",
       "index": "沪深300",
       "level": 4812.2957,
-      "indexed_value": 99.20827303275816
+      "indexed_value": 100.61044332442641
     },
     {
       "date": "2026-07-03",
       "index": "沪深300",
       "level": 4842.1737,
-      "indexed_value": 99.8242253695343
+      "indexed_value": 101.2351012866641
     },
     {
       "date": "2026-07-06",
       "index": "沪深300",
       "level": 4841.998,
-      "indexed_value": 99.82060321190755
+      "indexed_value": 101.23142793490143
     },
     {
       "date": "2026-07-07",
       "index": "沪深300",
       "level": 4792.2624,
-      "indexed_value": 98.79527490877605
+      "indexed_value": 100.19160804914371
     },
     {
       "date": "2026-07-08",
       "index": "沪深300",
       "level": 4755.5338,
-      "indexed_value": 98.03809347104541
+      "indexed_value": 99.42372490998302
     },
     {
       "date": "2026-07-09",
       "index": "沪深300",
       "level": 4876.3125,
-      "indexed_value": 100.52801657492734
+      "indexed_value": 101.94883959716816
     },
     {
       "date": "2026-07-10",
       "index": "沪深300",
       "level": 4780.7867,
-      "indexed_value": 98.55869668295297
+      "indexed_value": 99.95168612072645
     },
     {
       "date": "2026-07-13",
       "index": "沪深300",
       "level": 4695.383,
-      "indexed_value": 96.79804976601315
+      "indexed_value": 98.1661549201923
     },
     {
       "date": "2026-07-14",
       "index": "沪深300",
       "level": 4796.502,
-      "indexed_value": 98.88267672707033
+      "indexed_value": 100.28024516999194
     },
     {
       "date": "2026-07-15",
       "index": "沪深300",
       "level": 4786.7828,
-      "indexed_value": 98.68230976972396
+      "indexed_value": 100.07704630572456
     },
     {
       "date": "2026-07-16",
       "index": "沪深300",
       "level": 4698.4344,
-      "indexed_value": 96.86095615065867
+      "indexed_value": 98.22995039867052
     },
     {
       "date": "2026-07-17",
       "index": "沪深300",
       "level": 4529.0953,
-      "indexed_value": 93.36993217473767
+      "indexed_value": 94.68958567769974
     },
     {
       "date": "2026-07-20",
       "index": "沪深300",
       "level": 4598.3208,
-      "indexed_value": 94.7970560949966
+      "indexed_value": 96.13688000010706
     },
     {
       "date": "2026-07-21",
       "index": "沪深300",
       "level": 4739.2287,
-      "indexed_value": 97.70195435710309
+      "indexed_value": 99.08283493943338
     },
     {
       "date": "2026-07-22",
       "index": "沪深300",
       "level": 4717.2442,
-      "indexed_value": 97.24873111097368
+      "indexed_value": 98.62320601611809
     },
     {
       "date": "2026-07-23",
       "index": "沪深300",
       "level": 4728.0018,
-      "indexed_value": 97.47050528789659
+      "indexed_value": 98.84811466109326
     },
     {
       "date": "2026-07-24",
       "index": "沪深300",
       "level": 4649.1917,
-      "indexed_value": 95.8457892675284
+      "indexed_value": 97.20043555038475
     },
     {
       "date": "2026-07-27",
       "index": "沪深300",
       "level": 4702.4272,
-      "indexed_value": 96.94327004349888
+      "indexed_value": 98.31342768334896
     },
     {
       "date": "2026-07-28",
       "index": "沪深300",
       "level": 4569.5235,
-      "indexed_value": 94.20338301688417
+      "indexed_value": 95.53481618271809
     },
     {
       "date": "2026-07-29",
       "index": "沪深300",
       "level": 4600.2624,
-      "indexed_value": 94.83708330756386
+      "indexed_value": 96.17747294138425
     },
     {
       "date": "2026-07-30",
       "index": "沪深300",
       "level": 4549.7201,
-      "indexed_value": 93.79512441503287
+      "indexed_value": 95.12078741608784
     },
     {
       "date": "2026-07-31",
       "index": "沪深300",
       "level": 4588.1968,
-      "indexed_value": 94.58834395035768
+      "indexed_value": 95.92521800098747
     },
     {
       "date": "2026-08-03",
       "index": "沪深300",
       "level": 4543.1781,
-      "indexed_value": 93.66025728245408
+      "indexed_value": 94.98401412507242
     },
     {
       "date": "2026-08-04",
       "index": "沪深300",
       "level": 4600.9304,
-      "indexed_value": 94.85085451584308
+      "indexed_value": 96.19143878644668
     },
     {
       "date": "2026-08-05",
       "index": "沪深300",
       "level": 4658.1549,
-      "indexed_value": 96.030570845445
+      "indexed_value": 97.38782875766533
     },
     {
       "date": "2026-08-06",
       "index": "沪深300",
       "level": 4651.3098,
-      "indexed_value": 95.8894551301874
+      "indexed_value": 97.2447185689876
     },
     {
       "date": "2026-08-07",
       "index": "沪深300",
       "level": 4694.4365,
-      "indexed_value": 96.77853711835405
+      "indexed_value": 98.14636648852827
     },
     {
       "date": "2026-08-10",
       "index": "沪深300",
       "level": 4702.0247,
-      "indexed_value": 96.93497227204321
+      "indexed_value": 98.30501263449025
     },
     {
       "date": "2026-08-11",
       "index": "沪深300",
       "level": 4663.7887,
-      "indexed_value": 96.1467149071268
+      "indexed_value": 97.5056143533429
     },
     {
       "date": "2026-08-12",
       "index": "沪深300",
       "level": 4690.9165,
-      "indexed_value": 96.70597027233184
+      "indexed_value": 98.07277401155268
     },
     {
-      "date": "2026-05-20",
-      "index": "创业板指",
-      "level": 3921.7894,
-      "indexed_value": 100.0
+      "date": "2026-08-13",
+      "index": "沪深300",
+      "level": 4663.9513,
+      "indexed_value": 97.50901382401229
     },
     {
       "date": "2026-05-21",
       "index": "创业板指",
       "level": 3829.7786,
-      "indexed_value": 97.65385668083044
+      "indexed_value": 100.0
     },
     {
       "date": "2026-05-22",
       "index": "创业板指",
       "level": 3938.502,
-      "indexed_value": 100.42614730918493
+      "indexed_value": 102.83889517790922
     },
     {
       "date": "2026-05-25",
       "index": "创业板指",
       "level": 4021.1602,
-      "indexed_value": 102.53381275394338
+      "indexed_value": 104.99719748812633
     },
     {
       "date": "2026-05-26",
       "index": "创业板指",
       "level": 4043.0658,
-      "indexed_value": 103.0923741086148
+      "indexed_value": 105.56917833318093
     },
     {
       "date": "2026-05-27",
       "index": "创业板指",
       "level": 4045.7731,
-      "indexed_value": 103.16140637230544
+      "indexed_value": 105.63986910366046
     },
     {
       "date": "2026-05-28",
       "index": "创业板指",
       "level": 4125.0749,
-      "indexed_value": 105.18348843515155
+      "indexed_value": 107.71053188296575
     },
     {
       "date": "2026-05-29",
       "index": "创业板指",
       "level": 4037.951,
-      "indexed_value": 102.9619540508728
+      "indexed_value": 105.43562492098107
     },
     {
       "date": "2026-06-01",
       "index": "创业板指",
       "level": 3950.9432,
-      "indexed_value": 100.74338004993334
+      "indexed_value": 103.16374946583073
     },
     {
       "date": "2026-06-02",
       "index": "创业板指",
       "level": 4055.8709,
-      "indexed_value": 103.41888577698741
+      "indexed_value": 105.90353447585716
     },
     {
       "date": "2026-06-03",
       "index": "创业板指",
       "level": 4122.987,
-      "indexed_value": 105.13024998231674
+      "indexed_value": 107.65601437117019
     },
     {
       "date": "2026-06-04",
       "index": "创业板指",
       "level": 4088.884,
-      "indexed_value": 104.26067243692381
+      "indexed_value": 106.76554514143454
     },
     {
       "date": "2026-06-05",
       "index": "创业板指",
       "level": 3957.935,
-      "indexed_value": 100.92166091325556
+      "indexed_value": 103.34631354407797
     },
     {
       "date": "2026-06-08",
       "index": "创业板指",
       "level": 3811.7854,
-      "indexed_value": 97.19505590993745
+      "indexed_value": 99.53017649636458
     },
     {
       "date": "2026-06-09",
       "index": "创业板指",
       "level": 3961.7493,
-      "indexed_value": 101.0189200878558
+      "indexed_value": 103.44590937972235
     },
     {
       "date": "2026-06-10",
       "index": "创业板指",
       "level": 3854.7935,
-      "indexed_value": 98.29170072212446
+      "indexed_value": 100.653168305865
     },
     {
       "date": "2026-06-11",
       "index": "创业板指",
       "level": 3811.246,
-      "indexed_value": 97.1813019842422
+      "indexed_value": 99.51609213127881
     },
     {
       "date": "2026-06-12",
       "index": "创业板指",
       "level": 3830.353,
-      "indexed_value": 97.66850305628344
+      "indexed_value": 100.01499825603494
     },
     {
       "date": "2026-06-15",
       "index": "创业板指",
       "level": 4033.5349,
-      "indexed_value": 102.84934984015204
+      "indexed_value": 105.32031538324435
     },
     {
       "date": "2026-06-16",
       "index": "创业板指",
       "level": 4102.9421,
-      "indexed_value": 104.61913380662409
+      "indexed_value": 107.13261858009233
     },
     {
       "date": "2026-06-17",
       "index": "创业板指",
       "level": 4167.0478,
-      "indexed_value": 106.25373713336062
+      "indexed_value": 108.8064934093057
     },
     {
       "date": "2026-06-18",
       "index": "创业板指",
       "level": 4252.3903,
-      "indexed_value": 108.42984837482604
+      "indexed_value": 111.03488593309282
     },
     {
       "date": "2026-06-22",
       "index": "创业板指",
       "level": 4359.392,
-      "indexed_value": 111.1582381246683
+      "indexed_value": 113.82882550965216
     },
     {
       "date": "2026-06-23",
       "index": "创业板指",
       "level": 4192.1945,
-      "indexed_value": 106.89494188545665
+      "indexed_value": 109.46310316737369
     },
     {
       "date": "2026-06-24",
       "index": "创业板指",
       "level": 4251.4244,
-      "indexed_value": 108.40521931136841
+      "indexed_value": 111.00966515401176
     },
     {
       "date": "2026-06-25",
       "index": "创业板指",
       "level": 4371.9891,
-      "indexed_value": 111.47944609162337
+      "indexed_value": 114.15775052897312
     },
     {
       "date": "2026-06-26",
       "index": "创业板指",
       "level": 4194.2089,
-      "indexed_value": 106.94630619380018
+      "indexed_value": 109.51570150817594
     },
     {
       "date": "2026-06-29",
       "index": "创业板指",
       "level": 4216.6985,
-      "indexed_value": 107.5197587101439
+      "indexed_value": 110.1029312764973
     },
     {
       "date": "2026-06-30",
       "index": "创业板指",
       "level": 4342.7123,
-      "indexed_value": 110.73292971825566
+      "indexed_value": 113.39329902778192
     },
     {
       "date": "2026-07-01",
       "index": "创业板指",
       "level": 4260.7208,
-      "indexed_value": 108.64226416645421
+      "indexed_value": 111.25240503458869
     },
     {
       "date": "2026-07-02",
       "index": "创业板指",
       "level": 4017.2735,
-      "indexed_value": 102.43470748327282
+      "indexed_value": 104.89571120377559
     },
     {
       "date": "2026-07-03",
       "index": "创业板指",
       "level": 4019.9341,
-      "indexed_value": 102.50254896400097
+      "indexed_value": 104.96518258261717
     },
     {
       "date": "2026-07-06",
       "index": "创业板指",
       "level": 3948.86,
-      "indexed_value": 100.69026144035169
+      "indexed_value": 103.10935467653404
     },
     {
       "date": "2026-07-07",
       "index": "创业板指",
       "level": 3911.9075,
-      "indexed_value": 99.74802573539516
+      "indexed_value": 102.14448166794811
     },
     {
       "date": "2026-07-08",
       "index": "创业板指",
       "level": 3845.3513,
-      "indexed_value": 98.05093817633347
+      "indexed_value": 100.40662141670538
     },
     {
       "date": "2026-07-09",
       "index": "创业板指",
       "level": 4018.1744,
-      "indexed_value": 102.45767914003746
+      "indexed_value": 104.91923475680814
     },
     {
       "date": "2026-07-10",
       "index": "创业板指",
       "level": 3842.7314,
-      "indexed_value": 97.98413448718077
+      "indexed_value": 100.33821276248189
     },
     {
       "date": "2026-07-13",
       "index": "创业板指",
       "level": 3723.5166,
-      "indexed_value": 94.94432821915424
+      "indexed_value": 97.22537485587287
     },
     {
       "date": "2026-07-14",
       "index": "创业板指",
       "level": 3851.1372,
-      "indexed_value": 98.19847032071635
+      "indexed_value": 100.55769803507701
     },
     {
       "date": "2026-07-15",
       "index": "创业板指",
       "level": 3804.7038,
-      "indexed_value": 97.01448527552243
+      "indexed_value": 99.34526763505336
     },
     {
       "date": "2026-07-16",
       "index": "创业板指",
       "level": 3692.4573,
-      "indexed_value": 94.15236065455223
+      "indexed_value": 96.41438019419712
     },
     {
       "date": "2026-07-17",
       "index": "创业板指",
       "level": 3428.6298,
-      "indexed_value": 87.42513812699887
+      "indexed_value": 89.52553549701281
     },
     {
       "date": "2026-07-20",
       "index": "创业板指",
       "level": 3443.1015,
-      "indexed_value": 87.79414570297936
+      "indexed_value": 89.9034085155732
     },
     {
       "date": "2026-07-21",
       "index": "创业板指",
       "level": 3685.9684,
-      "indexed_value": 93.98690301932072
+      "indexed_value": 96.24494742333147
     },
     {
       "date": "2026-07-22",
       "index": "创业板指",
       "level": 3566.7323,
-      "indexed_value": 90.94655363187019
+      "indexed_value": 93.13155334880194
     },
     {
       "date": "2026-07-23",
       "index": "创业板指",
       "level": 3575.5202,
-      "indexed_value": 91.17063246690401
+      "indexed_value": 93.36101569944539
     },
     {
       "date": "2026-07-24",
       "index": "创业板指",
       "level": 3480.8702,
-      "indexed_value": 88.75719333628675
+      "indexed_value": 90.88959346109459
     },
     {
       "date": "2026-07-27",
       "index": "创业板指",
       "level": 3590.7872,
-      "indexed_value": 91.55991905123717
+      "indexed_value": 93.75965493148874
     },
     {
       "date": "2026-07-28",
       "index": "创业板指",
       "level": 3327.0298,
-      "indexed_value": 84.83448397305577
+      "indexed_value": 86.87264062731981
     },
     {
       "date": "2026-07-29",
       "index": "创业板指",
       "level": 3378.6964,
-      "indexed_value": 86.15190810602935
+      "indexed_value": 88.22171600206863
     },
     {
       "date": "2026-07-30",
       "index": "创业板指",
       "level": 3244.6179,
-      "indexed_value": 82.73309882473546
+      "indexed_value": 84.72076949826813
     },
     {
       "date": "2026-07-31",
       "index": "创业板指",
       "level": 3343.9641,
-      "indexed_value": 85.26628431399197
+      "indexed_value": 87.3148150130663
     },
     {
       "date": "2026-08-03",
       "index": "创业板指",
       "level": 3302.5534,
-      "indexed_value": 84.21037090874894
+      "indexed_value": 86.23353318648759
     },
     {
       "date": "2026-08-04",
       "index": "创业板指",
       "level": 3488.9663,
-      "indexed_value": 88.9636322643944
+      "indexed_value": 91.10099210434775
     },
     {
       "date": "2026-08-05",
       "index": "创业板指",
       "level": 3535.1431,
-      "indexed_value": 90.14107437793574
+      "indexed_value": 92.30672237815521
     },
     {
       "date": "2026-08-06",
       "index": "创业板指",
       "level": 3515.5603,
-      "indexed_value": 89.64174108890191
+      "indexed_value": 91.79539255872389
     },
     {
       "date": "2026-08-07",
       "index": "创业板指",
       "level": 3563.1165,
-      "indexed_value": 90.85435592232464
+      "indexed_value": 93.03714058039803
     },
     {
       "date": "2026-08-10",
       "index": "创业板指",
       "level": 3537.2136,
-      "indexed_value": 90.19386915574815
+      "indexed_value": 92.36078555559321
     },
     {
       "date": "2026-08-11",
       "index": "创业板指",
       "level": 3549.1641,
-      "indexed_value": 90.49858975089279
+      "indexed_value": 92.67282709240685
     },
     {
       "date": "2026-08-12",
       "index": "创业板指",
       "level": 3602.0835,
-      "indexed_value": 91.84795848548114
+      "indexed_value": 94.05461454090323
     },
     {
-      "date": "2026-05-20",
-      "index": "科创50",
-      "level": 1832.022,
-      "indexed_value": 100.0
+      "date": "2026-08-13",
+      "index": "创业板指",
+      "level": 3586.0427,
+      "indexed_value": 93.63577048553145
     },
     {
       "date": "2026-05-21",
       "index": "科创50",
       "level": 1764.1744,
-      "indexed_value": 96.29657285774952
+      "indexed_value": 100.0
     },
     {
       "date": "2026-05-22",
       "index": "科创50",
       "level": 1790.771,
-      "indexed_value": 97.7483348999084
+      "indexed_value": 101.50759471399198
     },
     {
       "date": "2026-05-25",
       "index": "科创50",
       "level": 1896.0369,
-      "indexed_value": 103.4942211392658
+      "indexed_value": 107.4744594411981
     },
     {
       "date": "2026-05-26",
       "index": "科创50",
       "level": 1867.7088,
-      "indexed_value": 101.94794603994933
+      "indexed_value": 105.86871683434471
     },
     {
       "date": "2026-05-27",
       "index": "科创50",
       "level": 1815.4513,
-      "indexed_value": 99.09549666979981
+      "indexed_value": 102.9065663802853
     },
     {
       "date": "2026-05-28",
       "index": "科创50",
       "level": 1844.2493,
-      "indexed_value": 100.66742102442001
+      "indexed_value": 104.53894467576448
     },
     {
       "date": "2026-05-29",
       "index": "科创50",
       "level": 1751.3234,
-      "indexed_value": 95.59510748233373
+      "indexed_value": 99.27155727914428
     },
     {
       "date": "2026-06-01",
       "index": "科创50",
       "level": 1663.6935,
-      "indexed_value": 90.81187343820108
+      "indexed_value": 94.3043669605454
     },
     {
       "date": "2026-06-02",
       "index": "科创50",
       "level": 1690.558,
-      "indexed_value": 92.27825866719941
+      "indexed_value": 95.82714724802717
     },
     {
       "date": "2026-06-03",
       "index": "科创50",
       "level": 1726.1806,
-      "indexed_value": 94.22270038241899
+      "indexed_value": 97.84636938388857
     },
     {
       "date": "2026-06-04",
       "index": "科创50",
       "level": 1738.0589,
-      "indexed_value": 94.87107141726464
+      "indexed_value": 98.51967583250271
     },
     {
       "date": "2026-06-05",
       "index": "科创50",
       "level": 1668.3291,
-      "indexed_value": 91.06490533410624
+      "indexed_value": 94.56713009779531
     },
     {
       "date": "2026-06-08",
       "index": "科创50",
       "level": 1596.5656,
-      "indexed_value": 87.14773075869175
+      "indexed_value": 90.49930664451314
     },
     {
       "date": "2026-06-09",
       "index": "科创50",
       "level": 1663.1089,
-      "indexed_value": 90.77996334105158
+      "indexed_value": 94.27122964713692
     },
     {
       "date": "2026-06-10",
       "index": "科创50",
       "level": 1652.2241,
-      "indexed_value": 90.1858220043209
+      "indexed_value": 93.65423849252092
     },
     {
       "date": "2026-06-11",
       "index": "科创50",
       "level": 1662.436,
-      "indexed_value": 90.74323343278628
+      "indexed_value": 94.23308715963682
     },
     {
       "date": "2026-06-12",
       "index": "科创50",
       "level": 1663.2213,
-      "indexed_value": 90.78609863855347
+      "indexed_value": 94.27760089932151
     },
     {
       "date": "2026-06-15",
       "index": "科创50",
       "level": 1748.3264,
-      "indexed_value": 95.43151774378256
+      "indexed_value": 99.10167611546794
     },
     {
       "date": "2026-06-16",
       "index": "科创50",
       "level": 1758.4244,
-      "indexed_value": 95.98271199800004
+      "indexed_value": 99.67406850479182
     },
     {
       "date": "2026-06-17",
       "index": "科创50",
       "level": 1840.8211,
-      "indexed_value": 100.48029445061249
+      "indexed_value": 104.34462148413444
     },
     {
       "date": "2026-06-18",
       "index": "科创50",
       "level": 1911.5132,
-      "indexed_value": 104.33898719556862
+      "indexed_value": 108.35171398020513
     },
     {
       "date": "2026-06-22",
       "index": "科创50",
       "level": 1948.9281,
-      "indexed_value": 106.38126070538456
+      "indexed_value": 110.47253038021638
     },
     {
       "date": "2026-06-23",
       "index": "科创50",
       "level": 1916.2123,
-      "indexed_value": 104.59548520705538
+      "indexed_value": 108.6180765348369
     },
     {
       "date": "2026-06-24",
       "index": "科创50",
       "level": 1989.4257,
-      "indexed_value": 108.59180184517436
+      "indexed_value": 112.768085740276
     },
     {
       "date": "2026-06-25",
       "index": "科创50",
       "level": 2066.3309,
-      "indexed_value": 112.78963353060169
+      "indexed_value": 117.12735997076025
     },
     {
       "date": "2026-06-26",
       "index": "科创50",
       "level": 2032.2842,
-      "indexed_value": 110.93121152475246
+      "indexed_value": 115.19746573808123
     },
     {
       "date": "2026-06-29",
       "index": "科创50",
       "level": 2126.0105,
-      "indexed_value": 116.04721449851584
+      "indexed_value": 120.51022279883439
     },
     {
       "date": "2026-06-30",
       "index": "科创50",
       "level": 2207.8648,
-      "indexed_value": 120.5151903197669
+      "indexed_value": 125.15003051852469
     },
     {
       "date": "2026-07-01",
       "index": "科创50",
       "level": 2153.0431,
-      "indexed_value": 117.52277538151834
+      "indexed_value": 122.04253162272391
     },
     {
       "date": "2026-07-02",
       "index": "科创50",
       "level": 1987.291,
-      "indexed_value": 108.47528031868615
+      "indexed_value": 112.64708296413323
     },
     {
       "date": "2026-07-03",
       "index": "科创50",
       "level": 1975.6001,
-      "indexed_value": 107.83713841864346
+      "indexed_value": 111.98439904807597
     },
     {
       "date": "2026-07-06",
       "index": "科创50",
       "level": 1996.1029,
-      "indexed_value": 108.95627345086467
+      "indexed_value": 113.14657439763324
     },
     {
       "date": "2026-07-07",
       "index": "科创50",
       "level": 2001.5859,
-      "indexed_value": 109.25556024982232
+      "indexed_value": 113.45737133471611
     },
     {
       "date": "2026-07-08",
       "index": "科创50",
       "level": 2016.2327,
-      "indexed_value": 110.05504846557518
+      "indexed_value": 114.28760671280571
     },
     {
       "date": "2026-07-09",
       "index": "科创50",
       "level": 2185.8251,
-      "indexed_value": 119.31216437357195
+      "indexed_value": 123.90073793157863
     },
     {
       "date": "2026-07-10",
       "index": "科创50",
       "level": 2064.9756,
-      "indexed_value": 112.71565516134633
+      "indexed_value": 117.05053650024624
     },
     {
       "date": "2026-07-13",
       "index": "科创50",
       "level": 1994.3192,
-      "indexed_value": 108.85891108294553
+      "indexed_value": 113.04546761363274
     },
     {
       "date": "2026-07-14",
       "index": "科创50",
       "level": 2009.7296,
-      "indexed_value": 109.7000800208731
+      "indexed_value": 113.91898669428599
     },
     {
       "date": "2026-07-15",
       "index": "科创50",
       "level": 1924.2735,
-      "indexed_value": 105.03550175707497
+      "indexed_value": 109.0750154859973
     },
     {
       "date": "2026-07-16",
       "index": "科创50",
       "level": 1846.8766,
-      "indexed_value": 100.81083087430174
+      "indexed_value": 104.68786986139239
     },
     {
       "date": "2026-07-17",
       "index": "科创50",
       "level": 1715.4044,
-      "indexed_value": 93.63448692210028
+      "indexed_value": 97.23553408325162
     },
     {
       "date": "2026-07-20",
       "index": "科创50",
       "level": 1718.6895,
-      "indexed_value": 93.81380245433733
+      "indexed_value": 97.42174583193135
     },
     {
       "date": "2026-07-21",
       "index": "科创50",
       "level": 1903.1613,
-      "indexed_value": 103.88310293217002
+      "indexed_value": 107.87829706632178
     },
     {
       "date": "2026-07-22",
       "index": "科创50",
       "level": 1860.0848,
-      "indexed_value": 101.53179383217015
+      "indexed_value": 105.43656001356783
     },
     {
       "date": "2026-07-23",
       "index": "科创50",
       "level": 1789.6941,
-      "indexed_value": 97.68955285471462
+      "indexed_value": 101.44655199621985
     },
     {
       "date": "2026-07-24",
       "index": "科创50",
       "level": 1787.1958,
-      "indexed_value": 97.55318440499077
+      "indexed_value": 101.30493901283228
     },
     {
       "date": "2026-07-27",
       "index": "科创50",
       "level": 1807.951,
-      "indexed_value": 98.68609656434258
+      "indexed_value": 102.48142133793574
     },
     {
       "date": "2026-07-28",
       "index": "科创50",
       "level": 1693.4786,
-      "indexed_value": 92.43767815015322
+      "indexed_value": 95.9926977740976
     },
     {
       "date": "2026-07-29",
       "index": "科创50",
       "level": 1678.7376,
-      "indexed_value": 91.63304807475019
+      "indexed_value": 95.15712278786042
     },
     {
       "date": "2026-07-30",
       "index": "科创50",
       "level": 1588.4149,
-      "indexed_value": 86.70282889615955
+      "indexed_value": 90.03729449877517
     },
     {
       "date": "2026-07-31",
       "index": "科创50",
       "level": 1635.9624,
-      "indexed_value": 89.29818528380117
+      "indexed_value": 92.73246454545536
     },
     {
       "date": "2026-08-03",
       "index": "科创50",
       "level": 1552.8903,
-      "indexed_value": 84.76373646168005
+      "indexed_value": 88.02362736926689
     },
     {
       "date": "2026-08-04",
       "index": "科创50",
       "level": 1616.3582,
-      "indexed_value": 88.22809988089662
+      "indexed_value": 91.62122520313183
     },
     {
       "date": "2026-08-05",
       "index": "科创50",
       "level": 1693.6677,
-      "indexed_value": 92.44800007860168
+      "indexed_value": 96.0034166690096
     },
     {
       "date": "2026-08-06",
       "index": "科创50",
       "level": 1701.2916,
-      "indexed_value": 92.86414682793111
+      "indexed_value": 96.43556782141266
     },
     {
       "date": "2026-08-07",
       "index": "科创50",
       "level": 1744.0236,
-      "indexed_value": 95.1966515685947
+      "indexed_value": 98.85777732632329
     },
     {
       "date": "2026-08-10",
       "index": "科创50",
       "level": 1737.7737,
-      "indexed_value": 94.85550391862107
+      "indexed_value": 98.50350963034039
     },
     {
       "date": "2026-08-11",
       "index": "科创50",
       "level": 1709.5026,
-      "indexed_value": 93.31234013565339
+      "indexed_value": 96.90099799656994
     },
     {
       "date": "2026-08-12",
       "index": "科创50",
       "level": 1736.9912,
-      "indexed_value": 94.81279154944646
+      "indexed_value": 98.45915460512293
+    },
+    {
+      "date": "2026-08-13",
+      "index": "科创50",
+      "level": 1717.7477,
+      "indexed_value": 97.36836108720316
     }
   ],
   "market_trend": [
@@ -3274,295 +3274,265 @@
       "turnover_total_yi": 12869.4574365079
     },
     {
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "month_label": "2026-08",
-      "crowding": 0.47729231447561504,
+      "crowding": 0.48640789284504765,
       "covered_stocks": 5208,
-      "top_group_stocks": 21522.761552638898,
-      "turnover_total_yi": 10272.648675365801
+      "top_group_stocks": 25507.602764356798,
+      "turnover_total_yi": 12407.099312139302
     }
   ],
   "industry_latest": [
     {
       "industry": "电子",
-      "amount_yi": 5963.0937186871,
-      "share": 0.2770598793330016,
-      "share_change": 0.0018492101103668723,
-      "history_percentile": 0.9778812572759022,
+      "amount_yi": 7057.991473159001,
+      "share": 0.2767014814509157,
+      "share_change": -0.0003583978820858591,
+      "history_percentile": 0.9775019394879751,
       "rank": 1
     },
     {
       "industry": "通信",
-      "amount_yi": 1795.157439223,
-      "share": 0.08340739336969033,
-      "share_change": 0.015228235015793984,
-      "history_percentile": 0.975941016686069,
+      "amount_yi": 2141.8540027119,
+      "share": 0.08396923938712235,
+      "share_change": 0.0005618460174320189,
+      "history_percentile": 0.9771140418929403,
       "rank": 2
     },
     {
       "industry": "医药生物",
-      "amount_yi": 1613.5103480327,
-      "share": 0.07496762643987327,
-      "share_change": -0.010327128522666942,
-      "history_percentile": 0.6247574699262709,
+      "amount_yi": 2107.4616262639997,
+      "share": 0.08262092074010474,
+      "share_change": 0.00765329430023147,
+      "history_percentile": 0.7141194724592708,
       "rank": 3
     },
     {
       "industry": "电力设备",
-      "amount_yi": 1609.183878418,
-      "share": 0.0747666081084608,
-      "share_change": 0.002733393996558392,
-      "history_percentile": 0.6336825766395033,
+      "amount_yi": 1828.7582965934,
+      "share": 0.0716946360458783,
+      "share_change": -0.003071972062582501,
+      "history_percentile": 0.6031807602792862,
       "rank": 4
     },
     {
       "industry": "机械设备",
-      "amount_yi": 1540.3276314921,
-      "share": 0.0715673789223038,
-      "share_change": 0.0038314589616160882,
-      "history_percentile": 0.8183934807916181,
+      "amount_yi": 1805.3703907061,
+      "share": 0.07077773663736228,
+      "share_change": -0.0007896422849415219,
+      "history_percentile": 0.8029480217222653,
       "rank": 5
     },
     {
-      "industry": "有色金属",
-      "amount_yi": 1466.3591112145002,
-      "share": 0.06813062104638289,
-      "share_change": -0.019745393947935883,
-      "history_percentile": 0.8055878928987195,
+      "industry": "计算机",
+      "amount_yi": 1771.2088876744,
+      "share": 0.06943846915122143,
+      "share_change": 0.014504692535941534,
+      "history_percentile": 0.48370830100853374,
       "rank": 6
     },
     {
-      "industry": "计算机",
-      "amount_yi": 1182.3265752766001,
-      "share": 0.05493377661527989,
-      "share_change": 0.0008133165840298537,
-      "history_percentile": 0.26270857586340707,
+      "industry": "有色金属",
+      "amount_yi": 1587.4571532696,
+      "share": 0.06223466657901081,
+      "share_change": -0.0058959544673720735,
+      "history_percentile": 0.7300232738557021,
       "rank": 7
     },
     {
       "industry": "基础化工",
-      "amount_yi": 1013.0722018786,
-      "share": 0.04706980558237832,
-      "share_change": -0.0027484979222785477,
-      "history_percentile": 0.2409778812572759,
+      "amount_yi": 1194.4435392047,
+      "share": 0.04682696175878052,
+      "share_change": -0.0002428438235978006,
+      "history_percentile": 0.23894491854150504,
       "rank": 8
     },
     {
       "industry": "传媒",
-      "amount_yi": 580.1208234089,
-      "share": 0.026953828484791793,
-      "share_change": 0.005175317203287216,
-      "history_percentile": 0.27357392316647267,
+      "amount_yi": 726.6951754139,
+      "share": 0.02848935598249757,
+      "share_change": 0.0015355274977057777,
+      "history_percentile": 0.3200155159038014,
       "rank": 9
     },
     {
-      "industry": "汽车",
-      "amount_yi": 567.6535588108001,
-      "share": 0.026374568961444456,
-      "share_change": 0.00046118238354960275,
-      "history_percentile": 0.10399689561505626,
+      "industry": "公用事业",
+      "amount_yi": 613.2612088532,
+      "share": 0.02404229101882299,
+      "share_change": 0.003531950448661572,
+      "history_percentile": 0.5201706749418153,
       "rank": 10
     },
     {
-      "industry": "国防军工",
-      "amount_yi": 449.72756403989996,
-      "share": 0.020895439599606536,
-      "share_change": -0.004910071844105239,
-      "history_percentile": 0.3523476911136981,
+      "industry": "汽车",
+      "amount_yi": 583.1288292714,
+      "share": 0.02286098127912822,
+      "share_change": -0.003513587682316237,
+      "history_percentile": 0.02482544608223429,
       "rank": 11
     },
     {
-      "industry": "公用事业",
-      "amount_yi": 441.439169455,
-      "share": 0.020510340570161417,
-      "share_change": -0.0004813996892497653,
-      "history_percentile": 0.36127279782693056,
+      "industry": "国防军工",
+      "amount_yi": 509.7881585447,
+      "share": 0.01998573379294802,
+      "share_change": -0.000909705806658518,
+      "history_percentile": 0.317300232738557,
       "rank": 12
     },
     {
-      "industry": "食品饮料",
-      "amount_yi": 340.1330721596,
-      "share": 0.015803412184246232,
-      "share_change": 0.0024318039551113352,
-      "history_percentile": 0.07916181606519208,
+      "industry": "非银金融",
+      "amount_yi": 415.74690543160006,
+      "share": 0.01629894072258905,
+      "share_change": 0.002321341112862642,
+      "history_percentile": 0.013576415826221877,
       "rank": 13
     },
     {
       "industry": "建筑装饰",
-      "amount_yi": 330.4731711095,
-      "share": 0.015354589619052894,
-      "share_change": 0.003565109332743628,
-      "history_percentile": 0.2048894062863795,
+      "amount_yi": 377.1029697283,
+      "share": 0.014783943956319058,
+      "share_change": -0.0005706456627338364,
+      "history_percentile": 0.17765709852598913,
       "rank": 14
     },
     {
-      "industry": "建筑材料",
-      "amount_yi": 307.7041700414,
-      "share": 0.014296686291340363,
-      "share_change": -0.0010272587985135292,
-      "history_percentile": 0.540162980209546,
+      "industry": "食品饮料",
+      "amount_yi": 368.99965884230005,
+      "share": 0.014466261775015718,
+      "share_change": -0.0013371504092305146,
+      "history_percentile": 0.06671838634600466,
       "rank": 15
     },
     {
-      "industry": "非银金融",
-      "amount_yi": 300.8365434784,
-      "share": 0.013977599609726407,
-      "share_change": -3.438215785156809e-06,
-      "history_percentile": 0.0031043849437330227,
+      "industry": "建筑材料",
+      "amount_yi": 337.7467156162,
+      "share": 0.013241021460791775,
+      "share_change": -0.0010556648305485878,
+      "history_percentile": 0.46896819239720716,
       "rank": 16
     },
     {
       "industry": "银行",
-      "amount_yi": 214.231393836,
-      "share": 0.009953713110283152,
-      "share_change": 0.0006836537012397184,
-      "history_percentile": 0.051610399689561506,
+      "amount_yi": 236.26070709330003,
+      "share": 0.009262364216500984,
+      "share_change": -0.0006913488937821677,
+      "history_percentile": 0.03801396431342126,
       "rank": 17
     },
     {
       "industry": "房地产",
-      "amount_yi": 198.01447572840001,
-      "share": 0.009200235538739289,
-      "share_change": 0.0037205939801415464,
-      "history_percentile": 0.06169965075669383,
+      "amount_yi": 200.0500222469,
+      "share": 0.007842760611218278,
+      "share_change": -0.0013574749275210105,
+      "history_percentile": 0.03529868114817688,
       "rank": 18
     },
     {
       "industry": "交通运输",
-      "amount_yi": 185.0804698743,
-      "share": 0.008599290078164125,
-      "share_change": -0.0009504865004400821,
-      "history_percentile": 0.013969732246798603,
+      "amount_yi": 186.36284627740002,
+      "share": 0.007306168596047577,
+      "share_change": -0.0012931214821165484,
+      "history_percentile": 0.0023273855702094647,
       "rank": 19
     },
     {
       "industry": "家用电器",
-      "amount_yi": 164.2525320219,
-      "share": 0.0076315732820894,
-      "share_change": -0.0005431792443561494,
-      "history_percentile": 0.0034924330616996507,
+      "amount_yi": 181.7832782325,
+      "share": 0.007126631220967418,
+      "share_change": -0.0005049420611219812,
+      "history_percentile": 0.0007757951900698216,
       "rank": 20
     },
     {
-      "industry": "石油石化",
-      "amount_yi": 161.5123988158,
-      "share": 0.007504260009608153,
-      "share_change": -0.0012084036063666533,
-      "history_percentile": 0.23205277454404347,
+      "industry": "环保",
+      "amount_yi": 164.69377863489999,
+      "share": 0.0064566545181202134,
+      "share_change": -0.00048455362741085285,
+      "history_percentile": 0.0647788983708301,
       "rank": 21
     },
     {
       "industry": "农林牧渔",
-      "amount_yi": 159.4966072376,
-      "share": 0.0074106014159713695,
-      "share_change": -0.00017862503739002247,
-      "history_percentile": 0.033760186263096625,
+      "amount_yi": 164.5611869363,
+      "share": 0.006451456393473814,
+      "share_change": -0.0009591450224975557,
+      "history_percentile": 0.018231186966640806,
       "rank": 22
     },
     {
       "industry": "商贸零售",
-      "amount_yi": 158.1839552757,
-      "share": 0.007349612404004219,
-      "share_change": 0.0005370588914955423,
-      "history_percentile": 0.05975941016686069,
+      "amount_yi": 163.5983834183,
+      "share": 0.006413710646572603,
+      "share_change": -0.000935901757431616,
+      "history_percentile": 0.022110162916989914,
       "rank": 23
     },
     {
-      "industry": "环保",
-      "amount_yi": 149.3939678035,
-      "share": 0.006941208145531066,
-      "share_change": 4.518022909667449e-06,
-      "history_percentile": 0.10981761738455569,
+      "industry": "石油石化",
+      "amount_yi": 147.1288091969,
+      "share": 0.005768037496745531,
+      "share_change": -0.001736222512862622,
+      "history_percentile": 0.08029480217222654,
       "rank": 24
     },
     {
       "industry": "轻工制造",
-      "amount_yi": 144.6579899141,
-      "share": 0.006721163060804505,
-      "share_change": 0.0006390318202557808,
-      "history_percentile": 0.012805587892898719,
+      "amount_yi": 140.91822495280002,
+      "share": 0.005524557766350076,
+      "share_change": -0.0011966052944544295,
+      "history_percentile": 0.0015515903801396431,
       "rank": 25
     },
     {
       "industry": "纺织服饰",
-      "amount_yi": 119.960173738,
-      "share": 0.005573642278413464,
-      "share_change": 0.0001342411740629561,
-      "history_percentile": 0.09701202949165696,
+      "amount_yi": 122.9201091708,
+      "share": 0.004818959676703259,
+      "share_change": -0.0007546826017102055,
+      "history_percentile": 0.032971295577967415,
       "rank": 26
     },
     {
       "industry": "社会服务",
-      "amount_yi": 114.658139631,
-      "share": 0.005327296841094343,
-      "share_change": 0.0008570345222209856,
-      "history_percentile": 0.30422972448583624,
+      "amount_yi": 115.00749084789999,
+      "share": 0.004508753406204302,
+      "share_change": -0.0008185434348900412,
+      "history_percentile": 0.1908456167571761,
       "rank": 27
     },
     {
       "industry": "煤炭",
-      "amount_yi": 107.7784989709,
-      "share": 0.005007651955224366,
-      "share_change": -0.0008426800665166578,
-      "history_percentile": 0.12456344586728754,
+      "amount_yi": 101.54287390209998,
+      "share": 0.00398088659448592,
+      "share_change": -0.0010267653607384459,
+      "history_percentile": 0.04809930178432894,
       "rank": 28
     },
     {
       "industry": "钢铁",
-      "amount_yi": 75.3400572689,
-      "share": 0.0035004828299862183,
-      "share_change": -0.0001449777503884646,
-      "history_percentile": 0.02522312766783081,
+      "amount_yi": 76.1980929208,
+      "share": 0.0029872698592937103,
+      "share_change": -0.000513212970692508,
+      "history_percentile": 0.00504266873545384,
       "rank": 29
     },
     {
       "industry": "综合",
-      "amount_yi": 35.2970513341,
-      "share": 0.0016399871014587454,
-      "share_change": 0.0004648353275285102,
-      "history_percentile": 0.14435389988358557,
+      "amount_yi": 41.6729877902,
+      "share": 0.001633747717305367,
+      "share_change": -6.239384153378276e-06,
+      "history_percentile": 0.14197051978277736,
       "rank": 30
     },
     {
       "industry": "美容护理",
-      "amount_yi": 33.784864462600005,
-      "share": 0.0015697272108865438,
-      "share_change": -1.8453836918704567e-05,
-      "history_percentile": 0.08187815289095848,
+      "amount_yi": 37.888981451,
+      "share": 0.001485399541502363,
+      "share_change": -8.432766938418082e-05,
+      "history_percentile": 0.0682699767261443,
       "rank": 31
     }
   ],
   "top_industry_trend": [
-    {
-      "date": "2026-05-20",
-      "industry": "电子",
-      "share": 0.2895586675168582,
-      "latest_rank": 1
-    },
-    {
-      "date": "2026-05-20",
-      "industry": "医药生物",
-      "share": 0.0333130180261312,
-      "latest_rank": 3
-    },
-    {
-      "date": "2026-05-20",
-      "industry": "电力设备",
-      "share": 0.10633721421328962,
-      "latest_rank": 4
-    },
-    {
-      "date": "2026-05-20",
-      "industry": "机械设备",
-      "share": 0.08868662819279072,
-      "latest_rank": 5
-    },
-    {
-      "date": "2026-05-20",
-      "industry": "通信",
-      "share": 0.07896372634886074,
-      "latest_rank": 2
-    },
     {
       "date": "2026-05-21",
       "industry": "电子",
@@ -5332,6 +5302,36 @@
       "industry": "通信",
       "share": 0.08340739336969033,
       "latest_rank": 2
+    },
+    {
+      "date": "2026-08-13",
+      "industry": "电子",
+      "share": 0.2767014814509157,
+      "latest_rank": 1
+    },
+    {
+      "date": "2026-08-13",
+      "industry": "医药生物",
+      "share": 0.08262092074010474,
+      "latest_rank": 3
+    },
+    {
+      "date": "2026-08-13",
+      "industry": "电力设备",
+      "share": 0.0716946360458783,
+      "latest_rank": 4
+    },
+    {
+      "date": "2026-08-13",
+      "industry": "机械设备",
+      "share": 0.07077773663736228,
+      "latest_rank": 5
+    },
+    {
+      "date": "2026-08-13",
+      "industry": "通信",
+      "share": 0.08396923938712235,
+      "latest_rank": 2
     }
   ],
   "top_turnover_stocks": [
@@ -5339,1828 +5339,1828 @@
       "rank": 1,
       "stock_code": "300308.SZ",
       "stock_name": "中际旭创",
-      "amount_yi": 284.08443493240003,
-      "circulating_market_cap_yi": 10222.54535538
+      "amount_yi": 277.4504153049,
+      "circulating_market_cap_yi": 10222.989331291199
     },
     {
       "rank": 2,
       "stock_code": "688825.SH",
       "stock_name": "长鑫科技",
-      "amount_yi": 271.55743878,
-      "circulating_market_cap_yi": 2410.0264572792003
+      "amount_yi": 253.86081354,
+      "circulating_market_cap_yi": 2381.2070078648003
     },
     {
       "rank": 3,
-      "stock_code": "300502.SZ",
-      "stock_name": "新易盛",
-      "amount_yi": 187.5155380948,
-      "circulating_market_cap_yi": 5370.669202556
+      "stock_code": "603986.SH",
+      "stock_name": "兆易创新",
+      "amount_yi": 229.01029235,
+      "circulating_market_cap_yi": 2704.04987303
     },
     {
       "rank": 4,
-      "stock_code": "603986.SH",
-      "stock_name": "兆易创新",
-      "amount_yi": 187.48833166,
-      "circulating_market_cap_yi": 2762.0081237078
+      "stock_code": "300502.SZ",
+      "stock_name": "新易盛",
+      "amount_yi": 194.4749838011,
+      "circulating_market_cap_yi": 5391.991336241999
     },
     {
       "rank": 5,
       "stock_code": "002384.SZ",
       "stock_name": "东山精密",
-      "amount_yi": 157.04600957510002,
-      "circulating_market_cap_yi": 2775.2774572737
+      "amount_yi": 172.7765720552,
+      "circulating_market_cap_yi": 2801.8948343553
     },
     {
       "rank": 6,
       "stock_code": "300394.SZ",
       "stock_name": "天孚通信",
-      "amount_yi": 127.18552010260001,
-      "circulating_market_cap_yi": 2612.675514025
+      "amount_yi": 168.5887950405,
+      "circulating_market_cap_yi": 2798.89870938
     },
     {
       "rank": 7,
-      "stock_code": "000636.SZ",
-      "stock_name": "风华高科",
-      "amount_yi": 117.75791776700001,
-      "circulating_market_cap_yi": 769.5291873411
+      "stock_code": "000938.SZ",
+      "stock_name": "紫光股份",
+      "amount_yi": 164.6089792502,
+      "circulating_market_cap_yi": 1132.588778904
     },
     {
       "rank": 8,
       "stock_code": "688256.SH",
       "stock_name": "寒武纪",
-      "amount_yi": 114.60557563,
-      "circulating_market_cap_yi": 6945.024820732201
+      "amount_yi": 148.34774792,
+      "circulating_market_cap_yi": 6945.778772295
     },
     {
       "rank": 9,
-      "stock_code": "002428.SZ",
-      "stock_name": "云南锗业",
-      "amount_yi": 112.04588954709999,
-      "circulating_market_cap_yi": 692.087155375
+      "stock_code": "300476.SZ",
+      "stock_name": "胜宏科技",
+      "amount_yi": 145.5351091113,
+      "circulating_market_cap_yi": 2347.273885785
     },
     {
       "rank": 10,
-      "stock_code": "300476.SZ",
-      "stock_name": "胜宏科技",
-      "amount_yi": 110.3895380308,
-      "circulating_market_cap_yi": 2417.2681568354997
+      "stock_code": "000636.SZ",
+      "stock_name": "风华高科",
+      "amount_yi": 133.3801545856,
+      "circulating_market_cap_yi": 717.5793143722
     },
     {
       "rank": 11,
-      "stock_code": "600667.SH",
-      "stock_name": "太极实业",
-      "amount_yi": 110.07104934,
-      "circulating_market_cap_yi": 474.98922862380005
+      "stock_code": "600487.SH",
+      "stock_name": "亨通光电",
+      "amount_yi": 128.46078955,
+      "circulating_market_cap_yi": 1404.7124821325
     },
     {
       "rank": 12,
       "stock_code": "600183.SH",
       "stock_name": "生益科技",
-      "amount_yi": 107.43291329,
-      "circulating_market_cap_yi": 3454.3478878810997
+      "amount_yi": 121.0009406,
+      "circulating_market_cap_yi": 3418.4128299118
     },
     {
       "rank": 13,
       "stock_code": "603259.SH",
       "stock_name": "药明康德",
-      "amount_yi": 106.94051631,
-      "circulating_market_cap_yi": 3933.5049032383995
+      "amount_yi": 120.28294271,
+      "circulating_market_cap_yi": 4014.8758233318003
     },
     {
       "rank": 14,
-      "stock_code": "600487.SH",
-      "stock_name": "亨通光电",
-      "amount_yi": 103.51502294,
-      "circulating_market_cap_yi": 1455.0122304010001
+      "stock_code": "600667.SH",
+      "stock_name": "太极实业",
+      "amount_yi": 120.16583505,
+      "circulating_market_cap_yi": 497.36872992840006
     },
     {
       "rank": 15,
-      "stock_code": "688012.SH",
-      "stock_name": "中微公司",
-      "amount_yi": 99.01701101,
-      "circulating_market_cap_yi": 3589.2996162609998
+      "stock_code": "600584.SH",
+      "stock_name": "长电科技",
+      "amount_yi": 119.80625234,
+      "circulating_market_cap_yi": 1392.522418374
     },
     {
       "rank": 16,
-      "stock_code": "300285.SZ",
-      "stock_name": "国瓷材料",
-      "amount_yi": 94.9348341905,
-      "circulating_market_cap_yi": 631.27400742
+      "stock_code": "000977.SZ",
+      "stock_name": "浪潮信息",
+      "amount_yi": 119.47134568979999,
+      "circulating_market_cap_yi": 1165.5445514584
     },
     {
       "rank": 17,
-      "stock_code": "688008.SH",
-      "stock_name": "澜起科技",
-      "amount_yi": 94.3963163,
-      "circulating_market_cap_yi": 2466.1662075903
+      "stock_code": "300058.SZ",
+      "stock_name": "蓝色光标",
+      "amount_yi": 117.4541427524,
+      "circulating_market_cap_yi": 530.384368005
     },
     {
       "rank": 18,
-      "stock_code": "600176.SH",
-      "stock_name": "中国巨石",
-      "amount_yi": 91.02683899,
-      "circulating_market_cap_yi": 1720.0943418268002
+      "stock_code": "601899.SH",
+      "stock_name": "紫金矿业",
+      "amount_yi": 108.56874191,
+      "circulating_market_cap_yi": 6635.837570394
     },
     {
       "rank": 19,
-      "stock_code": "000063.SZ",
-      "stock_name": "中兴通讯",
-      "amount_yi": 87.1074794583,
-      "circulating_market_cap_yi": 1433.4303964688002
+      "stock_code": "300285.SZ",
+      "stock_name": "国瓷材料",
+      "amount_yi": 108.02057290399999,
+      "circulating_market_cap_yi": 602.7813697878
     },
     {
       "rank": 20,
-      "stock_code": "002281.SZ",
-      "stock_name": "光迅科技",
-      "amount_yi": 86.0945703366,
-      "circulating_market_cap_yi": 1454.3562495156
+      "stock_code": "002428.SZ",
+      "stock_name": "云南锗业",
+      "amount_yi": 104.85962471190001,
+      "circulating_market_cap_yi": 654.4069998125
     },
     {
       "rank": 21,
-      "stock_code": "601138.SH",
-      "stock_name": "工业富联",
-      "amount_yi": 85.39389599,
-      "circulating_market_cap_yi": 13017.724538303999
+      "stock_code": "688008.SH",
+      "stock_name": "澜起科技",
+      "amount_yi": 104.6957996,
+      "circulating_market_cap_yi": 2406.5239760462
     },
     {
       "rank": 22,
-      "stock_code": "301308.SZ",
-      "stock_name": "江波龙",
-      "amount_yi": 83.8330986908,
-      "circulating_market_cap_yi": 1167.712388556
+      "stock_code": "600176.SH",
+      "stock_name": "中国巨石",
+      "amount_yi": 104.19079143,
+      "circulating_market_cap_yi": 1664.0949647319999
     },
     {
       "rank": 23,
-      "stock_code": "600105.SH",
-      "stock_name": "永鼎股份",
-      "amount_yi": 81.65109774,
-      "circulating_market_cap_yi": 602.4880579042
+      "stock_code": "300408.SZ",
+      "stock_name": "三环集团",
+      "amount_yi": 100.66938476709998,
+      "circulating_market_cap_yi": 2400.831182628
     },
     {
       "rank": 24,
-      "stock_code": "600584.SH",
-      "stock_name": "长电科技",
-      "amount_yi": 81.29643139,
-      "circulating_market_cap_yi": 1398.964310826
+      "stock_code": "002281.SZ",
+      "stock_name": "光迅科技",
+      "amount_yi": 97.96882791190001,
+      "circulating_market_cap_yi": 1452.9414296219998
     },
     {
       "rank": 25,
-      "stock_code": "300750.SZ",
-      "stock_name": "宁德时代",
-      "amount_yi": 79.0942354191,
-      "circulating_market_cap_yi": 16781.737158146698
+      "stock_code": "601138.SH",
+      "stock_name": "工业富联",
+      "amount_yi": 97.85252845,
+      "circulating_market_cap_yi": 12944.301396853201
     },
     {
       "rank": 26,
-      "stock_code": "000657.SZ",
-      "stock_name": "中钨高新",
-      "amount_yi": 76.5239312804,
-      "circulating_market_cap_yi": 1023.6120456021
+      "stock_code": "300750.SZ",
+      "stock_name": "宁德时代",
+      "amount_yi": 96.65143597030001,
+      "circulating_market_cap_yi": 16882.701078297
     },
     {
       "rank": 27,
-      "stock_code": "300058.SZ",
-      "stock_name": "蓝色光标",
-      "amount_yi": 75.90609673,
-      "circulating_market_cap_yi": 552.6431218098
+      "stock_code": "600105.SH",
+      "stock_name": "永鼎股份",
+      "amount_yi": 95.36178004,
+      "circulating_market_cap_yi": 595.9090812951999
     },
     {
       "rank": 28,
-      "stock_code": "600522.SH",
-      "stock_name": "中天科技",
-      "amount_yi": 74.70177872,
-      "circulating_market_cap_yi": 1145.0446082459998
+      "stock_code": "002407.SZ",
+      "stock_name": "多氟多",
+      "amount_yi": 93.9087550676,
+      "circulating_market_cap_yi": 420.3956343465
     },
     {
       "rank": 29,
-      "stock_code": "300408.SZ",
-      "stock_name": "三环集团",
-      "amount_yi": 72.9191581229,
-      "circulating_market_cap_yi": 2392.7910158949
+      "stock_code": "688012.SH",
+      "stock_name": "中微公司",
+      "amount_yi": 92.42028782,
+      "circulating_market_cap_yi": 3490.0862681596004
     },
     {
       "rank": 30,
-      "stock_code": "688498.SH",
-      "stock_name": "源杰科技",
-      "amount_yi": 72.8496434,
-      "circulating_market_cap_yi": 1756.12873776
+      "stock_code": "301308.SZ",
+      "stock_name": "江波龙",
+      "amount_yi": 91.9725645189,
+      "circulating_market_cap_yi": 1118.95201124
     },
     {
       "rank": 31,
-      "stock_code": "000938.SZ",
-      "stock_name": "紫光股份",
-      "amount_yi": 71.99553739560001,
-      "circulating_market_cap_yi": 1058.22688938
+      "stock_code": "002131.SZ",
+      "stock_name": "利欧股份",
+      "amount_yi": 91.7946402848,
+      "circulating_market_cap_yi": 325.52679404239996
     },
     {
       "rank": 32,
-      "stock_code": "601899.SH",
-      "stock_name": "紫金矿业",
-      "amount_yi": 68.76694098,
-      "circulating_market_cap_yi": 6918.082136411999
+      "stock_code": "000725.SZ",
+      "stock_name": "京东方A",
+      "amount_yi": 89.2498113978,
+      "circulating_market_cap_yi": 2072.5140592562
     },
     {
       "rank": 33,
-      "stock_code": "000725.SZ",
-      "stock_name": "京东方A",
-      "amount_yi": 68.50480994739999,
-      "circulating_market_cap_yi": 2097.2710531381
+      "stock_code": "688981.SH",
+      "stock_name": "中芯国际",
+      "amount_yi": 87.9007177,
+      "circulating_market_cap_yi": 2588.2337634256
     },
     {
       "rank": 34,
-      "stock_code": "001309.SZ",
-      "stock_name": "德明利",
-      "amount_yi": 67.5097015908,
-      "circulating_market_cap_yi": 672.6254182932
+      "stock_code": "600522.SH",
+      "stock_name": "中天科技",
+      "amount_yi": 86.69049372,
+      "circulating_market_cap_yi": 1122.860435508
     },
     {
       "rank": 35,
-      "stock_code": "301526.SZ",
-      "stock_name": "国际复材",
-      "amount_yi": 65.9481545429,
-      "circulating_market_cap_yi": 544.2022576625
+      "stock_code": "688347.SH",
+      "stock_name": "华虹宏力",
+      "amount_yi": 85.0139359,
+      "circulating_market_cap_yi": 1129.426725
     },
     {
       "rank": 36,
-      "stock_code": "688525.SH",
-      "stock_name": "佰维存储",
-      "amount_yi": 65.36967589,
-      "circulating_market_cap_yi": 1154.7724272128
+      "stock_code": "300274.SZ",
+      "stock_name": "阳光电源",
+      "amount_yi": 83.40987911399999,
+      "circulating_market_cap_yi": 1875.3452599962
     },
     {
       "rank": 37,
-      "stock_code": "002475.SZ",
-      "stock_name": "立讯精密",
-      "amount_yi": 64.09004524720001,
-      "circulating_market_cap_yi": 4200.930685697
+      "stock_code": "300857.SZ",
+      "stock_name": "协创数据",
+      "amount_yi": 83.302888645,
+      "circulating_market_cap_yi": 1246.36159488
     },
     {
       "rank": 38,
-      "stock_code": "300274.SZ",
-      "stock_name": "阳光电源",
-      "amount_yi": 63.96861050890001,
-      "circulating_market_cap_yi": 1865.8200999522
+      "stock_code": "000657.SZ",
+      "stock_name": "中钨高新",
+      "amount_yi": 82.92532009109999,
+      "circulating_market_cap_yi": 969.4011563490001
     },
     {
       "rank": 39,
-      "stock_code": "603228.SH",
-      "stock_name": "景旺电子",
-      "amount_yi": 61.4485814,
-      "circulating_market_cap_yi": 964.3372660278
+      "stock_code": "688498.SH",
+      "stock_name": "源杰科技",
+      "amount_yi": 82.76345318,
+      "circulating_market_cap_yi": 1844.2178265792002
     },
     {
       "rank": 40,
-      "stock_code": "688766.SH",
-      "stock_name": "普冉股份",
-      "amount_yi": 58.21171209,
-      "circulating_market_cap_yi": 586.784220138
+      "stock_code": "688525.SH",
+      "stock_name": "佰维存储",
+      "amount_yi": 82.24965825,
+      "circulating_market_cap_yi": 1108.2287982656
     },
     {
       "rank": 41,
-      "stock_code": "300475.SZ",
-      "stock_name": "香农芯创",
-      "amount_yi": 58.1237455102,
-      "circulating_market_cap_yi": 737.1585863460001
+      "stock_code": "001309.SZ",
+      "stock_name": "德明利",
+      "amount_yi": 79.5292443741,
+      "circulating_market_cap_yi": 654.3897078261999
     },
     {
       "rank": 42,
-      "stock_code": "600206.SH",
-      "stock_name": "有研新材",
-      "amount_yi": 58.01029186,
-      "circulating_market_cap_yi": 448.249989294
+      "stock_code": "301526.SZ",
+      "stock_name": "国际复材",
+      "amount_yi": 78.8597751222,
+      "circulating_market_cap_yi": 511.76078114119997
     },
     {
       "rank": 43,
-      "stock_code": "688347.SH",
-      "stock_name": "华虹宏力",
-      "amount_yi": 57.1316186,
-      "circulating_market_cap_yi": 1113.973
+      "stock_code": "000988.SZ",
+      "stock_name": "华工科技",
+      "amount_yi": 77.7921718697,
+      "circulating_market_cap_yi": 1075.7366472528
     },
     {
       "rank": 44,
-      "stock_code": "603629.SH",
-      "stock_name": "利通电子",
-      "amount_yi": 56.23823084,
-      "circulating_market_cap_yi": 430.55945024
+      "stock_code": "603228.SH",
+      "stock_name": "景旺电子",
+      "amount_yi": 76.07276131,
+      "circulating_market_cap_yi": 954.4199394960001
     },
     {
       "rank": 45,
-      "stock_code": "688981.SH",
-      "stock_name": "中芯国际",
-      "amount_yi": 55.53551712,
-      "circulating_market_cap_yi": 2558.6402377003997
+      "stock_code": "301396.SZ",
+      "stock_name": "宏景科技",
+      "amount_yi": 76.06809213470001,
+      "circulating_market_cap_yi": 289.126683544
     },
     {
       "rank": 46,
-      "stock_code": "688146.SH",
-      "stock_name": "中船特气",
-      "amount_yi": 55.36022062,
-      "circulating_market_cap_yi": 445.56788288700005
+      "stock_code": "603019.SH",
+      "stock_name": "中科曙光",
+      "amount_yi": 74.92434067,
+      "circulating_market_cap_yi": 1311.3356085271998
     },
     {
       "rank": 47,
-      "stock_code": "301217.SZ",
-      "stock_name": "铜冠铜箔",
-      "amount_yi": 53.7467507037,
-      "circulating_market_cap_yi": 999.0466320744
+      "stock_code": "603629.SH",
+      "stock_name": "利通电子",
+      "amount_yi": 73.14926689,
+      "circulating_market_cap_yi": 450.90425
     },
     {
       "rank": 48,
-      "stock_code": "002407.SZ",
-      "stock_name": "多氟多",
-      "amount_yi": 52.88360526060001,
-      "circulating_market_cap_yi": 403.45898703
+      "stock_code": "000063.SZ",
+      "stock_name": "中兴通讯",
+      "amount_yi": 72.3921467598,
+      "circulating_market_cap_yi": 1412.8895281856
     },
     {
       "rank": 49,
-      "stock_code": "000988.SZ",
-      "stock_name": "华工科技",
-      "amount_yi": 52.57336476890001,
-      "circulating_market_cap_yi": 1068.5007505223998
+      "stock_code": "002463.SZ",
+      "stock_name": "沪电股份",
+      "amount_yi": 69.2631937197,
+      "circulating_market_cap_yi": 2320.0631324076
     },
     {
       "rank": 50,
-      "stock_code": "600664.SH",
-      "stock_name": "哈药股份",
-      "amount_yi": 51.90640583,
-      "circulating_market_cap_yi": 221.8807200756
+      "stock_code": "688766.SH",
+      "stock_name": "普冉股份",
+      "amount_yi": 65.64441333,
+      "circulating_market_cap_yi": 570.129422202
     },
     {
       "rank": 51,
-      "stock_code": "300209.SZ",
-      "stock_name": "行云科技",
-      "amount_yi": 50.3920736609,
-      "circulating_market_cap_yi": 271.161748865
+      "stock_code": "002491.SZ",
+      "stock_name": "通鼎互联",
+      "amount_yi": 65.4151967425,
+      "circulating_market_cap_yi": 222.8232041674
     },
     {
       "rank": 52,
-      "stock_code": "002371.SZ",
-      "stock_name": "北方华创",
-      "amount_yi": 49.3327996633,
-      "circulating_market_cap_yi": 5510.8348448
+      "stock_code": "300604.SZ",
+      "stock_name": "长川科技",
+      "amount_yi": 65.375310359,
+      "circulating_market_cap_yi": 1378.8110993265
     },
     {
       "rank": 53,
-      "stock_code": "002131.SZ",
-      "stock_name": "利欧股份",
-      "amount_yi": 49.0297232112,
-      "circulating_market_cap_yi": 323.1848746608
+      "stock_code": "603083.SH",
+      "stock_name": "剑桥科技",
+      "amount_yi": 64.85634212,
+      "circulating_market_cap_yi": 465.74435037
     },
     {
       "rank": 54,
-      "stock_code": "603993.SH",
-      "stock_name": "洛阳钼业",
-      "amount_yi": 47.93986656,
-      "circulating_market_cap_yi": 3317.56001344
+      "stock_code": "600396.SH",
+      "stock_name": "华电辽能",
+      "amount_yi": 64.32438907,
+      "circulating_market_cap_yi": 275.83798682409997
     },
     {
       "rank": 55,
-      "stock_code": "688072.SH",
-      "stock_name": "拓荆科技",
-      "amount_yi": 47.73929,
-      "circulating_market_cap_yi": 1987.4166822635998
+      "stock_code": "300209.SZ",
+      "stock_name": "行云科技",
+      "amount_yi": 64.0354591968,
+      "circulating_market_cap_yi": 262.6182965035
     },
     {
       "rank": 56,
-      "stock_code": "600519.SH",
-      "stock_name": "贵州茅台",
-      "amount_yi": 47.17613108,
-      "circulating_market_cap_yi": 16788.59590143
+      "stock_code": "300475.SZ",
+      "stock_name": "香农芯创",
+      "amount_yi": 63.5142074609,
+      "circulating_market_cap_yi": 708.4913079881
     },
     {
       "rank": 57,
-      "stock_code": "002185.SZ",
-      "stock_name": "华天科技",
-      "amount_yi": 47.1594720955,
-      "circulating_market_cap_yi": 608.045271531
+      "stock_code": "002371.SZ",
+      "stock_name": "北方华创",
+      "amount_yi": 62.2633747772,
+      "circulating_market_cap_yi": 5355.661337328
     },
     {
       "rank": 58,
-      "stock_code": "301396.SZ",
-      "stock_name": "宏景科技",
-      "amount_yi": 46.9462286413,
-      "circulating_market_cap_yi": 275.7259900575
+      "stock_code": "002475.SZ",
+      "stock_name": "立讯精密",
+      "amount_yi": 61.801248264099996,
+      "circulating_market_cap_yi": 4106.4372143012
     },
     {
       "rank": 59,
-      "stock_code": "300857.SZ",
-      "stock_name": "协创数据",
-      "amount_yi": 46.3592293437,
-      "circulating_market_cap_yi": 1216.176275004
+      "stock_code": "301217.SZ",
+      "stock_name": "铜冠铜箔",
+      "amount_yi": 60.88600202520001,
+      "circulating_market_cap_yi": 988.4352331112001
     },
     {
       "rank": 60,
-      "stock_code": "002463.SZ",
-      "stock_name": "沪电股份",
-      "amount_yi": 45.8116887462,
-      "circulating_market_cap_yi": 2365.2491788286
+      "stock_code": "688146.SH",
+      "stock_name": "中船特气",
+      "amount_yi": 60.07298031,
+      "circulating_market_cap_yi": 428.3743410258
     },
     {
       "rank": 61,
-      "stock_code": "002156.SZ",
-      "stock_name": "通富微电",
-      "amount_yi": 45.586430236000005,
-      "circulating_market_cap_yi": 953.8704667492
+      "stock_code": "002851.SZ",
+      "stock_name": "麦格米特",
+      "amount_yi": 59.7482578211,
+      "circulating_market_cap_yi": 648.3412762692001
     },
     {
       "rank": 62,
-      "stock_code": "002436.SZ",
-      "stock_name": "兴森科技",
-      "amount_yi": 45.4270308586,
-      "circulating_market_cap_yi": 535.0704769275
+      "stock_code": "601991.SH",
+      "stock_name": "大唐发电",
+      "amount_yi": 59.66665946,
+      "circulating_market_cap_yi": 857.8093661352001
     },
     {
       "rank": 63,
-      "stock_code": "301717.SZ",
-      "stock_name": "C超纯",
-      "amount_yi": 45.3042769541,
-      "circulating_market_cap_yi": 87.48035732
+      "stock_code": "002156.SZ",
+      "stock_name": "通富微电",
+      "amount_yi": 58.8605737441,
+      "circulating_market_cap_yi": 944.1587725283999
     },
     {
       "rank": 64,
-      "stock_code": "002409.SZ",
-      "stock_name": "雅克科技",
-      "amount_yi": 44.076808939799996,
-      "circulating_market_cap_yi": 494.3154510693
+      "stock_code": "002185.SZ",
+      "stock_name": "华天科技",
+      "amount_yi": 57.61822688310001,
+      "circulating_market_cap_yi": 594.0901341516
     },
     {
       "rank": 65,
-      "stock_code": "300620.SZ",
-      "stock_name": "光库科技",
-      "amount_yi": 43.4801559563,
-      "circulating_market_cap_yi": 763.54885092
+      "stock_code": "600206.SH",
+      "stock_name": "有研新材",
+      "amount_yi": 56.83707555,
+      "circulating_market_cap_yi": 425.05442799720004
     },
     {
       "rank": 66,
-      "stock_code": "300604.SZ",
-      "stock_name": "长川科技",
-      "amount_yi": 43.38211487939999,
-      "circulating_market_cap_yi": 1405.3408169535
+      "stock_code": "300059.SZ",
+      "stock_name": "东方财富",
+      "amount_yi": 55.606565088900005,
+      "circulating_market_cap_yi": 2641.2819044928
     },
     {
       "rank": 67,
-      "stock_code": "002636.SZ",
-      "stock_name": "金安国纪",
-      "amount_yi": 43.2345226559,
-      "circulating_market_cap_yi": 495.93876601989996
+      "stock_code": "300223.SZ",
+      "stock_name": "君正股份",
+      "amount_yi": 55.506403855500004,
+      "circulating_market_cap_yi": 581.4489318064
     },
     {
       "rank": 68,
-      "stock_code": "600396.SH",
-      "stock_name": "华电辽能",
-      "amount_yi": 43.14725954,
-      "circulating_market_cap_yi": 253.01103116060003
+      "stock_code": "603993.SH",
+      "stock_name": "洛阳钼业",
+      "amount_yi": 55.30933038,
+      "circulating_market_cap_yi": 3214.5410446016
     },
     {
       "rank": 69,
-      "stock_code": "002739.SZ",
-      "stock_name": "儒意电影",
-      "amount_yi": 42.7840931506,
-      "circulating_market_cap_yi": 226.3705618944
+      "stock_code": "688041.SH",
+      "stock_name": "海光信息",
+      "amount_yi": 54.45365942,
+      "circulating_market_cap_yi": 6647.60694026
     },
     {
       "rank": 70,
-      "stock_code": "300395.SZ",
-      "stock_name": "菲利华",
-      "amount_yi": 42.6763849966,
-      "circulating_market_cap_yi": 486.8650668504
+      "stock_code": "301165.SZ",
+      "stock_name": "锐捷网络",
+      "amount_yi": 54.015897486499995,
+      "circulating_market_cap_yi": 1595.8409081790003
     },
     {
       "rank": 71,
-      "stock_code": "002008.SZ",
-      "stock_name": "大族激光",
-      "amount_yi": 41.6692704754,
-      "circulating_market_cap_yi": 902.1939212259999
+      "stock_code": "600276.SH",
+      "stock_name": "恒瑞医药",
+      "amount_yi": 53.1385318,
+      "circulating_market_cap_yi": 3429.3516225024
     },
     {
       "rank": 72,
-      "stock_code": "300489.SZ",
-      "stock_name": "光智科技",
-      "amount_yi": 41.645488315,
-      "circulating_market_cap_yi": 343.84823288
+      "stock_code": "000021.SZ",
+      "stock_name": "深科技",
+      "amount_yi": 53.0542773163,
+      "circulating_market_cap_yi": 622.5785318899999
     },
     {
       "rank": 73,
-      "stock_code": "300223.SZ",
-      "stock_name": "君正股份",
-      "amount_yi": 41.3028480181,
-      "circulating_market_cap_yi": 594.5175759675999
+      "stock_code": "300759.SZ",
+      "stock_name": "康龙化成",
+      "amount_yi": 51.5805865057,
+      "circulating_market_cap_yi": 707.175913092
     },
     {
       "rank": 74,
-      "stock_code": "600276.SH",
-      "stock_name": "恒瑞医药",
-      "amount_yi": 40.84685102,
-      "circulating_market_cap_yi": 3467.6256361464
+      "stock_code": "688167.SH",
+      "stock_name": "炬光科技",
+      "amount_yi": 50.17195342,
+      "circulating_market_cap_yi": 332.9735712006
     },
     {
       "rank": 75,
-      "stock_code": "002354.SZ",
-      "stock_name": "天娱数科",
-      "amount_yi": 40.6614351954,
-      "circulating_market_cap_yi": 138.6716793487
+      "stock_code": "002409.SZ",
+      "stock_name": "雅克科技",
+      "amount_yi": 50.160316639899996,
+      "circulating_market_cap_yi": 476.191506765
     },
     {
       "rank": 76,
-      "stock_code": "300666.SZ",
-      "stock_name": "江丰电子",
-      "amount_yi": 40.5950554777,
-      "circulating_market_cap_yi": 583.856227652
+      "stock_code": "002008.SZ",
+      "stock_name": "大族激光",
+      "amount_yi": 48.5154558088,
+      "circulating_market_cap_yi": 906.499194445
     },
     {
       "rank": 77,
-      "stock_code": "000977.SZ",
-      "stock_name": "浪潮信息",
-      "amount_yi": 40.3707014763,
-      "circulating_market_cap_yi": 1100.4172193608
+      "stock_code": "301171.SZ",
+      "stock_name": "易点天下",
+      "amount_yi": 47.9959738636,
+      "circulating_market_cap_yi": 187.70486321399997
     },
     {
       "rank": 78,
-      "stock_code": "000021.SZ",
-      "stock_name": "深科技",
-      "amount_yi": 38.9956454469,
-      "circulating_market_cap_yi": 635.17177653
+      "stock_code": "688702.SH",
+      "stock_name": "盛科通信",
+      "amount_yi": 47.24229155,
+      "circulating_market_cap_yi": 813.99704983
     },
     {
       "rank": 79,
-      "stock_code": "600186.SH",
-      "stock_name": "莲花控股",
-      "amount_yi": 38.60140355,
-      "circulating_market_cap_yi": 204.85633431949998
+      "stock_code": "002636.SZ",
+      "stock_name": "金安国纪",
+      "amount_yi": 46.815659886599995,
+      "circulating_market_cap_yi": 475.0060504686
     },
     {
       "rank": 80,
-      "stock_code": "688041.SH",
-      "stock_name": "海光信息",
-      "amount_yi": 38.4967215,
-      "circulating_market_cap_yi": 6686.1909525706005
+      "stock_code": "688072.SH",
+      "stock_name": "拓荆科技",
+      "amount_yi": 46.75941029,
+      "circulating_market_cap_yi": 1936.7580945132001
     },
     {
       "rank": 81,
-      "stock_code": "688313.SH",
-      "stock_name": "仕佳光子",
-      "amount_yi": 38.31808179,
-      "circulating_market_cap_yi": 632.2836742391999
+      "stock_code": "300666.SZ",
+      "stock_name": "江丰电子",
+      "amount_yi": 46.541991815900005,
+      "circulating_market_cap_yi": 555.0448409968
     },
     {
       "rank": 82,
-      "stock_code": "300136.SZ",
-      "stock_name": "信维通信",
-      "amount_yi": 38.1784496525,
-      "circulating_market_cap_yi": 565.9223232204
+      "stock_code": "300620.SZ",
+      "stock_name": "光库科技",
+      "amount_yi": 46.426383459899995,
+      "circulating_market_cap_yi": 776.274665102
     },
     {
       "rank": 83,
-      "stock_code": "688048.SH",
-      "stock_name": "长光华芯",
-      "amount_yi": 37.95222165,
-      "circulating_market_cap_yi": 531.4311441621
+      "stock_code": "002436.SZ",
+      "stock_name": "兴森科技",
+      "amount_yi": 45.6280566642,
+      "circulating_market_cap_yi": 525.0521360829001
     },
     {
       "rank": 84,
-      "stock_code": "601869.SH",
-      "stock_name": "长飞光纤",
-      "amount_yi": 37.91268598,
-      "circulating_market_cap_yi": 1405.0772559806
+      "stock_code": "600664.SH",
+      "stock_name": "哈药股份",
+      "amount_yi": 44.87849333,
+      "circulating_market_cap_yi": 223.13997501359998
     },
     {
       "rank": 85,
-      "stock_code": "601168.SH",
-      "stock_name": "西部矿业",
-      "amount_yi": 37.90275916,
-      "circulating_market_cap_yi": 914.1188
+      "stock_code": "000100.SZ",
+      "stock_name": "TCL科技",
+      "amount_yi": 44.5220819426,
+      "circulating_market_cap_yi": 1039.9444782012
     },
     {
       "rank": 86,
-      "stock_code": "300757.SZ",
-      "stock_name": "罗博特科",
-      "amount_yi": 37.4623883058,
-      "circulating_market_cap_yi": 838.5683089651001
+      "stock_code": "600519.SH",
+      "stock_name": "贵州茅台",
+      "amount_yi": 43.76205567,
+      "circulating_market_cap_yi": 16942.2309301929
     },
     {
       "rank": 87,
-      "stock_code": "601208.SH",
-      "stock_name": "东材科技",
-      "amount_yi": 36.36588962,
-      "circulating_market_cap_yi": 488.92854441199995
+      "stock_code": "600641.SH",
+      "stock_name": "先导基电",
+      "amount_yi": 43.57614757,
+      "circulating_market_cap_yi": 316.600298784
     },
     {
       "rank": 88,
-      "stock_code": "300059.SZ",
-      "stock_name": "东方财富",
-      "amount_yi": 36.359800644699995,
-      "circulating_market_cap_yi": 2647.9585523808
+      "stock_code": "600186.SH",
+      "stock_name": "莲花控股",
+      "amount_yi": 43.14831954,
+      "circulating_market_cap_yi": 195.5528152063
     },
     {
       "rank": 89,
-      "stock_code": "301171.SZ",
-      "stock_name": "易点天下",
-      "amount_yi": 36.3133088767,
-      "circulating_market_cap_yi": 190.0637211207
+      "stock_code": "603296.SH",
+      "stock_name": "华勤技术",
+      "amount_yi": 42.94605447,
+      "circulating_market_cap_yi": 686.5530250447
     },
     {
       "rank": 90,
-      "stock_code": "002916.SZ",
-      "stock_name": "深南电路",
-      "amount_yi": 36.2289907644,
-      "circulating_market_cap_yi": 2564.8348581
+      "stock_code": "002354.SZ",
+      "stock_name": "天娱数科",
+      "amount_yi": 41.6013680538,
+      "circulating_market_cap_yi": 135.7454305465
     },
     {
       "rank": 91,
-      "stock_code": "688017.SH",
-      "stock_name": "绿的谐波",
-      "amount_yi": 35.96634603,
-      "circulating_market_cap_yi": 650.8036107375
+      "stock_code": "601869.SH",
+      "stock_name": "长飞光纤",
+      "amount_yi": 41.58867617,
+      "circulating_market_cap_yi": 1371.4324435814
     },
     {
       "rank": 92,
-      "stock_code": "300759.SZ",
-      "stock_name": "康龙化成",
-      "amount_yi": 35.7657906752,
-      "circulating_market_cap_yi": 680.195305966
+      "stock_code": "688361.SH",
+      "stock_name": "中科飞测",
+      "amount_yi": 39.41106428,
+      "circulating_market_cap_yi": 1183.6329230691
     },
     {
       "rank": 93,
-      "stock_code": "600549.SH",
-      "stock_name": "厦门钨业",
-      "amount_yi": 34.84576194,
-      "circulating_market_cap_yi": 875.9514571259999
+      "stock_code": "002938.SZ",
+      "stock_name": "鹏鼎控股",
+      "amount_yi": 39.120497977199996,
+      "circulating_market_cap_yi": 2211.876380938
     },
     {
       "rank": 94,
-      "stock_code": "301511.SZ",
-      "stock_name": "德福科技",
-      "amount_yi": 34.5606053442,
-      "circulating_market_cap_yi": 336.6434624286
+      "stock_code": "688313.SH",
+      "stock_name": "仕佳光子",
+      "amount_yi": 38.99926914,
+      "circulating_market_cap_yi": 626.4982492408001
     },
     {
       "rank": 95,
-      "stock_code": "002938.SZ",
-      "stock_name": "鹏鼎控股",
-      "amount_yi": 34.3865607007,
-      "circulating_market_cap_yi": 2333.88544165
+      "stock_code": "300136.SZ",
+      "stock_name": "信维通信",
+      "amount_yi": 38.8586297025,
+      "circulating_market_cap_yi": 555.2772401502
     },
     {
       "rank": 96,
-      "stock_code": "688521.SH",
-      "stock_name": "芯原股份",
-      "amount_yi": 33.81378521,
-      "circulating_market_cap_yi": 1111.7848871219999
+      "stock_code": "002792.SZ",
+      "stock_name": "通宇通讯",
+      "amount_yi": 38.8406706251,
+      "circulating_market_cap_yi": 130.5015973966
     },
     {
       "rank": 97,
-      "stock_code": "600418.SH",
-      "stock_name": "江淮汽车",
-      "amount_yi": 33.1500691,
-      "circulating_market_cap_yi": 574.815439725
+      "stock_code": "300757.SZ",
+      "stock_name": "罗博特科",
+      "amount_yi": 38.8148601038,
+      "circulating_market_cap_yi": 825.0915214938001
     },
     {
       "rank": 98,
-      "stock_code": "603083.SH",
-      "stock_name": "剑桥科技",
-      "amount_yi": 33.14053058,
-      "circulating_market_cap_yi": 440.114631681
+      "stock_code": "301511.SZ",
+      "stock_name": "德福科技",
+      "amount_yi": 38.5809637269,
+      "circulating_market_cap_yi": 336.727305774
     },
     {
       "rank": 99,
-      "stock_code": "002792.SZ",
-      "stock_name": "通宇通讯",
-      "amount_yi": 32.8019185159,
-      "circulating_market_cap_yi": 125.3666652702
+      "stock_code": "300442.SZ",
+      "stock_name": "润泽科技",
+      "amount_yi": 38.36092267,
+      "circulating_market_cap_yi": 1121.6345496914998
     },
     {
       "rank": 100,
-      "stock_code": "001258.SZ",
-      "stock_name": "立新能源",
-      "amount_yi": 32.4493881821,
-      "circulating_market_cap_yi": 144.29152075140001
+      "stock_code": "688017.SH",
+      "stock_name": "绿的谐波",
+      "amount_yi": 38.33384302,
+      "circulating_market_cap_yi": 634.3222325
     },
     {
       "rank": 101,
-      "stock_code": "000807.SZ",
-      "stock_name": "云铝股份",
-      "amount_yi": 31.9773031919,
-      "circulating_market_cap_yi": 951.5975501144001
+      "stock_code": "600378.SH",
+      "stock_name": "昊华科技",
+      "amount_yi": 38.12252867,
+      "circulating_market_cap_yi": 523.8409232892001
     },
     {
       "rank": 102,
-      "stock_code": "002851.SZ",
-      "stock_name": "麦格米特",
-      "amount_yi": 31.367410294899997,
-      "circulating_market_cap_yi": 617.8565507052
+      "stock_code": "603538.SH",
+      "stock_name": "美诺华",
+      "amount_yi": 38.0856575,
+      "circulating_market_cap_yi": 109.7348280407
     },
     {
       "rank": 103,
-      "stock_code": "300570.SZ",
-      "stock_name": "太辰光",
-      "amount_yi": 31.234309594899997,
-      "circulating_market_cap_yi": 287.8279342848
+      "stock_code": "002484.SZ",
+      "stock_name": "江海股份",
+      "amount_yi": 38.0365671475,
+      "circulating_market_cap_yi": 546.5165757165
     },
     {
       "rank": 104,
-      "stock_code": "300903.SZ",
-      "stock_name": "科翔股份",
-      "amount_yi": 30.750936262899998,
-      "circulating_market_cap_yi": 282.12279645760003
+      "stock_code": "688627.SH",
+      "stock_name": "精智达",
+      "amount_yi": 37.98956983,
+      "circulating_market_cap_yi": 454.22481994239996
     },
     {
       "rank": 105,
-      "stock_code": "603799.SH",
-      "stock_name": "华友钴业",
-      "amount_yi": 30.66131271,
-      "circulating_market_cap_yi": 818.8440020586
+      "stock_code": "600330.SH",
+      "stock_name": "天通股份",
+      "amount_yi": 37.54145992,
+      "circulating_market_cap_yi": 298.6144721136
     },
     {
       "rank": 106,
-      "stock_code": "002716.SZ",
-      "stock_name": "湖南白银",
-      "amount_yi": 30.491899237600002,
-      "circulating_market_cap_yi": 227.13812091719998
+      "stock_code": "601168.SH",
+      "stock_name": "西部矿业",
+      "amount_yi": 37.53283344,
+      "circulating_market_cap_yi": 865.029
     },
     {
       "rank": 107,
-      "stock_code": "601288.SH",
-      "stock_name": "农业银行",
-      "amount_yi": 30.38247214,
-      "circulating_market_cap_yi": 20559.3271740388
+      "stock_code": "601208.SH",
+      "stock_name": "东材科技",
+      "amount_yi": 36.98190514,
+      "circulating_market_cap_yi": 473.97783685560006
     },
     {
       "rank": 108,
-      "stock_code": "600498.SH",
-      "stock_name": "烽火通信",
-      "amount_yi": 30.24744325,
-      "circulating_market_cap_yi": 500.8916915184
+      "stock_code": "688521.SH",
+      "stock_name": "芯原股份",
+      "amount_yi": 36.17560291,
+      "circulating_market_cap_yi": 1083.7536030711
     },
     {
       "rank": 109,
-      "stock_code": "301165.SZ",
-      "stock_name": "锐捷网络",
-      "amount_yi": 30.1307870469,
-      "circulating_market_cap_yi": 1405.7431810148998
+      "stock_code": "000807.SZ",
+      "stock_name": "云铝股份",
+      "amount_yi": 36.035127126999996,
+      "circulating_market_cap_yi": 897.8447730489
     },
     {
       "rank": 110,
-      "stock_code": "688702.SH",
-      "stock_name": "盛科通信",
-      "amount_yi": 30.02180765,
-      "circulating_market_cap_yi": 781.315372767
+      "stock_code": "603186.SH",
+      "stock_name": "华正新材",
+      "amount_yi": 35.74518974,
+      "circulating_market_cap_yi": 238.82331701759998
     },
     {
       "rank": 111,
-      "stock_code": "688120.SH",
-      "stock_name": "华海清科",
-      "amount_yi": 29.89737372,
-      "circulating_market_cap_yi": 1356.4860544854
+      "stock_code": "300033.SZ",
+      "stock_name": "同花顺",
+      "amount_yi": 35.7181445239,
+      "circulating_market_cap_yi": 1016.7187506574
     },
     {
       "rank": 112,
-      "stock_code": "601600.SH",
-      "stock_name": "中国铝业",
-      "amount_yi": 29.61223908,
-      "circulating_market_cap_yi": 1312.4119865569999
+      "stock_code": "600498.SH",
+      "stock_name": "烽火通信",
+      "amount_yi": 35.56892503,
+      "circulating_market_cap_yi": 496.8225028592
     },
     {
       "rank": 113,
-      "stock_code": "603087.SH",
-      "stock_name": "甘李药业",
-      "amount_yi": 29.60289164,
-      "circulating_market_cap_yi": 433.21340472
+      "stock_code": "688048.SH",
+      "stock_name": "长光华芯",
+      "amount_yi": 35.4514477,
+      "circulating_market_cap_yi": 530.4439764813001
     },
     {
       "rank": 114,
-      "stock_code": "300390.SZ",
-      "stock_name": "天华新能",
-      "amount_yi": 29.5621196621,
-      "circulating_market_cap_yi": 430.58738563049997
+      "stock_code": "002396.SZ",
+      "stock_name": "星网锐捷",
+      "amount_yi": 35.0049631523,
+      "circulating_market_cap_yi": 245.25101132280003
     },
     {
       "rank": 115,
-      "stock_code": "603256.SH",
-      "stock_name": "宏和科技",
-      "amount_yi": 29.45462855,
-      "circulating_market_cap_yi": 1359.09101475
+      "stock_code": "002916.SZ",
+      "stock_name": "深南电路",
+      "amount_yi": 34.5760692352,
+      "circulating_market_cap_yi": 2512.84675911
     },
     {
       "rank": 116,
-      "stock_code": "300548.SZ",
-      "stock_name": "长芯博创",
-      "amount_yi": 29.257293193899997,
-      "circulating_market_cap_yi": 532.4586428389999
+      "stock_code": "600549.SH",
+      "stock_name": "厦门钨业",
+      "amount_yi": 34.16703143,
+      "circulating_market_cap_yi": 850.156186258
     },
     {
       "rank": 117,
-      "stock_code": "605376.SH",
-      "stock_name": "博迁新材",
-      "amount_yi": 28.99148575,
-      "circulating_market_cap_yi": 441.5808
+      "stock_code": "603256.SH",
+      "stock_name": "宏和科技",
+      "amount_yi": 34.11415638,
+      "circulating_market_cap_yi": 1334.370672
     },
     {
       "rank": 118,
-      "stock_code": "300033.SZ",
-      "stock_name": "同花顺",
-      "amount_yi": 28.8990571396,
-      "circulating_market_cap_yi": 1025.88153876
+      "stock_code": "002415.SZ",
+      "stock_name": "海康威视",
+      "amount_yi": 33.8107869045,
+      "circulating_market_cap_yi": 3225.837016986
     },
     {
       "rank": 119,
-      "stock_code": "603186.SH",
-      "stock_name": "华正新材",
-      "amount_yi": 28.89831423,
-      "circulating_market_cap_yi": 243.80925549
+      "stock_code": "000066.SZ",
+      "stock_name": "中国长城",
+      "amount_yi": 33.5993113436,
+      "circulating_market_cap_yi": 487.70313550559996
     },
     {
       "rank": 120,
-      "stock_code": "000100.SZ",
-      "stock_name": "TCL科技",
-      "amount_yi": 28.829944547600004,
-      "circulating_market_cap_yi": 1023.8524940123999
+      "stock_code": "300418.SZ",
+      "stock_name": "昆仑万维",
+      "amount_yi": 33.5882027431,
+      "circulating_market_cap_yi": 495.63410844990005
     },
     {
       "rank": 121,
-      "stock_code": "002080.SZ",
-      "stock_name": "中材科技",
-      "amount_yi": 28.565196830799998,
-      "circulating_market_cap_yi": 956.53044288
+      "stock_code": "601288.SH",
+      "stock_name": "农业银行",
+      "amount_yi": 33.5131742,
+      "circulating_market_cap_yi": 20942.4202269712
     },
     {
       "rank": 122,
-      "stock_code": "688549.SH",
-      "stock_name": "中巨芯",
-      "amount_yi": 28.47819925,
-      "circulating_market_cap_yi": 169.8417358
+      "stock_code": "301717.SZ",
+      "stock_name": "C超纯",
+      "amount_yi": 33.3319662667,
+      "circulating_market_cap_yi": 89.0452449868
     },
     {
       "rank": 123,
-      "stock_code": "002415.SZ",
-      "stock_name": "海康威视",
-      "amount_yi": 28.163988915500003,
-      "circulating_market_cap_yi": 3299.110376037
+      "stock_code": "002400.SZ",
+      "stock_name": "省广集团",
+      "amount_yi": 33.174757622899996,
+      "circulating_market_cap_yi": 137.230087131
     },
     {
       "rank": 124,
-      "stock_code": "300139.SZ",
-      "stock_name": "晓程科技",
-      "amount_yi": 28.1506012042,
-      "circulating_market_cap_yi": 122.0869450625
+      "stock_code": "600362.SH",
+      "stock_name": "江西铜业",
+      "amount_yi": 32.53594242,
+      "circulating_market_cap_yi": 920.579748858
     },
     {
       "rank": 125,
-      "stock_code": "601318.SH",
-      "stock_name": "中国平安",
-      "amount_yi": 27.9442256,
-      "circulating_market_cap_yi": 5607.1942336580005
+      "stock_code": "688300.SH",
+      "stock_name": "联瑞新材",
+      "amount_yi": 32.38189155,
+      "circulating_market_cap_yi": 391.71132001800004
     },
     {
       "rank": 126,
-      "stock_code": "002859.SZ",
-      "stock_name": "洁美科技",
-      "amount_yi": 27.9235759917,
-      "circulating_market_cap_yi": 342.65216
+      "stock_code": "688629.SH",
+      "stock_name": "华丰科技",
+      "amount_yi": 31.99564937,
+      "circulating_market_cap_yi": 678.581447232
     },
     {
       "rank": 127,
-      "stock_code": "600988.SH",
-      "stock_name": "赤峰黄金",
-      "amount_yi": 27.91159955,
-      "circulating_market_cap_yi": 681.8708827044
+      "stock_code": "688111.SH",
+      "stock_name": "金山办公",
+      "amount_yi": 31.79803027,
+      "circulating_market_cap_yi": 1180.914192075
     },
     {
       "rank": 128,
-      "stock_code": "688361.SH",
-      "stock_name": "中科飞测",
-      "amount_yi": 27.29927097,
-      "circulating_market_cap_yi": 1225.3158409155
+      "stock_code": "300395.SZ",
+      "stock_name": "菲利华",
+      "amount_yi": 31.6561219483,
+      "circulating_market_cap_yi": 474.0514794504
     },
     {
       "rank": 129,
-      "stock_code": "300433.SZ",
-      "stock_name": "蓝思科技",
-      "amount_yi": 27.0795607205,
-      "circulating_market_cap_yi": 1751.8192531725
+      "stock_code": "002202.SZ",
+      "stock_name": "金风科技",
+      "amount_yi": 31.5996716438,
+      "circulating_market_cap_yi": 703.9816134533
     },
     {
       "rank": 130,
-      "stock_code": "002202.SZ",
-      "stock_name": "金风科技",
-      "amount_yi": 27.0220744627,
-      "circulating_market_cap_yi": 687.5004385564
+      "stock_code": "688549.SH",
+      "stock_name": "中巨芯",
+      "amount_yi": 31.46922508,
+      "circulating_market_cap_yi": 161.473406
     },
     {
       "rank": 131,
-      "stock_code": "002747.SZ",
-      "stock_name": "埃斯顿",
-      "amount_yi": 26.943075709000002,
-      "circulating_market_cap_yi": 271.5832416063
+      "stock_code": "300433.SZ",
+      "stock_name": "蓝思科技",
+      "amount_yi": 31.4619461873,
+      "circulating_market_cap_yi": 1722.0010531185
     },
     {
       "rank": 132,
-      "stock_code": "000603.SZ",
-      "stock_name": "盛达资源",
-      "amount_yi": 26.6315606437,
-      "circulating_market_cap_yi": 229.4170991319
+      "stock_code": "600397.SH",
+      "stock_name": "江钨装备",
+      "amount_yi": 31.43578649,
+      "circulating_market_cap_yi": 173.24297935
     },
     {
       "rank": 133,
-      "stock_code": "000815.SZ",
-      "stock_name": "美利云",
-      "amount_yi": 26.3346123585,
-      "circulating_market_cap_yi": 130.22276645550002
+      "stock_code": "600988.SH",
+      "stock_name": "赤峰黄金",
+      "amount_yi": 31.33762203,
+      "circulating_market_cap_yi": 643.2681387348
     },
     {
       "rank": 134,
-      "stock_code": "000426.SZ",
-      "stock_name": "兴业银锡",
-      "amount_yi": 26.1863885621,
-      "circulating_market_cap_yi": 712.0349116104
+      "stock_code": "300548.SZ",
+      "stock_name": "长芯博创",
+      "amount_yi": 31.2486583451,
+      "circulating_market_cap_yi": 529.810765844
     },
     {
       "rank": 135,
-      "stock_code": "600353.SH",
-      "stock_name": "旭光电子",
-      "amount_yi": 26.04933391,
-      "circulating_market_cap_yi": 241.10116615310002
+      "stock_code": "601600.SH",
+      "stock_name": "中国铝业",
+      "amount_yi": 31.10640326,
+      "circulating_market_cap_yi": 1238.473283089
     },
     {
       "rank": 136,
-      "stock_code": "600601.SH",
-      "stock_name": "方正科技",
-      "amount_yi": 25.81167556,
-      "circulating_market_cap_yi": 540.4700099952
+      "stock_code": "603799.SH",
+      "stock_name": "华友钴业",
+      "amount_yi": 30.89142799,
+      "circulating_market_cap_yi": 796.0039549749
     },
     {
       "rank": 137,
-      "stock_code": "600118.SH",
-      "stock_name": "中国卫星",
-      "amount_yi": 25.51905154,
-      "circulating_market_cap_yi": 775.3581258195
+      "stock_code": "300570.SZ",
+      "stock_name": "太辰光",
+      "amount_yi": 30.863340698800002,
+      "circulating_market_cap_yi": 287.7510571656
     },
     {
       "rank": 138,
-      "stock_code": "600547.SH",
-      "stock_name": "山东黄金",
-      "amount_yi": 25.5146854,
-      "circulating_market_cap_yi": 1121.2003262394
+      "stock_code": "002229.SZ",
+      "stock_name": "鸿博股份",
+      "amount_yi": 30.8416164452,
+      "circulating_market_cap_yi": 67.3158162495
     },
     {
       "rank": 139,
-      "stock_code": "601991.SH",
-      "stock_name": "大唐发电",
-      "amount_yi": 25.46757283,
-      "circulating_market_cap_yi": 779.7140047674001
+      "stock_code": "000815.SZ",
+      "stock_name": "美利云",
+      "amount_yi": 30.7863883433,
+      "circulating_market_cap_yi": 127.650293226
     },
     {
       "rank": 140,
-      "stock_code": "600641.SH",
-      "stock_name": "先导基电",
-      "amount_yi": 25.32560137,
-      "circulating_market_cap_yi": 332.421007424
+      "stock_code": "002821.SZ",
+      "stock_name": "凯莱英",
+      "amount_yi": 30.7483289482,
+      "circulating_market_cap_yi": 551.0539295898001
     },
     {
       "rank": 141,
-      "stock_code": "688300.SH",
-      "stock_name": "联瑞新材",
-      "amount_yi": 25.16595394,
-      "circulating_market_cap_yi": 398.4241635
+      "stock_code": "300139.SZ",
+      "stock_name": "晓程科技",
+      "amount_yi": 30.5953220584,
+      "circulating_market_cap_yi": 111.12832741
     },
     {
       "rank": 142,
-      "stock_code": "300346.SZ",
-      "stock_name": "南大光电",
-      "amount_yi": 25.1203164542,
-      "circulating_market_cap_yi": 388.6085002884
+      "stock_code": "600030.SH",
+      "stock_name": "中信证券",
+      "amount_yi": 30.43260777,
+      "circulating_market_cap_yi": 3389.9517911616
     },
     {
       "rank": 143,
-      "stock_code": "002173.SZ",
-      "stock_name": "创新医疗",
-      "amount_yi": 25.066725254899996,
-      "circulating_market_cap_yi": 94.3579399502
+      "stock_code": "600460.SH",
+      "stock_name": "士兰微",
+      "amount_yi": 30.42480959,
+      "circulating_market_cap_yi": 537.162391566
     },
     {
       "rank": 144,
-      "stock_code": "603893.SH",
-      "stock_name": "瑞芯微",
-      "amount_yi": 24.93644842,
-      "circulating_market_cap_yi": 903.29618925
+      "stock_code": "002364.SZ",
+      "stock_name": "中恒电气",
+      "amount_yi": 30.4071732682,
+      "circulating_market_cap_yi": 239.9846168
     },
     {
       "rank": 145,
-      "stock_code": "301205.SZ",
-      "stock_name": "联特科技",
-      "amount_yi": 24.8625055157,
-      "circulating_market_cap_yi": 252.74304378
+      "stock_code": "600601.SH",
+      "stock_name": "方正科技",
+      "amount_yi": 30.38901136,
+      "circulating_market_cap_yi": 524.6228955046
     },
     {
       "rank": 146,
-      "stock_code": "002484.SZ",
-      "stock_name": "江海股份",
-      "amount_yi": 24.8553454948,
-      "circulating_market_cap_yi": 535.1940584595001
+      "stock_code": "300489.SZ",
+      "stock_name": "光智科技",
+      "amount_yi": 30.3469443143,
+      "circulating_market_cap_yi": 336.40280945029997
     },
     {
       "rank": 147,
-      "stock_code": "688519.SH",
-      "stock_name": "南亚新材",
-      "amount_yi": 24.80224182,
-      "circulating_market_cap_yi": 699.1208999334
+      "stock_code": "002080.SZ",
+      "stock_name": "中材科技",
+      "amount_yi": 29.7663987027,
+      "circulating_market_cap_yi": 935.7217104384
     },
     {
       "rank": 148,
-      "stock_code": "600378.SH",
-      "stock_name": "昊华科技",
-      "amount_yi": 24.6796705,
-      "circulating_market_cap_yi": 513.758808877
+      "stock_code": "002552.SZ",
+      "stock_name": "宝鼎科技",
+      "amount_yi": 29.682249332199998,
+      "circulating_market_cap_yi": 216.1640293274
     },
     {
       "rank": 149,
-      "stock_code": "600330.SH",
-      "stock_name": "天通股份",
-      "amount_yi": 24.59212624,
-      "circulating_market_cap_yi": 298.98450243839994
+      "stock_code": "300346.SZ",
+      "stock_name": "南大光电",
+      "amount_yi": 29.6400885045,
+      "circulating_market_cap_yi": 377.850263616
     },
     {
       "rank": 150,
-      "stock_code": "300319.SZ",
-      "stock_name": "麦捷科技",
-      "amount_yi": 24.4652969954,
-      "circulating_market_cap_yi": 147.950764236
+      "stock_code": "002353.SZ",
+      "stock_name": "杰瑞股份",
+      "amount_yi": 29.540265614000003,
+      "circulating_market_cap_yi": 999.1036295670001
     },
     {
       "rank": 151,
-      "stock_code": "603618.SH",
-      "stock_name": "杭电股份",
-      "amount_yi": 24.32939636,
-      "circulating_market_cap_yi": 195.7284368896
+      "stock_code": "000603.SZ",
+      "stock_name": "盛达资源",
+      "amount_yi": 29.4335642575,
+      "circulating_market_cap_yi": 214.7493392339
     },
     {
       "rank": 152,
-      "stock_code": "605117.SH",
-      "stock_name": "德业股份",
-      "amount_yi": 24.08372948,
-      "circulating_market_cap_yi": 1197.9830817724
+      "stock_code": "688120.SH",
+      "stock_name": "华海清科",
+      "amount_yi": 29.38425918,
+      "circulating_market_cap_yi": 1305.1705537962
     },
     {
       "rank": 153,
       "stock_code": "601398.SH",
       "stock_name": "工商银行",
-      "amount_yi": 24.03068093,
-      "circulating_market_cap_yi": 20274.838382932798
+      "amount_yi": 29.33914637,
+      "circulating_market_cap_yi": 20490.528152963998
     },
     {
       "rank": 154,
-      "stock_code": "300014.SZ",
-      "stock_name": "亿纬锂能",
-      "amount_yi": 23.8338912931,
-      "circulating_market_cap_yi": 1194.1879943588
+      "stock_code": "002031.SZ",
+      "stock_name": "巨轮智能",
+      "amount_yi": 29.2242870652,
+      "circulating_market_cap_yi": 119.98401011519998
     },
     {
       "rank": 155,
-      "stock_code": "002585.SZ",
-      "stock_name": "双星新材",
-      "amount_yi": 23.6579695271,
-      "circulating_market_cap_yi": 98.42999747399999
+      "stock_code": "000426.SZ",
+      "stock_name": "兴业银锡",
+      "amount_yi": 29.1281554084,
+      "circulating_market_cap_yi": 672.4478297632
     },
     {
       "rank": 156,
-      "stock_code": "002842.SZ",
-      "stock_name": "翔鹭钨业",
-      "amount_yi": 23.622225283800002,
-      "circulating_market_cap_yi": 112.0830348825
+      "stock_code": "300017.SZ",
+      "stock_name": "网宿科技",
+      "amount_yi": 29.1237407206,
+      "circulating_market_cap_yi": 341.7182106732
     },
     {
       "rank": 157,
-      "stock_code": "301486.SZ",
-      "stock_name": "致尚科技",
-      "amount_yi": 23.5904920385,
-      "circulating_market_cap_yi": 124.0087572672
+      "stock_code": "002739.SZ",
+      "stock_name": "儒意电影",
+      "amount_yi": 29.0090598162,
+      "circulating_market_cap_yi": 214.8210434304
     },
     {
       "rank": 158,
-      "stock_code": "000858.SZ",
-      "stock_name": "五粮液",
-      "amount_yi": 23.562631231799998,
-      "circulating_market_cap_yi": 2922.0032807447997
+      "stock_code": "605376.SH",
+      "stock_name": "博迁新材",
+      "amount_yi": 28.83154631,
+      "circulating_market_cap_yi": 438.12768
     },
     {
       "rank": 159,
-      "stock_code": "300418.SZ",
-      "stock_name": "昆仑万维",
-      "amount_yi": 23.5477014967,
-      "circulating_market_cap_yi": 508.79773665629995
+      "stock_code": "600602.SH",
+      "stock_name": "云赛智联",
+      "amount_yi": 28.80215536,
+      "circulating_market_cap_yi": 207.98505886399997
     },
     {
       "rank": 160,
-      "stock_code": "688082.SH",
-      "stock_name": "盛美上海",
-      "amount_yi": 23.49295887,
-      "circulating_market_cap_yi": 1499.554346076
+      "stock_code": "000338.SZ",
+      "stock_name": "潍柴动力",
+      "amount_yi": 28.4134754138,
+      "circulating_market_cap_yi": 1491.8741554430003
     },
     {
       "rank": 161,
-      "stock_code": "688235.SH",
-      "stock_name": "百济神州",
-      "amount_yi": 23.43480432,
-      "circulating_market_cap_yi": 337.85977098999996
+      "stock_code": "001267.SZ",
+      "stock_name": "汇绿生态",
+      "amount_yi": 28.3899059379,
+      "circulating_market_cap_yi": 253.0986724722
     },
     {
       "rank": 162,
-      "stock_code": "002466.SZ",
-      "stock_name": "天齐锂业",
-      "amount_yi": 23.4073027696,
-      "circulating_market_cap_yi": 716.16633364
+      "stock_code": "603127.SH",
+      "stock_name": "昭衍新药",
+      "amount_yi": 28.24878042,
+      "circulating_market_cap_yi": 325.78497456599996
     },
     {
       "rank": 163,
-      "stock_code": "603019.SH",
-      "stock_name": "中科曙光",
-      "amount_yi": 23.23850918,
-      "circulating_market_cap_yi": 1264.3715640848
+      "stock_code": "002716.SZ",
+      "stock_name": "湖南白银",
+      "amount_yi": 28.1891672519,
+      "circulating_market_cap_yi": 210.41629606440003
     },
     {
       "rank": 164,
-      "stock_code": "600030.SH",
-      "stock_name": "中信证券",
-      "amount_yi": 23.15267042,
-      "circulating_market_cap_yi": 3372.9046197979997
+      "stock_code": "002580.SZ",
+      "stock_name": "圣阳股份",
+      "amount_yi": 27.767689177199998,
+      "circulating_market_cap_yi": 99.9668748
     },
     {
       "rank": 165,
-      "stock_code": "688808.SH",
-      "stock_name": "联讯仪器",
-      "amount_yi": 22.99103127,
-      "circulating_market_cap_yi": 433.77731712
+      "stock_code": "601318.SH",
+      "stock_name": "中国平安",
+      "amount_yi": 27.6053368,
+      "circulating_market_cap_yi": 5628.514363824001
     },
     {
       "rank": 166,
       "stock_code": "688432.SH",
       "stock_name": "有研硅",
-      "amount_yi": 22.82445612,
-      "circulating_market_cap_yi": 508.87285620600005
+      "amount_yi": 27.49681379,
+      "circulating_market_cap_yi": 492.24384149459996
     },
     {
       "rank": 167,
-      "stock_code": "688143.SH",
-      "stock_name": "长盈通",
-      "amount_yi": 22.81680056,
-      "circulating_market_cap_yi": 144.38958523739998
+      "stock_code": "000792.SZ",
+      "stock_name": "盐湖股份",
+      "amount_yi": 27.4382694246,
+      "circulating_market_cap_yi": 1463.1067650815
     },
     {
       "rank": 168,
-      "stock_code": "600460.SH",
-      "stock_name": "士兰微",
-      "amount_yi": 22.75097533,
-      "circulating_market_cap_yi": 546.6476010825
+      "stock_code": "688143.SH",
+      "stock_name": "长盈通",
+      "amount_yi": 27.36104443,
+      "circulating_market_cap_yi": 149.1377129662
     },
     {
       "rank": 169,
-      "stock_code": "000338.SZ",
-      "stock_name": "潍柴动力",
-      "amount_yi": 22.723156265,
-      "circulating_market_cap_yi": 1551.8465052133
+      "stock_code": "002001.SZ",
+      "stock_name": "新和成",
+      "amount_yi": 27.2871605468,
+      "circulating_market_cap_yi": 858.2137896528
     },
     {
       "rank": 170,
-      "stock_code": "002222.SZ",
-      "stock_name": "福晶科技",
-      "amount_yi": 22.694004266599997,
-      "circulating_market_cap_yi": 306.63937267
+      "stock_code": "300319.SZ",
+      "stock_name": "麦捷科技",
+      "amount_yi": 26.962988606,
+      "circulating_market_cap_yi": 147.440002104
     },
     {
       "rank": 171,
-      "stock_code": "688195.SH",
-      "stock_name": "腾景科技",
-      "amount_yi": 22.61933613,
-      "circulating_market_cap_yi": 285.180532
+      "stock_code": "301205.SZ",
+      "stock_name": "联特科技",
+      "amount_yi": 26.8101091867,
+      "circulating_market_cap_yi": 245.79219135
     },
     {
       "rank": 172,
-      "stock_code": "002709.SZ",
-      "stock_name": "天赐材料",
-      "amount_yi": 22.4743841837,
-      "circulating_market_cap_yi": 595.4557480974
+      "stock_code": "688195.SH",
+      "stock_name": "腾景科技",
+      "amount_yi": 26.79222935,
+      "circulating_market_cap_yi": 286.574925
     },
     {
       "rank": 173,
-      "stock_code": "000831.SZ",
-      "stock_name": "中国稀土",
-      "amount_yi": 22.4448270353,
-      "circulating_market_cap_yi": 600.4387326006
+      "stock_code": "300870.SZ",
+      "stock_name": "欧陆通",
+      "amount_yi": 26.671711515300004,
+      "circulating_market_cap_yi": 338.3276989914
     },
     {
       "rank": 174,
-      "stock_code": "600489.SH",
-      "stock_name": "中金黄金",
-      "amount_yi": 22.36888279,
-      "circulating_market_cap_yi": 1238.9730913583999
+      "stock_code": "600547.SH",
+      "stock_name": "山东黄金",
+      "amount_yi": 26.6334856,
+      "circulating_market_cap_yi": 1066.260787365
     },
     {
       "rank": 175,
-      "stock_code": "603127.SH",
-      "stock_name": "昭衍新药",
-      "amount_yi": 22.2932092,
-      "circulating_market_cap_yi": 321.07709921099996
+      "stock_code": "603893.SH",
+      "stock_name": "瑞芯微",
+      "amount_yi": 26.48888675,
+      "circulating_market_cap_yi": 881.46476847
     },
     {
       "rank": 176,
-      "stock_code": "002400.SZ",
-      "stock_name": "省广集团",
-      "amount_yi": 22.2500057025,
-      "circulating_market_cap_yi": 126.5278664994
+      "stock_code": "603618.SH",
+      "stock_name": "杭电股份",
+      "amount_yi": 26.38039312,
+      "circulating_market_cap_yi": 187.708479744
     },
     {
       "rank": 177,
-      "stock_code": "002837.SZ",
-      "stock_name": "英维克",
-      "amount_yi": 22.155809063499998,
-      "circulating_market_cap_yi": 633.1696075746
+      "stock_code": "300725.SZ",
+      "stock_name": "药石科技",
+      "amount_yi": 26.149786987800002,
+      "circulating_market_cap_yi": 111.0704808608
     },
     {
       "rank": 178,
-      "stock_code": "688596.SH",
-      "stock_name": "正帆科技",
-      "amount_yi": 22.09385638,
-      "circulating_market_cap_yi": 233.35186634649997
+      "stock_code": "001258.SZ",
+      "stock_name": "立新能源",
+      "amount_yi": 26.0889455,
+      "circulating_market_cap_yi": 142.5182096943
     },
     {
       "rank": 179,
-      "stock_code": "002364.SZ",
-      "stock_name": "中恒电气",
-      "amount_yi": 21.7761374992,
-      "circulating_market_cap_yi": 232.115353784
+      "stock_code": "600309.SH",
+      "stock_name": "万华化学",
+      "amount_yi": 25.80677326,
+      "circulating_market_cap_yi": 2288.6878057686
     },
     {
       "rank": 180,
-      "stock_code": "002536.SZ",
-      "stock_name": "飞龙股份",
-      "amount_yi": 21.761991476,
-      "circulating_market_cap_yi": 233.2758606375
+      "stock_code": "688519.SH",
+      "stock_name": "南亚新材",
+      "amount_yi": 25.75416935,
+      "circulating_market_cap_yi": 666.9482154677999
     },
     {
       "rank": 181,
-      "stock_code": "603011.SH",
-      "stock_name": "合锻智能",
-      "amount_yi": 21.61913108,
-      "circulating_market_cap_yi": 123.65305069370001
+      "stock_code": "600721.SH",
+      "stock_name": "百花医药",
+      "amount_yi": 25.71709395,
+      "circulating_market_cap_yi": 55.759407075
     },
     {
       "rank": 182,
-      "stock_code": "600036.SH",
-      "stock_name": "招商银行",
-      "amount_yi": 21.58507035,
-      "circulating_market_cap_yi": 7983.401494023001
+      "stock_code": "300903.SZ",
+      "stock_name": "科翔股份",
+      "amount_yi": 25.697411205700003,
+      "circulating_market_cap_yi": 271.96792185600003
     },
     {
       "rank": 183,
-      "stock_code": "300017.SZ",
-      "stock_name": "网宿科技",
-      "amount_yi": 21.485079177600003,
-      "circulating_market_cap_yi": 346.4511498792
+      "stock_code": "688205.SH",
+      "stock_name": "德科立",
+      "amount_yi": 25.48218819,
+      "circulating_market_cap_yi": 245.86268147200002
     },
     {
       "rank": 184,
-      "stock_code": "600362.SH",
-      "stock_name": "江西铜业",
-      "amount_yi": 21.47923254,
-      "circulating_market_cap_yi": 964.3674691035
+      "stock_code": "002747.SZ",
+      "stock_name": "埃斯顿",
+      "amount_yi": 25.475143540799998,
+      "circulating_market_cap_yi": 271.2702675451
     },
     {
       "rank": 185,
-      "stock_code": "002353.SZ",
-      "stock_name": "杰瑞股份",
-      "amount_yi": 21.3718829401,
-      "circulating_market_cap_yi": 972.9823699200001
+      "stock_code": "002015.SZ",
+      "stock_name": "协鑫能科",
+      "amount_yi": 25.3406035346,
+      "circulating_market_cap_yi": 266.8745665416
     },
     {
       "rank": 186,
-      "stock_code": "603039.SH",
-      "stock_name": "泛微网络",
-      "amount_yi": 21.22536505,
-      "circulating_market_cap_yi": 140.7756732096
+      "stock_code": "688362.SH",
+      "stock_name": "甬矽电子",
+      "amount_yi": 25.20743824,
+      "circulating_market_cap_yi": 308.600146701
     },
     {
       "rank": 187,
-      "stock_code": "688037.SH",
-      "stock_name": "芯源微",
-      "amount_yi": 21.06468172,
-      "circulating_market_cap_yi": 683.98842144
+      "stock_code": "002837.SZ",
+      "stock_name": "英维克",
+      "amount_yi": 24.8925690686,
+      "circulating_market_cap_yi": 626.8390419570001
     },
     {
       "rank": 188,
-      "stock_code": "001267.SZ",
-      "stock_name": "汇绿生态",
-      "amount_yi": 20.929896453599998,
-      "circulating_market_cap_yi": 251.8207037004
+      "stock_code": "002859.SZ",
+      "stock_name": "洁美科技",
+      "amount_yi": 24.739992354899996,
+      "circulating_market_cap_yi": 320.33693808000004
     },
     {
       "rank": 189,
-      "stock_code": "600150.SH",
-      "stock_name": "中国船舶",
-      "amount_yi": 20.86291975,
-      "circulating_market_cap_yi": 2550.4330545032
+      "stock_code": "600489.SH",
+      "stock_name": "中金黄金",
+      "amount_yi": 24.56845698,
+      "circulating_market_cap_yi": 1178.3816843084
     },
     {
       "rank": 190,
-      "stock_code": "603773.SH",
-      "stock_name": "沃格光电",
-      "amount_yi": 20.84187887,
-      "circulating_market_cap_yi": 220.409738973
+      "stock_code": "000858.SZ",
+      "stock_name": "五粮液",
+      "amount_yi": 24.5457023606,
+      "circulating_market_cap_yi": 2915.7928593192005
     },
     {
       "rank": 191,
-      "stock_code": "603399.SH",
-      "stock_name": "永杉锂业",
-      "amount_yi": 20.76480079,
-      "circulating_market_cap_yi": 86.11605809689999
+      "stock_code": "600703.SH",
+      "stock_name": "三安光电",
+      "amount_yi": 24.43503537,
+      "circulating_market_cap_yi": 674.0164300176999
     },
     {
       "rank": 192,
-      "stock_code": "300442.SZ",
-      "stock_name": "润泽科技",
-      "amount_yi": 20.7385205626,
-      "circulating_market_cap_yi": 1107.7266085210001
+      "stock_code": "300054.SZ",
+      "stock_name": "鼎龙股份",
+      "amount_yi": 24.392084633299998,
+      "circulating_market_cap_yi": 557.6256701536
     },
     {
       "rank": 193,
-      "stock_code": "002580.SZ",
-      "stock_name": "圣阳股份",
-      "amount_yi": 20.5661279703,
-      "circulating_market_cap_yi": 96.03152724
+      "stock_code": "603039.SH",
+      "stock_name": "泛微网络",
+      "amount_yi": 24.30726602,
+      "circulating_market_cap_yi": 142.6215080856
     },
     {
       "rank": 194,
-      "stock_code": "000506.SZ",
-      "stock_name": "招金黄金",
-      "amount_yi": 20.5380942759,
-      "circulating_market_cap_yi": 177.0115467666
+      "stock_code": "002149.SZ",
+      "stock_name": "西部材料",
+      "amount_yi": 24.2866079506,
+      "circulating_market_cap_yi": 209.0212371268
     },
     {
       "rank": 195,
-      "stock_code": "002552.SZ",
-      "stock_name": "宝鼎科技",
-      "amount_yi": 20.532716659800002,
-      "circulating_market_cap_yi": 221.3599257023
+      "stock_code": "300390.SZ",
+      "stock_name": "天华新能",
+      "amount_yi": 23.978634383899998,
+      "circulating_market_cap_yi": 431.66301376009994
     },
     {
       "rank": 196,
-      "stock_code": "600111.SH",
-      "stock_name": "北方稀土",
-      "amount_yi": 20.47228274,
-      "circulating_market_cap_yi": 1519.4121733926002
+      "stock_code": "000506.SZ",
+      "stock_name": "招金黄金",
+      "amount_yi": 23.9428554737,
+      "circulating_market_cap_yi": 162.98807165550002
     },
     {
       "rank": 197,
-      "stock_code": "603881.SH",
-      "stock_name": "数据港",
-      "amount_yi": 20.43359781,
-      "circulating_market_cap_yi": 231.7196848512
+      "stock_code": "600118.SH",
+      "stock_name": "中国卫星",
+      "amount_yi": 23.85097541,
+      "circulating_market_cap_yi": 781.625318235
     },
     {
       "rank": 198,
-      "stock_code": "000960.SZ",
-      "stock_name": "锡业股份",
-      "amount_yi": 20.4156463738,
-      "circulating_market_cap_yi": 645.6674979648001
+      "stock_code": "600578.SH",
+      "stock_name": "京能电力",
+      "amount_yi": 23.71554307,
+      "circulating_market_cap_yi": 441.1755248885
     },
     {
       "rank": 199,
-      "stock_code": "002437.SZ",
-      "stock_name": "誉衡药业",
-      "amount_yi": 20.4101945023,
-      "circulating_market_cap_yi": 80.7454042486
+      "stock_code": "688126.SH",
+      "stock_name": "沪硅产业",
+      "amount_yi": 23.65371896,
+      "circulating_market_cap_yi": 719.9037704209999
     },
     {
       "rank": 200,
-      "stock_code": "002460.SZ",
-      "stock_name": "赣锋锂业",
-      "amount_yi": 20.3764974259,
-      "circulating_market_cap_yi": 652.846522482
+      "stock_code": "600111.SH",
+      "stock_name": "北方稀土",
+      "amount_yi": 23.56113227,
+      "circulating_market_cap_yi": 1482.9000083884
     },
     {
       "rank": 201,
-      "stock_code": "002050.SZ",
-      "stock_name": "三花智控",
-      "amount_yi": 20.1499873028,
-      "circulating_market_cap_yi": 1445.7823233664
+      "stock_code": "603678.SH",
+      "stock_name": "火炬电子",
+      "amount_yi": 23.50169442,
+      "circulating_market_cap_yi": 240.87449860149997
     },
     {
       "rank": 202,
-      "stock_code": "300454.SZ",
-      "stock_name": "深信服",
-      "amount_yi": 20.132784540899998,
-      "circulating_market_cap_yi": 349.92356967
+      "stock_code": "688082.SH",
+      "stock_name": "盛美上海",
+      "amount_yi": 23.31083765,
+      "circulating_market_cap_yi": 1458.974238016
     },
     {
       "rank": 203,
-      "stock_code": "688126.SH",
-      "stock_name": "沪硅产业",
-      "amount_yi": 20.10489291,
-      "circulating_market_cap_yi": 746.335294562
+      "stock_code": "603087.SH",
+      "stock_name": "甘李药业",
+      "amount_yi": 23.18873278,
+      "circulating_market_cap_yi": 434.784645048
     },
     {
       "rank": 204,
-      "stock_code": "300870.SZ",
-      "stock_name": "欧陆通",
-      "amount_yi": 20.0977829036,
-      "circulating_market_cap_yi": 331.20003014
+      "stock_code": "002379.SZ",
+      "stock_name": "宏桥控股",
+      "amount_yi": 23.1645154048,
+      "circulating_market_cap_yi": 229.54749810599998
     },
     {
       "rank": 205,
-      "stock_code": "688111.SH",
-      "stock_name": "金山办公",
-      "amount_yi": 20.0897419,
-      "circulating_market_cap_yi": 1208.662195488
+      "stock_code": "002432.SZ",
+      "stock_name": "九安医疗",
+      "amount_yi": 23.1272336661,
+      "circulating_market_cap_yi": 336.62452351999997
     },
     {
       "rank": 206,
-      "stock_code": "002532.SZ",
-      "stock_name": "天山铝业",
-      "amount_yi": 20.0557359991,
-      "circulating_market_cap_yi": 586.0485584004
+      "stock_code": "002709.SZ",
+      "stock_name": "天赐材料",
+      "amount_yi": 22.997611660300002,
+      "circulating_market_cap_yi": 585.6471764739001
     },
     {
       "rank": 207,
-      "stock_code": "688167.SH",
-      "stock_name": "炬光科技",
-      "amount_yi": 20.01940257,
-      "circulating_market_cap_yi": 319.5172015992
+      "stock_code": "002466.SZ",
+      "stock_name": "天齐锂业",
+      "amount_yi": 22.8934934272,
+      "circulating_market_cap_yi": 704.80329888
     },
     {
       "rank": 208,
-      "stock_code": "002821.SZ",
-      "stock_name": "凯莱英",
-      "amount_yi": 19.5535911361,
-      "circulating_market_cap_yi": 554.8267515
+      "stock_code": "688630.SH",
+      "stock_name": "芯碁微装",
+      "amount_yi": 22.6841451,
+      "circulating_market_cap_yi": 551.99360004
     },
     {
       "rank": 209,
-      "stock_code": "002245.SZ",
-      "stock_name": "蔚蓝锂芯",
-      "amount_yi": 19.4041474425,
-      "circulating_market_cap_yi": 296.8996352784
+      "stock_code": "603773.SH",
+      "stock_name": "沃格光电",
+      "amount_yi": 22.52977425,
+      "circulating_market_cap_yi": 210.748557754
     },
     {
       "rank": 210,
-      "stock_code": "300054.SZ",
-      "stock_name": "鼎龙股份",
-      "amount_yi": 19.3433783331,
-      "circulating_market_cap_yi": 577.4239120464
+      "stock_code": "600744.SH",
+      "stock_name": "华银电力",
+      "amount_yi": 22.41170923,
+      "circulating_market_cap_yi": 158.427693372
     },
     {
       "rank": 211,
-      "stock_code": "600869.SH",
-      "stock_name": "远东股份",
-      "amount_yi": 19.33471686,
-      "circulating_market_cap_yi": 363.9738503439999
+      "stock_code": "300255.SZ",
+      "stock_name": "常山药业",
+      "amount_yi": 22.278068681799997,
+      "circulating_market_cap_yi": 260.14622766300005
     },
     {
       "rank": 212,
-      "stock_code": "300458.SZ",
-      "stock_name": "全志科技",
-      "amount_yi": 19.333819109700002,
-      "circulating_market_cap_yi": 285.767164215
+      "stock_code": "600150.SH",
+      "stock_name": "中国船舶",
+      "amount_yi": 22.23201627,
+      "circulating_market_cap_yi": 2542.1548710864004
     },
     {
       "rank": 213,
-      "stock_code": "600900.SH",
-      "stock_name": "长江电力",
-      "amount_yi": 19.32456903,
-      "circulating_market_cap_yi": 6855.9946040232
+      "stock_code": "600418.SH",
+      "stock_name": "江淮汽车",
+      "amount_yi": 22.2200541,
+      "circulating_market_cap_yi": 554.7532537894999
     },
     {
       "rank": 214,
-      "stock_code": "300164.SZ",
-      "stock_name": "通源石油",
-      "amount_yi": 19.1231771056,
-      "circulating_market_cap_yi": 64.73639635800001
+      "stock_code": "300199.SZ",
+      "stock_name": "翰宇药业",
+      "amount_yi": 22.1251686634,
+      "circulating_market_cap_yi": 197.61840641400002
     },
     {
       "rank": 215,
-      "stock_code": "600580.SH",
-      "stock_name": "卧龙电驱",
-      "amount_yi": 19.08407984,
-      "circulating_market_cap_yi": 558.5670184446
+      "stock_code": "002585.SZ",
+      "stock_name": "双星新材",
+      "amount_yi": 21.9640726071,
+      "circulating_market_cap_yi": 100.20351094200001
     },
     {
       "rank": 216,
-      "stock_code": "603823.SH",
-      "stock_name": "百合花",
-      "amount_yi": 19.04434581,
-      "circulating_market_cap_yi": 323.517706008
+      "stock_code": "301080.SZ",
+      "stock_name": "百普赛斯",
+      "amount_yi": 21.891082045,
+      "circulating_market_cap_yi": 111.88323172759998
     },
     {
       "rank": 217,
-      "stock_code": "301583.SZ",
-      "stock_name": "托伦斯",
-      "amount_yi": 19.0337738361,
-      "circulating_market_cap_yi": 50.56345172
+      "stock_code": "601108.SH",
+      "stock_name": "财通证券",
+      "amount_yi": 21.87884393,
+      "circulating_market_cap_yi": 417.010455302
     },
     {
       "rank": 218,
-      "stock_code": "300438.SZ",
-      "stock_name": "鹏辉能源",
-      "amount_yi": 18.9173425253,
-      "circulating_market_cap_yi": 268.1225554892
+      "stock_code": "002842.SZ",
+      "stock_name": "翔鹭钨业",
+      "amount_yi": 21.826194357800002,
+      "circulating_market_cap_yi": 106.84801888199999
     },
     {
       "rank": 219,
-      "stock_code": "000933.SZ",
-      "stock_name": "神火股份",
-      "amount_yi": 18.8266883136,
-      "circulating_market_cap_yi": 612.2379206316
+      "stock_code": "300124.SZ",
+      "stock_name": "汇川技术",
+      "amount_yi": 21.680320125700003,
+      "circulating_market_cap_yi": 1471.979199504
     },
     {
       "rank": 220,
-      "stock_code": "002594.SZ",
-      "stock_name": "比亚迪",
-      "amount_yi": 18.8111080938,
-      "circulating_market_cap_yi": 3152.24726535
+      "stock_code": "688123.SH",
+      "stock_name": "聚辰股份",
+      "amount_yi": 21.59887979,
+      "circulating_market_cap_yi": 220.68388782719998
     },
     {
       "rank": 221,
-      "stock_code": "688362.SH",
-      "stock_name": "甬矽电子",
-      "amount_yi": 18.73153296,
-      "circulating_market_cap_yi": 311.183522874
+      "stock_code": "300014.SZ",
+      "stock_name": "亿纬锂能",
+      "amount_yi": 21.5711257984,
+      "circulating_market_cap_yi": 1180.4568392848
     },
     {
       "rank": 222,
-      "stock_code": "301550.SZ",
-      "stock_name": "斯菱智驱",
-      "amount_yi": 18.7306914795,
-      "circulating_market_cap_yi": 182.03544541489998
+      "stock_code": "603881.SH",
+      "stock_name": "数据港",
+      "amount_yi": 21.50713511,
+      "circulating_market_cap_yi": 227.581833336
     },
     {
       "rank": 223,
-      "stock_code": "002240.SZ",
-      "stock_name": "盛新锂能",
-      "amount_yi": 18.5378083483,
-      "circulating_market_cap_yi": 301.25987826
+      "stock_code": "002532.SZ",
+      "stock_name": "天山铝业",
+      "amount_yi": 21.5030303925,
+      "circulating_market_cap_yi": 541.6944979187999
     },
     {
       "rank": 224,
-      "stock_code": "000333.SZ",
-      "stock_name": "美的集团",
-      "amount_yi": 18.5207319208,
-      "circulating_market_cap_yi": 5806.424430685
+      "stock_code": "600900.SH",
+      "stock_name": "长江电力",
+      "amount_yi": 21.49278508,
+      "circulating_market_cap_yi": 6909.8246829984
     },
     {
       "rank": 225,
-      "stock_code": "002432.SZ",
-      "stock_name": "九安医疗",
-      "amount_yi": 18.4473578138,
-      "circulating_market_cap_yi": 333.693307904
+      "stock_code": "000960.SZ",
+      "stock_name": "锡业股份",
+      "amount_yi": 21.4040488737,
+      "circulating_market_cap_yi": 619.8342163184001
     },
     {
       "rank": 226,
-      "stock_code": "688123.SH",
-      "stock_name": "聚辰股份",
-      "amount_yi": 18.44330574,
-      "circulating_market_cap_yi": 223.099206876
+      "stock_code": "002050.SZ",
+      "stock_name": "三花智控",
+      "amount_yi": 21.28314019,
+      "circulating_market_cap_yi": 1422.1596354176002
     },
     {
       "rank": 227,
-      "stock_code": "600721.SH",
-      "stock_name": "百花医药",
-      "amount_yi": 18.4079464,
-      "circulating_market_cap_yi": 53.9520331905
+      "stock_code": "002173.SZ",
+      "stock_name": "创新医疗",
+      "amount_yi": 21.2574016388,
+      "circulating_market_cap_yi": 92.9269988448
     },
     {
       "rank": 228,
-      "stock_code": "688409.SH",
-      "stock_name": "富创精密",
-      "amount_yi": 18.3765007,
-      "circulating_market_cap_yi": 664.7529627639
+      "stock_code": "600869.SH",
+      "stock_name": "远东股份",
+      "amount_yi": 21.15689538,
+      "circulating_market_cap_yi": 350.8796691426
     },
     {
       "rank": 229,
-      "stock_code": "600309.SH",
-      "stock_name": "万华化学",
-      "amount_yi": 18.28287678,
-      "circulating_market_cap_yi": 2349.7320024756
+      "stock_code": "688235.SH",
+      "stock_name": "百济神州",
+      "amount_yi": 20.94560508,
+      "circulating_market_cap_yi": 336.16845866799997
     },
     {
       "rank": 230,
-      "stock_code": "002422.SZ",
-      "stock_name": "科伦药业",
-      "amount_yi": 17.9895552542,
-      "circulating_market_cap_yi": 609.1790491631
+      "stock_code": "300996.SZ",
+      "stock_name": "普联软件",
+      "amount_yi": 20.848624009,
+      "circulating_market_cap_yi": 58.966187808
     },
     {
       "rank": 231,
-      "stock_code": "002195.SZ",
-      "stock_name": "岩山科技",
-      "amount_yi": 17.9831894893,
-      "circulating_market_cap_yi": 396.47784065220003
+      "stock_code": "603920.SH",
+      "stock_name": "世运电路",
+      "amount_yi": 20.7141629,
+      "circulating_market_cap_yi": 281.1030628617
     },
     {
       "rank": 232,
-      "stock_code": "601012.SH",
-      "stock_name": "隆基绿能",
-      "amount_yi": 17.97734978,
-      "circulating_market_cap_yi": 995.7572945027999
+      "stock_code": "688234.SH",
+      "stock_name": "天岳先进",
+      "amount_yi": 20.65127798,
+      "circulating_market_cap_yi": 481.4052825932
     },
     {
       "rank": 233,
-      "stock_code": "605358.SH",
-      "stock_name": "立昂微",
-      "amount_yi": 17.71287984,
-      "circulating_market_cap_yi": 351.42793465229994
+      "stock_code": "300454.SZ",
+      "stock_name": "深信服",
+      "amount_yi": 20.6263249931,
+      "circulating_market_cap_yi": 340.995478592
     },
     {
       "rank": 234,
-      "stock_code": "601872.SH",
-      "stock_name": "招商轮船",
-      "amount_yi": 17.67288859,
-      "circulating_market_cap_yi": 1374.2864530404
+      "stock_code": "002536.SZ",
+      "stock_name": "飞龙股份",
+      "amount_yi": 20.490482776500002,
+      "circulating_market_cap_yi": 226.7430477375
     },
     {
       "rank": 235,
-      "stock_code": "603501.SH",
-      "stock_name": "豪威集团",
-      "amount_yi": 17.56855711,
-      "circulating_market_cap_yi": 1104.6128387008
+      "stock_code": "603011.SH",
+      "stock_name": "合锻智能",
+      "amount_yi": 20.43207842,
+      "circulating_market_cap_yi": 121.42818572719999
     },
     {
       "rank": 236,
-      "stock_code": "002141.SZ",
-      "stock_name": "贤丰控股",
-      "amount_yi": 17.5212867296,
-      "circulating_market_cap_yi": 72.0989187004
+      "stock_code": "002594.SZ",
+      "stock_name": "比亚迪",
+      "amount_yi": 20.3969517343,
+      "circulating_market_cap_yi": 3127.84097085
     },
     {
       "rank": 237,
-      "stock_code": "600703.SH",
-      "stock_name": "三安光电",
-      "amount_yi": 17.49890665,
-      "circulating_market_cap_yi": 681.9988599809
+      "stock_code": "002422.SZ",
+      "stock_name": "科伦药业",
+      "amount_yi": 20.264206772,
+      "circulating_market_cap_yi": 601.257513883
     },
     {
       "rank": 238,
-      "stock_code": "300199.SZ",
-      "stock_name": "翰宇药业",
-      "amount_yi": 17.4034488843,
-      "circulating_market_cap_yi": 193.07288499950002
+      "stock_code": "002317.SZ",
+      "stock_name": "众生药业",
+      "amount_yi": 20.2572836818,
+      "circulating_market_cap_yi": 220.86904774
     },
     {
       "rank": 239,
-      "stock_code": "600397.SH",
-      "stock_name": "江钨装备",
-      "amount_yi": 17.36221294,
-      "circulating_market_cap_yi": 185.5184818868
+      "stock_code": "601179.SH",
+      "stock_name": "中国西电",
+      "amount_yi": 20.2226832,
+      "circulating_market_cap_yi": 709.934705752
     },
     {
       "rank": 240,
-      "stock_code": "301080.SZ",
-      "stock_name": "百普赛斯",
-      "amount_yi": 17.275337517,
-      "circulating_market_cap_yi": 104.26030663200001
+      "stock_code": "000933.SZ",
+      "stock_name": "神火股份",
+      "amount_yi": 19.962375808399997,
+      "circulating_market_cap_yi": 582.120489881
     },
     {
       "rank": 241,
-      "stock_code": "688627.SH",
-      "stock_name": "精智达",
-      "amount_yi": 17.2742106,
-      "circulating_market_cap_yi": 431.36109133580004
+      "stock_code": "603399.SH",
+      "stock_name": "永杉锂业",
+      "amount_yi": 19.84625312,
+      "circulating_market_cap_yi": 87.19186845979999
     },
     {
       "rank": 242,
-      "stock_code": "600438.SH",
-      "stock_name": "通威股份",
-      "amount_yi": 17.26447679,
-      "circulating_market_cap_yi": 607.318577806
+      "stock_code": "000630.SZ",
+      "stock_name": "铜陵有色",
+      "amount_yi": 19.780274743499998,
+      "circulating_market_cap_yi": 715.3799340534
     },
     {
       "rank": 243,
-      "stock_code": "600160.SH",
-      "stock_name": "巨化股份",
-      "amount_yi": 17.17155326,
-      "circulating_market_cap_yi": 1112.295385372
+      "stock_code": "601126.SH",
+      "stock_name": "四方股份",
+      "amount_yi": 19.74200695,
+      "circulating_market_cap_yi": 388.6152234
     },
     {
       "rank": 244,
-      "stock_code": "688630.SH",
-      "stock_name": "芯碁微装",
-      "amount_yi": 17.1441141,
-      "circulating_market_cap_yi": 560.55674658
+      "stock_code": "301536.SZ",
+      "stock_name": "星宸科技",
+      "amount_yi": 19.6720135434,
+      "circulating_market_cap_yi": 228.93735942599997
     },
     {
       "rank": 245,
-      "stock_code": "688234.SH",
-      "stock_name": "天岳先进",
-      "amount_yi": 17.06448087,
-      "circulating_market_cap_yi": 474.2291081584
+      "stock_code": "002421.SZ",
+      "stock_name": "达实智能",
+      "amount_yi": 19.609407506900002,
+      "circulating_market_cap_yi": 71.5205655402
     },
     {
       "rank": 246,
-      "stock_code": "301183.SZ",
-      "stock_name": "东田微",
-      "amount_yi": 17.0437944453,
-      "circulating_market_cap_yi": 117.80305521039999
+      "stock_code": "002437.SZ",
+      "stock_name": "誉衡药业",
+      "amount_yi": 19.540863465999998,
+      "circulating_market_cap_yi": 88.9036186675
     },
     {
       "rank": 247,
-      "stock_code": "300131.SZ",
-      "stock_name": "英唐智控",
-      "amount_yi": 17.0329864004,
-      "circulating_market_cap_yi": 175.3093961912
+      "stock_code": "002222.SZ",
+      "stock_name": "福晶科技",
+      "amount_yi": 19.5136203607,
+      "circulating_market_cap_yi": 298.1658266466
     },
     {
       "rank": 248,
-      "stock_code": "301377.SZ",
-      "stock_name": "鼎泰高科",
-      "amount_yi": 17.021143321500002,
-      "circulating_market_cap_yi": 444.44910098379995
+      "stock_code": "600089.SH",
+      "stock_name": "特变电工",
+      "amount_yi": 19.43393037,
+      "circulating_market_cap_yi": 1061.5917191671
     },
     {
       "rank": 249,
-      "stock_code": "300693.SZ",
-      "stock_name": "盛弘股份",
-      "amount_yi": 16.9308199205,
-      "circulating_market_cap_yi": 126.1029591231
+      "stock_code": "600036.SH",
+      "stock_name": "招商银行",
+      "amount_yi": 19.40835858,
+      "circulating_market_cap_yi": 7997.841755123301
     },
     {
       "rank": 250,
-      "stock_code": "000962.SZ",
-      "stock_name": "东方钽业",
-      "amount_yi": 16.7909088026,
-      "circulating_market_cap_yi": 276.7019101
+      "stock_code": "688596.SH",
+      "stock_name": "正帆科技",
+      "amount_yi": 19.38067428,
+      "circulating_market_cap_yi": 222.54366444139998
     },
     {
       "rank": 251,
-      "stock_code": "688797.SH",
-      "stock_name": "臻宝科技",
-      "amount_yi": 16.7757558,
-      "circulating_market_cap_yi": 102.02847951
+      "stock_code": "600353.SH",
+      "stock_name": "旭光电子",
+      "amount_yi": 19.29539431,
+      "circulating_market_cap_yi": 233.80762795389998
     },
     {
       "rank": 252,
-      "stock_code": "601212.SH",
-      "stock_name": "白银有色",
-      "amount_yi": 16.76900829,
-      "circulating_market_cap_yi": 427.99596673580004
+      "stock_code": "603466.SH",
+      "stock_name": "风语筑",
+      "amount_yi": 19.19907928,
+      "circulating_market_cap_yi": 81.6104691024
     },
     {
       "rank": 253,
-      "stock_code": "600961.SH",
-      "stock_name": "株冶集团",
-      "amount_yi": 16.72516946,
-      "circulating_market_cap_yi": 220.28103261400003
+      "stock_code": "600162.SH",
+      "stock_name": "香江控股",
+      "amount_yi": 19.07323932,
+      "circulating_market_cap_yi": 149.36762217540002
     },
     {
       "rank": 254,
-      "stock_code": "688629.SH",
-      "stock_name": "华丰科技",
-      "amount_yi": 16.65186264,
-      "circulating_market_cap_yi": 683.0991769758
+      "stock_code": "300364.SZ",
+      "stock_name": "中文在线",
+      "amount_yi": 18.9788793811,
+      "circulating_market_cap_yi": 164.1817725878
     },
     {
       "rank": 255,
-      "stock_code": "002396.SZ",
-      "stock_name": "星网锐捷",
-      "amount_yi": 16.6247779473,
-      "circulating_market_cap_yi": 222.9830072064
+      "stock_code": "600809.SH",
+      "stock_name": "山西汾酒",
+      "amount_yi": 18.93930563,
+      "circulating_market_cap_yi": 1543.864722941
     },
     {
       "rank": 256,
-      "stock_code": "000408.SZ",
-      "stock_name": "藏格矿业",
-      "amount_yi": 16.5060116917,
-      "circulating_market_cap_yi": 1273.160933121
+      "stock_code": "002558.SZ",
+      "stock_name": "巨人网络",
+      "amount_yi": 18.8588443016,
+      "circulating_market_cap_yi": 542.9876981147
     },
     {
       "rank": 257,
-      "stock_code": "600363.SH",
-      "stock_name": "联创光电",
-      "amount_yi": 16.337199,
-      "circulating_market_cap_yi": 97.93297134
+      "stock_code": "688409.SH",
+      "stock_name": "富创精密",
+      "amount_yi": 18.84656383,
+      "circulating_market_cap_yi": 641.2665966282
     },
     {
       "rank": 258,
-      "stock_code": "600172.SH",
-      "stock_name": "黄河旋风",
-      "amount_yi": 16.26951753,
-      "circulating_market_cap_yi": 160.0148664176
+      "stock_code": "688392.SH",
+      "stock_name": "骄成超声",
+      "amount_yi": 18.80459356,
+      "circulating_market_cap_yi": 201.3760464
     },
     {
       "rank": 259,
-      "stock_code": "600938.SH",
-      "stock_name": "中国海油",
-      "amount_yi": 16.1855396,
-      "circulating_market_cap_yi": 982.215
+      "stock_code": "002460.SZ",
+      "stock_name": "赣锋锂业",
+      "amount_yi": 18.798771203199998,
+      "circulating_market_cap_yi": 643.8835090007999
     },
     {
       "rank": 260,
-      "stock_code": "000630.SZ",
-      "stock_name": "铜陵有色",
-      "amount_yi": 16.1045620275,
-      "circulating_market_cap_yi": 738.7802122700999
+      "stock_code": "688808.SH",
+      "stock_name": "联讯仪器",
+      "amount_yi": 18.7769873,
+      "circulating_market_cap_yi": 426.83070528
     },
     {
       "rank": 261,
-      "stock_code": "300063.SZ",
-      "stock_name": "天龙集团",
-      "amount_yi": 16.102429118699998,
-      "circulating_market_cap_yi": 63.7794247974
+      "stock_code": "000783.SZ",
+      "stock_name": "长江证券",
+      "amount_yi": 18.7010155183,
+      "circulating_market_cap_yi": 506.00167474200003
     }
   ],
   "explorer": {
@@ -11687,7 +11687,8 @@
       "2026-08-07",
       "2026-08-10",
       "2026-08-11",
-      "2026-08-12"
+      "2026-08-12",
+      "2026-08-13"
     ],
     "crowding": [
       0.3315332516109537,
@@ -16212,7 +16213,8 @@
       0.5069663684730711,
       0.4962830906102633,
       0.48307437989030283,
-      0.47729231447561504
+      0.47729231447561504,
+      0.48640789284504765
     ],
     "turnover_total_yi": [
       1976.6167191729999,
@@ -20737,7 +20739,8 @@
       26642.5148130629,
       25229.4176053063,
       23208.394645898003,
-      21522.761552638898
+      21522.761552638898,
+      25507.602764356798
     ],
     "industry_dates": [
       "2016-01-04",
@@ -23316,7 +23319,8 @@
       "2026-08-07",
       "2026-08-10",
       "2026-08-11",
-      "2026-08-12"
+      "2026-08-12",
+      "2026-08-13"
     ],
     "industry_names": [
       "农林牧渔",
@@ -25929,7 +25933,8 @@
         0.006812106244209004,
         0.008729172181155716,
         0.007589226453361392,
-        0.0074106014159713695
+        0.0074106014159713695,
+        0.006451456393473814
       ],
       [
         0.06979734988456324,
@@ -28508,7 +28513,8 @@
         0.04832417140736482,
         0.05069027388853884,
         0.049818303504656866,
-        0.04706980558237832
+        0.04706980558237832,
+        0.04682696175878052
       ],
       [
         0.011642231057174515,
@@ -31087,7 +31093,8 @@
         0.0030140903746193595,
         0.003169071199875179,
         0.003645460580374683,
-        0.0035004828299862183
+        0.0035004828299862183,
+        0.0029872698592937103
       ],
       [
         0.03977477800001324,
@@ -33666,7 +33673,8 @@
         0.07254591446213139,
         0.0796381515607723,
         0.08787601499431877,
-        0.06813062104638289
+        0.06813062104638289,
+        0.06223466657901081
       ],
       [
         0.06424827722809023,
@@ -36245,7 +36253,8 @@
         0.29521075032884403,
         0.2830694231399479,
         0.2752106692226347,
-        0.2770598793330016
+        0.2770598793330016,
+        0.2767014814509157
       ],
       [
         0.03678979733392166,
@@ -38824,7 +38833,8 @@
         0.022052254070934082,
         0.02302029967502886,
         0.025913386577894854,
-        0.026374568961444456
+        0.026374568961444456,
+        0.02286098127912822
       ],
       [
         0.017946216240403257,
@@ -41403,7 +41413,8 @@
         0.007281706198960766,
         0.007388800100549797,
         0.008174752526445549,
-        0.0076315732820894
+        0.0076315732820894,
+        0.007126631220967418
       ],
       [
         0.020789808774005762,
@@ -43982,7 +43993,8 @@
         0.011335453987396094,
         0.016896867511560797,
         0.013371608229134897,
-        0.015803412184246232
+        0.015803412184246232,
+        0.014466261775015718
       ],
       [
         0.022535951378844406,
@@ -46561,7 +46573,8 @@
         0.004707736345783744,
         0.0056625842959471505,
         0.005439401104350508,
-        0.005573642278413464
+        0.005573642278413464,
+        0.004818959676703259
       ],
       [
         0.02868328389875672,
@@ -49140,7 +49153,8 @@
         0.006105157126189103,
         0.006784317564920737,
         0.006082131240548724,
-        0.006721163060804505
+        0.006721163060804505,
+        0.005524557766350076
       ],
       [
         0.06540013406847403,
@@ -51719,7 +51733,8 @@
         0.06971479312868863,
         0.0834469191781425,
         0.08529475496254021,
-        0.07496762643987327
+        0.07496762643987327,
+        0.08262092074010474
       ],
       [
         0.029287280432278212,
@@ -54298,7 +54313,8 @@
         0.016940112164103953,
         0.019306391072628427,
         0.020991740259411182,
-        0.020510340570161417
+        0.020510340570161417,
+        0.02404229101882299
       ],
       [
         0.029036878940198595,
@@ -56877,7 +56893,8 @@
         0.0072221034463927644,
         0.007785672129260205,
         0.009549776578604207,
-        0.008599290078164125
+        0.008599290078164125,
+        0.007306168596047577
       ],
       [
         0.05647380890849327,
@@ -59456,7 +59473,8 @@
         0.005520181093262087,
         0.006128404168401449,
         0.005479641558597742,
-        0.009200235538739289
+        0.009200235538739289,
+        0.007842760611218278
       ],
       [
         0.02960647208125626,
@@ -62035,7 +62053,8 @@
         0.005980578373980353,
         0.006267904784521884,
         0.006812553512508677,
-        0.007349612404004219
+        0.007349612404004219,
+        0.006413710646572603
       ],
       [
         0.008031254974898493,
@@ -64614,7 +64633,8 @@
         0.004570155615900011,
         0.0049820201160118704,
         0.004470262318873357,
-        0.005327296841094343
+        0.005327296841094343,
+        0.004508753406204302
       ],
       [
         0.01797282108716117,
@@ -67193,7 +67213,8 @@
         0.010063952446906492,
         0.00982866985695485,
         0.009270059409043433,
-        0.009953713110283152
+        0.009953713110283152,
+        0.009262364216500984
       ],
       [
         0.05078612500041155,
@@ -69772,7 +69793,8 @@
         0.013335985038922133,
         0.013030290234973851,
         0.013981037825511564,
-        0.013977599609726407
+        0.013977599609726407,
+        0.01629894072258905
       ],
       [
         0.015576954868435874,
@@ -72351,7 +72373,8 @@
         0.0011292403998760681,
         0.0011884169394022757,
         0.0011751517739302351,
-        0.0016399871014587454
+        0.0016399871014587454,
+        0.001633747717305367
       ],
       [
         0.015234284442193971,
@@ -74930,7 +74953,8 @@
         0.018428373579148456,
         0.01669689759178592,
         0.015323945089853892,
-        0.014296686291340363
+        0.014296686291340363,
+        0.013241021460791775
       ],
       [
         0.020886966348759813,
@@ -77509,7 +77533,8 @@
         0.011089116778744178,
         0.010972419665168055,
         0.011789480286309266,
-        0.015354589619052894
+        0.015354589619052894,
+        0.014783943956319058
       ],
       [
         0.050136151966086534,
@@ -80088,7 +80113,8 @@
         0.06890922779424598,
         0.07102859567904972,
         0.0720332141119024,
-        0.0747666081084608
+        0.0747666081084608,
+        0.0716946360458783
       ],
       [
         0.06573726736098444,
@@ -82667,7 +82693,8 @@
         0.07120369466426738,
         0.06581566955719433,
         0.06773591996068772,
-        0.0715673789223038
+        0.0715673789223038,
+        0.07077773663736228
       ],
       [
         0.026713361276625592,
@@ -85246,7 +85273,8 @@
         0.02289627558782523,
         0.025544574870358994,
         0.025805511443711775,
-        0.020895439599606536
+        0.020895439599606536,
+        0.01998573379294802
       ],
       [
         0.07949998784491064,
@@ -87825,7 +87853,8 @@
         0.06256458274912137,
         0.04962109089176105,
         0.05412046003125004,
-        0.05493377661527989
+        0.05493377661527989,
+        0.06943846915122143
       ],
       [
         0.043397626495154974,
@@ -90404,7 +90433,8 @@
         0.023273193620048167,
         0.021351647488275824,
         0.021778511281504577,
-        0.026953828484791793
+        0.026953828484791793,
+        0.02848935598249757
       ],
       [
         0.02984716280426924,
@@ -92983,7 +93013,8 @@
         0.09010310658666221,
         0.08177556831509557,
         0.06817915835389635,
-        0.08340739336969033
+        0.08340739336969033,
+        0.08396923938712235
       ],
       [
         0.00776693582235864,
@@ -95562,7 +95593,8 @@
         0.005961386054197733,
         0.005231511825629301,
         0.005850332021741024,
-        0.005007651955224366
+        0.005007651955224366,
+        0.00398088659448592
       ],
       [
         0.011449844759056365,
@@ -98141,7 +98173,8 @@
         0.005884838934546783,
         0.006250469921439373,
         0.008712663615974807,
-        0.007504260009608153
+        0.007504260009608153,
+        0.005768037496745531
       ],
       [
         0.01398683306180316,
@@ -100720,7 +100753,8 @@
         0.006407956731376314,
         0.006998601443121038,
         0.006936690122621399,
-        0.006941208145531066
+        0.006941208145531066,
+        0.0064566545181202134
       ],
       [
         0.0019207535397166632,
@@ -103299,7 +103333,8 @@
         0.0014118046653513294,
         0.0016993031525263187,
         0.0015881810478052484,
-        0.0015697272108865438
+        0.0015697272108865438,
+        0.001485399541502363
       ]
     ],
     "index_names": [
@@ -107836,7 +107871,8 @@
         3940.0371,
         3966.5935,
         3934.0929,
-        3946.6752
+        3946.6752,
+        3926.9648
       ],
       [
         5385.103,
@@ -112361,7 +112397,8 @@
         4694.4365,
         4702.0247,
         4663.7887,
-        4690.9165
+        4690.9165,
+        4663.9513
       ],
       [
         null,
@@ -116886,7 +116923,8 @@
         3563.1165,
         3537.2136,
         3549.1641,
-        3602.0835
+        3602.0835,
+        3586.0427
       ],
       [
         null,
@@ -121411,7 +121449,8 @@
         1744.0236,
         1737.7737,
         1709.5026,
-        1736.9912
+        1736.9912,
+        1717.7477
       ],
       [
         5123.934,
@@ -125936,7 +125975,8 @@
         7980.1245,
         8030.9483,
         7967.5386,
-        8045.3099
+        8045.3099,
+        7968.3809
       ],
       [
         5278.921,
@@ -130461,7 +130501,8 @@
         5256.3637,
         5271.6689,
         5229.1412,
-        5265.1996
+        5265.1996,
+        5229.4248
       ],
       [
         4636.775,
@@ -134986,7 +135027,8 @@
         7679.5285,
         7733.8995,
         7698.0479,
-        7793.7165
+        7793.7165,
+        7715.8946
       ],
       [
         null,
@@ -139511,16 +139553,17 @@
         3085.257,
         3120.8289,
         3105.7378,
-        3159.9817
+        3159.9817,
+        3124.7932
       ]
     ],
     "index_source": "Ricequant RQData"
   },
   "quality": {
-    "common_archive_dates": 4523,
-    "industry_archive_dates": 2577,
+    "common_archive_dates": 4524,
+    "industry_archive_dates": 2578,
     "history_start": "2008-01-02",
-    "latest_share_sum": 0.9999999999999999,
+    "latest_share_sum": 1.0,
     "complete": true,
     "stock_level_data_published": true,
     "stock_level_scope": "latest_complete_date_top_5_percent_by_turnover",
@@ -139569,7 +139612,7 @@
       "中证1000",
       "中证2000"
     ],
-    "rq_benchmark_latest_date": "2026-08-12",
+    "rq_benchmark_latest_date": "2026-08-13",
     "rq_benchmark_current_through_requested_date": true,
     "rq_benchmark_series_lengths_complete": true
   }
