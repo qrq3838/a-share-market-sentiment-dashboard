@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-19T23:10:33+08:00",
+  "generated_at": "2026-08-20T10:12:50+08:00",
   "source": "Ricequant RQData",
   "metric": {
     "name": "申万一级行业拥挤度",
@@ -108834,7 +108834,7 @@
         0.4076654104,
         0.3876899056,
         0.4238473862,
-        0.4013648938
+        0.4592180657
       ]
     },
     {
@@ -145303,12 +145303,12 @@
     },
     "机械设备": {
       "date": "2026-08-19",
-      "crowding": 0.4013648938,
-      "active_stock_count": 538,
-      "positive_turnover_stock_count": 535,
+      "crowding": 0.4592180657,
+      "active_stock_count": 539,
+      "positive_turnover_stock_count": 536,
       "top_stock_count": 27,
-      "industry_turnover_yi": 1880.5087,
-      "top_turnover_yi": 754.7702
+      "industry_turnover_yi": 2112.104,
+      "top_turnover_yi": 969.9163
     },
     "国防军工": {
       "date": "2026-08-19",
@@ -145390,12 +145390,10 @@
     "trading_days": 4528,
     "industry_count": 31,
     "row_count": 140368,
-    "minimum_label_turnover_coverage": 0.9907762847593264,
-    "latest_label_turnover_coverage": 0.9907762847593264,
-    "latest_industry_label_source_date": "2026-08-18",
-    "pending_label_dates": [
-      "2026-08-19"
-    ],
+    "minimum_label_turnover_coverage": 1.0,
+    "latest_label_turnover_coverage": 1.0,
+    "latest_industry_label_source_date": "2026-08-19",
+    "pending_label_dates": [],
     "source_api": [
       "RQData get_price(total_turnover)",
       "RQData get_factor_exposure_v2(sw2021 industry label)",
