@@ -5,7 +5,7 @@
     "surface": "dashboard",
     "title": "A股市场情绪日报",
     "description": "基于 Wind 与米筐 RQData 的 A 股市场情绪看板。",
-    "generatedAt": "2026-09-05T12:41:48.847771+08:00",
+    "generatedAt": "2026-09-05T22:36:46.203716+08:00",
     "filters": [],
     "cards": [
       {
@@ -388,7 +388,7 @@
           "language": "sql",
           "sql": "SELECT trading_date, stock_daybar_ready FROM RQData.trading_calendar_and_readiness",
           "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
-          "executed_at": "2026-09-05T12:41:48.847771+08:00"
+          "executed_at": "2026-09-05T22:36:46.203716+08:00"
         }
       },
       {
@@ -400,7 +400,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, stock_id, total_turnover, sw2021_level1 FROM RQData.get_price_total_turnover JOIN RQData.get_factor_exposure_sws_2021",
           "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
-          "executed_at": "2026-09-05T12:41:48.847771+08:00"
+          "executed_at": "2026-09-05T22:36:46.203716+08:00"
         }
       },
       {
@@ -412,7 +412,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, stock_id, total_turnover, a_share_market_val_in_circulation FROM RQData.stock_daybar_and_factor",
           "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
-          "executed_at": "2026-09-05T12:41:48.847771+08:00"
+          "executed_at": "2026-09-05T22:36:46.203716+08:00"
         }
       },
       {
@@ -424,7 +424,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_id, close FROM RQData.get_price_index_close",
           "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
-          "executed_at": "2026-09-05T12:41:48.847771+08:00"
+          "executed_at": "2026-09-05T22:36:46.203716+08:00"
         }
       },
       {
@@ -436,7 +436,7 @@
           "language": "sql",
           "sql": "SELECT trade_date, index_id, close FROM RQData.get_price_benchmark_index_close",
           "description": "Ricequant RQData",
-          "executed_at": "2026-09-05T12:41:48.847771+08:00"
+          "executed_at": "2026-09-05T22:36:46.203716+08:00"
         }
       }
     ],
@@ -500,7 +500,7 @@
   },
   "snapshot": {
     "version": 1,
-    "generatedAt": "2026-09-05T12:41:48.847771+08:00",
+    "generatedAt": "2026-09-05T22:36:46.203716+08:00",
     "status": "ready",
     "datasets": {
       "overview": [
@@ -7841,7 +7841,7 @@
         "language": "sql",
         "sql": "SELECT trading_date, stock_daybar_ready FROM RQData.trading_calendar_and_readiness",
         "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
-        "executed_at": "2026-09-05T12:41:48.847771+08:00"
+        "executed_at": "2026-09-05T22:36:46.203716+08:00"
       }
     },
     {
@@ -7853,7 +7853,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, stock_id, total_turnover, sw2021_level1 FROM RQData.get_price_total_turnover JOIN RQData.get_factor_exposure_sws_2021",
         "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
-        "executed_at": "2026-09-05T12:41:48.847771+08:00"
+        "executed_at": "2026-09-05T22:36:46.203716+08:00"
       }
     },
     {
@@ -7865,7 +7865,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, stock_id, total_turnover, a_share_market_val_in_circulation FROM RQData.stock_daybar_and_factor",
         "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
-        "executed_at": "2026-09-05T12:41:48.847771+08:00"
+        "executed_at": "2026-09-05T22:36:46.203716+08:00"
       }
     },
     {
@@ -7877,7 +7877,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_id, close FROM RQData.get_price_index_close",
         "description": "Existing history is retained; market, industry-turnover, and top-stock increments use Ricequant RQData from 2026-08-10",
-        "executed_at": "2026-09-05T12:41:48.847771+08:00"
+        "executed_at": "2026-09-05T22:36:46.203716+08:00"
       }
     },
     {
@@ -7889,7 +7889,7 @@
         "language": "sql",
         "sql": "SELECT trade_date, index_id, close FROM RQData.get_price_benchmark_index_close",
         "description": "Ricequant RQData",
-        "executed_at": "2026-09-05T12:41:48.847771+08:00"
+        "executed_at": "2026-09-05T22:36:46.203716+08:00"
       }
     }
   ]
