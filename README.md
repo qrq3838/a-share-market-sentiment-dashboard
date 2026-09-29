@@ -1,5 +1,9 @@
 # A股市场情绪日报网页
 
+## 沪深A股每日成交额
+
+网站包含2010年以来的沪深A股成交额面积图，数据来自RQData上证A股指数与深证A股指数的日频 `total_turnover`。图表支持快捷区间、双端时间轴、悬浮明细和CSV下载，日更脚本自动补齐增量。
+
 公开网址：https://qrq3838.github.io/a-share-market-sentiment-dashboard/
 
 ## 每日盘后更新
