@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-14T22:41:36+08:00",
+  "generated_at": "2026-11-16T10:48:31+08:00",
   "source": "Ricequant RQData",
   "metric": {
     "name": "申万一级行业拥挤度",
@@ -146970,7 +146970,7 @@
     "纺织服饰": {
       "date": "2026-11-13",
       "crowding": 0.4545907574,
-      "active_stock_count": 106,
+      "active_stock_count": 105,
       "positive_turnover_stock_count": 105,
       "top_stock_count": 6,
       "industry_turnover_yi": 133.6937,
@@ -147184,10 +147184,8 @@
     "row_count": 142104,
     "minimum_label_turnover_coverage": 1.0,
     "latest_label_turnover_coverage": 1.0,
-    "latest_industry_label_source_date": "2026-11-12",
-    "pending_label_dates": [
-      "2026-11-13"
-    ],
+    "latest_industry_label_source_date": "2026-11-13",
+    "pending_label_dates": [],
     "source_api": [
       "RQData get_price(total_turnover)",
       "RQData get_factor_exposure_v2(sw2021 industry label)",
